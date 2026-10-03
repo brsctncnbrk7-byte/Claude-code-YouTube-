@@ -9,21 +9,21 @@ episodes:
     thesis: "Nightingale's 1858 polar-area diagram showed that most British soldiers in Crimea died of preventable disease, not wounds — and the chart, not the numbers, changed policy."
     data: "Nightingale 1858 monthly mortality table (public domain; via HistData/Rdatasets)"
     visual_core: "animated polar-area (rose) chart; stacked monthly bars; before/after sanitation"
-    status: researched
+    status: packaged   # QC_PASS long+short 2026-10-03; 4.8 min (production version to extend to ~6 min)
     pilot: 1
   - id: ep-002
     title_working: "The Scatterplot That Could Have Saved Challenger"
     thesis: "Engineers had O-ring damage vs temperature data before the 1986 launch; the chart they drew hid the pattern by omitting the no-damage flights."
     data: "O-ring incidents per flight and launch temperature (Presidential Commission report, 1986; Dalal et al. 1989; via Rdatasets)"
     visual_core: "scatter with/without zero-incident flights; logistic fit; 31°F extrapolation"
-    status: researched
+    status: packaged   # QC_PASS long+short 2026-10-03; 3.0 min (production version to extend)
     pilot: 2
   - id: ep-003
     title_working: "616 Dots: How a Map Found the Source of Cholera"
     thesis: "John Snow's 1854 Broad Street investigation combined a death tally over time with a spatial argument; the pump handle came off before germ theory existed."
     data: "Snow 1855 daily deaths/attacks table (public domain)"
-    visual_core: "daily deaths timeline; schematic (non-copied) street grid with cumulative dots; pump removal marker"
-    status: idea
+    visual_core: "daily deaths/attacks timeline with Sept 8 marker; 616-dot grid; no map geometry (license)"
+    status: scripted
   - id: ep-004
     title_working: "The Bomber Armor Puzzle: Survivorship Bias in WWII"
     thesis: "Abraham Wald reasoned about the planes that didn't come back; the holes you see are where planes survive being hit."

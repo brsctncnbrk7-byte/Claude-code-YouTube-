@@ -1,31 +1,43 @@
 # STATUS — güncel durum
 
-**Son güncelleme:** 2026-10-03 (oturum 1)
-**Faz:** 1→2 (araştırma/kararlar yazıldı; üretim hattı MVP başlıyor)
-**READY_FOR_VPS:** HAYIR
+**Son güncelleme:** 2026-10-03 (oturum 1, devam ediyor)
+**Faz:** 3→4 (iki pilot tamamlandı; teslim zinciri ve yeniden üretim testleri sürüyor; ilk hafta paketleri başlıyor)
+**READY_FOR_VPS:** HAYIR (ölçüt tablosu aşağıda)
 
 ## Tamamlanan somut çıktılar
-- Repo iskeleti: CLAUDE.md, README, LICENSE (MIT), .gitignore, .env.example, scripts/env_check.sh, scripts/secret_scan.sh
-- docs/MASTER_PLAN.md (hedef, eşik matematiği, fazlar, yeniden üretilebilirlik tanımı)
-- docs/DECISIONS.md ADR-001…011 (ağ, public repo, runner, teslim yolu, dil+TTS, render yolu, ses QC, altyazı, niş, format)
-- docs/research: ortam yetenekleri (ölçümlü), araç/lisans tablosu (ayrı satırlar; Piper TR sesleri REJECTED), niş karşılaştırması (7 aday), ChatGPT yardım talebi
-- docs/policies: etiket şeması, YPP uygunluk, inauthentic content + üretim kapısı kuralları, sentetik içerik beyanı, production-gate
-- docs/operations: github-quota + teslim/tetikleme kararı, licensing-notes
-- assets/fonts: Inter variable (OFL 1.1) + lisans metni
-- Ölçümler: Kokoro RTF ≈ 0.26; Whisper base.en WER ≤ 0.016; Playwright 16 fps PNG yakalama
+- Repo iskeleti, CLAUDE.md, MIT lisans, sır taraması, ortam raporu betiği
+- docs: MASTER_PLAN, DECISIONS (ADR-001…011 + 004a), politika kayıtları (etiketli), araştırma (ortam, araç/lisans, niş), operasyon (yayın, ölçüm, kurtarma, süreklilik, GitHub kota, VPS taslağı)
+- `src/ytf` üretim hattı: Kokoro TTS → zaman çizelgesi → SRT/VTT → HTML/SVG sahneler (Playwright) → FFmpeg → loudnorm+limiter → QC (teknik + 3 katmanlı ses) → paket (manifest sha256) — 10 test geçiyor
+- **Pilot #1 ep-001 (Nightingale): QC_PASS uzun (4.8 dk) + Short** — `dist/ep-001/`
+- **Pilot #2 ep-002 (Challenger): QC_PASS uzun (3.0 dk) + Short** — `dist/ep-002/`; aynı hat, farklı veri/sahne türleri, kod değişikliği gerekmedi
+- ep-003 (Snow) senaryo + veri + kaynaklar hazır (`scripted`)
+- Kanal kiti: marka, logo/banner/profil/watermark PNG, kurulum listesi, playlist yapısı
+- Actions: smoke zinciri doğrulandı (workflow → release `smoke-37149042055` → indirme → sha256 OK); ep-001 gerçek release koşusu başlatıldı (run 37151370173)
+- Raporlar: `reports/pilot/ep-001.md`, `ep-002.md`, `render-benchmark.md`
+
+## READY_FOR_VPS ölçütleri (docs/MASTER_PROMPT.md §10)
+| # | Ölçüt | Durum |
+|---|---|---|
+| 1 | Araştırma, niş/dil, marka, 30 gün planı | ✅ (politikalar `chatgpt-verified`/`secondary` etiketli) |
+| 2 | Ücretsiz araçların lisans/teknik uygunluğu | ✅ ayrı satırlar; Piper TR REJECTED; Kokoro HF LICENSE dosyası okunamadı (GitHub kanıtı var) |
+| 3 | İki pilot + Shorts yolu gerçek çıktıyla | ✅ ep-001, ep-002 uzun+Short QC_PASS |
+| 4 | İlk hafta paketleri (placeholder yok) | ⏳ ep-001, ep-002 paketli; ep-003 üretilecek |
+| 5 | Gerçek CPU/RAM/disk/render/kota ölçümü | ✅ render-benchmark.md; Actions ep-001 koşusu ölçülüyor |
+| 6 | Temiz klondan tek komutla yeniden üretim + hata/devam | ⏳ `reports/pilot/reproducibility-run.log` (çalışıyor); checkpoint/retry testlerde |
+| 7 | Büyük çıktılar erişilebilir/kalıcı teslim + manifest | ⏳ Actions run 37151370173 (ep-001 release) |
+| 8 | Kanal/yükleme paketleri, hesap sahibi zorunlulukları, analytics sınırı, VPS rehberi | ✅ (VPS rehberi "denenmedi" etiketli) |
 
 ## Açık doğrulamalar (unverified / secondary)
 | Konu | Durum | Nerede |
 |---|---|---|
-| YPP 72851 / 12843009 tam metin | chatgpt-verified (ortamdan okunamadı) | policies/ypp-eligibility.md |
-| 1311392 inauthentic content tam metin | unverified | HELP_REQUEST #3 |
-| 14328491 sentetik beyan tam metin | unverified | HELP_REQUEST #4 |
+| YPP 72851 / 12843009 tam metin | chatgpt-verified | policies/ypp-eligibility.md |
+| 1311392, 14328491, 6162278 tam metin | unverified | HELP_REQUEST #3–5 |
 | Kokoro HF LICENSE/VOICES.md | GitHub kanıtı var; HF dosyası okunamadı | HELP_REQUEST #6 |
-| GitHub Actions sınırları | secondary | operations/github-quota.md |
-| World Bank / GCP veri atıf şartları | unverified | HELP_REQUEST #9 |
+| GitHub Actions/Release sınırları | secondary | operations/github-quota.md |
+| World Bank/GCP/UCI veri şartları | unverified (bu bölümlerde kullanılmıyor; UCI yalnızca ep-002'nin ikincil kaynağı) | HELP_REQUEST #9 |
 
 ## Açık engeller
-- Ağ politikası (kullanıcı kararı: devam). İnsan dinleme testi yapılamaz → ses QC üç katmanlı (ADR-008); raporlar bunu açıkça yazar.
-
-## Commit/push durumu
-Bu dosya güncellendiği oturumun sonunda `git log`/`git push` çıktısı HANDOFF'a işlenir.
+- **İnsan dinleme testi yapılamıyor**: ses QC fonem + ASR + spektrogram ile; tonlama/doğallık ölçülemiyor (raporlarda beyan). Çözüm yolu: yok (ortam); kullanıcıya devredilmez.
+- Resmî Google/YouTube sayfaları bu ortamdan okunamıyor (kullanıcı kararı: devam).
+- Tag push proxy tarafından reddediliyor → release-request dosyası (ADR-004a).
+- Pilot süreleri hedef bandın (6–9 dk) altında; üretim sürümlerinde uzatılacak.

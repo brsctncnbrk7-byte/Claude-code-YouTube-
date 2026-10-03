@@ -6,22 +6,22 @@ items:
     format: long
     package: dist/ep-001/           # GitHub Release ep-001
     planned_day: 0
-    status: packaging            # packaging → ready → scheduled → published
+    status: ready                # packaging → ready → scheduled → published
     video_url: null
     published_at_utc: null
   - id: ep-001
     format: short
     planned_day: 1
-    status: planned
+    status: ready
   - id: ep-002
     format: long
     planned_day: 2
-    status: scripted
+    status: ready
   - id: ep-002
     format: short
     planned_day: 3
-    status: planned
+    status: ready
   - id: ep-003
     format: long
     planned_day: 4
-    status: idea
+    status: scripted
