@@ -248,7 +248,7 @@
     ],
     "asr": {
       "model": "whisper-base.en int8 (sherpa-onnx)",
-      "seconds": 20.2,
+      "seconds": 46.6,
       "rows": [
         {
           "scene": "hook",
@@ -386,8 +386,7 @@
           "scene": "all23",
           "ref": "The engineers' recommendation that night was to not launch below fifty-three degrees.",
           "hyp": "The engineer's recommendation that night was to not launch below 53 degrees.",
-          "wer": 0.077,
-          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-002/long/spectrograms/flag_00_all23.png"
+          "wer": 0.0
         },
         {
           "scene": "caucus",
@@ -400,7 +399,7 @@
           "ref": "Thiokol's management took the call offline for about thirty minutes, returned, and overruled its own engineers.",
           "hyp": "Thio-Call's management took the call offline for about 30 minutes, returned, and overruled its own engineers.",
           "wer": 0.133,
-          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-002/long/spectrograms/flag_01_caucus.png"
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-002/long/spectrograms/flag_00_caucus.png"
         },
         {
           "scene": "caucus",
@@ -487,25 +486,38 @@
           "wer": 0.0
         }
       ],
-      "mean_wer": 0.0077,
+      "mean_wer": 0.0058,
       "flagged": [
-        {
-          "scene": "all23",
-          "ref": "The engineers' recommendation that night was to not launch below fifty-three degrees.",
-          "hyp": "The engineer's recommendation that night was to not launch below 53 degrees.",
-          "wer": 0.077,
-          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-002/long/spectrograms/flag_00_all23.png"
-        },
         {
           "scene": "caucus",
           "ref": "Thiokol's management took the call offline for about thirty minutes, returned, and overruled its own engineers.",
           "hyp": "Thio-Call's management took the call offline for about 30 minutes, returned, and overruled its own engineers.",
           "wer": 0.133,
-          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-002/long/spectrograms/flag_01_caucus.png"
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-002/long/spectrograms/flag_00_caucus.png"
         }
       ]
     },
-    "disclaimer": "Audio was evaluated by phoneme review, ASR round-trip and spectrogram inspection; no human listening test was performed."
+    "disclaimer": "Audio was evaluated by phoneme review, ASR round-trip and spectrogram inspection; no human listening test was performed.",
+    "deep": {
+      "audio_ok": true,
+      "summary": {
+        "sentences": 39,
+        "mean_wer_best": 0.0047,
+        "mean_wer_base": 0.0058,
+        "mean_wer_small": 0.0047,
+        "models": [
+          "whisper-base.en int8",
+          "whisper-small.en int8"
+        ],
+        "dnsmos_available": true,
+        "ovrl_median": 3.41,
+        "ovrl_min": 2.98,
+        "sig_median": 3.63,
+        "bak_median": 4.19
+      },
+      "flagged": 0,
+      "report": "/home/user/Claude-code-YouTube-/reports/ep-002/long/audio-eval.md"
+    }
   },
   "warnings": [],
   "status": "QC_PASS",

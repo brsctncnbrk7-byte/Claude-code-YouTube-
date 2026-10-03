@@ -1,0 +1,164 @@
+{
+  "episode": "ep-006",
+  "format": "short",
+  "checks": {
+    "container": {
+      "codec": "h264",
+      "pix_fmt": "yuv420p",
+      "w": 1080,
+      "h": 1920,
+      "fps": "30/1",
+      "audio": "aac 48000Hz",
+      "duration": 22.867,
+      "frames": 686,
+      "expected_frames": 686,
+      "ok": true
+    },
+    "blackdetect": {
+      "events": [],
+      "ok": true
+    },
+    "silencedetect": {
+      "events": [],
+      "ok": true
+    },
+    "loudness": {
+      "integrated_lufs": -14.0,
+      "true_peak_dbtp": -2.73,
+      "lra": 6.1,
+      "ok": true
+    },
+    "subtitles": {
+      "cues": 7,
+      "long_or_tall": 0,
+      "ok": true
+    },
+    "text_overflow": {
+      "scenes": [],
+      "ok": true
+    },
+    "frame_samples": {
+      "count": 6,
+      "dir": "/home/user/Claude-code-YouTube-/reports/ep-006/short/frames",
+      "reviewed_by_claude": true
+    },
+    "frame_content": {
+      "blank_frames": [],
+      "ok": true
+    }
+  },
+  "audio_eval": {
+    "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-006/short/spectrogram.png",
+    "phonemes": [
+      {
+        "scene": "s_hook",
+        "text": "In 1936 the biggest poll in history, two point four million ballots, predicted the wrong president.",
+        "ipa": "ɪn nˈaɪntiːnhˈʌndɹɪd θˈɜːɾi sˈɪks ðə bˈɪɡɪst pˈoʊl ɪn hˈɪstɚɹi tˈuː pˈɔɪnt fˈɔːɹ mˈɪliən bˈæləts pɹɪdˈɪktᵻd ðə ɹˈɔŋ pɹˈɛzɪdənt"
+      },
+      {
+        "scene": "s_compare",
+        "text": "Gallup, with fifty thousand interviews chosen to mirror the country, got it right.",
+        "ipa": "ɡˈælʌp wɪð fˈɪfti θˈaʊzənd ˈɪntɚvjˌuːz tʃˈoʊzən tə mˈɪɹɚ ðə kˈʌntɹi ɡɑːt ɪt ɹˈaɪt"
+      },
+      {
+        "scene": "s_compare",
+        "text": "The Digest asked the wrong people, and the wrong people answered.",
+        "ipa": "ðə dˈaɪdʒɛst ˈæskt ðə ɹˈɔŋ pˈiːpəl ænd ðə ɹˈɔŋ pˈiːpəl ˈænsɚd"
+      },
+      {
+        "scene": "s_compare",
+        "text": "Size does not fix bias.",
+        "ipa": "sˈaɪz dʌznˌɑːt fˈɪks bˈaɪəs"
+      },
+      {
+        "scene": "s_cta",
+        "text": "The full story is on the channel.",
+        "ipa": "ðə fˈʊl stˈɔːɹi ɪz ɔnðə tʃˈænəl"
+      }
+    ],
+    "asr": {
+      "model": "whisper-base.en int8 (sherpa-onnx)",
+      "seconds": 6.6,
+      "rows": [
+        {
+          "scene": "s_hook",
+          "ref": "In 1936 the biggest poll in history, two point four million ballots, predicted the wrong president.",
+          "hyp": "In 1936, the biggest poll in history, 2.4 million ballots, predicted the wrong president.",
+          "wer": 0.0
+        },
+        {
+          "scene": "s_compare",
+          "ref": "Gallup, with fifty thousand interviews chosen to mirror the country, got it right.",
+          "hyp": "Gallup, with 50,000 interviews chosen to mirror the country, got it right.",
+          "wer": 0.0
+        },
+        {
+          "scene": "s_compare",
+          "ref": "The Digest asked the wrong people, and the wrong people answered.",
+          "hyp": "The dye just asked the wrong people, and the wrong people answered.",
+          "wer": 0.2,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-006/short/spectrograms/flag_00_s_compare.png"
+        },
+        {
+          "scene": "s_compare",
+          "ref": "Size does not fix bias.",
+          "hyp": "Size does not fix bias.",
+          "wer": 0.0
+        },
+        {
+          "scene": "s_cta",
+          "ref": "The full story is on the channel.",
+          "hyp": "The full story is on the channel.",
+          "wer": 0.0
+        }
+      ],
+      "mean_wer": 0.04,
+      "flagged": [
+        {
+          "scene": "s_compare",
+          "ref": "The Digest asked the wrong people, and the wrong people answered.",
+          "hyp": "The dye just asked the wrong people, and the wrong people answered.",
+          "wer": 0.2,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-006/short/spectrograms/flag_00_s_compare.png"
+        }
+      ]
+    },
+    "disclaimer": "Audio was evaluated by phoneme review, ASR round-trip and spectrogram inspection; no human listening test was performed.",
+    "deep": {
+      "audio_ok": true,
+      "summary": {
+        "sentences": 5,
+        "mean_wer_best": 0.0,
+        "mean_wer_base": 0.04,
+        "mean_wer_small": 0.0,
+        "models": [
+          "whisper-base.en int8",
+          "whisper-small.en int8"
+        ],
+        "dnsmos_available": true,
+        "ovrl_median": 3.35,
+        "ovrl_min": 3.24,
+        "sig_median": 3.6,
+        "bak_median": 4.17
+      },
+      "flagged": 0,
+      "report": "/home/user/Claude-code-YouTube-/reports/ep-006/short/audio-eval.md"
+    }
+  },
+  "warnings": [],
+  "status": "QC_PASS",
+  "technical_ok": true,
+  "gate": {
+    "original_narrative": true,
+    "sources_verified": true,
+    "visuals_explain": true,
+    "distinct_from_previous": true,
+    "title_thumbnail_honest": true,
+    "ad_suitability_noted": true,
+    "licenses_recorded": true,
+    "frames_reviewed": true,
+    "audio_reviewed": true,
+    "notes": "sources_verified: poll figures (10M mailed, 2.4M returned, 57/43; Gallup ~50k, 56%) and the 1936 result (60.8/36.5 → two-party 62.5/37.5) agree across the cited secondary sources; Squire (1988) and Lusinchi (2012) summaries used for the two-bias explanation; narration hedges ('later analysis found'). frames_reviewed (2026-10-03): funnel and compare_polls frames inspected — stacked bars show Landon/Roosevelt shares for Digest, Gallup and the result; labels legible. audio_reviewed: deep evaluation audio_ok (two-model ASR mean WER 0.019, DNSMOS OVRL median 3.39, 0 flagged); base-model deviations are decimal/percent renderings ('2.4 million', '24%') and proper nouns (Landon, Squire, Digest). No human listening test was performed."
+  },
+  "gate_ok": true
+}

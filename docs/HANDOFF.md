@@ -3,7 +3,7 @@
 **Dal:** `claude/new-session-dop2fl` (remote'ta `main` yok). Son commit: bkz. `git log -1`.
 
 ## Sıradaki iş (öncelik sırasıyla)
-1. (Tamamlandı) READY_FOR_VPS ilan edildi; VPS geçişi **yalnızca kullanıcı talebiyle** — docs/operations/vps-setup.md'den başla, mevcut projelere dokunma.
+1. READY_FOR_VPS kabul incelemesi: reports/ACCEPTANCE_REVIEW.md; VPS geçişi **yalnızca kullanıcı talebiyle** — docs/operations/vps-setup.md'den başla, mevcut projelere dokunma.
 2. ep-005 (Minard) build sonucu: `reports/pilot/ep-005-build.log`; kare/ses incelemesi → gate → release isteği. ep-006 (Literary Digest) aynı yol.
 3. ep-004 (Wald) ve ep-007–013 senaryoları → 30 günlük kuyruk tamponu (her biri kaynaklı; `content/queue.yaml`).
 4. Üretim sürümleri (ADR-013): 7. gün verisinden sonra ep-001/002/003 için ek veri sahneleri.

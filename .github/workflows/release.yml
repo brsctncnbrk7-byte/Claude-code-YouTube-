@@ -62,7 +62,7 @@ jobs:
       - name: Cache models
         if: steps.t.outputs.ep != 'smoke'
         uses: actions/cache@v4
-        with: { path: models, key: models-kokoro-v1.0-whisper-base.en-v1 }
+        with: { path: models, key: models-kokoro-v1.0-whisper-base-small-dnsmos-v2 }
       - name: Fetch models (GitHub releases, sha256-verified)
         if: steps.t.outputs.ep != 'smoke'
         run: uv run python scripts/fetch_models.py

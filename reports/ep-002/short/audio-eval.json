@@ -1,0 +1,127 @@
+{
+  "episode": "ep-002",
+  "format": "short",
+  "summary": {
+    "sentences": 6,
+    "mean_wer_best": 0.0,
+    "mean_wer_base": 0.0,
+    "mean_wer_small": 0.0,
+    "models": [
+      "whisper-base.en int8",
+      "whisper-small.en int8"
+    ],
+    "dnsmos_available": true,
+    "ovrl_median": 3.46,
+    "ovrl_min": 3.16,
+    "sig_median": 3.67,
+    "bak_median": 4.21
+  },
+  "thresholds": {
+    "mean_wer_max": 0.05,
+    "sentence_wer_max": 0.34,
+    "ovrl_median_min": 3.0,
+    "ovrl_sentence_min": 2.6
+  },
+  "audio_ok": true,
+  "flagged": [],
+  "minor": [],
+  "rows": [
+    {
+      "scene": "s_hook",
+      "text": "Seventy-three seconds after launch, Challenger broke apart.",
+      "duration": 3.46,
+      "ipa": "sˈɛvəntiθɹˈiː sˈɛkəndz ˈæftɚ lˈɑːntʃ tʃˈælɪndʒɚ bɹˈoʊk ɐpˈɑːɹt",
+      "hyp_base": "73 seconds after launch, Challenger broke apart.",
+      "wer_base": 0.0,
+      "hyp_small": "73 seconds after launch, Challenger broke apart.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.63,
+        "bak": 4.19,
+        "ovrl": 3.44
+      }
+    },
+    {
+      "scene": "s_hook",
+      "text": "The night before, engineers tried to stop it with a chart.",
+      "duration": 3.14,
+      "ipa": "ðə nˈaɪt bᵻfˌɔːɹ ˌɛndʒɪnˈɪɹz tɹˈaɪd tə stˈɑːp ɪt wɪð ɐ tʃˈɑːɹt",
+      "hyp_base": "The night before, engineers tried to stop it with a chart.",
+      "wer_base": 0.0,
+      "hyp_small": "The night before, engineers tried to stop it with a chart.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.68,
+        "bak": 4.22,
+        "ovrl": 3.48
+      }
+    },
+    {
+      "scene": "s_compare",
+      "text": "They plotted only the flights with O-ring damage: no clear trend.",
+      "duration": 3.76,
+      "ipa": "ðeɪ plˈɑːɾᵻd ˈoʊnli ðə flˈaɪts wɪð ˈoʊɹˈɪŋ dˈæmɪdʒ nˈoʊ klˈɪɹ tɹˈɛnd",
+      "hyp_base": "They plotted only the flights with o-ring damage. No clear trend.",
+      "wer_base": 0.0,
+      "hyp_small": "They plotted only the flights with O-ring damage. No clear trend.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.65,
+        "bak": 4.21,
+        "ovrl": 3.44
+      }
+    },
+    {
+      "scene": "s_compare",
+      "text": "Add the sixteen flights with no damage, all of them warm, and the pattern appears.",
+      "duration": 4.71,
+      "ipa": "ˈæd ðə sˈɪkstiːn flˈaɪts wɪð nˈoʊ dˈæmɪdʒ ˈɔːl ʌv ðˌɛm wˈɔːɹm ænd ðə pˈætɚn ɐpˈɪɹz",
+      "hyp_base": "Add the 16 flights with no damage, all of them warm, and the pattern appears.",
+      "wer_base": 0.0,
+      "hyp_small": "Add the 16 flights with no damage, all of them warm, and the pattern appears.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.72,
+        "bak": 4.23,
+        "ovrl": 3.52
+      }
+    },
+    {
+      "scene": "s_compare",
+      "text": "Damage lives at the cold end.",
+      "duration": 1.72,
+      "ipa": "dˈæmɪdʒ lˈaɪvz æt ðə kˈoʊld ˈɛnd",
+      "hyp_base": "Damage lives at the cold end.",
+      "wer_base": 0.0,
+      "hyp_small": "damage lives at the cold end.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.45,
+        "bak": 3.99,
+        "ovrl": 3.16
+      }
+    },
+    {
+      "scene": "s_cta",
+      "text": "The full story, and the model that predicted it, is on the channel.",
+      "duration": 3.42,
+      "ipa": "ðə fˈʊl stˈɔːɹi ænd ðə mˈɑːdəl ðæt pɹɪdˈɪktᵻd ɪɾ ɪz ɔnðə tʃˈænəl",
+      "hyp_base": "The full story and the model that predicted it is on the channel.",
+      "wer_base": 0.0,
+      "hyp_small": "The full story and the model that predicted it is on the channel.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.72,
+        "bak": 4.22,
+        "ovrl": 3.51
+      }
+    }
+  ],
+  "disclaimer": "Machine evaluation on the actual synthesized audio: two-model ASR round-trip (intelligibility), DNSMOS P.835 (perceptual quality estimate), G2P phoneme listing (pronunciation review). No human listening test was performed."
+}

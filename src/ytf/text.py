@@ -93,6 +93,8 @@ def normalize_for_wer(s: str, year_style: bool = True) -> list[str]:
     s = re.sub(r"\[[^\]]*\]", " ", s)          # whisper tags like [AUDIO OUT]
     s = s.replace("°f", " degrees fahrenheit ").replace("°", " degrees ")
     s = re.sub(r"(\d),(\d{3})", r"\1\2", s)       # 1,023 -> 1023
+    s = s.replace("%", " percent ")
+    s = re.sub(r"(\d+)\.(\d+)", lambda m: " " + num_to_words_plain(int(m.group(1))) + " point " + " ".join(_ONES[int(c)] for c in m.group(2)) + " ", s)  # 2.4 -> two point four
     s = re.sub(r"\b([2-9])0s\b", lambda m: _TENS[int(m.group(1))][:-1] + "ies", s)  # 50s -> fifties
     s = re.sub(r"\b(\d+)(st|nd|rd|th)\b", lambda m: " " + ordinal_words(int(m.group(1))) + " ", s)  # 31st -> thirty first
     s = s.replace("'", "")                          # Snow's == Snows (ASR often drops possessives)

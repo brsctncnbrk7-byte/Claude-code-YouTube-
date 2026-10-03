@@ -1,0 +1,672 @@
+{
+  "episode": "ep-002",
+  "format": "long",
+  "summary": {
+    "sentences": 39,
+    "mean_wer_best": 0.0047,
+    "mean_wer_base": 0.0058,
+    "mean_wer_small": 0.0047,
+    "models": [
+      "whisper-base.en int8",
+      "whisper-small.en int8"
+    ],
+    "dnsmos_available": true,
+    "ovrl_median": 3.41,
+    "ovrl_min": 2.98,
+    "sig_median": 3.63,
+    "bak_median": 4.19
+  },
+  "thresholds": {
+    "mean_wer_max": 0.05,
+    "sentence_wer_max": 0.34,
+    "ovrl_median_min": 3.0,
+    "ovrl_sentence_min": 2.6
+  },
+  "audio_ok": true,
+  "flagged": [],
+  "minor": [
+    {
+      "scene": "caucus",
+      "text": "Thiokol's management took the call offline for about thirty minutes, returned, and overruled its own engineers.",
+      "duration": 7.14,
+      "ipa": "θˌaɪoʊkˈɑːlz mˈænɪdʒmənt tˈʊk ðə kˈɔːl ˈɔflaɪn fɔːɹ ɐbˌaʊt θˈɜːɾi mˈɪnɪts ɹᵻtˈɜːnd ænd ˌoʊvɚɹˈuːld ɪts ˈoʊn ˌɛndʒɪnˈɪɹz",
+      "hyp_base": "Thio-Call's management took the call offline for about 30 minutes, returned, and overruled its own engineers.",
+      "wer_base": 0.133,
+      "hyp_small": "Thio calls management took the call offline for about 30 minutes, returned, and overruled its own engineers.",
+      "wer_small": 0.133,
+      "wer_best": 0.133,
+      "dnsmos": {
+        "sig": 3.68,
+        "bak": 4.21,
+        "ovrl": 3.48
+      }
+    }
+  ],
+  "rows": [
+    {
+      "scene": "hook",
+      "text": "Seventy-three seconds after launch, on January 28, 1986, the Space Shuttle Challenger broke apart.",
+      "duration": 7.63,
+      "ipa": "sˈɛvəntiθɹˈiː sˈɛkəndz ˈæftɚ lˈɑːntʃ ˌɔn dʒˈænjuːˌɛɹi twˈɛnti ˈeɪt nˈaɪntiːnhˈʌndɹɪd ˈeɪɾi sˈɪks ðə spˈeɪs ʃˈʌɾəl tʃˈælɪndʒɚ bɹˈoʊk ɐpˈɑːɹt",
+      "hyp_base": "73 seconds after launch, on January 28, 1986, the Space Shuttle Challenger broke apart.",
+      "wer_base": 0.0,
+      "hyp_small": "Seventy-three seconds after launch, on January 28, 1986, the Space Shuttle Challenger broke apart.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.73,
+        "bak": 4.25,
+        "ovrl": 3.55
+      }
+    },
+    {
+      "scene": "hook",
+      "text": "Seven people died.",
+      "duration": 1.32,
+      "ipa": "sˈɛvən pˈiːpəl dˈaɪd",
+      "hyp_base": "Seven people died.",
+      "wer_base": 0.0,
+      "hyp_small": "Seven people died.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.57,
+        "bak": 4.11,
+        "ovrl": 3.34
+      }
+    },
+    {
+      "scene": "hook",
+      "text": "The night before, a group of engineers had tried to stop the launch with a chart.",
+      "duration": 4.11,
+      "ipa": "ðə nˈaɪt bᵻfˌɔːɹ ɐ ɡɹˈuːp ʌv ˌɛndʒɪnˈɪɹz hæd tɹˈaɪd tə stˈɑːp ðə lˈɑːntʃ wɪð ɐ tʃˈɑːɹt",
+      "hyp_base": "The night before, a group of engineers had tried to stop the launch with a chart.",
+      "wer_base": 0.0,
+      "hyp_small": "The night before, a group of engineers had tried to stop the launch with a chart.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.68,
+        "bak": 4.22,
+        "ovrl": 3.47
+      }
+    },
+    {
+      "scene": "title",
+      "text": "This is the story of the chart they drew, the chart they could have drawn, and the difference between them.",
+      "duration": 5.19,
+      "ipa": "ðɪs ɪz ðə stˈɔːɹi ʌvðə tʃˈɑːɹt ðeɪ dɹˈuː ðə tʃˈɑːɹt ðeɪ kˌʊdɐv dɹˈɔːn ænd ðə dˈɪfɹəns bᵻtwˈiːn ðˌɛm",
+      "hyp_base": "This is the story of the chart they drew, the chart they could have drawn, and the difference between them.",
+      "wer_base": 0.0,
+      "hyp_small": "This is the story of the chart they drew, the chart they could have drawn, and the difference between them.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.71,
+        "bak": 4.23,
+        "ovrl": 3.51
+      }
+    },
+    {
+      "scene": "engineers",
+      "text": "On the evening of January 27, engineers at Morton Thiokol, the contractor that built the solid rocket boosters, joined a teleconference with NASA.",
+      "duration": 9.97,
+      "ipa": "ɔnðɪ ˈiːvnɪŋ ʌv dʒˈænjuːˌɛɹi twˈɛnti sˈɛvən ˌɛndʒɪnˈɪɹz æt mˈɔːɹtən θˌaɪoʊkˈɑːl ðə kəntɹˈæktɚ ðæt bˈɪlt ðə sˈɑːlɪd ɹˈɑːkɪt bˈuːstɚz dʒˈɔɪnd ɐ tˈɛlᵻkˌɑːnfɚɹəns wɪð nˈæsɐ",
+      "hyp_base": "On the evening of January 27, engineers at Morton Thiocall, the contractor that built the solid rocket boosters, joined a teleconference with NASA. [buzzer]",
+      "wer_base": 0.042,
+      "hyp_small": "On the evening of January 27, engineers at Morton Thiokol, the contractor that built the solid rocket boosters, joined a teleconference with NASA.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.73,
+        "bak": 4.25,
+        "ovrl": 3.53
+      }
+    },
+    {
+      "scene": "engineers",
+      "text": "Their concern was the rubber O-rings that sealed the booster joints.",
+      "duration": 3.71,
+      "ipa": "ðɛɹ kənsˈɜːn wʌzðə ɹˈʌbɚɹ ˈoʊɹˈɪŋz ðæt sˈiːld ðə bˈuːstɚ dʒˈɔɪnts",
+      "hyp_base": "Their concern was the rubber o-rings that sealed the booster joints.",
+      "wer_base": 0.0,
+      "hyp_small": "Their concern was the rubber o-rings that sealed the booster joints.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.58,
+        "bak": 4.16,
+        "ovrl": 3.35
+      }
+    },
+    {
+      "scene": "engineers",
+      "text": "Cold makes rubber stiff.",
+      "duration": 1.44,
+      "ipa": "kˈoʊld mˌeɪks ɹˈʌbɚ stˈɪf",
+      "hyp_base": "Cold makes rubber stiff.",
+      "wer_base": 0.0,
+      "hyp_small": "Cold makes rubber stiff.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.45,
+        "bak": 4.05,
+        "ovrl": 3.17
+      }
+    },
+    {
+      "scene": "engineers",
+      "text": "Here is the kind of evidence they had: every flight on which an O-ring had shown damage, plotted against the temperature at launch.",
+      "duration": 7.24,
+      "ipa": "hˈɪɹ ɪz ðə kˈaɪnd ʌv ˈɛvɪdəns ðeɪ hæd ˈɛvɹi flˈaɪt ˌɔn wˌɪtʃ ɐn ˈoʊɹˈɪŋ hæd ʃˈoʊn dˈæmɪdʒ plˈɑːɾᵻd ɐɡˈɛnst ðə tˈɛmpɹɪtʃɚɹ æt lˈɑːntʃ",
+      "hyp_base": "Here is the kind of evidence they had. Every flight on which an o-ring had shown damage plotted against the temperature at launch. [buzzer]",
+      "wer_base": 0.0,
+      "hyp_small": "Here is the kind of evidence they had. Every flight on which an O-ring had shown damage plotted against the temperature at launch.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.69,
+        "bak": 4.22,
+        "ovrl": 3.48
+      }
+    },
+    {
+      "scene": "engineers",
+      "text": "Seven flights.",
+      "duration": 0.99,
+      "ipa": "sˈɛvən flˈaɪts",
+      "hyp_base": "7 flights",
+      "wer_base": 0.0,
+      "hyp_small": "7 flights",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.66,
+        "bak": 4.12,
+        "ovrl": 3.39
+      }
+    },
+    {
+      "scene": "engineers",
+      "text": "The coldest, at fifty-three degrees, had the most damage.",
+      "duration": 3.12,
+      "ipa": "ðə kˈoʊldɪst æt fˈɪftiθɹˈiː dᵻɡɹˈiːz hæd ðə mˈoʊst dˈæmɪdʒ",
+      "hyp_base": "The coldest at 53 degrees had the most damage.",
+      "wer_base": 0.0,
+      "hyp_small": "The coldest, at 53 degrees, had the most damage.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.6,
+        "bak": 4.18,
+        "ovrl": 3.38
+      }
+    },
+    {
+      "scene": "engineers",
+      "text": "The rest scatter from the high fifties to seventy-five.",
+      "duration": 3.02,
+      "ipa": "ðə ɹˈɛst skˈæɾɚ fɹʌmðə hˈaɪ fˈɪftiz tə sˈɛvəntifˈaɪv",
+      "hyp_base": "The rest scatter from the high 50s to 75.",
+      "wer_base": 0.0,
+      "hyp_small": "The rest scatter from the high 50s to 75.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.48,
+        "bak": 4.14,
+        "ovrl": 3.24
+      }
+    },
+    {
+      "scene": "engineers",
+      "text": "Managers looked at this and saw no clear trend.",
+      "duration": 2.67,
+      "ipa": "mˈænɪdʒɚz lˈʊkt æt ðɪs ænd sˈɔː nˈoʊ klˈɪɹ tɹˈɛnd",
+      "hyp_base": "managers looked at this and saw no clear trend.",
+      "wer_base": 0.0,
+      "hyp_small": "Managers looked at this and saw no clear trend.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.75,
+        "bak": 4.22,
+        "ovrl": 3.54
+      }
+    },
+    {
+      "scene": "compare",
+      "text": "Now add what was left out.",
+      "duration": 1.42,
+      "ipa": "nˈaʊ ˈæd wʌt wʌz lˈɛft ˈaʊt",
+      "hyp_base": "Now add what was left out.",
+      "wer_base": 0.0,
+      "hyp_small": "Now add what was left out.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.29,
+        "bak": 3.96,
+        "ovrl": 2.98
+      }
+    },
+    {
+      "scene": "compare",
+      "text": "Sixteen flights had launched with no O-ring damage at all.",
+      "duration": 3.22,
+      "ipa": "sˈɪkstiːn flˈaɪts hæd lˈɑːntʃt wɪð nˈoʊ ˈoʊɹˈɪŋ dˈæmɪdʒ æɾ ˈɔːl",
+      "hyp_base": "16 flights had launched with no o-ring damage at all.",
+      "wer_base": 0.0,
+      "hyp_small": "16 flights had launched, with no O-ring damage at all.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.52,
+        "bak": 4.09,
+        "ovrl": 3.26
+      }
+    },
+    {
+      "scene": "compare",
+      "text": "Every one of them was warm: sixty-six degrees or higher.",
+      "duration": 3.4,
+      "ipa": "ˈɛvɹi wˈʌn ʌv ðˌɛm wʌz wˈɔːɹm sˈɪkstisˈɪks dᵻɡɹˈiːz ɔːɹ hˈaɪɚ",
+      "hyp_base": "Every one of them was warm, 66 degrees or higher.",
+      "wer_base": 0.0,
+      "hyp_small": "Every one of them was warm, 66 degrees or higher.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.73,
+        "bak": 4.22,
+        "ovrl": 3.53
+      }
+    },
+    {
+      "scene": "compare",
+      "text": "Put the zeros back and the picture changes.",
+      "duration": 2.42,
+      "ipa": "pˌʊt ðə zˈiəɹoʊz bˈæk ænd ðə pˈɪktʃɚ tʃˈeɪndʒᵻz",
+      "hyp_base": "Put the zeros back and the picture changes.",
+      "wer_base": 0.0,
+      "hyp_small": "Put the zeros back and the picture changes.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.66,
+        "bak": 4.18,
+        "ovrl": 3.43
+      }
+    },
+    {
+      "scene": "compare",
+      "text": "Damage is not random.",
+      "duration": 1.38,
+      "ipa": "dˈæmɪdʒ ɪz nˌɑːt ɹˈændəm",
+      "hyp_base": "Damage is not random.",
+      "wer_base": 0.0,
+      "hyp_small": "Damage is not random.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.36,
+        "bak": 4.08,
+        "ovrl": 3.1
+      }
+    },
+    {
+      "scene": "compare",
+      "text": "It lives at the cold end.",
+      "duration": 1.35,
+      "ipa": "ɪt lˈɪvz æt ðə kˈoʊld ˈɛnd",
+      "hyp_base": "It lives at the cold end.",
+      "wer_base": 0.0,
+      "hyp_small": "It lives at the cold end.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.63,
+        "bak": 4.19,
+        "ovrl": 3.42
+      }
+    },
+    {
+      "scene": "all23",
+      "text": "Statisticians later fitted a simple model to these twenty-three flights: the chance that an O-ring is damaged as a function of temperature.",
+      "duration": 8.14,
+      "ipa": "stˌæɾɪstˈɪʃənz lˈeɪɾɚ fˈɪɾᵻd ɐ sˈɪmpəl mˈɑːdəl tə ðiːz twˈɛntiθɹˈiː flˈaɪts ðə tʃˈæns ðæt ɐn ˈoʊɹˈɪŋ ɪz dˈæmɪdʒd æz ɐ fˈʌŋkʃən ʌv tˈɛmpɹɪtʃɚ",
+      "hyp_base": "Statisticians later fitted a simple model to these 23 flights. The chance that an o-ring is damaged as a function of temperature.",
+      "wer_base": 0.0,
+      "hyp_small": "Statisticians later fitted a simple model to these 23 flights, the chance that an O-ring is damaged as a function of temperature.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.59,
+        "bak": 4.19,
+        "ovrl": 3.37
+      }
+    },
+    {
+      "scene": "all23",
+      "text": "Fit the same model to the public table, and the curve climbs steeply below sixty degrees.",
+      "duration": 5.05,
+      "ipa": "fˈɪt ðə sˈeɪm mˈɑːdəl tə ðə pˈʌblɪk tˈeɪbəl ænd ðə kˈɜːv klˈaɪmz stˈiːpli bᵻlˌoʊ sˈɪksti dᵻɡɹˈiːz",
+      "hyp_base": "Fit the same model to the public table, and the curve climbs steeply below 60 degrees.",
+      "wer_base": 0.0,
+      "hyp_small": "fit the same model to the public table, and the curve climbs steeply below 60 degrees.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.77,
+        "bak": 4.23,
+        "ovrl": 3.56
+      }
+    },
+    {
+      "scene": "all23",
+      "text": "At fifty-three degrees, the coldest launch so far, it expects about three damaged rings out of six.",
+      "duration": 5.83,
+      "ipa": "æt fˈɪftiθɹˈiː dᵻɡɹˈiːz ðə kˈoʊldɪst lˈɑːntʃ sˈoʊ fˌɑːɹ ɪɾ ɛkspˈɛkts ɐbˌaʊt θɹˈiː dˈæmɪdʒd ɹˈɪŋz ˌaʊɾəv sˈɪks",
+      "hyp_base": "At 53 degrees, the coldest launch so far. It expects about three damaged rings out of six. [BUZZER]",
+      "wer_base": 0.0,
+      "hyp_small": "At 53 degrees, the coldest launch so far. It expects about three damaged rings out of six.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.52,
+        "bak": 4.16,
+        "ovrl": 3.28
+      }
+    },
+    {
+      "scene": "all23",
+      "text": "At the thirty-six degrees recorded on the pad that morning, it expects nearly all six.",
+      "duration": 4.93,
+      "ipa": "æt ðə θˈɜːɾisˈɪks dᵻɡɹˈiːz ɹᵻkˈɔːɹdᵻd ɔnðə pˈæd ðæt mˈɔːɹnɪŋ ɪɾ ɛkspˈɛkts nˌɪɹli ˈɔːl sˈɪks",
+      "hyp_base": "At the 36 degrees recorded on the pad that morning, it expects nearly all six.",
+      "wer_base": 0.0,
+      "hyp_small": "At the 36 degrees recorded on the pad that morning, it expects nearly all six.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.65,
+        "bak": 4.2,
+        "ovrl": 3.45
+      }
+    },
+    {
+      "scene": "all23",
+      "text": "The engineers' recommendation that night was to not launch below fifty-three degrees.",
+      "duration": 4.75,
+      "ipa": "ðɪ ˌɛndʒɪnˈɪɹz ɹˌɛkəmɛndˈeɪʃən ðæt nˈaɪt wʌz tə nˌɑːt lˈɑːntʃ bᵻlˌoʊ fˈɪftiθɹˈiː dᵻɡɹˈiːz",
+      "hyp_base": "The engineer's recommendation that night was to not launch below 53 degrees.",
+      "wer_base": 0.0,
+      "hyp_small": "The engineer's recommendation that night was to not launch below 53 degrees.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.64,
+        "bak": 4.19,
+        "ovrl": 3.41
+      }
+    },
+    {
+      "scene": "caucus",
+      "text": "NASA managers pushed back on the recommendation.",
+      "duration": 2.82,
+      "ipa": "nˈæsɐ mˈænɪdʒɚz pˈʊʃt bˈæk ɔnðə ɹˌɛkəmɛndˈeɪʃən",
+      "hyp_base": "NASA managers pushed back on the recommendation.",
+      "wer_base": 0.0,
+      "hyp_small": "NASA managers pushed back on the recommendation.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.6,
+        "bak": 4.15,
+        "ovrl": 3.36
+      }
+    },
+    {
+      "scene": "caucus",
+      "text": "Thiokol's management took the call offline for about thirty minutes, returned, and overruled its own engineers.",
+      "duration": 7.14,
+      "ipa": "θˌaɪoʊkˈɑːlz mˈænɪdʒmənt tˈʊk ðə kˈɔːl ˈɔflaɪn fɔːɹ ɐbˌaʊt θˈɜːɾi mˈɪnɪts ɹᵻtˈɜːnd ænd ˌoʊvɚɹˈuːld ɪts ˈoʊn ˌɛndʒɪnˈɪɹz",
+      "hyp_base": "Thio-Call's management took the call offline for about 30 minutes, returned, and overruled its own engineers.",
+      "wer_base": 0.133,
+      "hyp_small": "Thio calls management took the call offline for about 30 minutes, returned, and overruled its own engineers.",
+      "wer_small": 0.133,
+      "wer_best": 0.133,
+      "dnsmos": {
+        "sig": 3.68,
+        "bak": 4.21,
+        "ovrl": 3.48
+      }
+    },
+    {
+      "scene": "caucus",
+      "text": "The launch went ahead.",
+      "duration": 1.17,
+      "ipa": "ðə lˈɑːntʃ wɛnt ɐhˈɛd",
+      "hyp_base": "The launch went ahead.",
+      "wer_base": 0.0,
+      "hyp_small": "The launch went ahead.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.45,
+        "bak": 4.12,
+        "ovrl": 3.2
+      }
+    },
+    {
+      "scene": "caucus",
+      "text": "The Presidential Commission later traced the failure to the O-ring seal in the aft field joint of the right solid rocket booster, with cold temperature among the causes.",
+      "duration": 9.9,
+      "ipa": "ðə pɹˌɛzɪdˈɛnʃəl kəmˈɪʃən lˈeɪɾɚ tɹˈeɪst ðə fˈeɪlɪɹ tə ðɪ ˈoʊɹˈɪŋ sˈiːl ɪnðɪ ˈæft fˈiːld dʒˈɔɪnt ʌvðə ɹˈaɪt sˈɑːlɪd ɹˈɑːkɪt bˈuːstɚ wɪð kˈoʊld tˈɛmpɹɪtʃɚɹ ɐmˌʌŋ ðə kˈɔːzᵻz",
+      "hyp_base": "The presidential commission later traced the failure to the O-ring seal in the aft field joint of the right solid rocket booster, with cold temperature among the causes. [BUZZER]",
+      "wer_base": 0.0,
+      "hyp_small": "The Presidential Commission later traced the failure to the O-ring seal in the aft field joint of the right solid rocket booster, with cold temperature among the causes.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.65,
+        "bak": 4.22,
+        "ovrl": 3.45
+      }
+    },
+    {
+      "scene": "selection",
+      "text": "The mistake has a name.",
+      "duration": 1.29,
+      "ipa": "ðə mɪstˈeɪk hɐz ɐ nˈeɪm",
+      "hyp_base": "The mistake has a name.",
+      "wer_base": 0.0,
+      "hyp_small": "The mistake has a name.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.56,
+        "bak": 4.13,
+        "ovrl": 3.31
+      }
+    },
+    {
+      "scene": "selection",
+      "text": "The engineers selected on the outcome: they plotted only the flights where damage had occurred.",
+      "duration": 5.11,
+      "ipa": "ðɪ ˌɛndʒɪnˈɪɹz sᵻlˈɛktᵻd ɔnðɪ ˈaʊtkʌm ðeɪ plˈɑːɾᵻd ˈoʊnli ðə flˈaɪts wˌɛɹ dˈæmɪdʒ hæd əkˈɜːd",
+      "hyp_base": "The engineers selected on the outcome. They plotted only the flights where damage had occurred.",
+      "wer_base": 0.0,
+      "hyp_small": "The engineers selected on the outcome. They plotted only the flights where damage had occurred.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.64,
+        "bak": 4.21,
+        "ovrl": 3.42
+      }
+    },
+    {
+      "scene": "selection",
+      "text": "That throws away the comparison group.",
+      "duration": 2.1,
+      "ipa": "ðæt θɹˈoʊz ɐwˈeɪ ðə kəmpˈæɹɪsən ɡɹˈuːp",
+      "hyp_base": "That throws away the comparison group.",
+      "wer_base": 0.0,
+      "hyp_small": "that throws away the comparison group.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.44,
+        "bak": 4.03,
+        "ovrl": 3.16
+      }
+    },
+    {
+      "scene": "selection",
+      "text": "Without the flights that went fine, there is nothing for the damaged flights to be different from.",
+      "duration": 4.71,
+      "ipa": "wɪðˌaʊt ðə flˈaɪts ðæt wɛnt fˈaɪn ðɛɹ ɪz nˈʌθɪŋ fɚðə dˈæmɪdʒd flˈaɪts təbi dˈɪfɹənt fɹʌm",
+      "hyp_base": "Without the flights that went fine, there is nothing for the damaged flights to be different from.",
+      "wer_base": 0.0,
+      "hyp_small": "Without the flights that went fine, there is nothing for the damaged flights to be different from.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.47,
+        "bak": 4.11,
+        "ovrl": 3.22
+      }
+    },
+    {
+      "scene": "tufte",
+      "text": "In 1989, three statisticians published a risk analysis using only the data available before the launch.",
+      "duration": 7.26,
+      "ipa": "ɪn nˈaɪntiːnhˈʌndɹɪd ˈeɪɾi nˈaɪn θɹˈiː stˌæɾɪstˈɪʃənz pˈʌblɪʃt ɐ ɹˈɪsk ɐnˈæləsˌɪs jˈuːzɪŋ ˈoʊnli ðə dˈeɪɾə ɐvˈeɪləbəl bᵻfˌɔːɹ ðə lˈɑːntʃ",
+      "hyp_base": "In 1989, three statisticians published a risk analysis using only the data available before the launch.",
+      "wer_base": 0.0,
+      "hyp_small": "In 1989, three statisticians published a risk analysis using only the data available before the launch.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.66,
+        "bak": 4.23,
+        "ovrl": 3.47
+      }
+    },
+    {
+      "scene": "tufte",
+      "text": "Their conclusion was that the probability of failure near freezing was very high.",
+      "duration": 4.68,
+      "ipa": "ðɛɹ kəŋklˈuːʒən wʌz ðætðə pɹˌɑːbəbˈɪlᵻɾi ʌv fˈeɪlɪɹ nˌɪɹ fɹˈiːzɪŋ wʌz vˈɛɹi hˈaɪ",
+      "hyp_base": "Their conclusion was that the probability of failure near freezing was very high.",
+      "wer_base": 0.0,
+      "hyp_small": "Their conclusion was that the probability of failure near freezing was very high.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.62,
+        "bak": 4.2,
+        "ovrl": 3.42
+      }
+    },
+    {
+      "scene": "tufte",
+      "text": "Edward Tufte later made the same point about the charts themselves: the evidence existed; the display failed to show it.",
+      "duration": 7.07,
+      "ipa": "ˈɛdwɚd tˈʌft lˈeɪɾɚ mˌeɪd ðə sˈeɪm pˈɔɪnt ɐbˌaʊt ðə tʃˈɑːɹts ðɛmsˈɛlvz ðɪ ˈɛvɪdəns ɛɡzˈɪstᵻd ðə dɪsplˈeɪ fˈeɪld tə ʃˈoʊ ɪt",
+      "hyp_base": "Edward Tuft later made the same point about the charts themselves. The evidence existed, the display failed to show it.",
+      "wer_base": 0.05,
+      "hyp_small": "Edward Tuft later made the same point about the charts themselves. The evidence existed. The display failed to show it.",
+      "wer_small": 0.05,
+      "wer_best": 0.05,
+      "dnsmos": {
+        "sig": 3.66,
+        "bak": 4.21,
+        "ovrl": 3.45
+      }
+    },
+    {
+      "scene": "why",
+      "text": "Twenty-three rows and two columns.",
+      "duration": 1.87,
+      "ipa": "twˈɛntiθɹˈiː ɹˈoʊz ænd tˈuː kˈɑːlʌmz",
+      "hyp_base": "23 rows and two columns.",
+      "wer_base": 0.0,
+      "hyp_small": "23 rows and 2 columns.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.63,
+        "bak": 4.15,
+        "ovrl": 3.39
+      }
+    },
+    {
+      "scene": "why",
+      "text": "Shown in full, they told the truth.",
+      "duration": 1.84,
+      "ipa": "ʃˈoʊn ɪn fˈʊl ðeɪ tˈoʊld ðə tɹˈuːθ",
+      "hyp_base": "Shown in full, they told the truth.",
+      "wer_base": 0.0,
+      "hyp_small": "Shown in full, they told the truth.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.6,
+        "bak": 4.16,
+        "ovrl": 3.39
+      }
+    },
+    {
+      "scene": "why",
+      "text": "Shown in part, they said nothing at all.",
+      "duration": 1.95,
+      "ipa": "ʃˈoʊn ɪn pˈɑːɹt ðeɪ sˈɛd nˈʌθɪŋ æɾ ˈɔːl",
+      "hyp_base": "Shown in part, they said nothing at all.",
+      "wer_base": 0.0,
+      "hyp_small": "Shown in part, they said nothing at all.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.61,
+        "bak": 4.15,
+        "ovrl": 3.37
+      }
+    },
+    {
+      "scene": "outro",
+      "text": "Sources, the data table, and the model fit are in the description.",
+      "duration": 3.82,
+      "ipa": "sˈɔːɹsᵻz ðə dˈeɪɾə tˈeɪbəl ænd ðə mˈɑːdəl fˈɪt ɑːɹ ɪnðə dᵻskɹˈɪpʃən",
+      "hyp_base": "Sources, the data table, and the model fit are in the description. [AUDIO OUT]",
+      "wer_base": 0.0,
+      "hyp_small": "Sources, the data table, and the model fit are in the description.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.67,
+        "bak": 4.21,
+        "ovrl": 3.45
+      }
+    },
+    {
+      "scene": "outro",
+      "text": "Next time: six hundred and sixteen dots, and the map that found the source of cholera.",
+      "duration": 4.95,
+      "ipa": "nˈɛkst tˈaɪm sˈɪks hˈʌndɹɪd ænd sˈɪkstiːn dˈɑːts ænd ðə mˈæp ðæt fˈaʊnd ðə sˈɔːɹs ʌv kˈɑːlɚɹə",
+      "hyp_base": "Next time, 616 dots and the map that found the source of cholera.",
+      "wer_base": 0.0,
+      "hyp_small": "Next time, 616 dots and the map that found the source of cholera.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.69,
+        "bak": 4.22,
+        "ovrl": 3.48
+      }
+    }
+  ],
+  "disclaimer": "Machine evaluation on the actual synthesized audio: two-model ASR round-trip (intelligibility), DNSMOS P.835 (perceptual quality estimate), G2P phoneme listing (pronunciation review). No human listening test was performed."
+}

@@ -16,6 +16,8 @@ FILES = [
      "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d"),
     ("https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-whisper-base.en.tar.bz2", "asr/sherpa-onnx-whisper-base.en.tar.bz2",
      "475bc7052ce299c007f6d5d5407ba8601f819a2867f6eecee510ed17df581542"),
+    ("https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-whisper-small.en.tar.bz2", "asr/sherpa-onnx-whisper-small.en.tar.bz2",
+     "0cdba2b8aaab69e04847f3427cc9709574112e67913a1a84b7fec3a8729faa9a"),
     # DNSMOS P.835 (Microsoft DNS-Challenge, CC BY 4.0) — QC only, never shipped in outputs
     ("https://raw.githubusercontent.com/microsoft/DNS-Challenge/master/DNSMOS/DNSMOS/sig_bak_ovr.onnx", "dnsmos/sig_bak_ovr.onnx", None),
     ("https://raw.githubusercontent.com/microsoft/DNS-Challenge/master/LICENSE", "dnsmos/LICENSE", None),
@@ -49,13 +51,13 @@ def fetch(url: str, dst: Path, expect: str | None) -> None:
 def main() -> None:
     for url, rel, expect in FILES:
         fetch(url, MODELS / rel, expect)
-    tb = MODELS / "asr" / "sherpa-onnx-whisper-base.en.tar.bz2"
-    d = MODELS / "asr" / "sherpa-onnx-whisper-base.en"
-    if not (d / "base.en-encoder.int8.onnx").exists():
-        print("extract whisper base.en")
-        with tarfile.open(tb) as t:
-            t.extractall(MODELS / "asr", filter="data")
-    print("sha256 whisper tarball:", sha256(tb))
+    for name, marker in (("base.en", "base.en-encoder.int8.onnx"), ("small.en", "small.en-encoder.int8.onnx")):
+        tb = MODELS / "asr" / f"sherpa-onnx-whisper-{name}.tar.bz2"
+        d = MODELS / "asr" / f"sherpa-onnx-whisper-{name}"
+        if not (d / marker).exists():
+            print(f"extract whisper {name}")
+            with tarfile.open(tb) as t:
+                t.extractall(MODELS / "asr", filter="data")
     print("models ready")
 
 

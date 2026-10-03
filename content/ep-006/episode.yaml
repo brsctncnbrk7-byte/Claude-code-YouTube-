@@ -48,13 +48,15 @@ thumbnail:
   chosen: 0
 gate:
   original_narrative: true
-  sources_verified: false
+  sources_verified: true
   visuals_explain: true
   distinct_from_previous: true
   title_thumbnail_honest: true
   ad_suitability_noted: true
   licenses_recorded: true
-  notes: Not yet built. Two-party shares (37.5/62.5) are derived from 36.5/60.8; narration says 'about 62 to 38'.
+  notes: 'sources_verified: poll figures (10M mailed, 2.4M returned, 57/43; Gallup ~50k, 56%) and the 1936 result (60.8/36.5 → two-party 62.5/37.5) agree across the cited secondary sources; Squire (1988) and Lusinchi (2012) summaries used for the two-bias explanation; narration hedges (''later analysis found''). frames_reviewed (2026-10-03): funnel and compare_polls frames inspected — stacked bars show Landon/Roosevelt shares for Digest, Gallup and the result; labels legible. audio_reviewed: deep evaluation audio_ok (two-model ASR mean WER 0.019, DNSMOS OVRL median 3.39, 0 flagged); base-model deviations are decimal/percent renderings (''2.4 million'', ''24%'') and proper nouns (Landon, Squire, Digest). No human listening test was performed.'
+  frames_reviewed: true
+  audio_reviewed: true
 scenes:
 - id: hook
   kind: text

@@ -1,0 +1,515 @@
+{
+  "episode": "ep-006",
+  "format": "long",
+  "checks": {
+    "container": {
+      "codec": "h264",
+      "pix_fmt": "yuv420p",
+      "w": 1920,
+      "h": 1080,
+      "fps": "30/1",
+      "audio": "aac 48000Hz",
+      "duration": 160.467,
+      "frames": 4814,
+      "expected_frames": 4814,
+      "ok": true
+    },
+    "blackdetect": {
+      "events": [],
+      "ok": true
+    },
+    "silencedetect": {
+      "events": [],
+      "ok": true
+    },
+    "loudness": {
+      "integrated_lufs": -14.01,
+      "true_peak_dbtp": -2.88,
+      "lra": 2.8,
+      "ok": true
+    },
+    "subtitles": {
+      "cues": 46,
+      "long_or_tall": 0,
+      "ok": true
+    },
+    "text_overflow": {
+      "scenes": [],
+      "ok": true
+    },
+    "frame_samples": {
+      "count": 18,
+      "dir": "/home/user/Claude-code-YouTube-/reports/ep-006/long/frames",
+      "reviewed_by_claude": true
+    },
+    "frame_content": {
+      "blank_frames": [],
+      "ok": true
+    }
+  },
+  "audio_eval": {
+    "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-006/long/spectrogram.png",
+    "phonemes": [
+      {
+        "scene": "hook",
+        "text": "In October 1936, an American magazine announced the result of the largest opinion poll ever taken.",
+        "ipa": "ɪn ɑːktˈoʊbɚ nˈaɪntiːnhˈʌndɹɪd θˈɜːɾi sˈɪks ɐn ɐmˈɛɹɪkən mˌæɡɐzˈiːn ɐnˈaʊnst ðə ɹɪzˈʌlt ʌvðə lˈɑːɹdʒɪst əpˈɪniən pˈoʊl ˈɛvɚ tˈeɪkən"
+      },
+      {
+        "scene": "hook",
+        "text": "Two million four hundred thousand ballots, returned by mail.",
+        "ipa": "tˈuː mˈɪliən fˈɔːɹ hˈʌndɹɪd θˈaʊzənd bˈæləts ɹᵻtˈɜːnd baɪ mˈeɪl"
+      },
+      {
+        "scene": "hook",
+        "text": "Its prediction: Alf Landon would beat Franklin Roosevelt, fifty-seven to forty-three.",
+        "ipa": "ɪts pɹɪdˈɪkʃən ˈælf lˈændən wʊd bˈiːt fɹˈæŋklɪn ɹˈoʊzəvˌɛlt fˈɪftisˈɛvən tə fˈɔːɹɾiθɹˈiː"
+      },
+      {
+        "scene": "title",
+        "text": "Three weeks later Roosevelt won forty-six of forty-eight states.",
+        "ipa": "θɹˈiː wˈiːks lˈeɪɾɚ ɹˈoʊzəvˌɛlt wˈʌn fˈɔːɹɾisˈɪks ʌv fˈɔːɹɾiˈeɪt stˈeɪts"
+      },
+      {
+        "scene": "title",
+        "text": "This is the story of how the biggest poll in history got it backwards, and why a much smaller one got it right.",
+        "ipa": "ðɪs ɪz ðə stˈɔːɹi ʌv hˌaʊ ðə bˈɪɡɪst pˈoʊl ɪn hˈɪstɚɹi ɡɑːt ɪt bˈækwɚdz ænd wˌaɪ ɐ mˈʌtʃ smˈɔːlɚ wˈʌn ɡɑːt ɪt ɹˈaɪt"
+      },
+      {
+        "scene": "funnel",
+        "text": "The Literary Digest had called every presidential election since 1916.",
+        "ipa": "ðə lˈɪɾɚɹˌɛɹi daɪdʒˈɛst hæd kˈɔːld ˈɛvɹi pɹˌɛzɪdˈɛnʃəl ᵻlˈɛkʃən sˈɪns nˈaɪntiːnhˈʌndɹɪd sˈɪkstiːn"
+      },
+      {
+        "scene": "funnel",
+        "text": "Its method was scale.",
+        "ipa": "ɪts mˈɛθəd wʌz skˈeɪl"
+      },
+      {
+        "scene": "funnel",
+        "text": "It mailed ten million ballots, to names taken from telephone directories, automobile registrations and its own subscriber lists.",
+        "ipa": "ɪt mˈeɪld tˈɛn mˈɪliən bˈæləts tə nˈeɪmz tˈeɪkən fɹʌm tˈɛlᵻfˌoʊn dᵻɹˈɛktɚɹiz ˈɔːɾəməbˌiəl ɹˌɛdʒɪstɹˈeɪʃənz ænd ɪts ˈoʊn səbskɹˈaɪbɚ lˈɪsts"
+      },
+      {
+        "scene": "funnel",
+        "text": "About twenty-four percent came back.",
+        "ipa": "ɐbˌaʊt twˈɛntifˈɔːɹ pɚsˈɛnt kˈeɪm bˈæk"
+      },
+      {
+        "scene": "funnel",
+        "text": "Two point four million is an enormous sample.",
+        "ipa": "tˈuː pˈɔɪnt fˈɔːɹ mˈɪliən ɪz ɐn ɪnˈɔːɹməs sˈæmpəl"
+      },
+      {
+        "scene": "funnel",
+        "text": "It was also the wrong one, twice over.",
+        "ipa": "ɪt wʌz ˈɔːlsoʊ ðə ɹˈɔŋ wˈʌn twˈaɪs ˈoʊvɚ"
+      },
+      {
+        "scene": "compare_polls",
+        "text": "Here are the three numbers side by side.",
+        "ipa": "hˈɪɹ ɑːɹ ðə θɹˈiː nˈʌmbɚz sˈaɪd baɪ sˈaɪd"
+      },
+      {
+        "scene": "compare_polls",
+        "text": "The Digest, with two point four million ballots: Landon fifty-seven.",
+        "ipa": "ðə dˈaɪdʒɛst wɪð tˈuː pˈɔɪnt fˈɔːɹ mˈɪliən bˈæləts lˈændən fˈɪftisˈɛvən"
+      },
+      {
+        "scene": "compare_polls",
+        "text": "George Gallup, a young pollster with roughly fifty thousand interviews, chosen to mirror the population by region, income and sex: Roosevelt fifty-six.",
+        "ipa": "dʒˈɔːɹdʒ ɡˈælʌp ɐ jˈʌŋ pˈɑːlstɚ wɪð ɹˈʌfli fˈɪfti θˈaʊzənd ˈɪntɚvjˌuːz tʃˈoʊzən tə mˈɪɹɚ ðə pˌɑːpjʊlˈeɪʃən baɪ ɹˈiːdʒən ˈɪŋkʌm ænd sˈɛks ɹˈoʊzəvˌɛlt fˈɪftisˈɪks"
+      },
+      {
+        "scene": "compare_polls",
+        "text": "The election: Roosevelt about sixty-two to thirty-eight.",
+        "ipa": "ðɪ ᵻlˈɛkʃən ɹˈoʊzəvˌɛlt ɐbˌaʊt sˈɪkstitˈuː tə θˈɜːɾiˈeɪt"
+      },
+      {
+        "scene": "compare_polls",
+        "text": "The small sample was close.",
+        "ipa": "ðə smˈɔːl sˈæmpəl wʌz klˈoʊs"
+      },
+      {
+        "scene": "compare_polls",
+        "text": "The huge one was off by nineteen points.",
+        "ipa": "ðə hjˈuːdʒ wˈʌn wʌz ˈɔf baɪ nˈaɪntiːn pˈɔɪnts"
+      },
+      {
+        "scene": "selection",
+        "text": "The first problem was who received a ballot.",
+        "ipa": "ðə fˈɜːst pɹˈɑːbləm wʌz hˌuː ɹᵻsˈiːvd ɐ bˈælət"
+      },
+      {
+        "scene": "selection",
+        "text": "In 1936, in the middle of the Depression, owning a telephone or a car marked you as better off than most voters, and better-off voters leaned Republican.",
+        "ipa": "ɪn nˈaɪntiːnhˈʌndɹɪd θˈɜːɾi sˈɪks ɪnðə mˈɪdəl ʌvðə dᵻpɹˈɛʃən ˈoʊnɪŋ ɐ tˈɛlᵻfˌoʊn ɔːɹ ɐ kˈɑːɹ mˈɑːɹkt juː æz bˈɛɾɚɹ ˈɔf ðɐn mˈoʊst vˈoʊɾɚz ænd bˈɛɾɚɹˈɔf vˈoʊɾɚz lˈiːnd ɹᵻpˈʌblɪkən"
+      },
+      {
+        "scene": "selection",
+        "text": "The list itself tilted toward Landon.",
+        "ipa": "ðə lˈɪst ɪtsˈɛlf tˈɪltᵻd təwˈɔːɹd lˈændən"
+      },
+      {
+        "scene": "nonresponse",
+        "text": "The second problem was who bothered to reply.",
+        "ipa": "ðə sˈɛkənd pɹˈɑːbləm wʌz hˌuː bˈɑːðɚd tə ɹᵻplˈaɪ"
+      },
+      {
+        "scene": "nonresponse",
+        "text": "Only one in four did.",
+        "ipa": "ˈoʊnli wˈʌn ɪn fˈɔːɹ dˈɪd"
+      },
+      {
+        "scene": "nonresponse",
+        "text": "In 1937 Gallup asked people whether they had received a Digest ballot and whether they had returned it.",
+        "ipa": "ɪn nˈaɪntiːnhˈʌndɹɪd θˈɜːɾi sˈɛvən ɡˈælʌp ˈæskt pˈiːpəl wˈɛðɚ ðeɪ hæd ɹᵻsˈiːvd ɐ dˈaɪdʒɛst bˈælət ænd wˈɛðɚ ðeɪ hæd ɹᵻtˈɜːnd ɪt"
+      },
+      {
+        "scene": "nonresponse",
+        "text": "Roosevelt supporters on the list had been less likely to send it back.",
+        "ipa": "ɹˈoʊzəvˌɛlt səpˈɔːɹɾɚz ɔnðə lˈɪst hɐdbɪn lˈɛs lˈaɪkli tə sˈɛnd ɪt bˈæk"
+      },
+      {
+        "scene": "nonresponse",
+        "text": "In 1988 the political scientist Peverill Squire re-analysed that survey and concluded that both biases were real, and that the failure to respond was the larger one.",
+        "ipa": "ɪn nˈaɪntiːnhˈʌndɹɪd ˈeɪɾi ˈeɪt ðə pəlˈɪɾɪkəl sˈaɪəntɪst pˈɛvɚɹˌɪl skwˈaɪɚ ɹˌiːˈænɐlˌaɪzd ðæt sˈɜːveɪ ænd kəŋklˈuːdᵻd ðæt bˈoʊθ bˈaɪəsᵻz wɜː ɹˈiːəl ænd ðætðə fˈeɪlɪɹ tə ɹᵻspˈɑːnd wʌzðə lˈɑːɹdʒɚ wˌʌn"
+      },
+      {
+        "scene": "lesson",
+        "text": "This is the lesson that survived.",
+        "ipa": "ðɪs ɪz ðə lˈɛsən ðæt sɚvˈaɪvd"
+      },
+      {
+        "scene": "lesson",
+        "text": "A biased sample does not get more accurate as it grows.",
+        "ipa": "ɐ bˈaɪəst sˈæmpəl dʌznˌɑːt ɡɛt mˈɔːɹ ˈækjʊɹət æz ɪt ɡɹˈoʊz"
+      },
+      {
+        "scene": "lesson",
+        "text": "It gets more confident.",
+        "ipa": "ɪt ɡˈɛts mˈɔːɹ kˈɑːnfɪdənt"
+      },
+      {
+        "scene": "lesson",
+        "text": "Two point four million ballots gave the Digest a precise estimate of the wrong population.",
+        "ipa": "tˈuː pˈɔɪnt fˈɔːɹ mˈɪliən bˈæləts ɡˈeɪv ðə dˈaɪdʒɛst ɐ pɹɪsˈaɪs ˈɛstᵻmət ʌvðə ɹˈɔŋ pˌɑːpjʊlˈeɪʃən"
+      },
+      {
+        "scene": "aftermath",
+        "text": "The Literary Digest folded within two years.",
+        "ipa": "ðə lˈɪɾɚɹˌɛɹi daɪdʒˈɛst fˈoʊldᵻd wɪðˌɪn tˈuː jˈɪɹz"
+      },
+      {
+        "scene": "aftermath",
+        "text": "Gallup's approach, small samples designed to look like the country, became the standard.",
+        "ipa": "ɡˈælʌps ɐpɹˈoʊtʃ smˈɔːl sˈæmpəlz dɪzˈaɪnd tə lˈʊk lˈaɪk ðə kˈʌntɹi bɪkˌeɪm ðə stˈændɚd"
+      },
+      {
+        "scene": "aftermath",
+        "text": "It would fail in its own way in 1948, but that is another episode.",
+        "ipa": "ɪt wʊd fˈeɪl ɪn ɪts ˈoʊn wˈeɪ ɪn nˈaɪntiːnhˈʌndɹɪd fˈɔːɹɾi ˈeɪt bˌʌt ðæt ɪz ɐnˈʌðɚɹ ˈɛpɪsˌoʊd"
+      },
+      {
+        "scene": "outro",
+        "text": "Sources for this episode are in the description.",
+        "ipa": "sˈɔːɹsᵻz fɔːɹ ðɪs ˈɛpɪsˌoʊd ɑːɹ ɪnðə dᵻskɹˈɪpʃən"
+      },
+      {
+        "scene": "outro",
+        "text": "Next time: Simpson's paradox, and the admissions data that said two opposite things at once.",
+        "ipa": "nˈɛkst tˈaɪm sˈɪmpsənz pˈæɹədˌɑːks ænd ðɪ ɐdmˈɪʃənz dˈeɪɾə ðæt sˈɛd tˈuː ˈɑːpəzˌɪt θˈɪŋz ɐtwˈʌns"
+      }
+    ],
+    "asr": {
+      "model": "whisper-base.en int8 (sherpa-onnx)",
+      "seconds": 38.8,
+      "rows": [
+        {
+          "scene": "hook",
+          "ref": "In October 1936, an American magazine announced the result of the largest opinion poll ever taken.",
+          "hyp": "In October 1936, an American magazine announced the result of the largest opinion poll ever taken.",
+          "wer": 0.0
+        },
+        {
+          "scene": "hook",
+          "ref": "Two million four hundred thousand ballots, returned by mail.",
+          "hyp": "2,400,000 ballots returned by mail.",
+          "wer": 0.222,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-006/long/spectrograms/flag_00_hook.png"
+        },
+        {
+          "scene": "hook",
+          "ref": "Its prediction: Alf Landon would beat Franklin Roosevelt, fifty-seven to forty-three.",
+          "hyp": "Its prediction, Alflanden would beat Franklin Roosevelt 57-43.",
+          "wer": 0.231,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-006/long/spectrograms/flag_01_hook.png"
+        },
+        {
+          "scene": "title",
+          "ref": "Three weeks later Roosevelt won forty-six of forty-eight states.",
+          "hyp": "Three weeks later, Roosevelt, 146 of 48 states.",
+          "wer": 0.182,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-006/long/spectrograms/flag_02_title.png"
+        },
+        {
+          "scene": "title",
+          "ref": "This is the story of how the biggest poll in history got it backwards, and why a much smaller one got it right.",
+          "hyp": "This is the story of how the biggest poll in history got it backwards, and why a much smaller one got it right.",
+          "wer": 0.0
+        },
+        {
+          "scene": "funnel",
+          "ref": "The Literary Digest had called every presidential election since 1916.",
+          "hyp": "The literary digest had called every presidential election since 1916.",
+          "wer": 0.0
+        },
+        {
+          "scene": "funnel",
+          "ref": "Its method was scale.",
+          "hyp": "Its method was scale.",
+          "wer": 0.0
+        },
+        {
+          "scene": "funnel",
+          "ref": "It mailed ten million ballots, to names taken from telephone directories, automobile registrations and its own subscriber lists.",
+          "hyp": "It mailed 10 million ballots to names taken from telephone directories, automobile registrations, and its own subscriber lists.",
+          "wer": 0.0
+        },
+        {
+          "scene": "funnel",
+          "ref": "About twenty-four percent came back.",
+          "hyp": "About 24% came back.",
+          "wer": 0.0
+        },
+        {
+          "scene": "funnel",
+          "ref": "Two point four million is an enormous sample.",
+          "hyp": "2.4 million is an enormous sample.",
+          "wer": 0.0
+        },
+        {
+          "scene": "funnel",
+          "ref": "It was also the wrong one, twice over.",
+          "hyp": "It was also the wrong one, twice over.",
+          "wer": 0.0
+        },
+        {
+          "scene": "compare_polls",
+          "ref": "Here are the three numbers side by side.",
+          "hyp": "Here are the three numbers side by side.",
+          "wer": 0.0
+        },
+        {
+          "scene": "compare_polls",
+          "ref": "The Digest, with two point four million ballots: Landon fifty-seven.",
+          "hyp": "The digest with 2.4 million ballots, landed in 57.",
+          "wer": 0.182,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-006/long/spectrograms/flag_03_compare_polls.png"
+        },
+        {
+          "scene": "compare_polls",
+          "ref": "George Gallup, a young pollster with roughly fifty thousand interviews, chosen to mirror the population by region, income and sex: Roosevelt fifty-six.",
+          "hyp": "George Gallup, a young pollster with roughly 50,000 interviews, chosen to mirror the population by region, income, and sex. Roosevelt 56.",
+          "wer": 0.0
+        },
+        {
+          "scene": "compare_polls",
+          "ref": "The election: Roosevelt about sixty-two to thirty-eight.",
+          "hyp": "The election, Roosevelt about 62 to 38.",
+          "wer": 0.0
+        },
+        {
+          "scene": "compare_polls",
+          "ref": "The small sample was close.",
+          "hyp": "The small sample was close.",
+          "wer": 0.0
+        },
+        {
+          "scene": "compare_polls",
+          "ref": "The huge one was off by nineteen points.",
+          "hyp": "The huge one was off by 19 points.",
+          "wer": 0.0
+        },
+        {
+          "scene": "selection",
+          "ref": "The first problem was who received a ballot.",
+          "hyp": "The first problem was who received a ballot.",
+          "wer": 0.0
+        },
+        {
+          "scene": "selection",
+          "ref": "In 1936, in the middle of the Depression, owning a telephone or a car marked you as better off than most voters, and better-off voters leaned Republican.",
+          "hyp": "In 1936, in the middle of the Depression, owning a telephone or a car marked you as better off than most voters, and better off voters leaned Republican.",
+          "wer": 0.0
+        },
+        {
+          "scene": "selection",
+          "ref": "The list itself tilted toward Landon.",
+          "hyp": "The list itself tilted toward Landon.",
+          "wer": 0.0
+        },
+        {
+          "scene": "nonresponse",
+          "ref": "The second problem was who bothered to reply.",
+          "hyp": "The second problem was who bothered to reply.",
+          "wer": 0.0
+        },
+        {
+          "scene": "nonresponse",
+          "ref": "Only one in four did.",
+          "hyp": "Only 1 in 4 did.",
+          "wer": 0.0
+        },
+        {
+          "scene": "nonresponse",
+          "ref": "In 1937 Gallup asked people whether they had received a Digest ballot and whether they had returned it.",
+          "hyp": "In 1937, Gallup asked people whether they had received a digest ballot and whether they had returned it.",
+          "wer": 0.0
+        },
+        {
+          "scene": "nonresponse",
+          "ref": "Roosevelt supporters on the list had been less likely to send it back.",
+          "hyp": "Roosevelt supporters on the list had been less likely to send it back.",
+          "wer": 0.0
+        },
+        {
+          "scene": "nonresponse",
+          "ref": "In 1988 the political scientist Peverill Squire re-analysed that survey and concluded that both biases were real, and that the failure to respond was the larger one.",
+          "hyp": "In 1988, the political scientist Pevreel Squire re-analyzed that survey and concluded that both biases were real and that the failure to respond was the larger one.",
+          "wer": 0.071,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-006/long/spectrograms/flag_04_nonresponse.png"
+        },
+        {
+          "scene": "lesson",
+          "ref": "This is the lesson that survived.",
+          "hyp": "This is the lesson that survived.",
+          "wer": 0.0
+        },
+        {
+          "scene": "lesson",
+          "ref": "A biased sample does not get more accurate as it grows.",
+          "hyp": "A biased sample does not get more accurate as it grows.",
+          "wer": 0.0
+        },
+        {
+          "scene": "lesson",
+          "ref": "It gets more confident.",
+          "hyp": "It gets more confident.",
+          "wer": 0.0
+        },
+        {
+          "scene": "lesson",
+          "ref": "Two point four million ballots gave the Digest a precise estimate of the wrong population.",
+          "hyp": "2.4 million ballots gave the digest a precise estimate of the wrong population.",
+          "wer": 0.0
+        },
+        {
+          "scene": "aftermath",
+          "ref": "The Literary Digest folded within two years.",
+          "hyp": "The literary digest folded within two years.",
+          "wer": 0.0
+        },
+        {
+          "scene": "aftermath",
+          "ref": "Gallup's approach, small samples designed to look like the country, became the standard.",
+          "hyp": "Gallup's approach, small samples designed to look like the country, became the standard.",
+          "wer": 0.0
+        },
+        {
+          "scene": "aftermath",
+          "ref": "It would fail in its own way in 1948, but that is another episode.",
+          "hyp": "It would fail in its own way in 1948, but that is another episode.",
+          "wer": 0.0
+        },
+        {
+          "scene": "outro",
+          "ref": "Sources for this episode are in the description.",
+          "hyp": "Sources for this episode are in the description.",
+          "wer": 0.0
+        },
+        {
+          "scene": "outro",
+          "ref": "Next time: Simpson's paradox, and the admissions data that said two opposite things at once.",
+          "hyp": "Next time, Simpson's Paradox and the admissions data that said two opposite things at once.",
+          "wer": 0.0
+        }
+      ],
+      "mean_wer": 0.0261,
+      "flagged": [
+        {
+          "scene": "hook",
+          "ref": "Two million four hundred thousand ballots, returned by mail.",
+          "hyp": "2,400,000 ballots returned by mail.",
+          "wer": 0.222,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-006/long/spectrograms/flag_00_hook.png"
+        },
+        {
+          "scene": "hook",
+          "ref": "Its prediction: Alf Landon would beat Franklin Roosevelt, fifty-seven to forty-three.",
+          "hyp": "Its prediction, Alflanden would beat Franklin Roosevelt 57-43.",
+          "wer": 0.231,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-006/long/spectrograms/flag_01_hook.png"
+        },
+        {
+          "scene": "title",
+          "ref": "Three weeks later Roosevelt won forty-six of forty-eight states.",
+          "hyp": "Three weeks later, Roosevelt, 146 of 48 states.",
+          "wer": 0.182,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-006/long/spectrograms/flag_02_title.png"
+        },
+        {
+          "scene": "compare_polls",
+          "ref": "The Digest, with two point four million ballots: Landon fifty-seven.",
+          "hyp": "The digest with 2.4 million ballots, landed in 57.",
+          "wer": 0.182,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-006/long/spectrograms/flag_03_compare_polls.png"
+        },
+        {
+          "scene": "nonresponse",
+          "ref": "In 1988 the political scientist Peverill Squire re-analysed that survey and concluded that both biases were real, and that the failure to respond was the larger one.",
+          "hyp": "In 1988, the political scientist Pevreel Squire re-analyzed that survey and concluded that both biases were real and that the failure to respond was the larger one.",
+          "wer": 0.071,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-006/long/spectrograms/flag_04_nonresponse.png"
+        }
+      ]
+    },
+    "disclaimer": "Audio was evaluated by phoneme review, ASR round-trip and spectrogram inspection; no human listening test was performed.",
+    "deep": {
+      "audio_ok": true,
+      "summary": {
+        "sentences": 34,
+        "mean_wer_best": 0.0109,
+        "mean_wer_base": 0.0261,
+        "mean_wer_small": 0.0119,
+        "models": [
+          "whisper-base.en int8",
+          "whisper-small.en int8"
+        ],
+        "dnsmos_available": true,
+        "ovrl_median": 3.39,
+        "ovrl_min": 3.15,
+        "sig_median": 3.62,
+        "bak_median": 4.19
+      },
+      "flagged": 0,
+      "report": "/home/user/Claude-code-YouTube-/reports/ep-006/long/audio-eval.md"
+    }
+  },
+  "warnings": [],
+  "status": "QC_PASS",
+  "technical_ok": true,
+  "gate": {
+    "original_narrative": true,
+    "sources_verified": true,
+    "visuals_explain": true,
+    "distinct_from_previous": true,
+    "title_thumbnail_honest": true,
+    "ad_suitability_noted": true,
+    "licenses_recorded": true,
+    "frames_reviewed": true,
+    "audio_reviewed": true,
+    "notes": "sources_verified: poll figures (10M mailed, 2.4M returned, 57/43; Gallup ~50k, 56%) and the 1936 result (60.8/36.5 → two-party 62.5/37.5) agree across the cited secondary sources; Squire (1988) and Lusinchi (2012) summaries used for the two-bias explanation; narration hedges ('later analysis found'). frames_reviewed (2026-10-03): funnel and compare_polls frames inspected — stacked bars show Landon/Roosevelt shares for Digest, Gallup and the result; labels legible. audio_reviewed: deep evaluation audio_ok (two-model ASR mean WER 0.019, DNSMOS OVRL median 3.39, 0 flagged); base-model deviations are decimal/percent renderings ('2.4 million', '24%') and proper nouns (Landon, Squire, Digest). No human listening test was performed."
+  },
+  "gate_ok": true
+}

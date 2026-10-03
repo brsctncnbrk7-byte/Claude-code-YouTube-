@@ -40,8 +40,19 @@ _(bu bölüm `reports/<ep>/<fmt>/audio-eval.md` çıktılarıyla doldurulur — 
 
 **Uzunluk ilkesi (ADR-013):** Bölüm uzunluğunu içerik belirler; hiçbir bölüm süre için uzatılmaz. Ek sahne yalnızca yeni bilgi/anlatı değeri katıyorsa eklenir.
 
-## D. Bağımsız inceleme bulguları
-_(alt ajan raporu entegre edilecek)_
+## D. Bağımsız inceleme bulguları (alt ajan, salt okunur; HEAD 09a6208) ve çözümleri
+Alt ajan sonucu: 6 PASS, 2 PARTIAL (ölçüt 7 "repo içinde manifest", ölçüt 8 "kullanıcı repo düzenlemez"). Bulgular ve ana oturumun yaptığı düzeltmeler:
+| # | Bulgu | Çözüm |
+|---|---|---|
+| 1 | Yayımlanan `UPLOAD_CHECKLIST` dosyaları hâlâ "paste the video URL into content/publish-queue.yaml" diyor (düzeltme paketlere yansımamış) | `package.py` adım 7–8 düzeltildi; tüm bölümler yeniden paketlenip yeniden yayımlanıyor (bu incelemenin sonunda release varlıkları doğrulanacak) |
+| 2 | Dört bölümün commit'li `qc.json` dosyaları derin ses katmanından (iki ASR + DNSMOS) önce üretilmiş; `audio-eval.md` yalnızca ep-001 Short için var | Derin QC tüm bölümler için yeniden çalıştırıldı (`reports/pilot/deep-qc.log`); yeni `qc-report.md` ve `audio-eval.md` paketlere ve release'lere giriyor (§B) |
+| 3 | `dist/` git'te izlenmiyor → repoda manifest/checksum yok | `package.py` manifestleri `reports/releases/<ep>/manifest*.json` olarak da yazıyor (izlenen) |
+| 4 | Atıf yapılan eksik dosyalar: `reports/pilot/voice-selection.md`, `content/licenses/{fonts,datasets}.md` | Oluşturuldu |
+| 5 | Bayat metinler: STATUS "ADR-001…011"/"10 test", HANDOFF "ilan edildi", github-quota "ADR-006"/setup-uv, vps-setup "render_queue (yazılacak)"/229 s | Düzeltildi |
+| 6 | Kokoro ağırlık lisansı yazar README'sine dayanıyor; voices/Chromium `secondary`; UCI şartları doğrulanmadı | Etiketler korunuyor; HELP_REQUEST #6/#9 ile kapatılacak; üretimde kullanılan ağırlıkların Apache-2.0 beyanı yazarın kendi deposundan (birincil) |
+| 7 | §C "iki ASR modeli" kodda yalnızca yerelde sağlanıyordu (runner'da small.en yok) | `fetch_models.py` small.en'i (sha256 ile) runner'da da kuruyor; cache anahtarı güncellendi |
+| 8 | WER değerleri belgeler arasında farklı (0.003/0.0076/0.015) | ep-001 raporuna açıklama eklendi; geçerli değerler `audio-eval.md` |
+| 9 | Ölçüt 6 kanıtı: temiz klon komutları repo içinde bir betikte değil | `scripts/repro_check.py` + `docs/operations/recovery.md` adımları; klon zinciri `reports/pilot/chain3.log` başlığında yol ve komut sırasıyla kayıtlı (kabul: yeterli, ancak `scripts/repro_clone.sh` olarak sonraki oturumda betikleştirilecek) |
 
 ## E. Hesap sahibi zorunlulukları (Claude yapamaz)
 Google hesabı/telefon doğrulaması; 2 Adımlı Doğrulama; gelişmiş özellikler için kimlik/telefon; YPP başvurusu; AdSense hesabı, vergi/banka bilgileri, sözleşme kabulü; video yükleme ve zamanlama (channel/SETUP_CHECKLIST.md, docs/operations/publishing.md). Yükleme sonrası kullanıcı yalnızca video URL'sini bildirir; repo kayıtlarını Claude günceller.

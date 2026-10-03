@@ -1,1 +1,13 @@
 == qc ep-001 long 23:08:35
+[qc] QC_PASS technical_ok=True gate_ok=True → reports/ep-001/long/qc-report.md
+[package] /home/user/Claude-code-YouTube-/dist/ep-001
+== qc ep-001 short 23:15:04
+[qc] QC_PASS technical_ok=True gate_ok=True → reports/ep-001/short/qc-report.md
+[package] /home/user/Claude-code-YouTube-/dist/ep-001/short
+== qc ep-002 long 23:15:31
+[qc] QC_PASS technical_ok=True gate_ok=True → reports/ep-002/long/qc-report.md
+[package] /home/user/Claude-code-YouTube-/dist/ep-002
+== qc ep-002 short 23:19:47
+[qc] QC_PASS technical_ok=True gate_ok=True → reports/ep-002/short/qc-report.md
+[package] /home/user/Claude-code-YouTube-/dist/ep-002/short
+== qc ep-003 long 23:20:13

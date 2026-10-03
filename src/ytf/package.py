@@ -66,6 +66,8 @@ def make_package(ep: Episode, fmt: str, bdir: Path, final: Path, tl: Timeline, q
     manifest = {"episode": ep.id, "format": fmt, "created_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
                 "files": {Path(p).name: {"sha256": sha256_file(Path(p)), "bytes": Path(p).stat().st_size} for p in files.values()}}
     write_json(d / ("manifest.json" if fmt == "long" else "manifest-short.json"), manifest)
+    # tracked copy (dist/ is git-ignored): reports/releases/<ep>/manifest*.json keeps checksums in the repo (MASTER_PROMPT §10.7)
+    write_json(paths.REPORTS / "releases" / ep.id / ("manifest.json" if fmt == "long" else "manifest-short.json"), manifest)
     checklist = f"""# Upload checklist — {ep.id} ({fmt})
 1. YouTube Studio → Create → Upload videos → `{Path(files['video']).name}`
 2. Title: `{title}`
@@ -73,7 +75,7 @@ def make_package(ep: Episode, fmt: str, bdir: Path, final: Path, tl: Timeline, q
 4. Thumbnail: `{meta['thumbnail_chosen']}` (long only) • Playlist: `{ep.playlist}`
 5. Audience: {"Yes, made for kids" if ep.audience_made_for_kids else "No, it's not made for kids"} • Altered or synthetic content: {"Yes" if ep.disclosure.altered_or_synthetic else "No"} ({ep.disclosure.rationale})
 6. Subtitles: upload `{Path(files['srt']).name}` (English) • Language: English • Category: Education
-7. Visibility: Schedule → {ep.publish_at_utc or 'see content/publish-queue.yaml'} (UTC) → Save
+7. Visibility: Schedule → {ep.publish_at_utc or 'the date Claude gives you for this episode (15:00 UTC by default)'} → Save
 8. After publishing: tell Claude the video URL (or that the upload is scheduled). Claude records the publish time in the repo; you never edit repo files.
 """
     (d / ("UPLOAD_CHECKLIST.md" if fmt == "long" else "UPLOAD_CHECKLIST-short.md")).write_text(checklist, encoding="utf-8")

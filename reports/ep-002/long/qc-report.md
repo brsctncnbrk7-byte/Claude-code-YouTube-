@@ -17,9 +17,8 @@
 ## C. Audio evaluation (not a human listening test)
 > Audio was evaluated by phoneme review, ASR round-trip and spectrogram inspection; no human listening test was performed.
 
-ASR: whisper-base.en int8 (sherpa-onnx) — mean WER **0.0077**, flagged (WER>0.05): 2
+ASR: whisper-base.en int8 (sherpa-onnx) — mean WER **0.0058**, flagged (WER>0.05): 1
 
-- [all23] WER 0.077: ref=`The engineers' recommendation that night was to not launch below fifty-three degrees.` hyp=`The engineer's recommendation that night was to not launch below 53 degrees.`
 - [caucus] WER 0.133: ref=`Thiokol's management took the call offline for about thirty minutes, returned, and overruled its own engineers.` hyp=`Thio-Call's management took the call offline for about 30 minutes, returned, and overruled its own engineers.`
 
 <details><summary>Phoneme review (IPA per sentence)</summary>

@@ -43,3 +43,53 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[qc] QC_PASS_TECHNICAL_ONLY technical_ok=True gate_ok=False → reports/ep-006/long/qc-report.md
+[package] /home/user/Claude-code-YouTube-/dist/ep-006
+== short
+[tts] 22.9s narration, 5 sentences, 17.9s
+[subs] 7 cues
+[render] /home/user/Claude-code-YouTube-/build/ep-006/short/video.mp4 in 40.7s
+[mux] /home/user/Claude-code-YouTube-/build/ep-006/short/ep-006.mp4 (measured I=-25.66 LUFS → -14)
+[done] build ep-006/short in 64.3s
+
+
+
+
+
+
+
+
+
+
+[qc] QC_PASS_TECHNICAL_ONLY technical_ok=True gate_ok=False → reports/ep-006/short/qc-report.md
+[package] /home/user/Claude-code-YouTube-/dist/ep-006/short
+EXIT 0

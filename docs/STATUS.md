@@ -6,8 +6,8 @@
 
 ## Tamamlanan somut çıktılar
 - Repo iskeleti, CLAUDE.md, MIT lisans, sır taraması, ortam raporu betiği
-- docs: MASTER_PLAN, DECISIONS (ADR-001…011 + 004a), politika kayıtları (etiketli), araştırma (ortam, araç/lisans, niş), operasyon (yayın, ölçüm, kurtarma, süreklilik, GitHub kota, VPS taslağı)
-- `src/ytf` üretim hattı: Kokoro TTS → zaman çizelgesi → SRT/VTT → HTML/SVG sahneler (Playwright) → FFmpeg → loudnorm+limiter → QC (teknik + 3 katmanlı ses) → paket (manifest sha256) — 10 test geçiyor
+- docs: MASTER_PLAN, DECISIONS (ADR-001…013 + 004a), politika kayıtları (etiketli), araştırma (ortam, araç/lisans, niş), operasyon (yayın, ölçüm, kurtarma, süreklilik, GitHub kota, VPS taslağı)
+- `src/ytf` üretim hattı: Kokoro TTS → zaman çizelgesi → SRT/VTT → HTML/SVG sahneler (Playwright) → FFmpeg → loudnorm+limiter → QC (teknik + derin ses: iki ASR + DNSMOS) → paket (manifest sha256; kopyası reports/releases/) — 12 test geçiyor
 - **Pilot #1 ep-001 (Nightingale): QC_PASS uzun (4.8 dk) + Short** — `dist/ep-001/`
 - **Pilot #2 ep-002 (Challenger): QC_PASS uzun (3.0 dk) + Short** — `dist/ep-002/`; aynı hat, farklı veri/sahne türleri, kod değişikliği gerekmedi
 - **ep-003 (Snow): QC_PASS uzun (2.6 dk) + Short** — `dist/ep-003/`; yeni `dots` sahnesi; tarihsiz satır filtresi

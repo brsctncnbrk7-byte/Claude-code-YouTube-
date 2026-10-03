@@ -1,0 +1,943 @@
+{
+  "episode": "ep-001",
+  "format": "long",
+  "summary": {
+    "sentences": 57,
+    "mean_wer_best": 0.0012,
+    "mean_wer_base": 0.0076,
+    "mean_wer_small": 0.0012,
+    "models": [
+      "whisper-base.en int8",
+      "whisper-small.en int8"
+    ],
+    "dnsmos_available": true,
+    "ovrl_median": 3.41,
+    "ovrl_min": 3.14,
+    "sig_median": 3.63,
+    "bak_median": 4.19
+  },
+  "thresholds": {
+    "mean_wer_max": 0.05,
+    "sentence_wer_max": 0.34,
+    "ovrl_median_min": 3.0,
+    "ovrl_sentence_min": 2.6
+  },
+  "audio_ok": true,
+  "flagged": [],
+  "minor": [],
+  "rows": [
+    {
+      "scene": "hook",
+      "text": "In January 1855, the British army besieging Sevastopol was dying at a rate of one thousand and twenty-three men per thousand, per year.",
+      "duration": 10.67,
+      "ipa": "ɪn dʒˈænjuːˌɛɹi wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti fˈaɪv ðə bɹˈɪɾɪʃ ˈɑːɹmi bᵻsˈiːdʒɪŋ sˈɛvɐstˌɑːpɑːl wʌz dˈaɪɪŋ æɾɚ ɹˈeɪt ʌv wˈʌn θˈaʊzənd ænd twˈɛntiθɹˈiː mˈɛn pɜː θˈaʊzənd pɜː jˈɪɹ",
+      "hyp_base": "In January 1855, the British Army besieging Sevastopol was dying at a rate of 1,023 men per thousand per year.",
+      "wer_base": 0.0,
+      "hyp_small": "In January 1855, the British Army besieging Sevastopol was dying at a rate of 1,023 men per thousand, per year.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.63,
+        "bak": 4.19,
+        "ovrl": 3.41
+      }
+    },
+    {
+      "scene": "hook",
+      "text": "Read that again.",
+      "duration": 1.01,
+      "ipa": "ɹˈiːd ðæt ɐɡˈɛn",
+      "hyp_base": "Read that again.",
+      "wer_base": 0.0,
+      "hyp_small": "Read that again.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.38,
+        "bak": 4.11,
+        "ovrl": 3.15
+      }
+    },
+    {
+      "scene": "hook",
+      "text": "At that rate, disease alone would have wiped out the entire army in under a year, without the enemy firing a shot.",
+      "duration": 6.56,
+      "ipa": "æt ðæt ɹˈeɪt dɪzˈiːz ɐlˈoʊn wʊdhɐv wˈaɪpt ˈaʊt ðɪ ɛntˈaɪɚɹ ˈɑːɹmi ɪn ˌʌndɚɹ ɐ jˈɪɹ wɪðˌaʊt ðɪ ˈɛnəmi fˈaɪɚɹɪŋ ɐ ʃˈɑːt",
+      "hyp_base": "At that rate, disease alone would have wiped out the entire army in under a year, without the enemy firing a shot.",
+      "wer_base": 0.0,
+      "hyp_small": "At that rate, disease alone would have wiped out the entire army in under a year, without the enemy firing a shot.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.56,
+        "bak": 4.04,
+        "ovrl": 3.27
+      }
+    },
+    {
+      "scene": "title",
+      "text": "This is the story of how one woman turned that ledger into a picture, and why the picture worked where the numbers had failed.",
+      "duration": 6.57,
+      "ipa": "ðɪs ɪz ðə stˈɔːɹi ʌv hˌaʊ wˈʌn wˈʊmən tˈɜːnd ðæt lˈɛdʒɚɹ ˌɪntʊ ɐ pˈɪktʃɚ ænd wˌaɪ ðə pˈɪktʃɚ wˈɜːkt wˌɛɹ ðə nˈʌmbɚz hæd fˈeɪld",
+      "hyp_base": "This is the story of how one woman turned that ledger into a picture, and why the picture worked where the numbers had failed. [buzzer]",
+      "wer_base": 0.0,
+      "hyp_small": "This is the story of how one woman turned that ledger into a picture and why the picture worked where the numbers had failed.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.65,
+        "bak": 4.19,
+        "ovrl": 3.43
+      }
+    },
+    {
+      "scene": "bars_all",
+      "text": "Here is every month of the war, from April 1854 to March 1856.",
+      "duration": 7.24,
+      "ipa": "hˈɪɹ ɪz ˈɛvɹi mˈʌnθ ʌvðə wˈɔːɹ fɹʌm ˈeɪpɹəl wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti fˈɔːɹ tə mˈɑːɹtʃ wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti sˈɪks",
+      "hyp_base": "Here is every month of the war, from April 1854 to March 1856.",
+      "wer_base": 0.0,
+      "hyp_small": "Here is every month of the war, from April 1854 to March 1856.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.62,
+        "bak": 4.21,
+        "ovrl": 3.41
+      }
+    },
+    {
+      "scene": "bars_all",
+      "text": "Blue is death from disease: cholera, typhus, dysentery.",
+      "duration": 3.48,
+      "ipa": "blˈuː ɪz dˈɛθ fɹʌm dɪzˈiːz kˈɑːlɚɹə tˈaɪfəs dˈɪsəntɚɹi",
+      "hyp_base": "Blue is death from disease, cholera typhus dysentery.",
+      "wer_base": 0.0,
+      "hyp_small": "Blue is death from disease, cholera typhus dysentery.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.63,
+        "bak": 4.23,
+        "ovrl": 3.44
+      }
+    },
+    {
+      "scene": "bars_all",
+      "text": "Red is death from wounds.",
+      "duration": 1.42,
+      "ipa": "ɹˈɛd ɪz dˈɛθ fɹʌm wˈuːndz",
+      "hyp_base": "Red is death from wounds.",
+      "wer_base": 0.0,
+      "hyp_small": "Red is death from wounds.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.51,
+        "bak": 4.13,
+        "ovrl": 3.27
+      }
+    },
+    {
+      "scene": "bars_all",
+      "text": "White is everything else.",
+      "duration": 1.42,
+      "ipa": "wˈaɪt ɪz ˈɛvɹɪθˌɪŋ ˈɛls",
+      "hyp_base": "White is everything else.",
+      "wer_base": 0.0,
+      "hyp_small": "White is everything else.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.56,
+        "bak": 4.11,
+        "ovrl": 3.31
+      }
+    },
+    {
+      "scene": "bars_all",
+      "text": "The bars are not close.",
+      "duration": 1.27,
+      "ipa": "ðə bˈɑːɹz ɑːɹ nˌɑːt klˈoʊs",
+      "hyp_base": "The bars are not close.",
+      "wer_base": 0.0,
+      "hyp_small": "The bars are not close.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.65,
+        "bak": 4.2,
+        "ovrl": 3.42
+      }
+    },
+    {
+      "scene": "bars_all",
+      "text": "Over the whole war, disease killed fourteen thousand four hundred and seventy-six British soldiers.",
+      "duration": 5.71,
+      "ipa": "ˌoʊvɚ ðə hˈoʊl wˈɔːɹ dɪzˈiːz kˈɪld fˈɔːɹtiːn θˈaʊzənd fˈɔːɹ hˈʌndɹɪd ænd sˈɛvəntisˈɪks bɹˈɪɾɪʃ sˈoʊldʒɚz",
+      "hyp_base": "Over the whole war, disease killed 14,400 and 76 British soldiers.",
+      "wer_base": 0.0,
+      "hyp_small": "Over the whole war, disease killed 14,400 and 76 British soldiers.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.53,
+        "bak": 4.17,
+        "ovrl": 3.29
+      }
+    },
+    {
+      "scene": "bars_all",
+      "text": "Wounds killed one thousand seven hundred and fifty-eight.",
+      "duration": 3.09,
+      "ipa": "wˈuːndz kˈɪld wˈʌn θˈaʊzənd sˈɛvən hˈʌndɹɪd ænd fˈɪftiˈeɪt",
+      "hyp_base": "Wounds killed 1,758.",
+      "wer_base": 0.0,
+      "hyp_small": "Wounds killed 1,758.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.66,
+        "bak": 4.2,
+        "ovrl": 3.45
+      }
+    },
+    {
+      "scene": "bars_all",
+      "text": "For every soldier killed by the enemy, eight died of something that could have been prevented.",
+      "duration": 4.81,
+      "ipa": "fɔːɹ ˈɛvɹi sˈoʊldʒɚ kˈɪld baɪ ðɪ ˈɛnəmi ˈeɪt dˈaɪd ʌv sˈʌmθɪŋ ðæt kˌʊdɐv bˌɪn pɹɪvˈɛntᵻd",
+      "hyp_base": "For every soldier killed by the enemy, eight died of something that could have been prevented.",
+      "wer_base": 0.0,
+      "hyp_small": "For every soldier killed by the enemy, eight died of something that could have been prevented.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.62,
+        "bak": 4.21,
+        "ovrl": 3.42
+      }
+    },
+    {
+      "scene": "ledger",
+      "text": "The numbers came from army returns, compiled with William Farr, the statistician at the General Register Office.",
+      "duration": 6.85,
+      "ipa": "ðə nˈʌmbɚz kˈeɪm fɹʌm ˈɑːɹmi ɹᵻtˈɜːnz kəmpˈaɪld wɪð wˈɪljəm fˈɑːɹ ðə stˌæɾɪstˈɪʃən æt ðə dʒˈɛnɚɹəl ɹˈɛdʒɪstɚɹ ˈɑːfɪs",
+      "hyp_base": "The numbers came from Army Returns, compiled with William Far, the statistician at the General Register Office.",
+      "wer_base": 0.0,
+      "hyp_small": "The numbers came from Army returns, compiled with William Farr, the statistician at the General Register Office.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.64,
+        "bak": 4.21,
+        "ovrl": 3.42
+      }
+    },
+    {
+      "scene": "ledger",
+      "text": "Florence Nightingale reached the barracks hospital at Scutari in November 1854 and found the record keeping in disarray.",
+      "duration": 8.72,
+      "ipa": "flˈɔːɹəns nˈaɪɾɪŋɡˌeɪl ɹˈiːtʃt ðə bˈɛɹəks hˈɑːspɪɾəl æt skjuːtˈɑːɹɹi ɪn noʊvˈɛmbɚ wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti fˈɔːɹ ænd fˈaʊnd ðə ɹˈɛkɚd kˈiːpɪŋ ɪn dˌɪsɚɹˈeɪ",
+      "hyp_base": "Florence Nightingale reached the barracks hospital at Scutari in November 1854 and found the record keeping in disarray.",
+      "wer_base": 0.0,
+      "hyp_small": "Florence Nightingale reached the barracks hospital at Scutari in November 1854 and found the record keeping in disarray.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.71,
+        "bak": 4.22,
+        "ovrl": 3.51
+      }
+    },
+    {
+      "scene": "ledger",
+      "text": "She sorted every death into three columns: zymotic disease, meaning epidemic and preventable; wounds; and everything else.",
+      "duration": 8.0,
+      "ipa": "ʃiː sˈɔːɹɾᵻd ˈɛvɹi dˈɛθ ˌɪntʊ θɹˈiː kˈɑːlʌmz zaɪmˈɑːɾɪk dɪzˈiːz mˈiːnɪŋ ˌɛpɪdˈɛmɪk ænd pɹɪvˈɛntəbəl wˈuːndz ænd ˈɛvɹɪθˌɪŋ ˈɛls",
+      "hyp_base": "She sorted every death into three columns, \"zymotic disease\" meaning epidemic and preventable, wounds and everything else.",
+      "wer_base": 0.0,
+      "hyp_small": "She sorted every death into three columns-- zymotic disease, meaning epidemic and preventable, wounds, and everything else.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.66,
+        "bak": 4.22,
+        "ovrl": 3.45
+      }
+    },
+    {
+      "scene": "ledger",
+      "text": "Counting came before cleaning.",
+      "duration": 1.58,
+      "ipa": "kˈaʊntɪŋ kˈeɪm bᵻfˌɔːɹ klˈiːnɪŋ",
+      "hyp_base": "counting came before cleaning.",
+      "wer_base": 0.0,
+      "hyp_small": "Counting came before cleaning.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.66,
+        "bak": 4.16,
+        "ovrl": 3.45
+      }
+    },
+    {
+      "scene": "rose_y1",
+      "text": "In 1858 she drew this.",
+      "duration": 2.92,
+      "ipa": "ɪn wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti ˈeɪt ʃiː dɹˈuː ðˈɪs",
+      "hyp_base": "In 1858, she drew this.",
+      "wer_base": 0.0,
+      "hyp_small": "In 1,858, she drew this.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.63,
+        "bak": 4.16,
+        "ovrl": 3.39
+      }
+    },
+    {
+      "scene": "rose_y1",
+      "text": "Twelve wedges, one per month, starting in April 1854 and running clockwise.",
+      "duration": 6.15,
+      "ipa": "twˈɛlv wˈɛdʒᵻz wˈʌn pɜː mˈʌnθ stˈɑːɹɾɪŋ ɪn ˈeɪpɹəl wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti fˈɔːɹ ænd ɹˈʌnɪŋ klˈɑːkwaɪz",
+      "hyp_base": "12 wedges, one per month, starting in April 1854 and running clockwise.",
+      "wer_base": 0.0,
+      "hyp_small": "12 wedges, one per month, starting in April 1854 and running clockwise.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.65,
+        "bak": 4.16,
+        "ovrl": 3.42
+      }
+    },
+    {
+      "scene": "rose_y1",
+      "text": "The area of each wedge, not its length, is proportional to the number of deaths.",
+      "duration": 4.49,
+      "ipa": "ðɪ ˈɛɹiə ʌv ˈiːtʃ wˈɛdʒ nˌɑːt ɪts lˈɛŋθ ɪz pɹəpˈɔːɹʃənəl tə ðə nˈʌmbɚɹ ʌv dˈɛθs",
+      "hyp_base": "The area of each wedge, not its length, is proportional to the number of deaths.",
+      "wer_base": 0.0,
+      "hyp_small": "The area of each wedge, not its length, is proportional to the number of deaths.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.62,
+        "bak": 4.18,
+        "ovrl": 3.41
+      }
+    },
+    {
+      "scene": "rose_y1",
+      "text": "Blue is preventable disease.",
+      "duration": 1.7,
+      "ipa": "blˈuː ɪz pɹɪvˈɛntəbəl dɪzˈiːz",
+      "hyp_base": "Blue is preventable disease.",
+      "wer_base": 0.0,
+      "hyp_small": "Blue is preventable disease.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.59,
+        "bak": 4.19,
+        "ovrl": 3.39
+      }
+    },
+    {
+      "scene": "rose_y1",
+      "text": "Red is wounds.",
+      "duration": 0.98,
+      "ipa": "ɹˈɛd ɪz wˈuːndz",
+      "hyp_base": "Red is wounds.",
+      "wer_base": 0.0,
+      "hyp_small": "Red is Wounds",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.46,
+        "bak": 4.13,
+        "ovrl": 3.23
+      }
+    },
+    {
+      "scene": "rose_y1",
+      "text": "White is other causes.",
+      "duration": 1.42,
+      "ipa": "wˈaɪt ɪz ˈʌðɚ kˈɔːzᵻz",
+      "hyp_base": "White is other causes.",
+      "wer_base": 0.0,
+      "hyp_small": "White is other causes.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.63,
+        "bak": 4.18,
+        "ovrl": 3.4
+      }
+    },
+    {
+      "scene": "rose_y1",
+      "text": "Watch what happens as winter arrives.",
+      "duration": 2.13,
+      "ipa": "wˈɑːtʃ wʌt hˈæpənz æz wˈɪntɚɹ ɚɹˈaɪvz",
+      "hyp_base": "Watch what happens as winter arrives.",
+      "wer_base": 0.0,
+      "hyp_small": "Watch what happens as winter arrives.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.57,
+        "bak": 4.18,
+        "ovrl": 3.34
+      }
+    },
+    {
+      "scene": "rose_y1",
+      "text": "Watch January.",
+      "duration": 1.14,
+      "ipa": "wˈɑːtʃ dʒˈænjuːˌɛɹi",
+      "hyp_base": "Watch January",
+      "wer_base": 0.0,
+      "hyp_small": "Watch January.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.41,
+        "bak": 4.02,
+        "ovrl": 3.14
+      }
+    },
+    {
+      "scene": "rose_y2",
+      "text": "Now the second year, drawn at exactly the same scale.",
+      "duration": 3.1,
+      "ipa": "nˈaʊ ðə sˈɛkənd jˈɪɹ dɹˈɔːn æɾ ɛɡzˈæktli ðə sˈeɪm skˈeɪl",
+      "hyp_base": "Now the second year, drawn at exactly the same scale.",
+      "wer_base": 0.0,
+      "hyp_small": "Now the second year, drawn at exactly the same scale.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.52,
+        "bak": 4.18,
+        "ovrl": 3.31
+      }
+    },
+    {
+      "scene": "rose_y2",
+      "text": "In March 1855 a Sanitary Commission reached Scutari.",
+      "duration": 4.99,
+      "ipa": "ɪn mˈɑːɹtʃ wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti fˈaɪv ɐ sˈænətˌɛɹi kəmˈɪʃən ɹˈiːtʃt skjuːtˈɑːɹɹi",
+      "hyp_base": "In March 1855, a sanitary commission reached Scutari.",
+      "wer_base": 0.0,
+      "hyp_small": "In March 1855, a sanitary commission reached Scutari.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.69,
+        "bak": 4.2,
+        "ovrl": 3.46
+      }
+    },
+    {
+      "scene": "rose_y2",
+      "text": "It flushed the sewers, cleared the latrines, and, by one widely repeated account, removed a dead horse from the water supply.",
+      "duration": 7.79,
+      "ipa": "ɪt flˈʌʃt ðə sˈuːɚz klˈɪɹd ðə lɐtɹˈiːnz ænd baɪ wˈʌn wˈaɪdli ɹᵻpˈiːɾᵻd ɐkˈaʊnt ɹᵻmˈuːvd ɐ dˈɛd hˈɔːɹs fɹʌmðə wˈɔːɾɚ səplˈaɪ",
+      "hyp_base": "It flushed the sewers, cleared the latrines, and by one widely repeated account, removed a dead horse from the water supply.",
+      "wer_base": 0.0,
+      "hyp_small": "It flushed the sewers, cleared the latrines, and by one widely repeated account, removed a dead horse from the water supply.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.68,
+        "bak": 4.23,
+        "ovrl": 3.49
+      }
+    },
+    {
+      "scene": "rose_y2",
+      "text": "The wedges shrink.",
+      "duration": 1.1,
+      "ipa": "ðə wˈɛdʒᵻz ʃɹˈɪŋk",
+      "hyp_base": "The wedges shrink.",
+      "wer_base": 0.0,
+      "hyp_small": "The wedges shrink.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.54,
+        "bak": 4.1,
+        "ovrl": 3.29
+      }
+    },
+    {
+      "scene": "rose_y2",
+      "text": "By September 1855, for the first time, more soldiers died of wounds than of disease.",
+      "duration": 6.96,
+      "ipa": "baɪ sɛptˈɛmbɚ wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti fˈaɪv fɚðə fˈɜːst tˈaɪm mˈɔːɹ sˈoʊldʒɚz dˈaɪd ʌv wˈuːndz ðɐn ʌv dɪzˈiːz",
+      "hyp_base": "By September 1855, for the first time, more soldiers died of wounds than of disease.",
+      "wer_base": 0.0,
+      "hyp_small": "By September 1855, for the first time, more soldiers died of wounds than of disease.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.7,
+        "bak": 4.24,
+        "ovrl": 3.51
+      }
+    },
+    {
+      "scene": "army_size",
+      "text": "One more thing the table shows.",
+      "duration": 1.7,
+      "ipa": "wˈʌn mˈɔːɹ θˈɪŋ ðə tˈeɪbəl ʃˈoʊz",
+      "hyp_base": "One more thing the table shows.",
+      "wer_base": 0.0,
+      "hyp_small": "One more thing the table shows.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.7,
+        "bak": 4.19,
+        "ovrl": 3.46
+      }
+    },
+    {
+      "scene": "army_size",
+      "text": "The army itself was changing.",
+      "duration": 1.7,
+      "ipa": "ðɪ ˈɑːɹmi ɪtsˈɛlf wʌz tʃˈeɪndʒɪŋ",
+      "hyp_base": "The army itself was changing.",
+      "wer_base": 0.0,
+      "hyp_small": "The army itself was changing.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.41,
+        "bak": 4.12,
+        "ovrl": 3.17
+      }
+    },
+    {
+      "scene": "army_size",
+      "text": "In April 1854 there were about eight thousand five hundred British soldiers in the East.",
+      "duration": 6.48,
+      "ipa": "ɪn ˈeɪpɹəl wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti fˈɔːɹ ðɛɹwˌɜːɹ ɐbˌaʊt ˈeɪt θˈaʊzənd fˈaɪv hˈʌndɹɪd bɹˈɪɾɪʃ sˈoʊldʒɚz ɪnðɪ ˈiːst",
+      "hyp_base": "In April 1854, there were about 8,500 British soldiers in the east.",
+      "wer_base": 0.0,
+      "hyp_small": "In April 1854, there were about 8,500 British soldiers in the east.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.72,
+        "bak": 4.23,
+        "ovrl": 3.49
+      }
+    },
+    {
+      "scene": "army_size",
+      "text": "By March 1856 there were more than forty-six thousand.",
+      "duration": 4.77,
+      "ipa": "baɪ mˈɑːɹtʃ wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti sˈɪks ðɛɹwˌɜː mˈɔːɹ ðɐn fˈɔːɹɾisˈɪks θˈaʊzənd",
+      "hyp_base": "By March 1856, there were more than 46,000.",
+      "wer_base": 0.0,
+      "hyp_small": "By March 1856, there were more than 46,000.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.66,
+        "bak": 4.2,
+        "ovrl": 3.43
+      }
+    },
+    {
+      "scene": "army_size",
+      "text": "A death count in a small army and a death count in a large one are not the same thing, which is why Nightingale, following Farr, reported deaths as annual rates per thousand.",
+      "duration": 11.01,
+      "ipa": "ɐ dˈɛθ kˈaʊnt ɪn ɐ smˈɔːl ˈɑːɹmi ænd ɐ dˈɛθ kˈaʊnt ɪn ɐ lˈɑːɹdʒ wˈʌn ɑːɹ nˌɑːt ðə sˈeɪm θˈɪŋ wˌɪtʃ ɪz wˌaɪ nˈaɪɾɪŋɡˌeɪl fˈɑːloʊɪŋ fˈɑːɹ ɹᵻpˈɔːɹɾᵻd dˈɛθs æz ˈænjuːəl ɹˈeɪts pɜː θˈaʊzənd",
+      "hyp_base": "A death count in a small army and a death count in a large one are not the same thing, which is why Nightingale, following far reported deaths as annual rates per thousand.",
+      "wer_base": 0.0,
+      "hyp_small": "A death count in a small army and a death count in a large one are not the same thing, which is why Nightingale, following far reported deaths as annual rates per thousand.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.6,
+        "bak": 4.21,
+        "ovrl": 3.4
+      }
+    },
+    {
+      "scene": "rates",
+      "text": "Rates tell the same story with the army's size taken out.",
+      "duration": 3.41,
+      "ipa": "ɹˈeɪts tˈɛl ðə sˈeɪm stˈɔːɹi wɪððɪ ˈɑːɹmiz sˈaɪz tˈeɪkən ˈaʊt",
+      "hyp_base": "Rates tell the same story, with the army's size taken out.",
+      "wer_base": 0.0,
+      "hyp_small": "Rates tell the same story, with the army's size taken out.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.57,
+        "bak": 4.14,
+        "ovrl": 3.33
+      }
+    },
+    {
+      "scene": "rates",
+      "text": "The army more than doubled during the war, so raw counts can mislead.",
+      "duration": 3.8,
+      "ipa": "ðɪ ˈɑːɹmi mˈɔːɹ ðɐn dˈʌbəld dˈʊɹɹɪŋ ðə wˈɔːɹ sˌoʊ ɹˈɔː kˈaʊnts kæn mɪslˈiːd",
+      "hyp_base": "The army more than doubled during the war, so raw counts can mislead.",
+      "wer_base": 0.0,
+      "hyp_small": "The army more than doubled during the war, so raw counts can mislead.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.67,
+        "bak": 4.21,
+        "ovrl": 3.45
+      }
+    },
+    {
+      "scene": "rates",
+      "text": "Per thousand men, disease deaths fell from over one thousand a year in January 1855 to under four by March 1856.",
+      "duration": 11.01,
+      "ipa": "pɜː θˈaʊzənd mˈɛn dɪzˈiːz dˈɛθs fˈɛl fɹʌm ˌoʊvɚ wˈʌn θˈaʊzənd ɐ jˈɪɹ ɪn dʒˈænjuːˌɛɹi wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti fˈaɪv tʊ ˌʌndɚ fˈɔːɹ baɪ mˈɑːɹtʃ wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti sˈɪks",
+      "hyp_base": "per thousand men, disease deaths fell from over one thousand a year in January one thousand eight hundred fifty five to under four by march one thousand eight hundred fifty six",
+      "wer_base": 0.32,
+      "hyp_small": "Per 1,000 men, disease deaths fell from over 1,000 a year in January 1,855 to under 4 by March 1,856.",
+      "wer_small": 0.04,
+      "wer_best": 0.04,
+      "dnsmos": {
+        "sig": 3.55,
+        "bak": 4.13,
+        "ovrl": 3.29
+      }
+    },
+    {
+      "scene": "batswing",
+      "text": "Her first attempt, later nicknamed the bat's wing, scaled the radius of each wedge to the death rate.",
+      "duration": 5.69,
+      "ipa": "hɜː fˈɜːst ɐtˈɛmpt lˈeɪɾɚ nˈɪkneɪmd ðə bˈæts wˈɪŋ skˈeɪld ðə ɹˈeɪdɪəs ʌv ˈiːtʃ wˈɛdʒ tə ðə dˈɛθ ɹˈeɪt",
+      "hyp_base": "Her first attempt, later nicknamed the bat's wing, scaled the radius of each wedge to the death rate.",
+      "wer_base": 0.0,
+      "hyp_small": "Her first attempt, later nicknamed the bat's wing, scaled the radius of each wedge to the death rate.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.66,
+        "bak": 4.19,
+        "ovrl": 3.44
+      }
+    },
+    {
+      "scene": "batswing",
+      "text": "That exaggerates: double the deaths looks like four times the area.",
+      "duration": 3.89,
+      "ipa": "ðæt ɛɡzˈædʒɚɹˌeɪts dˈʌbəl ðə dˈɛθs lˈʊks lˈaɪk fˈɔːɹ tˈaɪmz ðɪ ˈɛɹiə",
+      "hyp_base": "That exaggerates. Double the deaths looks like four times the area.",
+      "wer_base": 0.0,
+      "hyp_small": "That exaggerates. Double the deaths looks like four times the area.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.71,
+        "bak": 4.23,
+        "ovrl": 3.51
+      }
+    },
+    {
+      "scene": "batswing",
+      "text": "She redrew it so that the area of each wedge carried the number, and wrote the rule into the legend itself.",
+      "duration": 5.97,
+      "ipa": "ʃiː ɹiːdɹˈuː ɪt sˌoʊ ðætðɪ ˈɛɹiə ʌv ˈiːtʃ wˈɛdʒ kˈæɹid ðə nˈʌmbɚ ænd ɹˈoʊt ðə ɹˈuːl ˌɪntʊ ðə lˈɛdʒənd ɪtsˈɛlf",
+      "hyp_base": "She redrew it so that the area of each wedge carried the number and wrote the rule into the legend itself.",
+      "wer_base": 0.0,
+      "hyp_small": "She redrew it so that the area of each wedge carried the number and wrote the rule into the legend itself.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.61,
+        "bak": 4.22,
+        "ovrl": 3.39
+      }
+    },
+    {
+      "scene": "coxcomb",
+      "text": "Most people call the chart a coxcomb.",
+      "duration": 2.1,
+      "ipa": "mˈoʊst pˈiːpəl kˈɔːl ðə tʃˈɑːɹt ɐ kˈɑːkskoʊm",
+      "hyp_base": "Most people call the chart a cockscomb.",
+      "wer_base": 0.0,
+      "hyp_small": "Most people call the chart a coxcomb.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.6,
+        "bak": 4.18,
+        "ovrl": 3.39
+      }
+    },
+    {
+      "scene": "coxcomb",
+      "text": "According to historian Hugh Small, she used that word for the printed booklet the diagrams appeared in, not for the chart itself.",
+      "duration": 7.38,
+      "ipa": "ɐkˈɔːɹdɪŋ tə hɪstˈɔːɹiən hjˈuː smˈɔːl ʃiː jˈuːzd ðæt wˈɜːd fɚðə pɹˈɪntᵻd bˈʊklɪt ðə dˈaɪəɡɹˌæmz ɐpˈɪɹd ɪn nˌɑːt fɚðə tʃˈɑːɹt ɪtsˈɛlf",
+      "hyp_base": "According to historian Hugh Small, she used that word for the printed booklet the Diagrams appeared in, not for the chart itself.",
+      "wer_base": 0.0,
+      "hyp_small": "According to historian Hugh Small, she used that word for the printed booklet the diagrams appeared in, not for the chart itself.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.67,
+        "bak": 4.24,
+        "ovrl": 3.47
+      }
+    },
+    {
+      "scene": "barracks",
+      "text": "She did not stop at the war.",
+      "duration": 1.49,
+      "ipa": "ʃiː dɪdnˌɑːt stˈɑːp æt ðə wˈɔːɹ",
+      "hyp_base": "She did not stop at the war.",
+      "wer_base": 0.0,
+      "hyp_small": "She did not stop at the war.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.47,
+        "bak": 4.1,
+        "ovrl": 3.22
+      }
+    },
+    {
+      "scene": "barracks",
+      "text": "Back in England she compared young soldiers living in barracks with civilian men of the same ages.",
+      "duration": 5.7,
+      "ipa": "bˈæk ɪn ˈɪŋɡlənd ʃiː kəmpˈɛɹd jˈʌŋ sˈoʊldʒɚz lˈɪvɪŋ ɪn bˈɛɹəks wɪð sɪvˈɪliən mˈɛn ʌvðə sˈeɪm ˈeɪdʒᵻz",
+      "hyp_base": "Back in England, she compared young soldiers living in barracks with civilian men of the same ages.",
+      "wer_base": 0.0,
+      "hyp_small": "Back in England, she compared young soldiers living in barracks with civilian men of the same ages.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.63,
+        "bak": 4.17,
+        "ovrl": 3.4
+      }
+    },
+    {
+      "scene": "barracks",
+      "text": "Civilians died at about eleven per thousand a year.",
+      "duration": 3.12,
+      "ipa": "sɪvˈɪliənz dˈaɪd æɾ ɐbˌaʊt ᵻlˈɛvən pɜː θˈaʊzənd ɐ jˈɪɹ",
+      "hyp_base": "Civilians died at about 11 per thousand a year.",
+      "wer_base": 0.0,
+      "hyp_small": "civilians died at about 11 per thousand a year.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.61,
+        "bak": 4.19,
+        "ovrl": 3.41
+      }
+    },
+    {
+      "scene": "barracks",
+      "text": "Infantry, seventeen.",
+      "duration": 1.41,
+      "ipa": "ˈɪnfəntɹi sˈɛvəntˌiːn",
+      "hyp_base": "infantry 17",
+      "wer_base": 0.0,
+      "hyp_small": "Infantry 17.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.6,
+        "bak": 4.13,
+        "ovrl": 3.35
+      }
+    },
+    {
+      "scene": "barracks",
+      "text": "Artillery, nineteen.",
+      "duration": 1.29,
+      "ipa": "ɑːɹtˈɪlɚɹi nˈaɪntiːn",
+      "hyp_base": "Artillery 19",
+      "wer_base": 0.0,
+      "hyp_small": "Artillery 19.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.5,
+        "bak": 4.14,
+        "ovrl": 3.27
+      }
+    },
+    {
+      "scene": "barracks",
+      "text": "Guards, twenty.",
+      "duration": 1.17,
+      "ipa": "ɡˈɑːɹdz twˈɛnti",
+      "hyp_base": "Guards 20.",
+      "wer_base": 0.0,
+      "hyp_small": "Guards 20.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.41,
+        "bak": 4.06,
+        "ovrl": 3.15
+      }
+    },
+    {
+      "scene": "barracks",
+      "text": "Healthy men, already screened by a medical exam, were dying at nearly twice the civilian rate in peacetime.",
+      "duration": 6.54,
+      "ipa": "hˈɛlθi mˈɛn ɔːlɹˌɛdi skɹˈiːnd baɪ ɐ mˈɛdɪkəl ɛɡzˈæm wɜː dˈaɪɪŋ æt nˌɪɹli twˈaɪs ðə sɪvˈɪliən ɹˈeɪt ɪn pˈiːstaɪm",
+      "hyp_base": "Healthy men, already screened by a medical exam, were dying at nearly twice the civilian rate in peacetime.",
+      "wer_base": 0.0,
+      "hyp_small": "Healthy men, already screened by a medical exam, were dying at nearly twice the civilian rate in peacetime.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.65,
+        "bak": 4.21,
+        "ovrl": 3.44
+      }
+    },
+    {
+      "scene": "barracks",
+      "text": "She printed two thousand copies of the report at her own expense and sent them to people who could act.",
+      "duration": 5.71,
+      "ipa": "ʃiː pɹˈɪntᵻd tˈuː θˈaʊzənd kˈɑːpɪz ʌvðə ɹᵻpˈɔːɹt æt hɜːɹ ˈoʊn ɛkspˈɛns ænd sˈɛnt ðˌɛm tə pˈiːpəl hˌuː kʊd ˈækt",
+      "hyp_base": "She printed 2,000 copies of the report at her own expense and sent them to people who could act.",
+      "wer_base": 0.0,
+      "hyp_small": "She printed 2,000 copies of the report at her own expense and sent them to people who could act.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.67,
+        "bak": 4.21,
+        "ovrl": 3.45
+      }
+    },
+    {
+      "scene": "impact",
+      "text": "The diagram went into her evidence for the Royal Commission on the Health of the Army, formed in 1857, and to the people who could act: Queen Victoria, Sidney Herbert, members of Parliament.",
+      "duration": 12.8,
+      "ipa": "ðə dˈaɪəɡɹˌæm wɛnt ˌɪntʊ hɜːɹ ˈɛvɪdəns fɚðə ɹˈɔɪəl kəmˈɪʃən ɔnðə hˈɛlθ ʌvðɪ ˈɑːɹmi fˈɔːɹmd ɪn wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti sˈɛvən ænd tə ðə pˈiːpəl hˌuː kʊd ˈækt kwˈiːn vɪktˈɔːɹiə sˈɪdni hˈɜːbɚt mˈɛmbɚz ʌv pˈɑːɹləmənt",
+      "hyp_base": "The diagram went into her evidence for the Royal Commission on the Health of the Army, formed in 1857, and to the people who could act. Queen Victoria, Sydney Herbert, members of Parliament.",
+      "wer_base": 0.029,
+      "hyp_small": "The diagram went into her evidence for the Royal Commission on the Health of the Army, formed in 1857, and to the people who could act. Queen Victoria, Sydney Herbert, Members of Parliament.",
+      "wer_small": 0.029,
+      "wer_best": 0.029,
+      "dnsmos": {
+        "sig": 3.66,
+        "bak": 4.2,
+        "ovrl": 3.45
+      }
+    },
+    {
+      "scene": "impact",
+      "text": "Reforms followed: an army medical school, routine sanitary statistics for barracks and hospitals.",
+      "duration": 6.27,
+      "ipa": "ɹᵻfˈɔːɹmz fˈɑːloʊd ɐn ˈɑːɹmi mˈɛdɪkəl skˈuːl ɹuːtˈiːn sˈænətˌɛɹi stɐtˈɪstɪks fɔːɹ bˈɛɹəks ænd hˈɑːspɪɾəlz",
+      "hyp_base": "Reforms followed. An Army medical school routines sanitary statistics for barracks and hospitals.",
+      "wer_base": 0.083,
+      "hyp_small": "Reforms followed. An Army medical school routine sanitary statistics for barracks and hospitals.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.69,
+        "bak": 4.22,
+        "ovrl": 3.49
+      }
+    },
+    {
+      "scene": "impact",
+      "text": "In 1858 she became the first woman elected to the Statistical Society of London.",
+      "duration": 6.47,
+      "ipa": "ɪn wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti ˈeɪt ʃiː bɪkˌeɪm ðə fˈɜːst wˈʊmən ᵻlˈɛktᵻd tə ðə stɐtˈɪstɪkəl səsˈaɪəɾi ʌv lˈʌndən",
+      "hyp_base": "In 1858, she became the first woman elected to the Statistical Society of London.",
+      "wer_base": 0.0,
+      "hyp_small": "In 1858, she became the first woman elected to the Statistical Society of London.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.68,
+        "bak": 4.21,
+        "ovrl": 3.48
+      }
+    },
+    {
+      "scene": "why",
+      "text": "The report had hundreds of pages of tables.",
+      "duration": 2.6,
+      "ipa": "ðə ɹᵻpˈɔːɹt hæd hˈʌndɹɪdz ʌv pˈeɪdʒᵻz ʌv tˈeɪbəlz",
+      "hyp_base": "The report had hundreds of pages of tables.",
+      "wer_base": 0.0,
+      "hyp_small": "The report had hundreds of pages of tables.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.64,
+        "bak": 4.19,
+        "ovrl": 3.41
+      }
+    },
+    {
+      "scene": "why",
+      "text": "The chart made one argument, and made it in a shape: the biggest killer was the one you could fix.",
+      "duration": 5.42,
+      "ipa": "ðə tʃˈɑːɹt mˌeɪd wˈʌn ˈɑːɹɡjuːmənt ænd mˌeɪd ɪɾ ɪn ɐ ʃˈeɪp ðə bˈɪɡɪst kˈɪlɚ wʌzðə wˈʌn juː kʊd fˈɪks",
+      "hyp_base": "The chart made one argument and made it in a shape. The biggest killer was the one you could fix.",
+      "wer_base": 0.0,
+      "hyp_small": "The chart made one argument and made it in a shape. The biggest killer was the one you could fix.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.7,
+        "bak": 4.2,
+        "ovrl": 3.49
+      }
+    },
+    {
+      "scene": "outro",
+      "text": "Next time: the scatterplot that could have saved the space shuttle Challenger.",
+      "duration": 4.16,
+      "ipa": "nˈɛkst tˈaɪm ðə skˈæɾɚplˌɑːt ðæt kˌʊdɐv sˈeɪvd ðə spˈeɪs ʃˈʌɾəl tʃˈælɪndʒɚ",
+      "hyp_base": "Next time, the scatter plot that could have saved the space shuttle Challenger. [buzzer]",
+      "wer_base": 0.0,
+      "hyp_small": "Next time, the scatterplot that could have saved the Space Shuttle Challenger.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.63,
+        "bak": 4.2,
+        "ovrl": 3.41
+      }
+    },
+    {
+      "scene": "outro",
+      "text": "Sources and the data for this episode are in the description.",
+      "duration": 3.33,
+      "ipa": "sˈɔːɹsᵻz ænd ðə dˈeɪɾə fɔːɹ ðɪs ˈɛpɪsˌoʊd ɑːɹ ɪnðə dᵻskɹˈɪpʃən",
+      "hyp_base": "Sources and the data for this episode are in the description.",
+      "wer_base": 0.0,
+      "hyp_small": "Sources and the data for this episode are in the description.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.55,
+        "bak": 4.14,
+        "ovrl": 3.31
+      }
+    }
+  ],
+  "disclaimer": "Machine evaluation on the actual synthesized audio: two-model ASR round-trip (intelligibility), DNSMOS P.835 (perceptual quality estimate), G2P phoneme listing (pronunciation review). No human listening test was performed."
+}
