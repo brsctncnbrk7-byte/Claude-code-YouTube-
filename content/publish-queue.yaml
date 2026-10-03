@@ -29,3 +29,15 @@ items:
     format: short
     planned_day: 5
     status: ready
+  - id: ep-005
+    format: long
+    planned_day: 7
+    status: ready
+  - id: ep-005
+    format: short
+    planned_day: 8
+    status: ready
+  - id: ep-006
+    format: long
+    planned_day: 9
+    status: scripted

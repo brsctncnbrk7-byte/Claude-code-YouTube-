@@ -35,7 +35,7 @@ episodes:
     thesis: "Minard's 1869 flow map encodes six variables; the retreat line tells the story that 422,000 became 10,000."
     data: "Minard 1869 figures (public domain; HistData Minard.troops/temp)"
     visual_core: "animated flow band width ∝ troop count; temperature strip"
-    status: scripted
+    status: packaged   # QC_PASS long+short 2026-10-03; 2.3 min
   - id: ep-006
     title_working: "The Poll That Got 1936 Spectacularly Wrong"
     thesis: "Literary Digest's 2.4 million responses predicted Landon; Gallup's 50,000 predicted Roosevelt. Sample size is not sample quality."
