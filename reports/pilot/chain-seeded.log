@@ -136,3 +136,67 @@
 == build ep-002 short 20:56:31
 [tts] 24.1s narration, 6 sentences, 12.2s
 [subs] 6 cues
+[render] /home/user/Claude-code-YouTube-/build/ep-002/short/video.mp4 in 34.4s
+[mux] /home/user/Claude-code-YouTube-/build/ep-002/short/ep-002.mp4 (measured I=-25.57 LUFS → -14)
+[done] build ep-002/short in 52.5s
+== qc ep-002 short
+
+
+
+
+
+
+[qc] QC_PASS technical_ok=True gate_ok=True → reports/ep-002/short/qc-report.md
+== package ep-002 short
+[package] /home/user/Claude-code-YouTube-/dist/ep-002/short
+== clean clone build 20:57:34
+[tts] 288.3s narration, 57 sentences, 132.9s
+[subs] 81 cues
+[render] /tmp/claude-0/-home-user-Claude-code-YouTube-/8ccc70bb-5f25-5025-9976-28d226d9edb3/scratchpad/repro2/clone/build/ep-001/long/video.mp4 in 399.6s
+[mux] /tmp/claude-0/-home-user-Claude-code-YouTube-/8ccc70bb-5f25-5025-9976-28d226d9edb3/scratchpad/repro2/clone/build/ep-001/long/ep-001.mp4 (measured I=-25.68 LUFS → -14)
+[done] build ep-001/long in 596.2s
+== repro check
+{
+  "duration": {
+    "a": 288.1,
+    "b": 288.333333,
+    "ok": false
+  },
+  "frames": {
+    "a": 8643,
+    "b": 8650,
+    "ok": false
+  },
+  "sentences": {
+    "n_a": 57,
+    "n_b": 57,
+    "max_abs_diff_ms": 200.3,
+    "ok": false
+  },
+  "srt_cues": {
+    "a": 81,
+    "b": 81,
+    "ok": true
+  },
+  "loudness": {
+    "a": -14.01,
+    "b": -14.01,
+    "ok": true
+  },
+  "frames_pixel_diff": {
+    "mean_per_sample": [
+      0.0,
+      0.0,
+      0.00029,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0069
+    ],
+    "ok": false
+  },
+  "mp4_sha256_identical": false,
+  "REPRODUCIBLE": false
+}
+CHAIN2 EXIT 21:08:08

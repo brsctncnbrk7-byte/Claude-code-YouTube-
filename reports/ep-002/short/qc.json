@@ -23,7 +23,7 @@
       "ok": true
     },
     "loudness": {
-      "integrated_lufs": -14.01,
+      "integrated_lufs": -14.03,
       "true_peak_dbtp": -2.26,
       "lra": 2.0,
       "ok": true
@@ -83,7 +83,7 @@
     ],
     "asr": {
       "model": "whisper-base.en int8 (sherpa-onnx)",
-      "seconds": 3.2,
+      "seconds": 3.3,
       "rows": [
         {
           "scene": "s_hook",

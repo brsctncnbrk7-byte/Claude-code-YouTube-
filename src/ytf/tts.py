@@ -1,5 +1,6 @@
 from __future__ import annotations
 import json
+import os
 from dataclasses import dataclass, asdict
 from pathlib import Path
 import numpy as np
@@ -15,13 +16,29 @@ _synth = None
 _synth_seed = None
 
 
+def espeak_config():
+    """Always use the espeak-ng bundled in the espeakng-loader wheel (same bytes on every machine). Mixing it with a system
+    espeak-ng in one process produced different phonemes per environment ("fˈɔːɹ" vs "fˈoːɹ") — see reproducibility.md."""
+    import espeakng_loader
+    from kokoro_onnx.config import EspeakConfig
+    paths.ensure_espeak_env()
+    return EspeakConfig(lib_path=os.environ["PHONEMIZER_ESPEAK_LIBRARY"], data_path=os.environ["ESPEAK_DATA_PATH"])
+
+
+def use_bundled_espeak_for_phonemizer() -> None:
+    import espeakng_loader
+    from phonemizer.backend.espeak.wrapper import EspeakWrapper
+    paths.ensure_espeak_env()
+    EspeakWrapper.set_data_path(os.environ["ESPEAK_DATA_PATH"])
+    EspeakWrapper.set_library(os.environ["PHONEMIZER_ESPEAK_LIBRARY"])
+
+
 def get_synth(seed: int | None = None):
     """Kokoro session. The ONNX graph draws random noise, so output is only reproducible when ONNX Runtime is seeded
     *before* the session is created and calls happen in the same order. We therefore create a fresh seeded session per
     sentence (seed = hash of text|voice|speed), which makes every sentence deterministic on its own (ADR-012)."""
     global _synth, _synth_seed
     if _synth is None or seed is not None:  # a seeded call always gets a fresh session (RNG state must start from the seed)
-        paths.ensure_espeak_env()
         import onnxruntime as ort
         from kokoro_onnx import Kokoro  # heavy import, lazy
         if not paths.KOKORO_MODEL.exists() or not paths.KOKORO_VOICES.exists():
@@ -31,7 +48,7 @@ def get_synth(seed: int | None = None):
         so = ort.SessionOptions()
         so.intra_op_num_threads = 4
         sess = ort.InferenceSession(str(paths.KOKORO_MODEL), so, providers=["CPUExecutionProvider"])
-        _synth = Kokoro.from_session(sess, str(paths.KOKORO_VOICES))
+        _synth = Kokoro.from_session(sess, str(paths.KOKORO_VOICES), espeak_config=espeak_config())
         _synth_seed = seed
     return _synth
 
@@ -152,7 +169,7 @@ def build_narration(scenes, voice: str, speed: float, lang: str, out_dir: Path, 
 
 
 def phonemes_for(sentences: list[str], lang: str = "en-us") -> list[str]:
-    """IPA from the same G2P stack kokoro-onnx uses (espeak via phonemizer) — for pre-synthesis review."""
-    paths.ensure_espeak_env()
+    """IPA from the same G2P stack kokoro-onnx uses (bundled espeak via phonemizer) — for pre-synthesis review."""
+    use_bundled_espeak_for_phonemizer()
     from phonemizer import phonemize
     return [phonemize(s, language=lang, backend="espeak", with_stress=True, strip=True) for s in sentences]

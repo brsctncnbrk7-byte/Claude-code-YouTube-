@@ -8,7 +8,7 @@
 | container | ✅ | {"codec": "h264", "pix_fmt": "yuv420p", "w": 1080, "h": 1920, "fps": "30/1", "audio": "aac 48000Hz", "duration": 24.1, "frames": 723, "expected_frames": 723} |
 | blackdetect | ✅ | {} |
 | silencedetect | ✅ | {} |
-| loudness | ✅ | {"integrated_lufs": -14.01, "true_peak_dbtp": -2.26, "lra": 2.0} |
+| loudness | ✅ | {"integrated_lufs": -14.03, "true_peak_dbtp": -2.26, "lra": 2.0} |
 | subtitles | ✅ | {"cues": 6, "long_or_tall": 0} |
 | text_overflow | ✅ | {} |
 | frame_samples | ✅ | {"count": 6, "dir": "/home/user/Claude-code-YouTube-/reports/ep-002/short/frames", "reviewed_by_claude": true} |
