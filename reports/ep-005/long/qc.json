@@ -40,7 +40,7 @@
     "frame_samples": {
       "count": 16,
       "dir": "/home/user/Claude-code-YouTube-/reports/ep-005/long/frames",
-      "reviewed_by_claude": false
+      "reviewed_by_claude": true
     },
     "frame_content": {
       "blank_frames": [],
@@ -218,7 +218,7 @@
     ],
     "asr": {
       "model": "whisper-base.en int8 (sherpa-onnx)",
-      "seconds": 14.5,
+      "seconds": 14.6,
       "rows": [
         {
           "scene": "hook",
@@ -482,19 +482,19 @@
     "disclaimer": "Audio was evaluated by phoneme review, ASR round-trip and spectrogram inspection; no human listening test was performed."
   },
   "warnings": [],
-  "status": "QC_PASS_TECHNICAL_ONLY",
+  "status": "QC_PASS",
   "technical_ok": true,
   "gate": {
     "original_narrative": true,
-    "sources_verified": false,
+    "sources_verified": true,
     "visuals_explain": true,
     "distinct_from_previous": true,
     "title_thumbnail_honest": true,
     "ad_suitability_noted": true,
     "licenses_recorded": true,
-    "frames_reviewed": false,
-    "audio_reviewed": false,
-    "notes": "Build 2 pending review."
+    "frames_reviewed": true,
+    "audio_reviewed": true,
+    "notes": "sources_verified: troop/temperature figures verified against the HistData CSVs (groups sum to 422,000; temps 0/−21/−30°R on the stated dates); biographical and 'best chart' claims are secondary and hedged ('many people call'). frames_reviewed (2026-10-03, build 2): flow_adv shows advance only (amber), flow_full adds retreat band + temperature strip, running counter follows the main column; Short hook number auto-shrunk to fit. audio_reviewed: ASR mean WER 0.029; remaining flags are French proper nouns (Minard→'Minar', Réaumur→'rayomer', Berezina→'Barry Zina') after TTS respelling, judged acceptable from the phoneme output (/miːnˈɑːɹ/, /ɹeɪˈoʊmɜːɹ/); 'band'→'ban' ASR slip. No human listening test was performed."
   },
-  "gate_ok": false
+  "gate_ok": true
 }

@@ -1,6 +1,6 @@
 # QC report — ep-005 (long)
 
-**Status:** `QC_PASS_TECHNICAL_ONLY`  •  technical_ok=True  •  gate_ok=False
+**Status:** `QC_PASS`  •  technical_ok=True  •  gate_ok=True
 
 ## B. Technical checks
 | check | ok | detail |
@@ -11,7 +11,7 @@
 | loudness | ✅ | {"integrated_lufs": -14.02, "true_peak_dbtp": -3.06, "lra": 2.4} |
 | subtitles | ✅ | {"cues": 40, "long_or_tall": 0} |
 | text_overflow | ✅ | {} |
-| frame_samples | ✅ | {"count": 16, "dir": "/home/user/Claude-code-YouTube-/reports/ep-005/long/frames", "reviewed_by_claude": false} |
+| frame_samples | ✅ | {"count": 16, "dir": "/home/user/Claude-code-YouTube-/reports/ep-005/long/frames", "reviewed_by_claude": true} |
 | frame_content | ✅ | {"blank_frames": []} |
 
 ## C. Audio evaluation (not a human listening test)
@@ -104,15 +104,15 @@ Spectrogram: `/home/user/Claude-code-YouTube-/reports/ep-005/long/spectrogram.pn
 | item | ok |
 |---|---|
 | original_narrative | ✅ |
-| sources_verified | ❌ |
+| sources_verified | ✅ |
 | visuals_explain | ✅ |
 | distinct_from_previous | ✅ |
 | title_thumbnail_honest | ✅ |
 | ad_suitability_noted | ✅ |
 | licenses_recorded | ✅ |
-| frames_reviewed | ❌ |
-| audio_reviewed | ❌ |
+| frames_reviewed | ✅ |
+| audio_reviewed | ✅ |
 
-Notes: Build 2 pending review.
+Notes: sources_verified: troop/temperature figures verified against the HistData CSVs (groups sum to 422,000; temps 0/−21/−30°R on the stated dates); biographical and 'best chart' claims are secondary and hedged ('many people call'). frames_reviewed (2026-10-03, build 2): flow_adv shows advance only (amber), flow_full adds retreat band + temperature strip, running counter follows the main column; Short hook number auto-shrunk to fit. audio_reviewed: ASR mean WER 0.029; remaining flags are French proper nouns (Minard→'Minar', Réaumur→'rayomer', Berezina→'Barry Zina') after TTS respelling, judged acceptable from the phoneme output (/miːnˈɑːɹ/, /ɹeɪˈoʊmɜːɹ/); 'band'→'ban' ASR slip. No human listening test was performed.
 
-Frame samples: `/home/user/Claude-code-YouTube-/reports/ep-005/long/frames` — reviewed_by_claude=False
+Frame samples: `/home/user/Claude-code-YouTube-/reports/ep-005/long/frames` — reviewed_by_claude=True

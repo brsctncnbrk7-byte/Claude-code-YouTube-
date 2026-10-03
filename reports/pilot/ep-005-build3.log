@@ -1,3 +1,44 @@
 == long
 [tts] 137.6s narration, 33 sentences, 0.1s
 [subs] 40 cues
+[render] /home/user/Claude-code-YouTube-/build/ep-005/long/video.mp4 in 197.4s
+[mux] /home/user/Claude-code-YouTube-/build/ep-005/long/ep-005.mp4 (measured I=-25.69 LUFS → -14)
+[done] build ep-005/long in 227.6s
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[qc] QC_PASS technical_ok=True gate_ok=True → reports/ep-005/long/qc-report.md
+[package] /home/user/Claude-code-YouTube-/dist/ep-005
+== short
+[tts] 26.9s narration, 7 sentences, 0.0s
+[subs] 7 cues

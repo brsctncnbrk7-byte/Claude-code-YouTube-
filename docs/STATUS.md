@@ -1,8 +1,8 @@
 # STATUS — güncel durum
 
 **Son güncelleme:** 2026-10-03 (oturum 1, sonlara doğru)
-**Faz:** 4→6 (ilk hafta paketleri tamam; son release doğrulamaları sürüyor)
-**READY_FOR_VPS:** HAYIR (ölçüt tablosu aşağıda)
+**Faz:** 6 — GitHub hazırlığı tamamlandı
+**READY_FOR_VPS:** **EVET** — `reports/READY_FOR_VPS.md` (8/8 ölçüt kanıtlı); VPS geçişi kullanıcı talebini bekliyor
 
 ## Tamamlanan somut çıktılar
 - Repo iskeleti, CLAUDE.md, MIT lisans, sır taraması, ortam raporu betiği
@@ -24,10 +24,10 @@
 | 1 | Araştırma, niş/dil, marka, 30 gün planı | ✅ (politikalar `chatgpt-verified`/`secondary` etiketli) |
 | 2 | Ücretsiz araçların lisans/teknik uygunluğu | ✅ ayrı satırlar; Piper TR REJECTED; Kokoro HF LICENSE dosyası okunamadı (GitHub kanıtı var) |
 | 3 | İki pilot + Shorts yolu gerçek çıktıyla | ✅ ep-001, ep-002 uzun+Short QC_PASS |
-| 4 | İlk hafta paketleri (placeholder yok) | ✅ ep-001/002/003 uzun + 3 Short paketli (ep-003 release doğrulaması bekleniyor) |
+| 4 | İlk hafta paketleri (placeholder yok) | ✅ Releases ep-001/002/003 (uzun + Short), sha256 doğrulandı |
 | 5 | Gerçek CPU/RAM/disk/render/kota ölçümü | ✅ render-benchmark.md; Actions ep-001 koşusu ölçülüyor |
 | 6 | Temiz klondan tek komutla yeniden üretim + hata/devam | ✅ Koşu 3: REPRODUCIBLE true, MP4 sha256 birebir |
-| 7 | Büyük çıktılar erişilebilir/kalıcı teslim + manifest | ✅ Releases `ep-001`, `ep-002` (21 varlık, sha256 eşleşti) |
+| 7 | Büyük çıktılar erişilebilir/kalıcı teslim + manifest | ✅ Releases `ep-001`, `ep-002`, `ep-003` (21'er varlık; sha256 eşleşti; runner çıktıları yerel ile bit-aynı) |
 | 8 | Kanal/yükleme paketleri, hesap sahibi zorunlulukları, analytics sınırı, VPS rehberi | ✅ (VPS rehberi "denenmedi" etiketli) |
 
 ## Açık doğrulamalar (unverified / secondary)
