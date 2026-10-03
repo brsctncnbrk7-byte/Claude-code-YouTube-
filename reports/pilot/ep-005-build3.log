@@ -42,3 +42,16 @@
 == short
 [tts] 26.9s narration, 7 sentences, 0.0s
 [subs] 7 cues
+[render] /home/user/Claude-code-YouTube-/build/ep-005/short/video.mp4 in 40.1s
+[mux] /home/user/Claude-code-YouTube-/build/ep-005/short/ep-005.mp4 (measured I=-25.68 LUFS → -14)
+[done] build ep-005/short in 46.5s
+
+
+
+
+
+
+
+[qc] QC_PASS technical_ok=True gate_ok=True → reports/ep-005/short/qc-report.md
+[package] /home/user/Claude-code-YouTube-/dist/ep-005/short
+EXIT 0
