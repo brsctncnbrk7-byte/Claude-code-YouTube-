@@ -1,2 +1,3 @@
 episode: ep-002
 format: both
+# retry 2: pinned espeak + seeded TTS (reproducible build)

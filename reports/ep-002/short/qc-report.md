@@ -25,7 +25,7 @@ ASR: whisper-base.en int8 (sherpa-onnx) — mean WER **0.0**, flagged (WER>0.05)
 - [s_hook] Seventy-three seconds after launch, Challenger broke apart.
   - `sˈɛvəntiθɹˈiː sˈɛkəndz ˈæftɚ lˈɑːntʃ tʃˈælɪndʒɚ bɹˈoʊk ɐpˈɑːɹt`
 - [s_hook] The night before, engineers tried to stop it with a chart.
-  - `ðə nˈaɪt bᵻfˌoːɹ ˌɛndʒɪnˈɪɹz tɹˈaɪd tə stˈɑːp ɪt wɪð ɐ tʃˈɑːɹt`
+  - `ðə nˈaɪt bᵻfˌɔːɹ ˌɛndʒɪnˈɪɹz tɹˈaɪd tə stˈɑːp ɪt wɪð ɐ tʃˈɑːɹt`
 - [s_compare] They plotted only the flights with O-ring damage: no clear trend.
   - `ðeɪ plˈɑːɾᵻd ˈoʊnli ðə flˈaɪts wɪð ˈoʊɹˈɪŋ dˈæmɪdʒ nˈoʊ klˈɪɹ tɹˈɛnd`
 - [s_compare] Add the sixteen flights with no damage, all of them warm, and the pattern appears.
@@ -33,7 +33,7 @@ ASR: whisper-base.en int8 (sherpa-onnx) — mean WER **0.0**, flagged (WER>0.05)
 - [s_compare] Damage lives at the cold end.
   - `dˈæmɪdʒ lˈaɪvz æt ðə kˈoʊld ˈɛnd`
 - [s_cta] The full story, and the model that predicted it, is on the channel.
-  - `ðə fˈʊl stˈoːɹi ænd ðə mˈɑːdəl ðæt pɹɪdˈɪktᵻd ɪɾ ɪz ɔnðə tʃˈænəl`
+  - `ðə fˈʊl stˈɔːɹi ænd ðə mˈɑːdəl ðæt pɹɪdˈɪktᵻd ɪɾ ɪz ɔnðə tʃˈænəl`
 
 </details>
 

@@ -29,9 +29,9 @@ ASR: whisper-base.en int8 (sherpa-onnx) — mean WER **0.0077**, flagged (WER>0.
 - [hook] Seven people died.
   - `sˈɛvən pˈiːpəl dˈaɪd`
 - [hook] The night before, a group of engineers had tried to stop the launch with a chart.
-  - `ðə nˈaɪt bᵻfˌoːɹ ɐ ɡɹˈuːp ʌv ˌɛndʒɪnˈɪɹz hæd tɹˈaɪd tə stˈɑːp ðə lˈɑːntʃ wɪð ɐ tʃˈɑːɹt`
+  - `ðə nˈaɪt bᵻfˌɔːɹ ɐ ɡɹˈuːp ʌv ˌɛndʒɪnˈɪɹz hæd tɹˈaɪd tə stˈɑːp ðə lˈɑːntʃ wɪð ɐ tʃˈɑːɹt`
 - [title] This is the story of the chart they drew, the chart they could have drawn, and the difference between them.
-  - `ðɪs ɪz ðə stˈoːɹi ʌvðə tʃˈɑːɹt ðeɪ dɹˈuː ðə tʃˈɑːɹt ðeɪ kˌʊdɐv dɹˈɔːn ænd ðə dˈɪfɹəns bᵻtwˈiːn ðˌɛm`
+  - `ðɪs ɪz ðə stˈɔːɹi ʌvðə tʃˈɑːɹt ðeɪ dɹˈuː ðə tʃˈɑːɹt ðeɪ kˌʊdɐv dɹˈɔːn ænd ðə dˈɪfɹəns bᵻtwˈiːn ðˌɛm`
 - [engineers] On the evening of January 27, engineers at Morton Thiokol, the contractor that built the solid rocket boosters, joined a teleconference with NASA.
   - `ɔnðɪ ˈiːvnɪŋ ʌv dʒˈænjuːˌɛɹi twˈɛnti sˈɛvən ˌɛndʒɪnˈɪɹz æt mˈɔːɹtən θˌaɪoʊkˈɑːl ðə kəntɹˈæktɚ ðæt bˈɪlt ðə sˈɑːlɪd ɹˈɑːkɪt bˈuːstɚz dʒˈɔɪnd ɐ tˈɛlᵻkˌɑːnfɚɹəns wɪð nˈæsɐ`
 - [engineers] Their concern was the rubber O-rings that sealed the booster joints.
@@ -67,7 +67,7 @@ ASR: whisper-base.en int8 (sherpa-onnx) — mean WER **0.0077**, flagged (WER>0.
 - [all23] At fifty-three degrees, the coldest launch so far, it expects about three damaged rings out of six.
   - `æt fˈɪftiθɹˈiː dᵻɡɹˈiːz ðə kˈoʊldɪst lˈɑːntʃ sˈoʊ fˌɑːɹ ɪɾ ɛkspˈɛkts ɐbˌaʊt θɹˈiː dˈæmɪdʒd ɹˈɪŋz ˌaʊɾəv sˈɪks`
 - [all23] At the thirty-six degrees recorded on the pad that morning, it expects nearly all six.
-  - `æt ðə θˈɜːɾisˈɪks dᵻɡɹˈiːz ɹᵻkˈoːɹdᵻd ɔnðə pˈæd ðæt mˈɔːɹnɪŋ ɪɾ ɛkspˈɛkts nˌɪɹli ˈɔːl sˈɪks`
+  - `æt ðə θˈɜːɾisˈɪks dᵻɡɹˈiːz ɹᵻkˈɔːɹdᵻd ɔnðə pˈæd ðæt mˈɔːɹnɪŋ ɪɾ ɛkspˈɛkts nˌɪɹli ˈɔːl sˈɪks`
 - [all23] The engineers' recommendation that night was to not launch below fifty-three degrees.
   - `ðɪ ˌɛndʒɪnˈɪɹz ɹˌɛkəmɛndˈeɪʃən ðæt nˈaɪt wʌz tə nˌɑːt lˈɑːntʃ bᵻlˌoʊ fˈɪftiθɹˈiː dᵻɡɹˈiːz`
 - [caucus] NASA managers pushed back on the recommendation.
@@ -87,7 +87,7 @@ ASR: whisper-base.en int8 (sherpa-onnx) — mean WER **0.0077**, flagged (WER>0.
 - [selection] Without the flights that went fine, there is nothing for the damaged flights to be different from.
   - `wɪðˌaʊt ðə flˈaɪts ðæt wɛnt fˈaɪn ðɛɹ ɪz nˈʌθɪŋ fɚðə dˈæmɪdʒd flˈaɪts təbi dˈɪfɹənt fɹʌm`
 - [tufte] In 1989, three statisticians published a risk analysis using only the data available before the launch.
-  - `ɪn nˈaɪntiːnhˈʌndɹɪd ˈeɪɾi nˈaɪn θɹˈiː stˌæɾɪstˈɪʃənz pˈʌblɪʃt ɐ ɹˈɪsk ɐnˈæləsˌɪs jˈuːzɪŋ ˈoʊnli ðə dˈeɪɾə ɐvˈeɪləbəl bᵻfˌoːɹ ðə lˈɑːntʃ`
+  - `ɪn nˈaɪntiːnhˈʌndɹɪd ˈeɪɾi nˈaɪn θɹˈiː stˌæɾɪstˈɪʃənz pˈʌblɪʃt ɐ ɹˈɪsk ɐnˈæləsˌɪs jˈuːzɪŋ ˈoʊnli ðə dˈeɪɾə ɐvˈeɪləbəl bᵻfˌɔːɹ ðə lˈɑːntʃ`
 - [tufte] Their conclusion was that the probability of failure near freezing was very high.
   - `ðɛɹ kəŋklˈuːʒən wʌz ðætðə pɹˌɑːbəbˈɪlᵻɾi ʌv fˈeɪlɪɹ nˌɪɹ fɹˈiːzɪŋ wʌz vˈɛɹi hˈaɪ`
 - [tufte] Edward Tufte later made the same point about the charts themselves: the evidence existed; the display failed to show it.
@@ -99,9 +99,9 @@ ASR: whisper-base.en int8 (sherpa-onnx) — mean WER **0.0077**, flagged (WER>0.
 - [why] Shown in part, they said nothing at all.
   - `ʃˈoʊn ɪn pˈɑːɹt ðeɪ sˈɛd nˈʌθɪŋ æɾ ˈɔːl`
 - [outro] Sources, the data table, and the model fit are in the description.
-  - `sˈoːɹsᵻz ðə dˈeɪɾə tˈeɪbəl ænd ðə mˈɑːdəl fˈɪt ɑːɹ ɪnðə dᵻskɹˈɪpʃən`
+  - `sˈɔːɹsᵻz ðə dˈeɪɾə tˈeɪbəl ænd ðə mˈɑːdəl fˈɪt ɑːɹ ɪnðə dᵻskɹˈɪpʃən`
 - [outro] Next time: six hundred and sixteen dots, and the map that found the source of cholera.
-  - `nˈɛkst tˈaɪm sˈɪks hˈʌndɹɪd ænd sˈɪkstiːn dˈɑːts ænd ðə mˈæp ðæt fˈaʊnd ðə sˈoːɹs ʌv kˈɑːlɚɹə`
+  - `nˈɛkst tˈaɪm sˈɪks hˈʌndɹɪd ænd sˈɪkstiːn dˈɑːts ænd ðə mˈæp ðæt fˈaʊnd ðə sˈɔːɹs ʌv kˈɑːlɚɹə`
 
 </details>
 

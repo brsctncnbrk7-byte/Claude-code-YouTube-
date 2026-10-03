@@ -26,21 +26,23 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with: { fetch-depth: 2 }
-      - name: Resolve target (request file in this push, else smoke)
+      - name: Resolve targets (every request file changed in this push, else smoke)
         id: t
         run: |
-          EP="${{ github.event.inputs.episode }}"; FMT="${{ github.event.inputs.format }}"
-          if [ -z "$EP" ]; then
-            REQ=$(git diff --name-only HEAD~1 HEAD -- 'release-requests/*.request' 2>/dev/null | tail -1)
-            if [ -n "$REQ" ] && [ -f "$REQ" ]; then
-              EP=$(sed -n 's/^episode:[[:space:]]*//p' "$REQ" | head -1); FMT=$(sed -n 's/^format:[[:space:]]*//p' "$REQ" | head -1)
-            else EP=smoke; fi
+          EP="${{ github.event.inputs.episode }}"; FMT="${{ github.event.inputs.format }}"; [ -z "$FMT" ] && FMT=long
+          TARGETS=""
+          if [ -n "$EP" ]; then TARGETS="$EP:$FMT"; else
+            for REQ in $(git diff --name-only HEAD~1 HEAD -- 'release-requests/*.request' 2>/dev/null); do
+              [ -f "$REQ" ] || continue
+              E=$(sed -n 's/^episode:[[:space:]]*//p' "$REQ" | head -1); F=$(sed -n 's/^format:[[:space:]]*//p' "$REQ" | head -1); [ -z "$F" ] && F=long
+              TARGETS="$TARGETS $E:$F"
+            done
           fi
-          [ -z "$FMT" ] && FMT=long
-          case "$EP" in ep-[0-9][0-9][0-9]|smoke) ;; *) echo "bad episode id: $EP"; exit 1;; esac
-          TAG="$EP"; [ "$EP" = smoke ] && TAG="smoke-${GITHUB_RUN_ID}"
-          echo "ep=$EP" >> "$GITHUB_OUTPUT"; echo "fmt=$FMT" >> "$GITHUB_OUTPUT"; echo "tag=$TAG" >> "$GITHUB_OUTPUT"
-          echo "target: $EP ($FMT) → release $TAG"
+          TARGETS=$(echo $TARGETS); [ -z "$TARGETS" ] && TARGETS="smoke:long"
+          for T in $TARGETS; do case "${T%%:*}" in ep-[0-9][0-9][0-9]|smoke) ;; *) echo "bad episode id: $T"; exit 1;; esac; done
+          echo "targets=$TARGETS" >> "$GITHUB_OUTPUT"
+          case "$TARGETS" in smoke:*) echo "ep=smoke" >> "$GITHUB_OUTPUT";; *) echo "ep=episodes" >> "$GITHUB_OUTPUT";; esac
+          echo "targets: $TARGETS"
       - name: System packages (ffmpeg, espeak-ng, fonts)
         run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg espeak-ng fonts-dejavu-core time
       - uses: actions/setup-python@v5
@@ -67,25 +69,29 @@ jobs:
           ffmpeg -hide_banner -loglevel error -f lavfi -i testsrc=size=1280x720:rate=30 -f lavfi -i sine=frequency=440:sample_rate=48000 -t 3 -c:v libx264 -pix_fmt yuv420p -c:a aac dist/smoke/smoke.mp4
           echo "smoke $(date -u +%FT%TZ) run=${GITHUB_RUN_ID}" > dist/smoke/RELEASE_NOTES.md
           (cd dist/smoke && sha256sum smoke.mp4 RELEASE_NOTES.md > manifest.sha256 && cat manifest.sha256)
-      - name: Build episode
+      - name: Build episodes
         if: steps.t.outputs.ep != 'smoke'
         run: |
-          EP=${{ steps.t.outputs.ep }}; FMT=${{ steps.t.outputs.fmt }}
-          /usr/bin/time -v uv run ytf all "$EP" --workers 2 2>&1 | tee build-long.log
-          if [ "$FMT" = "both" ] || [ "$FMT" = "short" ]; then /usr/bin/time -v uv run ytf all "$EP" --format short --workers 2 2>&1 | tee build-short.log; fi
-          mkdir -p reports/quota && { echo "## run ${GITHUB_RUN_ID} $(date -u +%F) $EP"; grep -E "Elapsed|Maximum resident" build-*.log; du -sh dist/$EP; } > reports/quota/run-${GITHUB_RUN_ID}.md
+          mkdir -p reports/quota
+          for T in ${{ steps.t.outputs.targets }}; do EP=${T%%:*}; FMT=${T##*:}
+            /usr/bin/time -v uv run ytf all "$EP" --workers 2 2>&1 | tee build-$EP-long.log
+            if [ "$FMT" = "both" ] || [ "$FMT" = "short" ]; then /usr/bin/time -v uv run ytf all "$EP" --format short --workers 2 2>&1 | tee build-$EP-short.log; fi
+            { echo "## run ${GITHUB_RUN_ID} $(date -u +%F) $EP"; grep -E "Elapsed|Maximum resident" build-$EP-*.log; du -sh dist/$EP; } > reports/quota/run-${GITHUB_RUN_ID}-$EP.md
+          done
       - name: Upload artifact (90-day backup)
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ steps.t.outputs.ep }}-${{ github.run_id }}
-          path: dist/${{ steps.t.outputs.ep }}
+          name: dist-${{ github.run_id }}
+          path: dist/
           retention-days: 90
-      - name: Create GitHub Release (same run; GITHUB_TOKEN)
+      - name: Create GitHub Releases (same run; GITHUB_TOKEN)
         env: { GH_TOKEN: "${{ secrets.GITHUB_TOKEN }}" }
         run: |
-          EP=${{ steps.t.outputs.ep }}; TAG=${{ steps.t.outputs.tag }}
-          NOTES=dist/$EP/RELEASE_NOTES.md; [ -f "$NOTES" ] || NOTES=/dev/null
-          # files only (no directories); the short/ copies of sources.md and licenses.md are duplicates of the top-level ones
-          mapfile -t FILES < <(find "dist/$EP" -type f ! -path "*/short/sources.md" ! -path "*/short/licenses.md" | sort)
-          printf '%s\n' "${FILES[@]}"
-          if gh release view "$TAG" >/dev/null 2>&1; then gh release upload "$TAG" "${FILES[@]}" --clobber; else gh release create "$TAG" "${FILES[@]}" --title "$TAG" --notes-file "$NOTES" --target "$GITHUB_SHA"; fi
+          for T in ${{ steps.t.outputs.targets }}; do EP=${T%%:*}
+            TAG="$EP"; [ "$EP" = smoke ] && TAG="smoke-${GITHUB_RUN_ID}"
+            NOTES=dist/$EP/RELEASE_NOTES.md; [ -f "$NOTES" ] || NOTES=/dev/null
+            # files only (no directories); the short/ copies of sources.md and licenses.md duplicate the top-level ones
+            mapfile -t FILES < <(find "dist/$EP" -type f ! -path "*/short/sources.md" ! -path "*/short/licenses.md" | sort)
+            printf '%s\n' "${FILES[@]}"
+            if gh release view "$TAG" >/dev/null 2>&1; then gh release upload "$TAG" "${FILES[@]}" --clobber; else gh release create "$TAG" "${FILES[@]}" --title "$TAG" --notes-file "$NOTES" --target "$GITHUB_SHA"; fi
+          done

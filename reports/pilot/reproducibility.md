@@ -24,5 +24,14 @@ Tohumlama işe yaradı (aynı ortamda ardışık süreçler birebir aynı) ama a
 **Kök neden 2:** iki espeak-ng aynı süreçte karışıyor — `espeakng-loader` wheel'i kendi `libespeak-ng.so` (1.52) + verisini taşır, sistemde 1.51 var. espeak-ng veri yolunu ~160 baytlık sabit tampona yazar; klonun uzun yolu (`/tmp/claude-0/-home-user-…/scratchpad/repro2/clone/.venv/…`, ~170 karakter) sessizce yok sayılıp kütüphane derlenmiş yola düşüyor, ardından sistem sözlüğüyle fonemleştirme yapılıyor → farklı fonem → farklı ses.
 **Düzeltme (commit "Pin bundled espeak-ng"):** `ytf` import edilirken `PHONEMIZER_ESPEAK_LIBRARY`/`ESPEAK_DATA_PATH` wheel'deki espeak'e sabitlenir; veri yolu 120 karakteri aşarsa `/tmp/ytf-espeak-ng-data`'ya kopyalanır (`YTF_ESPEAK_DATA_DIR` ile değiştirilebilir); Kokoro'ya `EspeakConfig` ile aynı yollar verilir; QC fonem listesi de aynı espeak'i kullanır. Doğrulama: aynı cümle iki venv'de aynı sha (`dc5e25d131c5`), süre 11.0108 s.
 
-## Koşu 3 — sabitlenmiş espeak + tohumlu TTS, kısa yollu temiz klon (`reports/pilot/chain3.log`)
-_bekleniyor_
+## Koşu 3 — 2026-10-03 21:35 UTC (sabitlenmiş espeak + tohumlu TTS; klon yolu `/tmp/claude-0/r3/c`) — **REPRODUCIBLE: true**
+| Ölçüt | A (ana) | B (temiz klon) | Sonuç |
+|---|---|---|---|
+| Süre / kare sayısı | eşit | eşit | ✅ |
+| Cümle süreleri (57) | maks. fark **0.0 ms** | | ✅ |
+| SRT cue, loudness | eşit | eşit | ✅ |
+| Kare piksel farkı (8 örnek) | tümü **0.0** | | ✅ |
+| **MP4 sha256** | **birebir aynı** | | ✅ (zorunlu değildi; bit-düzeyi deterministiklik sağlandı) |
+Temiz klon derleme: 9:49 duvar (cümle başına tohumlu oturum nedeniyle TTS ~2 dk), tepe RSS **1.34 GB** (oturum yeniden yükleme; VPS gereksinimine işlendi).
+
+Sonuç: `git clone` → `uv sync --frozen` → modeller (sha256) → `ytf build ep-001` zinciri, MASTER_PLAN §6 toleranslarını aşarak bit-düzeyinde aynı MP4 üretiyor. Bu sonuç bu makine/işletim sistemi için ölçülmüştür; farklı CPU/ORT yapısında bit eşitliği garanti edilmez, toleranslı eşitlik beklenir (CPU-only ORT, aynı wheel'ler).

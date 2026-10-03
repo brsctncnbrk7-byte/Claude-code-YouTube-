@@ -93,12 +93,12 @@
       {
         "scene": "s_cta",
         "text": "The full story, and what the chart changed, is on the channel.",
-        "ipa": "ðə fˈʊl stˈoːɹi ænd wʌt ðə tʃˈɑːɹt tʃˈeɪndʒd ɪz ɔnðə tʃˈænəl"
+        "ipa": "ðə fˈʊl stˈɔːɹi ænd wʌt ðə tʃˈɑːɹt tʃˈeɪndʒd ɪz ɔnðə tʃˈænəl"
       }
     ],
     "asr": {
       "model": "whisper-base.en int8 (sherpa-onnx)",
-      "seconds": 4.1,
+      "seconds": 3.9,
       "rows": [
         {
           "scene": "s_hook",

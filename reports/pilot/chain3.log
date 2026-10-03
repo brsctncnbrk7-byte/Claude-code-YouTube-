@@ -1,1 +1,204 @@
 == build ep-001 long 21:14:12
+[tts] 288.1s narration, 57 sentences, 131.3s
+[subs] 81 cues
+[render] /home/user/Claude-code-YouTube-/build/ep-001/long/video.mp4 in 395.4s
+[mux] /home/user/Claude-code-YouTube-/build/ep-001/long/ep-001.mp4 (measured I=-25.70 LUFS → -14)
+[done] build ep-001/long in 590.1s
+== qc ep-001 long
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[qc] QC_PASS technical_ok=True gate_ok=True → reports/ep-001/long/qc-report.md
+== package ep-001 long
+[package] /home/user/Claude-code-YouTube-/dist/ep-001
+== build ep-001 short 21:25:20
+[tts] 30.0s narration, 9 sentences, 14.0s
+[subs] 10 cues
+[render] /home/user/Claude-code-YouTube-/build/ep-001/short/video.mp4 in 44.4s
+[mux] /home/user/Claude-code-YouTube-/build/ep-001/short/ep-001.mp4 (measured I=-25.74 LUFS → -14)
+[done] build ep-001/short in 65.6s
+== qc ep-001 short
+
+
+
+
+
+
+
+
+
+[qc] QC_PASS technical_ok=True gate_ok=True → reports/ep-001/short/qc-report.md
+== package ep-001 short
+[package] /home/user/Claude-code-YouTube-/dist/ep-001/short
+== build ep-002 long 21:26:37
+[tts] 179.6s narration, 39 sentences, 86.7s
+[subs] 56 cues
+[render] /home/user/Claude-code-YouTube-/build/ep-002/long/video.mp4 in 258.4s
+[mux] /home/user/Claude-code-YouTube-/build/ep-002/long/ep-002.mp4 (measured I=-25.62 LUFS → -14)
+[done] build ep-002/long in 385.4s
+== qc ep-002 long
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[qc] QC_PASS technical_ok=True gate_ok=True → reports/ep-002/long/qc-report.md
+== package ep-002 long
+[package] /home/user/Claude-code-YouTube-/dist/ep-002
+== build ep-002 short 21:33:55
+[tts] 24.1s narration, 6 sentences, 13.1s
+[subs] 6 cues
+[render] /home/user/Claude-code-YouTube-/build/ep-002/short/video.mp4 in 35.6s
+[mux] /home/user/Claude-code-YouTube-/build/ep-002/short/ep-002.mp4 (measured I=-25.57 LUFS → -14)
+[done] build ep-002/short in 54.9s
+== qc ep-002 short
+
+
+
+
+
+
+[qc] QC_PASS technical_ok=True gate_ok=True → reports/ep-002/short/qc-report.md
+== package ep-002 short
+[package] /home/user/Claude-code-YouTube-/dist/ep-002/short
+== clean clone build 21:35:01 path=/tmp/claude-0/r3/c
+[tts] 288.1s narration, 57 sentences, 133.8s
+[subs] 81 cues
+[render] /tmp/claude-0/r3/c/build/ep-001/long/video.mp4 in 392.3s
+[mux] /tmp/claude-0/r3/c/build/ep-001/long/ep-001.mp4 (measured I=-25.70 LUFS → -14)
+[done] build ep-001/long in 588.3s
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 9:49.07
+	Maximum resident set size (kbytes): 1342276
+== repro check
+{
+  "duration": {
+    "a": 288.1,
+    "b": 288.1,
+    "ok": true
+  },
+  "frames": {
+    "a": 8643,
+    "b": 8643,
+    "ok": true
+  },
+  "sentences": {
+    "n_a": 57,
+    "n_b": 57,
+    "max_abs_diff_ms": 0.0,
+    "ok": true
+  },
+  "srt_cues": {
+    "a": 81,
+    "b": 81,
+    "ok": true
+  },
+  "loudness": {
+    "a": -14.01,
+    "b": -14.01,
+    "ok": true
+  },
+  "frames_pixel_diff": {
+    "mean_per_sample": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "ok": true
+  },
+  "mp4_sha256_identical": true,
+  "REPRODUCIBLE": true
+}
+CHAIN3 EXIT 21:45:27

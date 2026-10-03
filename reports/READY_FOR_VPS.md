@@ -1,6 +1,6 @@
 # READY_FOR_VPS değerlendirmesi — TASLAK (henüz ilan edilmedi)
 
-Durum: **HAZIR DEĞİL** — 4 ve 6 numaralı ölçütler kapanmadı. Bu dosya ölçütler kapandıkça kanıt bağlantılarıyla güncellenir; `READY_FOR_VPS / GITHUB PREPARATION COMPLETE` ancak 8/8 kanıtlandığında yazılır.
+Durum: **HAZIR DEĞİL** — 4 numaralı ölçüt (ilk hafta paketleri: ep-003) kapanmadı. Bu dosya ölçütler kapandıkça kanıt bağlantılarıyla güncellenir; `READY_FOR_VPS / GITHUB PREPARATION COMPLETE` ancak 8/8 kanıtlandığında yazılır.
 
 | # | Ölçüt (MASTER_PROMPT §10) | Durum | Kanıt |
 |---|---|---|---|
@@ -9,6 +9,6 @@ Durum: **HAZIR DEĞİL** — 4 ve 6 numaralı ölçütler kapanmadı. Bu dosya �
 | 3 | Pilot uçtan uca + ikinci konu + Shorts yolu | ✅ | reports/pilot/ep-001.md, ep-002.md; dist/ep-001, dist/ep-002 (uzun+Short) QC_PASS |
 | 4 | İlk hafta yayın paketleri (placeholder yok) | ⏳ | ep-001, ep-002 hazır; ep-003 senaryo hazır, üretim bekliyor; Shorts ×2 hazır |
 | 5 | Gerçek CPU/RAM/disk/render/kota ölçümü → VPS gereksinimi | ✅ | reports/pilot/render-benchmark.md, reports/quota/actions-ep-00*.md, docs/operations/vps-setup.md (denenmedi etiketli) |
-| 6 | Temiz klondan tek komutla yeniden üretim; hata/devam mekanizması | ⏳ | reports/pilot/reproducibility.md (Koşu 3 bekleniyor); checkpoint/retry: tests/test_jobs.py, docs/operations/recovery.md |
+| 6 | Temiz klondan tek komutla yeniden üretim; hata/devam mekanizması | ✅ | reports/pilot/reproducibility.md Koşu 3: REPRODUCIBLE true, MP4 sha256 birebir; checkpoint/retry: tests/test_jobs.py, docs/operations/recovery.md |
 | 7 | Büyük çıktılar erişilebilir/ücretsiz/kalıcı teslim + manifest/checksum | ✅ | GitHub Releases `ep-001`, `ep-002` (21 varlık); sha256 doğrulandı (reports/quota/actions-ep-00*.md) |
 | 8 | Kanal/yükleme paketleri, hesap sahibi zorunlulukları, analytics sınırları, ücretsiz sınırlar, VPS rehberi | ✅ | channel/SETUP_CHECKLIST.md, dist/*/UPLOAD_CHECKLIST.md, docs/operations/{publishing,measurement,github-quota,vps-setup,session-continuity}.md |

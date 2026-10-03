@@ -63,12 +63,12 @@
       {
         "scene": "hook",
         "text": "The night before, a group of engineers had tried to stop the launch with a chart.",
-        "ipa": "ðə nˈaɪt bᵻfˌoːɹ ɐ ɡɹˈuːp ʌv ˌɛndʒɪnˈɪɹz hæd tɹˈaɪd tə stˈɑːp ðə lˈɑːntʃ wɪð ɐ tʃˈɑːɹt"
+        "ipa": "ðə nˈaɪt bᵻfˌɔːɹ ɐ ɡɹˈuːp ʌv ˌɛndʒɪnˈɪɹz hæd tɹˈaɪd tə stˈɑːp ðə lˈɑːntʃ wɪð ɐ tʃˈɑːɹt"
       },
       {
         "scene": "title",
         "text": "This is the story of the chart they drew, the chart they could have drawn, and the difference between them.",
-        "ipa": "ðɪs ɪz ðə stˈoːɹi ʌvðə tʃˈɑːɹt ðeɪ dɹˈuː ðə tʃˈɑːɹt ðeɪ kˌʊdɐv dɹˈɔːn ænd ðə dˈɪfɹəns bᵻtwˈiːn ðˌɛm"
+        "ipa": "ðɪs ɪz ðə stˈɔːɹi ʌvðə tʃˈɑːɹt ðeɪ dɹˈuː ðə tʃˈɑːɹt ðeɪ kˌʊdɐv dɹˈɔːn ænd ðə dˈɪfɹəns bᵻtwˈiːn ðˌɛm"
       },
       {
         "scene": "engineers",
@@ -158,7 +158,7 @@
       {
         "scene": "all23",
         "text": "At the thirty-six degrees recorded on the pad that morning, it expects nearly all six.",
-        "ipa": "æt ðə θˈɜːɾisˈɪks dᵻɡɹˈiːz ɹᵻkˈoːɹdᵻd ɔnðə pˈæd ðæt mˈɔːɹnɪŋ ɪɾ ɛkspˈɛkts nˌɪɹli ˈɔːl sˈɪks"
+        "ipa": "æt ðə θˈɜːɾisˈɪks dᵻɡɹˈiːz ɹᵻkˈɔːɹdᵻd ɔnðə pˈæd ðæt mˈɔːɹnɪŋ ɪɾ ɛkspˈɛkts nˌɪɹli ˈɔːl sˈɪks"
       },
       {
         "scene": "all23",
@@ -208,7 +208,7 @@
       {
         "scene": "tufte",
         "text": "In 1989, three statisticians published a risk analysis using only the data available before the launch.",
-        "ipa": "ɪn nˈaɪntiːnhˈʌndɹɪd ˈeɪɾi nˈaɪn θɹˈiː stˌæɾɪstˈɪʃənz pˈʌblɪʃt ɐ ɹˈɪsk ɐnˈæləsˌɪs jˈuːzɪŋ ˈoʊnli ðə dˈeɪɾə ɐvˈeɪləbəl bᵻfˌoːɹ ðə lˈɑːntʃ"
+        "ipa": "ɪn nˈaɪntiːnhˈʌndɹɪd ˈeɪɾi nˈaɪn θɹˈiː stˌæɾɪstˈɪʃənz pˈʌblɪʃt ɐ ɹˈɪsk ɐnˈæləsˌɪs jˈuːzɪŋ ˈoʊnli ðə dˈeɪɾə ɐvˈeɪləbəl bᵻfˌɔːɹ ðə lˈɑːntʃ"
       },
       {
         "scene": "tufte",
@@ -238,17 +238,17 @@
       {
         "scene": "outro",
         "text": "Sources, the data table, and the model fit are in the description.",
-        "ipa": "sˈoːɹsᵻz ðə dˈeɪɾə tˈeɪbəl ænd ðə mˈɑːdəl fˈɪt ɑːɹ ɪnðə dᵻskɹˈɪpʃən"
+        "ipa": "sˈɔːɹsᵻz ðə dˈeɪɾə tˈeɪbəl ænd ðə mˈɑːdəl fˈɪt ɑːɹ ɪnðə dᵻskɹˈɪpʃən"
       },
       {
         "scene": "outro",
         "text": "Next time: six hundred and sixteen dots, and the map that found the source of cholera.",
-        "ipa": "nˈɛkst tˈaɪm sˈɪks hˈʌndɹɪd ænd sˈɪkstiːn dˈɑːts ænd ðə mˈæp ðæt fˈaʊnd ðə sˈoːɹs ʌv kˈɑːlɚɹə"
+        "ipa": "nˈɛkst tˈaɪm sˈɪks hˈʌndɹɪd ænd sˈɪkstiːn dˈɑːts ænd ðə mˈæp ðæt fˈaʊnd ðə sˈɔːɹs ʌv kˈɑːlɚɹə"
       }
     ],
     "asr": {
       "model": "whisper-base.en int8 (sherpa-onnx)",
-      "seconds": 20.1,
+      "seconds": 20.2,
       "rows": [
         {
           "scene": "hook",

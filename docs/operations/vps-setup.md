@@ -6,7 +6,7 @@
 | Kaynak | Ölçüm | VPS önerisi |
 |---|---|---|
 | CPU | 4 vCPU; build %207 CPU ortalaması (2 Playwright işçisi + ffmpeg) | ≥ 2 vCPU çalışır (2× yavaş), 4 vCPU ideal |
-| RAM | tepe RSS 830 MB (build), Whisper QC ~1 GB | ≥ 2 GB boş; 4 GB rahat |
+| RAM | tepe RSS 1.34 GB (build, cümle başına tohumlu TTS oturumu), Whisper QC ~1 GB | ≥ 3 GB boş; 4 GB rahat |
 | Disk | modeller 560 MB + çıkarılmış whisper 300 MB; build/ep başına ~150 MB (kareler silinir); dist/ep ~15 MB | ≥ 10 GB boş |
 | Süre | TTS 59 s (229 s ses), render 310 s, QC 56 s → ~7 dk / 4 dk video | 8 dk video ≈ 15–20 dk/ep (4 vCPU) |
 | Ağ | GitHub release indirme (modeller), pypi/apt | çıkış erişimi gerekli |

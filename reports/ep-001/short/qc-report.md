@@ -39,7 +39,7 @@ ASR: whisper-base.en int8 (sherpa-onnx) — mean WER **0.0**, flagged (WER>0.05)
 - [s_rose] For every soldier killed by the enemy, eight died of disease.
   - `fɔːɹ ˈɛvɹi sˈoʊldʒɚ kˈɪld baɪ ðɪ ˈɛnəmi ˈeɪt dˈaɪd ʌv dɪzˈiːz`
 - [s_cta] The full story, and what the chart changed, is on the channel.
-  - `ðə fˈʊl stˈoːɹi ænd wʌt ðə tʃˈɑːɹt tʃˈeɪndʒd ɪz ɔnðə tʃˈænəl`
+  - `ðə fˈʊl stˈɔːɹi ænd wʌt ðə tʃˈɑːɹt tʃˈeɪndʒd ɪz ɔnðə tʃˈænəl`
 
 </details>
 

@@ -58,7 +58,7 @@
       {
         "scene": "s_hook",
         "text": "The night before, engineers tried to stop it with a chart.",
-        "ipa": "ðə nˈaɪt bᵻfˌoːɹ ˌɛndʒɪnˈɪɹz tɹˈaɪd tə stˈɑːp ɪt wɪð ɐ tʃˈɑːɹt"
+        "ipa": "ðə nˈaɪt bᵻfˌɔːɹ ˌɛndʒɪnˈɪɹz tɹˈaɪd tə stˈɑːp ɪt wɪð ɐ tʃˈɑːɹt"
       },
       {
         "scene": "s_compare",
@@ -78,12 +78,12 @@
       {
         "scene": "s_cta",
         "text": "The full story, and the model that predicted it, is on the channel.",
-        "ipa": "ðə fˈʊl stˈoːɹi ænd ðə mˈɑːdəl ðæt pɹɪdˈɪktᵻd ɪɾ ɪz ɔnðə tʃˈænəl"
+        "ipa": "ðə fˈʊl stˈɔːɹi ænd ðə mˈɑːdəl ðæt pɹɪdˈɪktᵻd ɪɾ ɪz ɔnðə tʃˈænəl"
       }
     ],
     "asr": {
       "model": "whisper-base.en int8 (sherpa-onnx)",
-      "seconds": 3.3,
+      "seconds": 3.2,
       "rows": [
         {
           "scene": "s_hook",
