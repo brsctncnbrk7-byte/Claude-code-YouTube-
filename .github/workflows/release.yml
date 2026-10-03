@@ -14,7 +14,9 @@ on:
       format: { description: "long | short | both", required: false, default: "long" }
 permissions:
   contents: read
-concurrency: { group: release-${{ github.ref }}, cancel-in-progress: false }
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
 jobs:
   build:
     runs-on: ubuntu-latest
