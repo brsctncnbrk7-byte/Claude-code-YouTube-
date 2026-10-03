@@ -8,7 +8,7 @@
 | container | ✅ | {"codec": "h264", "pix_fmt": "yuv420p", "w": 1920, "h": 1080, "fps": "30/1", "audio": "aac 48000Hz", "duration": 179.6, "frames": 5388, "expected_frames": 5388} |
 | blackdetect | ✅ | {} |
 | silencedetect | ✅ | {} |
-| loudness | ✅ | {"integrated_lufs": -14.01, "true_peak_dbtp": -2.81, "lra": 2.4} |
+| loudness | ✅ | {"integrated_lufs": -14.01, "true_peak_dbtp": -2.73, "lra": 2.3} |
 | subtitles | ✅ | {"cues": 56, "long_or_tall": 0} |
 | text_overflow | ✅ | {} |
 | frame_samples | ✅ | {"count": 20, "dir": "/home/user/Claude-code-YouTube-/reports/ep-002/long/frames", "reviewed_by_claude": true} |
@@ -17,9 +17,10 @@
 ## C. Audio evaluation (not a human listening test)
 > Audio was evaluated by phoneme review, ASR round-trip and spectrogram inspection; no human listening test was performed.
 
-ASR: whisper-base.en int8 (sherpa-onnx) — mean WER **0.0058**, flagged (WER>0.05): 1
+ASR: whisper-base.en int8 (sherpa-onnx) — mean WER **0.0077**, flagged (WER>0.05): 2
 
-- [caucus] WER 0.133: ref=`Thiokol's management took the call offline for about thirty minutes, returned, and overruled its own engineers.` hyp=`Thio Call's management took the call offline for about 30 minutes, returned, and overruled its own engineers.`
+- [all23] WER 0.077: ref=`The engineers' recommendation that night was to not launch below fifty-three degrees.` hyp=`The engineer's recommendation that night was to not launch below 53 degrees.`
+- [caucus] WER 0.133: ref=`Thiokol's management took the call offline for about thirty minutes, returned, and overruled its own engineers.` hyp=`Thio-Call's management took the call offline for about 30 minutes, returned, and overruled its own engineers.`
 
 <details><summary>Phoneme review (IPA per sentence)</summary>
 

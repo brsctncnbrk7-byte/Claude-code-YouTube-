@@ -9,9 +9,9 @@
       "h": 1080,
       "fps": "30/1",
       "audio": "aac 48000Hz",
-      "duration": 288.067,
-      "frames": 8642,
-      "expected_frames": 8642,
+      "duration": 288.1,
+      "frames": 8643,
+      "expected_frames": 8643,
       "ok": true
     },
     "blackdetect": {
@@ -23,9 +23,9 @@
       "ok": true
     },
     "loudness": {
-      "integrated_lufs": -14.02,
-      "true_peak_dbtp": -2.5,
-      "lra": 2.2,
+      "integrated_lufs": -14.01,
+      "true_peak_dbtp": -2.23,
+      "lra": 2.3,
       "ok": true
     },
     "subtitles": {
@@ -338,7 +338,7 @@
     ],
     "asr": {
       "model": "whisper-base.en int8 (sherpa-onnx)",
-      "seconds": 28.9,
+      "seconds": 27.4,
       "rows": [
         {
           "scene": "hook",
@@ -361,7 +361,7 @@
         {
           "scene": "title",
           "ref": "This is the story of how one woman turned that ledger into a picture, and why the picture worked where the numbers had failed.",
-          "hyp": "This is the story of how one woman turned that ledger into a picture, and why the picture worked where the numbers had failed.",
+          "hyp": "This is the story of how one woman turned that ledger into a picture, and why the picture worked where the numbers had failed. [buzzer]",
           "wer": 0.0
         },
         {
@@ -433,7 +433,7 @@
         {
           "scene": "ledger",
           "ref": "Counting came before cleaning.",
-          "hyp": "Counting came before cleaning.",
+          "hyp": "counting came before cleaning.",
           "wer": 0.0
         },
         {
@@ -559,8 +559,9 @@
         {
           "scene": "rates",
           "ref": "Per thousand men, disease deaths fell from over one thousand a year in January 1855 to under four by March 1856.",
-          "hyp": "Per 1,000 men, disease deaths fell from over 1,000 a year in January 1,855, to under 4 by March 1,856. [buzzer]",
-          "wer": 0.04
+          "hyp": "per thousand men, disease deaths fell from over one thousand a year in January one thousand eight hundred fifty five to under four by march one thousand eight hundred fifty six",
+          "wer": 0.32,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-001/long/spectrograms/flag_00_rates.png"
         },
         {
           "scene": "batswing",
@@ -643,7 +644,7 @@
         {
           "scene": "impact",
           "ref": "The diagram went into her evidence for the Royal Commission on the Health of the Army, formed in 1857, and to the people who could act: Queen Victoria, Sidney Herbert, members of Parliament.",
-          "hyp": "The diagram went into her evidence for the Royal Commission on the Health of the Army, formed in 1857 and to the people who could act. Queen Victoria, Sydney Herbert, members of Parliament.",
+          "hyp": "The diagram went into her evidence for the Royal Commission on the Health of the Army, formed in 1857, and to the people who could act. Queen Victoria, Sydney Herbert, members of Parliament.",
           "wer": 0.029
         },
         {
@@ -651,7 +652,7 @@
           "ref": "Reforms followed: an army medical school, routine sanitary statistics for barracks and hospitals.",
           "hyp": "Reforms followed. An Army medical school routines sanitary statistics for barracks and hospitals.",
           "wer": 0.083,
-          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-001/long/spectrograms/flag_00_impact.png"
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-001/long/spectrograms/flag_01_impact.png"
         },
         {
           "scene": "impact",
@@ -680,18 +681,25 @@
         {
           "scene": "outro",
           "ref": "Sources and the data for this episode are in the description.",
-          "hyp": "Sources and the data for this episode are in the description. [AUDIO OUT]",
+          "hyp": "Sources and the data for this episode are in the description.",
           "wer": 0.0
         }
       ],
-      "mean_wer": 0.0027,
+      "mean_wer": 0.0076,
       "flagged": [
+        {
+          "scene": "rates",
+          "ref": "Per thousand men, disease deaths fell from over one thousand a year in January 1855 to under four by March 1856.",
+          "hyp": "per thousand men, disease deaths fell from over one thousand a year in January one thousand eight hundred fifty five to under four by march one thousand eight hundred fifty six",
+          "wer": 0.32,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-001/long/spectrograms/flag_00_rates.png"
+        },
         {
           "scene": "impact",
           "ref": "Reforms followed: an army medical school, routine sanitary statistics for barracks and hospitals.",
           "hyp": "Reforms followed. An Army medical school routines sanitary statistics for barracks and hospitals.",
           "wer": 0.083,
-          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-001/long/spectrograms/flag_00_impact.png"
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-001/long/spectrograms/flag_01_impact.png"
         }
       ]
     },

@@ -24,8 +24,8 @@
     },
     "loudness": {
       "integrated_lufs": -14.01,
-      "true_peak_dbtp": -2.81,
-      "lra": 2.4,
+      "true_peak_dbtp": -2.73,
+      "lra": 2.3,
       "ok": true
     },
     "subtitles": {
@@ -248,7 +248,7 @@
     ],
     "asr": {
       "model": "whisper-base.en int8 (sherpa-onnx)",
-      "seconds": 19.1,
+      "seconds": 20.1,
       "rows": [
         {
           "scene": "hook",
@@ -283,7 +283,7 @@
         {
           "scene": "engineers",
           "ref": "Their concern was the rubber O-rings that sealed the booster joints.",
-          "hyp": "Their concern was the rubber o-rings that sealed the booster joints. [buzzer]",
+          "hyp": "Their concern was the rubber o-rings that sealed the booster joints.",
           "wer": 0.0
         },
         {
@@ -319,7 +319,7 @@
         {
           "scene": "engineers",
           "ref": "Managers looked at this and saw no clear trend.",
-          "hyp": "Managers looked at this and saw no clear trend.",
+          "hyp": "managers looked at this and saw no clear trend.",
           "wer": 0.0
         },
         {
@@ -385,8 +385,9 @@
         {
           "scene": "all23",
           "ref": "The engineers' recommendation that night was to not launch below fifty-three degrees.",
-          "hyp": "The engineers' recommendation that night was to not launch below 53 degrees.",
-          "wer": 0.0
+          "hyp": "The engineer's recommendation that night was to not launch below 53 degrees.",
+          "wer": 0.077,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-002/long/spectrograms/flag_00_all23.png"
         },
         {
           "scene": "caucus",
@@ -397,9 +398,9 @@
         {
           "scene": "caucus",
           "ref": "Thiokol's management took the call offline for about thirty minutes, returned, and overruled its own engineers.",
-          "hyp": "Thio Call's management took the call offline for about 30 minutes, returned, and overruled its own engineers.",
+          "hyp": "Thio-Call's management took the call offline for about 30 minutes, returned, and overruled its own engineers.",
           "wer": 0.133,
-          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-002/long/spectrograms/flag_00_caucus.png"
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-002/long/spectrograms/flag_01_caucus.png"
         },
         {
           "scene": "caucus",
@@ -422,7 +423,7 @@
         {
           "scene": "selection",
           "ref": "The engineers selected on the outcome: they plotted only the flights where damage had occurred.",
-          "hyp": "The engineers selected on the outcome. They plotted only the flights where damage had occurred. [buzzer]",
+          "hyp": "The engineers selected on the outcome. They plotted only the flights where damage had occurred.",
           "wer": 0.0
         },
         {
@@ -486,14 +487,21 @@
           "wer": 0.0
         }
       ],
-      "mean_wer": 0.0058,
+      "mean_wer": 0.0077,
       "flagged": [
+        {
+          "scene": "all23",
+          "ref": "The engineers' recommendation that night was to not launch below fifty-three degrees.",
+          "hyp": "The engineer's recommendation that night was to not launch below 53 degrees.",
+          "wer": 0.077,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-002/long/spectrograms/flag_00_all23.png"
+        },
         {
           "scene": "caucus",
           "ref": "Thiokol's management took the call offline for about thirty minutes, returned, and overruled its own engineers.",
-          "hyp": "Thio Call's management took the call offline for about 30 minutes, returned, and overruled its own engineers.",
+          "hyp": "Thio-Call's management took the call offline for about 30 minutes, returned, and overruled its own engineers.",
           "wer": 0.133,
-          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-002/long/spectrograms/flag_00_caucus.png"
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-002/long/spectrograms/flag_01_caucus.png"
         }
       ]
     },

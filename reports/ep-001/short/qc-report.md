@@ -5,10 +5,10 @@
 ## B. Technical checks
 | check | ok | detail |
 |---|---|---|
-| container | ✅ | {"codec": "h264", "pix_fmt": "yuv420p", "w": 1080, "h": 1920, "fps": "30/1", "audio": "aac 48000Hz", "duration": 29.933, "frames": 898, "expected_frames": 898} |
+| container | ✅ | {"codec": "h264", "pix_fmt": "yuv420p", "w": 1080, "h": 1920, "fps": "30/1", "audio": "aac 48000Hz", "duration": 29.967, "frames": 899, "expected_frames": 899} |
 | blackdetect | ✅ | {} |
 | silencedetect | ✅ | {} |
-| loudness | ✅ | {"integrated_lufs": -14.02, "true_peak_dbtp": -2.19, "lra": 2.9} |
+| loudness | ✅ | {"integrated_lufs": -14.03, "true_peak_dbtp": -2.45, "lra": 2.5} |
 | subtitles | ✅ | {"cues": 10, "long_or_tall": 0} |
 | text_overflow | ✅ | {} |
 | frame_samples | ✅ | {"count": 6, "dir": "/home/user/Claude-code-YouTube-/reports/ep-001/short/frames", "reviewed_by_claude": true} |

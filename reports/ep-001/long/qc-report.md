@@ -5,10 +5,10 @@
 ## B. Technical checks
 | check | ok | detail |
 |---|---|---|
-| container | ✅ | {"codec": "h264", "pix_fmt": "yuv420p", "w": 1920, "h": 1080, "fps": "30/1", "audio": "aac 48000Hz", "duration": 288.067, "frames": 8642, "expected_frames": 8642} |
+| container | ✅ | {"codec": "h264", "pix_fmt": "yuv420p", "w": 1920, "h": 1080, "fps": "30/1", "audio": "aac 48000Hz", "duration": 288.1, "frames": 8643, "expected_frames": 8643} |
 | blackdetect | ✅ | {} |
 | silencedetect | ✅ | {} |
-| loudness | ✅ | {"integrated_lufs": -14.02, "true_peak_dbtp": -2.5, "lra": 2.2} |
+| loudness | ✅ | {"integrated_lufs": -14.01, "true_peak_dbtp": -2.23, "lra": 2.3} |
 | subtitles | ✅ | {"cues": 81, "long_or_tall": 0} |
 | text_overflow | ✅ | {} |
 | frame_samples | ✅ | {"count": 28, "dir": "/home/user/Claude-code-YouTube-/reports/ep-001/long/frames", "reviewed_by_claude": true} |
@@ -17,8 +17,9 @@
 ## C. Audio evaluation (not a human listening test)
 > Audio was evaluated by phoneme review, ASR round-trip and spectrogram inspection; no human listening test was performed.
 
-ASR: whisper-base.en int8 (sherpa-onnx) — mean WER **0.0027**, flagged (WER>0.05): 1
+ASR: whisper-base.en int8 (sherpa-onnx) — mean WER **0.0076**, flagged (WER>0.05): 2
 
+- [rates] WER 0.32: ref=`Per thousand men, disease deaths fell from over one thousand a year in January 1855 to under four by March 1856.` hyp=`per thousand men, disease deaths fell from over one thousand a year in January one thousand eight hundred fifty five to under four by march one thousand eight hundred fifty six`
 - [impact] WER 0.083: ref=`Reforms followed: an army medical school, routine sanitary statistics for barracks and hospitals.` hyp=`Reforms followed. An Army medical school routines sanitary statistics for barracks and hospitals.`
 
 <details><summary>Phoneme review (IPA per sentence)</summary>

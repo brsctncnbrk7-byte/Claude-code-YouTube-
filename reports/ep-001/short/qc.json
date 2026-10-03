@@ -9,9 +9,9 @@
       "h": 1920,
       "fps": "30/1",
       "audio": "aac 48000Hz",
-      "duration": 29.933,
-      "frames": 898,
-      "expected_frames": 898,
+      "duration": 29.967,
+      "frames": 899,
+      "expected_frames": 899,
       "ok": true
     },
     "blackdetect": {
@@ -23,9 +23,9 @@
       "ok": true
     },
     "loudness": {
-      "integrated_lufs": -14.02,
-      "true_peak_dbtp": -2.19,
-      "lra": 2.9,
+      "integrated_lufs": -14.03,
+      "true_peak_dbtp": -2.45,
+      "lra": 2.5,
       "ok": true
     },
     "subtitles": {
@@ -98,7 +98,7 @@
     ],
     "asr": {
       "model": "whisper-base.en int8 (sherpa-onnx)",
-      "seconds": 3.8,
+      "seconds": 4.1,
       "rows": [
         {
           "scene": "s_hook",

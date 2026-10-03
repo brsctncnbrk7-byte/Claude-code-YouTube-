@@ -1,3 +1,138 @@
 == build ep-001 long 20:37:15
 [tts] 288.1s narration, 57 sentences, 129.5s
 [subs] 81 cues
+[render] /home/user/Claude-code-YouTube-/build/ep-001/long/video.mp4 in 388.2s
+[mux] /home/user/Claude-code-YouTube-/build/ep-001/long/ep-001.mp4 (measured I=-25.70 LUFS → -14)
+[done] build ep-001/long in 578.7s
+== qc ep-001 long
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[qc] QC_PASS technical_ok=True gate_ok=True → reports/ep-001/long/qc-report.md
+== package ep-001 long
+[package] /home/user/Claude-code-YouTube-/dist/ep-001
+== build ep-001 short 20:48:08
+[tts] 30.0s narration, 9 sentences, 13.2s
+[subs] 10 cues
+[render] /home/user/Claude-code-YouTube-/build/ep-001/short/video.mp4 in 44.3s
+[mux] /home/user/Claude-code-YouTube-/build/ep-001/short/ep-001.mp4 (measured I=-25.74 LUFS → -14)
+[done] build ep-001/short in 64.4s
+== qc ep-001 short
+
+
+
+
+
+
+
+
+
+[qc] QC_PASS technical_ok=True gate_ok=True → reports/ep-001/short/qc-report.md
+== package ep-001 short
+[package] /home/user/Claude-code-YouTube-/dist/ep-001/short
+== build ep-002 long 20:49:24
+[tts] 179.6s narration, 39 sentences, 85.5s
+[subs] 56 cues
+[render] /home/user/Claude-code-YouTube-/build/ep-002/long/video.mp4 in 249.7s
+[mux] /home/user/Claude-code-YouTube-/build/ep-002/long/ep-002.mp4 (measured I=-25.62 LUFS → -14)
+[done] build ep-002/long in 375.2s
+== qc ep-002 long
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[qc] QC_PASS technical_ok=True gate_ok=True → reports/ep-002/long/qc-report.md
+== package ep-002 long
+[package] /home/user/Claude-code-YouTube-/dist/ep-002
+== build ep-002 short 20:56:31
+[tts] 24.1s narration, 6 sentences, 12.2s
+[subs] 6 cues
