@@ -1,0 +1,175 @@
+{
+  "episode": "ep-001",
+  "format": "short",
+  "summary": {
+    "sentences": 9,
+    "mean_wer_best": 0.0,
+    "mean_wer_base": 0.0,
+    "mean_wer_small": 0.0556,
+    "models": [
+      "whisper-base.en int8",
+      "whisper-small.en int8"
+    ],
+    "dnsmos_available": true,
+    "ovrl_median": 3.29,
+    "ovrl_min": 3.12,
+    "sig_median": 3.56,
+    "bak_median": 4.13
+  },
+  "thresholds": {
+    "mean_wer_max": 0.05,
+    "sentence_wer_max": 0.34,
+    "ovrl_median_min": 3.0,
+    "ovrl_sentence_min": 2.6
+  },
+  "audio_ok": true,
+  "flagged": [],
+  "minor": [],
+  "rows": [
+    {
+      "scene": "s_hook",
+      "text": "In January 1855 the British army was dying at a rate of one thousand and twenty-three men per thousand, per year.",
+      "duration": 9.02,
+      "ipa": "ɪn dʒˈænjuːˌɛɹi wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti fˈaɪv ðə bɹˈɪɾɪʃ ˈɑːɹmi wʌz dˈaɪɪŋ æɾɚ ɹˈeɪt ʌv wˈʌn θˈaʊzənd ænd twˈɛntiθɹˈiː mˈɛn pɜː θˈaʊzənd pɜː jˈɪɹ",
+      "hyp_base": "In January 1855, the British Army was dying at a rate of 1,000 and 23 men per thousand per year.",
+      "wer_base": 0.0,
+      "hyp_small": "In January 1855, the British army was dying at a rate of 1,000 and 23 men per thousand, per year.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.53,
+        "bak": 4.18,
+        "ovrl": 3.32
+      }
+    },
+    {
+      "scene": "s_hook",
+      "text": "Almost none of it was combat.",
+      "duration": 1.53,
+      "ipa": "ˈɔːlmoʊst nˈʌn ʌv ɪt wʌz kˈɑːmbæt",
+      "hyp_base": "Almost none of it was combat.",
+      "wer_base": 0.0,
+      "hyp_small": "Almost none of it was combat.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.57,
+        "bak": 4.08,
+        "ovrl": 3.29
+      }
+    },
+    {
+      "scene": "s_rose",
+      "text": "Florence Nightingale drew this.",
+      "duration": 1.73,
+      "ipa": "flˈɔːɹəns nˈaɪɾɪŋɡˌeɪl dɹˈuː ðˈɪs",
+      "hyp_base": "Florence Nightingale drew this.",
+      "wer_base": 0.0,
+      "hyp_small": "Florence Knight and Gail drew this.",
+      "wer_small": 0.5,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.56,
+        "bak": 4.04,
+        "ovrl": 3.26
+      }
+    },
+    {
+      "scene": "s_rose",
+      "text": "Each wedge is a month.",
+      "duration": 1.21,
+      "ipa": "ˈiːtʃ wˈɛdʒ ɪz ɐ mˈʌnθ",
+      "hyp_base": "Each wedge is a month.",
+      "wer_base": 0.0,
+      "hyp_small": "Each wedge is a month.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.41,
+        "bak": 3.99,
+        "ovrl": 3.12
+      }
+    },
+    {
+      "scene": "s_rose",
+      "text": "Its area is the number of deaths.",
+      "duration": 1.86,
+      "ipa": "ɪts ˈɛɹiə ɪz ðə nˈʌmbɚɹ ʌv dˈɛθs",
+      "hyp_base": "Its area is the number of deaths.",
+      "wer_base": 0.0,
+      "hyp_small": "Its area is the number of deaths.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.45,
+        "bak": 4.06,
+        "ovrl": 3.18
+      }
+    },
+    {
+      "scene": "s_rose",
+      "text": "Blue is preventable disease.",
+      "duration": 1.7,
+      "ipa": "blˈuː ɪz pɹɪvˈɛntəbəl dɪzˈiːz",
+      "hyp_base": "Blue is preventable disease.",
+      "wer_base": 0.0,
+      "hyp_small": "Blue is preventable disease.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.59,
+        "bak": 4.19,
+        "ovrl": 3.39
+      }
+    },
+    {
+      "scene": "s_rose",
+      "text": "Red is wounds.",
+      "duration": 0.98,
+      "ipa": "ɹˈɛd ɪz wˈuːndz",
+      "hyp_base": "Red is wounds.",
+      "wer_base": 0.0,
+      "hyp_small": "Red is Wounds",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.46,
+        "bak": 4.13,
+        "ovrl": 3.23
+      }
+    },
+    {
+      "scene": "s_rose",
+      "text": "For every soldier killed by the enemy, eight died of disease.",
+      "duration": 3.6,
+      "ipa": "fɔːɹ ˈɛvɹi sˈoʊldʒɚ kˈɪld baɪ ðɪ ˈɛnəmi ˈeɪt dˈaɪd ʌv dɪzˈiːz",
+      "hyp_base": "For every soldier killed by the enemy, eight died of disease.",
+      "wer_base": 0.0,
+      "hyp_small": "For every soldier killed by the enemy, eight died of disease.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.57,
+        "bak": 4.19,
+        "ovrl": 3.35
+      }
+    },
+    {
+      "scene": "s_cta",
+      "text": "The full story, and what the chart changed, is on the channel.",
+      "duration": 3.34,
+      "ipa": "ðə fˈʊl stˈɔːɹi ænd wʌt ðə tʃˈɑːɹt tʃˈeɪndʒd ɪz ɔnðə tʃˈænəl",
+      "hyp_base": "The full story and what the chart changed is on the channel.",
+      "wer_base": 0.0,
+      "hyp_small": "The full story and what the chart changed is on the channel.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.64,
+        "bak": 4.2,
+        "ovrl": 3.43
+      }
+    }
+  ],
+  "disclaimer": "Machine evaluation on the actual synthesized audio: two-model ASR round-trip (intelligibility), DNSMOS P.835 (perceptual quality estimate), G2P phoneme listing (pronunciation review). No human listening test was performed."
+}

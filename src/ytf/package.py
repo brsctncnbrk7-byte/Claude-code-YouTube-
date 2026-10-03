@@ -74,7 +74,7 @@ def make_package(ep: Episode, fmt: str, bdir: Path, final: Path, tl: Timeline, q
 5. Audience: {"Yes, made for kids" if ep.audience_made_for_kids else "No, it's not made for kids"} • Altered or synthetic content: {"Yes" if ep.disclosure.altered_or_synthetic else "No"} ({ep.disclosure.rationale})
 6. Subtitles: upload `{Path(files['srt']).name}` (English) • Language: English • Category: Education
 7. Visibility: Schedule → {ep.publish_at_utc or 'see content/publish-queue.yaml'} (UTC) → Save
-8. After publishing: paste the video URL into `content/publish-queue.yaml` for {ep.id}.
+8. After publishing: tell Claude the video URL (or that the upload is scheduled). Claude records the publish time in the repo; you never edit repo files.
 """
     (d / ("UPLOAD_CHECKLIST.md" if fmt == "long" else "UPLOAD_CHECKLIST-short.md")).write_text(checklist, encoding="utf-8")
     notes = f"# {title}\n\n{ep.thesis}\n\nQC: `{qc.get('status')}` • duration {tl.total:.1f}s • sha256 in manifest.\n"

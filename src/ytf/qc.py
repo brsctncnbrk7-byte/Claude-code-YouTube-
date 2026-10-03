@@ -161,14 +161,24 @@ def run_qc(ep: Episode, fmt: str, bdir: Path, final: Path, tl: Timeline, report_
                                     "mean_wer": round(sum(r["wer"] for r in rows) / max(1, len(rows)), 4), "flagged": flagged}
     res["audio_eval"]["disclaimer"] = ("Audio was evaluated by phoneme review, ASR round-trip and spectrogram inspection; "
                                        "no human listening test was performed.")
+    # ---- deep audio evaluation on the real sentence audio (two ASR models + DNSMOS) ----
+    try:
+        from .audio_eval import evaluate as audio_evaluate
+        deep = audio_evaluate(ep.id, fmt, tl, ep.language, report_dir, base_rows=res["audio_eval"].get("asr", {}).get("rows"))
+        res["audio_eval"]["deep"] = {"audio_ok": deep["audio_ok"], "summary": deep["summary"], "flagged": len(deep["flagged"]),
+                                     "report": str(report_dir / "audio-eval.md")}
+    except Exception as e:  # noqa: BLE001
+        res["audio_eval"]["deep"] = {"audio_ok": False, "error": repr(e)}
+        res["warnings"].append(f"deep audio evaluation failed: {e!r}")
     tech_ok = all(c.get("ok", True) for c in ck.values() if isinstance(c, dict) and "ok" in c)
     res["technical_ok"] = tech_ok
     res["gate"] = ep.gate.model_dump()
     res["gate_ok"] = ep.gate.all_ok()
     audio_layers_ok = do_asr and bool(res["audio_eval"].get("phonemes"))
     audio_reviewed = ep.gate.audio_reviewed and ep.gate.frames_reviewed
-    if tech_ok and res["gate_ok"] and audio_layers_ok and audio_reviewed:
-        res["status"] = "QC_PASS"  # flagged ASR rows must have been reviewed and explained in gate.notes
+    deep_ok = bool(res["audio_eval"].get("deep", {}).get("audio_ok"))
+    if tech_ok and res["gate_ok"] and audio_layers_ok and audio_reviewed and deep_ok:
+        res["status"] = "QC_PASS"  # requires the deep audio evaluation (two-model ASR + DNSMOS) to pass as well
     elif tech_ok:
         res["status"] = "QC_PASS_TECHNICAL_ONLY"
     write_json(report_dir / "qc.json", res)

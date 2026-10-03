@@ -16,6 +16,9 @@ FILES = [
      "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d"),
     ("https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-whisper-base.en.tar.bz2", "asr/sherpa-onnx-whisper-base.en.tar.bz2",
      "475bc7052ce299c007f6d5d5407ba8601f819a2867f6eecee510ed17df581542"),
+    # DNSMOS P.835 (Microsoft DNS-Challenge, CC BY 4.0) — QC only, never shipped in outputs
+    ("https://raw.githubusercontent.com/microsoft/DNS-Challenge/master/DNSMOS/DNSMOS/sig_bak_ovr.onnx", "dnsmos/sig_bak_ovr.onnx", None),
+    ("https://raw.githubusercontent.com/microsoft/DNS-Challenge/master/LICENSE", "dnsmos/LICENSE", None),
 ]
 
 

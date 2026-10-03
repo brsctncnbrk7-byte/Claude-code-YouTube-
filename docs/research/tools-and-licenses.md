@@ -19,6 +19,8 @@ Kural: kod, model ağırlığı, ses modeli/veri seti, fonemizer, font, veri set
 | espeakng-loader | 0.2.4 | lib yükleyici | MIT | PyPI | verified-primary |
 | sherpa-onnx + sherpa-onnx-core (pip) | 1.13.8 | ASR çalıştırıcı (QC); `-core` ikili kütüphaneleri taşır (libonnxruntime, c-api) | Apache-2.0 | raw.githubusercontent.com/k2-fsa/sherpa-onnx/master/LICENSE | verified-primary |
 | **Whisper base.en ağırlıkları** (sherpa-onnx dönüştürme) | — | ASR (QC, yayınlanmaz) | MIT (OpenAI) | raw.githubusercontent.com/openai/whisper/main/LICENSE | verified-primary (orijinal); dönüştürülmüş dosya sherpa release'inden (`asr-models`) |
+| **DNSMOS P.835** (`sig_bak_ovr.onnx`, Microsoft DNS-Challenge) | repo master | ses kalitesi tahmini (yalnızca QC; çıktıya girmez) | **CC BY 4.0** (repo LICENSE, raw.githubusercontent.com/microsoft/DNS-Challenge/master/LICENSE) — atıf: Reddy et al., DNSMOS P.835 (ICASSP 2022) | sha256 269fbebdb513aa23…; `models/dnsmos/LICENSE` | verified-primary |
+| Whisper small.en (sherpa-onnx dönüştürme) | — | ikinci ASR görüşü (QC) | MIT (OpenAI) | sherpa `asr-models` release | verified-primary (isteğe bağlı; runner'da kullanılmaz) |
 | soundfile / numpy / Pillow / pydantic / PyYAML / pytest | sabit (`uv.lock`) | yardımcı | BSD/MIT/HPND | PyPI | verified-primary |
 | Fontlar: DejaVu Sans | sistem | tipografi | Bitstream Vera/DejaVu lisansı (özgür, gömme serbest) | sistem paketi | verified-primary |
 | Fontlar: Inter (Google Fonts repo) | github.com/google/fonts/ofl/inter | tipografi | SIL OFL 1.1 | raw.githubusercontent.com/google/fonts/main/ofl/inter/OFL.txt (HTTP 200) | verified-primary (indirilecek, sha256 kaydı `content/licenses/fonts.md`) |

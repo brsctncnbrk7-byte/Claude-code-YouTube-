@@ -21,4 +21,4 @@ Sekiz bitiş ölçütü (docs/MASTER_PROMPT.md §10) kanıtlarıyla aşağıdad�
 - VPS rehberi test edilmemiştir; geçiş kullanıcı talebiyle başlar.
 
 ## Kullanıcıdan beklenen tek şey
-Kanal açma (channel/SETUP_CHECKLIST.md) ve yükleme (docs/operations/publishing.md §B). Yayın tarihi `content/publish-queue.yaml → first_public_publish_utc` alanına yazıldığında 30 gün sayacı başlar.
+Kanal açma (channel/SETUP_CHECKLIST.md) ve yükleme (docs/operations/publishing.md §B). Kullanıcı repo dosyası düzenlemez; yükleme bildirimi veya izinli erişimden alınan gerçek yayın zamanı üzerine `content/publish-queue.yaml`'ı Claude günceller. 30 gün sayacı, ilk herkese açık yayın doğrulanmadan başlatılmaz.

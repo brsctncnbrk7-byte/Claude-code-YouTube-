@@ -14,7 +14,7 @@ Ayrı izlenen durumlar (hiçbiri diğerinin yerine başarı sayılmaz):
 | 4 | Reklam geliri etkinleşmesi | YouTube + AdSense | tarih |
 | 5 | İlk ödeme | AdSense eşiği | tarih |
 
-Hazırlık süresi ayrı sayılır; 30 gün sayacı yayın tarihi bilinmeden başlamaz.
+Hazırlık süresi ayrı sayılır; 30 gün sayacı, ilk herkese açık yayın Claude tarafından doğrulanmadan (kullanıcının yükleme bildirimi + kamuya açık video sayfası veya izinli erişim) başlatılmaz. Kullanıcı repo kaydı düzenlemez; kayıtları Claude günceller.
 
 ## 2. Eşik matematiği (2026 şartları; 2027 eşikleri uygulanmaz)
 İzlenme saati = uygun görüntüleme × ortalama izlenen dakika / 60. Shorts akışı saatleri sayılmaz.
@@ -63,7 +63,7 @@ Temiz klondan `make pilot` sonrası:
 - MP4 sha256 eşitliği **zorunlu değil** (encoder zaman damgaları vb.); eşitse ayrıca raporlanır. sha256 teslim bütünlüğü içindir.
 
 ## 7. 30 günlük yayın takvimi (taslak; ilk yayın tarihi kullanıcı yükleme adımında belirlenir)
-Hafta 1: ep-001, ep-002, ep-003 (+3 Short) • Hafta 2: ep-004–006 • Hafta 3: ep-007–009 • Hafta 4: ep-010–013. Konu kuyruğu: `content/queue.yaml`. Yayın saati: 15:00 UTC (ABD sabahı / Avrupa öğleden sonra; `secondary`), Studio'da zamanlanmış.
+Hafta 1: ep-001, ep-002, ep-003 (+3 Short) • Hafta 2: ep-005, ep-006 ve üçüncü bölüm (ep-004 Wald, verisi doğrulanırsa; aksi hâlde ep-007 Simpson) • Hafta 3: ep-007–009 • Hafta 4: ep-010–013. Konu kuyruğu: `content/queue.yaml`. Yayın saati: 15:00 UTC (ABD sabahı / Avrupa öğleden sonra; `secondary`), Studio'da zamanlanmış.
 
 ## 8. Ölçüm (gün 3, 7, 14, 21, 30)
 Kullanıcıdan günlük veri istenmez. Yükleme adımlarında Studio'dan okunabilen (gösterim, CTR, izlenme, ort. izleme süresi, abone, YPP sayacı) `reports/progress/dayNN.md` şablonuna işlenir; yoksa yalnızca kamuya açık sayılar (görüntüleme, abone) kaydedilir ve sınır belirtilir. Küçük örneklemde kesin sonuç yok; niş değişikliği yalnızca 14. gün sonrası ve gerekçeli.

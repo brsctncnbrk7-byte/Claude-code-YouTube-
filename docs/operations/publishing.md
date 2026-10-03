@@ -8,7 +8,7 @@ Hesap sahibinin yapması zorunlu olanlar (Claude yapamaz): Google hesabı/telefo
 ## B. Video yükleme (her bölüm, ~5 dakika)
 1. Paketi indir: GitHub → Releases → `ep-001` → `ep-001.mp4`, `thumbnail_A.png`, `ep-001.en.srt`, `metadata.yaml`, `UPLOAD_CHECKLIST.md`. `manifest.json` içindeki sha256 ile dosyayı doğrulamak isteğe bağlı (`sha256sum ep-001.mp4`).
 2. `UPLOAD_CHECKLIST.md` adımlarını sırayla uygula (başlık, açıklama, thumbnail, playlist, kitle, sentetik içerik, altyazı, zamanlama).
-3. Yayın URL'sini `content/publish-queue.yaml` içine yaz (veya Claude'a mesajla bildir); bu, 30 gün sayacının başlangıcını belirler.
+3. Yükleme bitince Claude'a yalnızca video URL'sini (veya zamanlandığını) bildir. Repo kayıtlarını (`content/publish-queue.yaml`, yayın zamanı) Claude günceller; kullanıcı repo dosyası düzenlemez. 30 gün sayacı, ilk herkese açık yayın Claude tarafından doğrulanmadan (kamuya açık video sayfası veya izinli erişim) başlatılmaz.
 4. Shorts: `short/ep-001-short.mp4` aynı şekilde yüklenir; dikey ve ≤60 sn olduğu için otomatik Short olur; başlık `metadata-short.yaml`'dan.
 
 ## C. Zamanlama
