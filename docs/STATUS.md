@@ -2,7 +2,7 @@
 
 **Son güncelleme:** 2026-10-03 (oturum 1, sonlara doğru)
 **Faz:** 6 — GitHub hazırlığı tamamlandı
-**READY_FOR_VPS:** **EVET** — `reports/READY_FOR_VPS.md` (8/8 ölçüt kanıtlı); VPS geçişi kullanıcı talebini bekliyor
+**READY_FOR_VPS:** **YENİDEN AÇILDI — son kabul incelemesi sürüyor** (kullanıcı talebi 2026-10-03); karar `reports/READY_FOR_VPS.md` güncellenince
 
 ## Tamamlanan somut çıktılar
 - Repo iskeleti, CLAUDE.md, MIT lisans, sır taraması, ortam raporu betiği
