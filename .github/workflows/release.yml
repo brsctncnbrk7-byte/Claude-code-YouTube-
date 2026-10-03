@@ -1,10 +1,13 @@
 # Render → QC → package → GitHub Release, all in ONE run (GITHUB_TOKEN pushes do not trigger other workflows — ADR-004).
-# Triggers: a human/session pushes a tag `ep-NNN` (or `smoke-*` for the delivery-chain test), or workflow_dispatch once this file is on the default branch.
+# Triggers: a push that adds/changes `release-requests/<ep>.request` (see release-requests/README.md); a push touching only this
+# workflow file runs the 3-second smoke test. Tag pushes are refused by the Claude environment's git proxy and workflow_dispatch needs a
+# default branch, so neither is used (ADR-004 amended 2026-10-03).
 # Free standard runner only (ADR-003). Runner setup is explicit — nothing from the Claude environment is assumed (ADR-005).
 name: build-and-release
 on:
   push:
-    tags: ["ep-*", "smoke-*"]
+    branches: ["**"]
+    paths: ["release-requests/*.request", ".github/workflows/release.yml"]
   workflow_dispatch:
     inputs:
       episode: { description: "episode id (e.g. ep-001) or 'smoke'", required: true, default: "smoke" }
@@ -20,15 +23,22 @@ jobs:
       contents: write   # only this job creates the release
     steps:
       - uses: actions/checkout@v4
-      - name: Resolve target
+        with: { fetch-depth: 2 }
+      - name: Resolve target (request file in this push, else smoke)
         id: t
         run: |
-          REF="${GITHUB_REF_NAME}"
           EP="${{ github.event.inputs.episode }}"; FMT="${{ github.event.inputs.format }}"
-          if [ -z "$EP" ]; then case "$REF" in smoke-*) EP=smoke;; *) EP="$REF";; esac; fi
+          if [ -z "$EP" ]; then
+            REQ=$(git diff --name-only HEAD~1 HEAD -- 'release-requests/*.request' 2>/dev/null | tail -1)
+            if [ -n "$REQ" ] && [ -f "$REQ" ]; then
+              EP=$(sed -n 's/^episode:[[:space:]]*//p' "$REQ" | head -1); FMT=$(sed -n 's/^format:[[:space:]]*//p' "$REQ" | head -1)
+            else EP=smoke; fi
+          fi
           [ -z "$FMT" ] && FMT=long
-          echo "ep=$EP" >> "$GITHUB_OUTPUT"; echo "fmt=$FMT" >> "$GITHUB_OUTPUT"
-          echo "tag=${REF:-manual-$EP-${GITHUB_RUN_ID}}" >> "$GITHUB_OUTPUT"
+          case "$EP" in ep-[0-9][0-9][0-9]|smoke) ;; *) echo "bad episode id: $EP"; exit 1;; esac
+          TAG="$EP"; [ "$EP" = smoke ] && TAG="smoke-${GITHUB_RUN_ID}"
+          echo "ep=$EP" >> "$GITHUB_OUTPUT"; echo "fmt=$FMT" >> "$GITHUB_OUTPUT"; echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          echo "target: $EP ($FMT) → release $TAG"
       - name: System packages (ffmpeg, espeak-ng, fonts)
         run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg espeak-ng fonts-dejavu-core time
       - uses: actions/setup-python@v5

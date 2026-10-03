@@ -47,3 +47,7 @@ Bkz. `docs/research/niche-comparison.md`. **Karar:** "Data detective stories": g
 
 ## ADR-011 — Format dengesi ve sayaç (2026-10-03)
 **Karar:** Ana ürün uzun video (izlenme saati eşiği için). Shorts yalnızca keşif/abone için; Shorts saatleri 4.000 saat eşiğine eklenmez; 10M Shorts yolu hedeflenmez. Yayın sıklığı pilot render ölçümünden sonra kesinleşir (başlangıç varsayımı: haftada 3 uzun + 3 Short; `docs/MASTER_PLAN.md`).
+
+## ADR-004a — Tetikleme düzeltmesi: release-request dosyası (2026-10-03)
+**Bağlam:** Bu ortamın git proxy'si tag push'unu reddediyor ("remote end hung up"; yalnızca çalışma dalı push edilebiliyor). `workflow_dispatch` default branch gerektiriyor; `main` yok ve izinsiz oluşturulmaz.
+**Karar:** Workflow, `release-requests/<ep>.request` dosyasını ekleyen/değiştiren push ile tetiklenir; yalnızca workflow dosyasına dokunan push smoke testi çalıştırır. Release tag'i `gh release create` ile koşunun içinde oluşturulur (GITHUB_TOKEN; başka workflow tetiklemez). Ek kullanıcı tokenı yok. Bkz. `release-requests/README.md`.

@@ -1,0 +1,317 @@
+id: ep-002
+title: The Scatterplot That Could Have Saved Challenger
+thesis: The night before the 1986 Challenger launch, engineers had O-ring damage data for 23 flights. The chart they built left out the flights with no damage — and with them, the pattern. Plot all 23 and the risk at freezing is unmistakable.
+format: long
+language: en-us
+voice: af_heart
+speed: 1.0
+playlist: Disasters & Engineering
+tags:
+- Challenger
+- data visualization
+- statistics
+- O-ring
+- NASA
+- logistic regression
+- Tufte
+- engineering ethics
+ad_suitability_note: Historical disaster with loss of life; no footage, no graphic description; focus on data and decision-making.
+audience_made_for_kids: false
+publish_at_utc: ''
+description: On January 27, 1986, engineers argued by teleconference that Challenger should not launch below 53°F. The chart they had showed seven flights with O-ring damage and no clear trend. It omitted sixteen flights with zero damage. We rebuild both charts from the 23-flight record, fit the simple model statisticians later fitted, and show what the data said about launching at freezing temperatures.
+disclosure:
+  altered_or_synthetic: false
+  rationale: Synthetic narrator voice over non-realistic animated charts; no depiction of the accident, no real person imitated. Recorded as unverified pending re-read of the official disclosure page.
+data_files:
+  orings: data/orings.csv
+sources:
+- name: Report of the Presidential Commission on the Space Shuttle Challenger Accident (Rogers Commission), 1986 — O-ring/temperature history, teleconference account
+  license: US Government work (public domain)
+  primary: true
+- name: 'O-ring data for 23 pre-Challenger flights (damaged/undamaged of 6 primary O-rings vs launch temperature) — openintro::orings via Rdatasets CSV; original: UCI Challenger USA Space Shuttle O-Ring dataset'
+  url: https://raw.githubusercontent.com/vincentarelbundock/Rdatasets/master/csv/openintro/orings.csv
+  accessed: '2026-10-03'
+  license: facts from the public-domain Commission record; UCI dataset page license to re-verify (CC BY 4.0 typical) — HELP_REQUEST
+- name: 'Dalal, S. R., Fowlkes, E. B., & Hoadley, B. (1989). Risk Analysis of the Space Shuttle: Pre-Challenger Prediction of Failure. JASA 84(408), 945–957.'
+  accessed: 2026-10-03 (WebSearch summary; paper not readable here)
+- name: Tufte, E. R. (1997). Visual Explanations — chapter on the Challenger decision charts
+  accessed: '2026-10-03 (via secondary summaries: onlineethics.virginia.edu, eagereyes.org)'
+- name: Rogers Commission Report / Roger Boisjoly — Wikipedia and Wikibooks summaries (teleconference, 53°F recommendation, 36°F pad temperature, 30-minute caucus)
+  accessed: 2026-10-03 (WebSearch summary)
+thumbnail:
+  variants:
+  - headline: They left out the **zeros**
+    sub: The Challenger chart, rebuilt
+    scene: all23
+    t: 6.0
+  - headline: The chart that could have **saved** Challenger
+    sub: 23 flights, one pattern
+    scene: all23
+    t: 6.0
+  - headline: '**53°F**'
+    sub: The line the engineers drew
+    scene: engineers
+    t: 4.0
+  chosen: 0
+gate:
+  original_narrative: true
+  sources_verified: false
+  visuals_explain: true
+  distinct_from_previous: true
+  title_thumbnail_honest: true
+  ad_suitability_noted: true
+  licenses_recorded: true
+  notes: sources_verified false until claims are cross-checked (see sources.md); the logistic fit is our own computation on the 23-flight table and is presented as a model estimate.
+scenes:
+- id: hook
+  kind: text
+  shows: The time to failure, as the single number that opens the story.
+  params:
+    number: 73
+    headline: seconds
+    sub: Space Shuttle Challenger · January 28, 1986
+    color: '#FF6B6B'
+  narration: Seventy-three seconds after launch, on January 28, 1986, the Space Shuttle Challenger broke apart. Seven people died. The night before, a group of engineers had tried to stop the launch with a chart.
+  min_duration: 6
+- id: title
+  kind: title
+  shows: Title card.
+  params:
+    title: The Scatterplot That Could Have **Saved** Challenger
+    subtitle: 23 flights, two charts, one missing pattern
+  narration: This is the story of the chart they drew, the chart they could have drawn, and the difference between them.
+  min_duration: 5
+- id: engineers
+  kind: scatter
+  shows: 'The engineers'' view: only the seven flights with O-ring damage, plotted against temperature — no obvious trend.'
+  params:
+    data: orings
+    x: temperature
+    y: damaged
+    xdomain: &id001
+    - 25
+    - 85
+    ydomain: &id002
+    - 0
+    - 6.5
+    xlabel: Launch temperature (°F)
+    ylabel: Damaged O-rings (of 6)
+    jitter: true
+    title: 'What the engineers plotted: flights **with** O-ring damage'
+    subtitle: 7 of 23 flights · damaged primary O-rings vs launch temperature
+    hide_if: r.damaged===0
+    reveal_seconds: 3
+    chapter: The engineers' chart
+  source: 'Data: Rogers Commission (1986) via openintro'
+  narration: 'On the evening of January 27, engineers at Morton Thiokol, the contractor that built the solid rocket boosters, joined a teleconference with NASA. Their concern was the rubber O-rings that sealed the booster joints. Cold makes rubber stiff. Here is the kind of evidence they had: every flight on which an O-ring had shown damage, plotted against the temperature at launch. Seven flights. The coldest, at fifty-three degrees, had the most damage. The rest scatter from the high fifties to seventy-five. Managers looked at this and saw no clear trend.'
+  min_duration: 14
+- id: compare
+  kind: compare
+  shows: 'Side by side: the damaged-only view versus all 23 flights; the zeros cluster at warm temperatures and reveal the slope.'
+  params:
+    title: Add the flights with **no** damage
+    subtitle: 'left: 7 damaged flights · right: all 23 flights'
+    right_at: 3.0
+    left:
+      data: orings
+      x: temperature
+      y: damaged
+      xdomain: *id001
+      ydomain: *id002
+      xlabel: Launch temperature (°F)
+      ylabel: Damaged O-rings (of 6)
+      jitter: true
+      title: Damaged flights only
+      hide_if: r.damaged===0
+      left_pad: 0.09
+    right:
+      data: orings
+      x: temperature
+      y: damaged
+      xdomain: *id001
+      ydomain: *id002
+      xlabel: Launch temperature (°F)
+      ylabel: Damaged O-rings (of 6)
+      jitter: true
+      title: All 23 flights
+      highlight: r.damaged===0
+      left_pad: 0.09
+  source: 'Data: Rogers Commission (1986) via openintro'
+  narration: 'Now add what was left out. Sixteen flights had launched with no O-ring damage at all. Every one of them was warm: sixty-six degrees or higher. Put the zeros back and the picture changes. Damage is not random. It lives at the cold end.'
+  min_duration: 12
+- id: all23
+  kind: scatter
+  shows: All 23 flights with a logistic curve (expected damaged O-rings of six) fitted to the data, extrapolated to the forecast temperature.
+  params:
+    data: orings
+    x: temperature
+    y: damaged
+    xdomain: *id001
+    ydomain: *id002
+    xlabel: Launch temperature (°F)
+    ylabel: Damaged O-rings (of 6)
+    jitter: true
+    title: All 23 flights, with a model fitted to them
+    subtitle: 'curve: expected number of damaged O-rings (binomial logistic fit, our computation)'
+    highlight: r.damaged===0
+    reveal_seconds: 2
+    curve:
+      points:
+      - - 30
+        - 5.966
+      - - 32
+        - 5.948
+      - - 34
+        - 5.921
+      - - 36
+        - 5.878
+      - - 38
+        - 5.815
+      - - 40
+        - 5.719
+      - - 42
+        - 5.578
+      - - 44
+        - 5.373
+      - - 46
+        - 5.086
+      - - 48
+        - 4.699
+      - - 50
+        - 4.205
+      - - 52
+        - 3.619
+      - - 54
+        - 2.98
+      - - 56
+        - 2.342
+      - - 58
+        - 1.761
+      - - 60
+        - 1.274
+      - - 62
+        - 0.893
+      - - 64
+        - 0.612
+      - - 66
+        - 0.412
+      - - 68
+        - 0.274
+      - - 70
+        - 0.18
+      - - 72
+        - 0.118
+      - - 74
+        - 0.077
+      - - 76
+        - 0.05
+      - - 78
+        - 0.033
+      - - 80
+        - 0.021
+      at: 3.0
+      dur: 3.0
+      color: '#FF6B6B'
+    markers:
+    - x: 53
+      label: 53°F coldest prior launch
+      at: 7.0
+    - x: 36
+      label: 36°F at launch
+      at: 9.0
+    chapter: All 23 flights
+  source: 'Data: Rogers Commission (1986); fit: this episode'
+  narration: 'Statisticians later fitted a simple model to these twenty-three flights: the chance that an O-ring is damaged as a function of temperature. Fit the same model to the public table, and the curve climbs steeply below sixty degrees. At fifty-three degrees, the coldest launch so far, it expects about three damaged rings out of six. At the thirty-six degrees recorded on the pad that morning, it expects nearly all six. The engineers'' recommendation that night was to not launch below fifty-three degrees.'
+  min_duration: 16
+- id: caucus
+  kind: text
+  shows: 'The decision: engineers'' recommendation, a thirty-minute offline caucus, management reversal.'
+  params:
+    headline: A thirty-minute **caucus**
+    sub: 'Thiokol engineers: do not launch below 53°F. Management took the call offline, reversed the recommendation, and signed off.'
+    chapter: The decision
+  narration: NASA managers pushed back on the recommendation. Thiokol's management took the call offline for about thirty minutes, returned, and overruled its own engineers. The launch went ahead. The Presidential Commission later traced the failure to the O-ring seal in the aft field joint of the right solid rocket booster, with cold temperature among the causes.
+  min_duration: 10
+- id: selection
+  kind: text
+  shows: 'The statistical lesson named: selecting on the outcome removes the comparison group.'
+  params:
+    headline: Selecting on the **outcome**
+    sub: If you only plot the cases where something went wrong, you cannot see what made it go wrong.
+  narration: 'The mistake has a name. The engineers selected on the outcome: they plotted only the flights where damage had occurred. That throws away the comparison group. Without the flights that went fine, there is nothing for the damaged flights to be different from.'
+  min_duration: 8
+- id: tufte
+  kind: text
+  shows: 'The later analyses: Dalal, Fowlkes and Hoadley (1989) and Tufte (1997) argued the data were sufficient.'
+  params:
+    headline: The chart that could have been drawn
+    sub: 'Dalal, Fowlkes & Hoadley (1989): the pre-launch data predicted very high failure risk near freezing. Tufte (1997): the evidence was there; the display failed.'
+  narration: 'In 1989, three statisticians published a risk analysis using only the data available before the launch. Their conclusion was that the probability of failure near freezing was very high. Edward Tufte later made the same point about the charts themselves: the evidence existed; the display failed to show it.'
+  min_duration: 9
+- id: why
+  kind: text
+  shows: Thesis restated.
+  params:
+    headline: The data were **not** the problem.
+    sub: Twenty-three rows, two columns. Shown whole, they told the truth.
+  narration: Twenty-three rows and two columns. Shown in full, they told the truth. Shown in part, they said nothing at all.
+  min_duration: 6
+- id: outro
+  kind: outro
+  shows: Closing card.
+  params:
+    headline: Plotted Past
+    sub: Every episode, a real mystery solved by a chart. Sources and data in the description.
+  narration: 'Sources, the data table, and the model fit are in the description. Next time: six hundred and sixteen dots, and the map that found the source of cholera.'
+  min_duration: 6
+short:
+  title: 'The chart that could have saved Challenger #shorts'
+  scenes:
+  - id: s_hook
+    kind: text
+    shows: Hook
+    params:
+      number: 73
+      headline: seconds
+      sub: Challenger · January 28, 1986
+      color: '#FF6B6B'
+    narration: Seventy-three seconds after launch, Challenger broke apart. The night before, engineers tried to stop it with a chart.
+    min_duration: 5
+  - id: s_compare
+    kind: compare
+    shows: Compare
+    params:
+      title: They left out the **zeros**
+      right_at: 3.0
+      left:
+        data: orings
+        x: temperature
+        y: damaged
+        xdomain: *id001
+        ydomain: *id002
+        xlabel: Launch temperature (°F)
+        ylabel: Damaged O-rings (of 6)
+        jitter: true
+        title: What they plotted
+        hide_if: r.damaged===0
+      right:
+        data: orings
+        x: temperature
+        y: damaged
+        xdomain: *id001
+        ydomain: *id002
+        xlabel: Launch temperature (°F)
+        ylabel: Damaged O-rings (of 6)
+        jitter: true
+        title: All 23 flights
+        highlight: r.damaged===0
+    narration: 'They plotted only the flights with O-ring damage: no clear trend. Add the sixteen flights with no damage, all of them warm, and the pattern appears. Damage lives at the cold end.'
+    min_duration: 10
+  - id: s_cta
+    kind: outro
+    shows: CTA
+    params:
+      headline: Why the chart failed
+      sub: Full story on the channel
+    narration: The full story, and the model that predicted it, is on the channel.
+    min_duration: 4
