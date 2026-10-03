@@ -35,13 +35,13 @@ episodes:
     thesis: "Minard's 1869 flow map encodes six variables; the retreat line tells the story that 422,000 became 10,000."
     data: "Minard 1869 figures (public domain; HistData Minard.troops/temp)"
     visual_core: "animated flow band width ∝ troop count; temperature strip"
-    status: idea
+    status: scripted
   - id: ep-006
     title_working: "The Poll That Got 1936 Spectacularly Wrong"
     thesis: "Literary Digest's 2.4 million responses predicted Landon; Gallup's 50,000 predicted Roosevelt. Sample size is not sample quality."
     data: "published 1936 poll and election results (public record)"
-    visual_core: "sample-size vs error animation; bias arrows"
-    status: idea
+    visual_core: "mailing funnel; prediction vs result bars; bias explainer cards"
+    status: scripted
   - id: ep-007
     title_working: "Simpson's Paradox: The Berkeley Admissions Case"
     thesis: "Aggregate data showed bias against women; department-level data reversed it. Both were 'true'."

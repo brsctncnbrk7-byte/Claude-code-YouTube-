@@ -1,0 +1,202 @@
+id: ep-006
+title: The Poll That Got 1936 Spectacularly Wrong
+thesis: 'The Literary Digest collected 2.4 million ballots and predicted a Landon landslide; Roosevelt won 46 of 48 states. Sample size is not sample quality: who you ask, and who bothers to answer, decide the result.'
+format: long
+language: en-us
+voice: af_heart
+speed: 1.0
+playlist: Polls, Courts & Paradoxes
+tags:
+- Literary Digest
+- 1936 election
+- polling
+- sampling bias
+- nonresponse bias
+- Gallup
+- statistics
+ad_suitability_note: Historical politics; no partisan commentary; focus on sampling methodology.
+audience_made_for_kids: false
+publish_at_utc: ''
+description: In 1936 the Literary Digest mailed ten million ballots, received 2.4 million back, and predicted Alf Landon would beat Franklin Roosevelt 57 to 43. Roosevelt won in a landslide. George Gallup, with about fifty thousand interviews, called it. We rebuild the numbers and show why a huge sample can be worse than a small one.
+disclosure:
+  altered_or_synthetic: false
+  rationale: Synthetic narrator voice over non-realistic charts; no real person depicted or imitated. Unverified pending official page re-read.
+data_files:
+  polls: data/polls.csv
+  funnel: data/funnel.csv
+sources:
+- name: Squire, P. (1988). Why the 1936 Literary Digest Poll Failed. Public Opinion Quarterly 52(1), 125–133.
+  accessed: 2026-10-03 (WebSearch summaries; paper not readable here)
+- name: 'Lusinchi, D. (2012). ''President'' Landon and the 1936 Literary Digest Poll: Were Automobile and Telephone Owners to Blame? Social Science History 36(1).'
+  accessed: 2026-10-03 (WebSearch summary)
+- name: 'Wikipedia: The Literary Digest; 1936 United States presidential election (results: Roosevelt 60.8%, Landon 36.5%, 523–8 electoral votes)'
+  accessed: 2026-10-03 (WebSearch summary)
+  license: CC BY-SA text; only facts used
+- name: 'UPenn Math 170 case study: 1936 election (Digest 10 million mailed, 2.4 million returned, 57/43 prediction; Gallup ~50,000)'
+  url: https://www2.math.upenn.edu/~deturck/m170/wk4/lecture/case1.html
+  accessed: 2026-10-03 (WebSearch summary)
+thumbnail:
+  variants:
+  - headline: 2,400,000 **wrong**
+    sub: The poll that failed in 1936
+    scene: compare_polls
+    t: 7.0
+  - headline: Bigger sample, **worse** answer
+    sub: Literary Digest, 1936
+    scene: compare_polls
+    t: 7.0
+  chosen: 0
+gate:
+  original_narrative: true
+  sources_verified: false
+  visuals_explain: true
+  distinct_from_previous: true
+  title_thumbnail_honest: true
+  ad_suitability_noted: true
+  licenses_recorded: true
+  notes: Not yet built. Two-party shares (37.5/62.5) are derived from 36.5/60.8; narration says 'about 62 to 38'.
+scenes:
+- id: hook
+  kind: text
+  shows: The sample size as the hook.
+  params:
+    number: 2400000
+    headline: ballots returned
+    sub: Literary Digest poll · October 1936
+    color: '#F2A93B'
+  narration: 'In October 1936, an American magazine announced the result of the largest opinion poll ever taken. Two million four hundred thousand ballots, returned by mail. Its prediction: Alf Landon would beat Franklin Roosevelt, fifty-seven to forty-three.'
+  min_duration: 7
+- id: title
+  kind: title
+  shows: Title.
+  params:
+    title: The Poll That Got 1936 **Spectacularly** Wrong
+    subtitle: Why 2.4 million answers lost to 50,000
+  narration: Three weeks later Roosevelt won forty-six of forty-eight states. This is the story of how the biggest poll in history got it backwards, and why a much smaller one got it right.
+  min_duration: 6
+- id: funnel
+  kind: bars
+  shows: Ten million ballots mailed; 2.4 million returned — the response rate is the first clue.
+  params:
+    title: Ten million mailed, 2.4 million returned
+    subtitle: a 24% response rate
+    data: funnel
+    series:
+    - count
+    labels:
+    - ballots
+    colors:
+    - '#F2A93B'
+    xkey: stage
+    ylabel: ballots
+    reveal_seconds: 3
+    chapter: The mailing
+  source: 'Figures: Literary Digest (1936) as reported in Squire (1988)'
+  narration: The Literary Digest had called every presidential election since 1916. Its method was scale. It mailed ten million ballots, to names taken from telephone directories, automobile registrations and its own subscriber lists. About twenty-four percent came back. Two point four million is an enormous sample. It was also the wrong one, twice over.
+  min_duration: 10
+- id: compare_polls
+  kind: bars
+  shows: 'Predicted vote shares vs the actual result: the Digest''s 57/43 against Gallup''s 44/56 and the real 37.5/62.5.'
+  params:
+    title: Prediction vs result
+    subtitle: share of the two-party vote (%)
+    data: polls
+    series:
+    - landon
+    - roosevelt
+    labels:
+    - Landon
+    - Roosevelt
+    colors:
+    - '#FF6B6B'
+    - '#5CC8FF'
+    xkey: poll
+    ymax: 100
+    ylabel: '% of two-party vote'
+    reveal_seconds: 4
+    chapter: Prediction vs result
+  source: 'Digest and Gallup figures via Squire (1988); result: 1936 election returns'
+  narration: 'Here are the three numbers side by side. The Digest, with two point four million ballots: Landon fifty-seven. George Gallup, a young pollster with roughly fifty thousand interviews, chosen to mirror the population by region, income and sex: Roosevelt fifty-six. The election: Roosevelt about sixty-two to thirty-eight. The small sample was close. The huge one was off by nineteen points.'
+  min_duration: 12
+- id: selection
+  kind: text
+  shows: 'Bias one: the sampling frame (phones, cars, subscriptions) over-represented the better-off in 1936.'
+  params:
+    headline: 'Bias one: **who was asked**'
+    sub: Telephone directories, car registrations, magazine subscribers — in the Depression, a wealthier slice of the country than the electorate.
+  narration: The first problem was who received a ballot. In 1936, in the middle of the Depression, owning a telephone or a car marked you as better off than most voters, and better-off voters leaned Republican. The list itself tilted toward Landon.
+  min_duration: 8
+- id: nonresponse
+  kind: text
+  shows: 'Bias two: nonresponse — those who mailed back differed from those who did not; later research names this the larger error.'
+  params:
+    headline: 'Bias two: **who answered**'
+    sub: Only 24% replied. Later analysis of a 1937 Gallup survey found that Roosevelt supporters on the list were less likely to mail the ballot back.
+  narration: The second problem was who bothered to reply. Only one in four did. In 1937 Gallup asked people whether they had received a Digest ballot and whether they had returned it. Roosevelt supporters on the list had been less likely to send it back. In 1988 the political scientist Peverill Squire re-analysed that survey and concluded that both biases were real, and that the failure to respond was the larger one.
+  min_duration: 11
+- id: lesson
+  kind: text
+  shows: 'Thesis: size does not fix bias; a biased sample converges confidently on the wrong answer.'
+  params:
+    headline: Size does not fix **bias**
+    sub: A biased sample does not get more accurate as it grows. It gets more confident.
+  narration: This is the lesson that survived. A biased sample does not get more accurate as it grows. It gets more confident. Two point four million ballots gave the Digest a precise estimate of the wrong population.
+  min_duration: 7
+- id: aftermath
+  kind: text
+  shows: 'Consequence: the Digest folded within two years; quota and later probability sampling took over.'
+  params:
+    headline: The aftermath
+    sub: The Literary Digest ceased publication in 1938. Gallup's smaller, designed samples became the model — until 1948 taught the next lesson.
+    chapter: Aftermath
+  narration: The Literary Digest folded within two years. Gallup's approach, small samples designed to look like the country, became the standard. It would fail in its own way in 1948, but that is another episode.
+  min_duration: 7
+- id: outro
+  kind: outro
+  shows: Closing.
+  params:
+    headline: Plotted Past
+    sub: Every episode, a real mystery solved by a chart. Sources and data in the description.
+  narration: 'Sources for this episode are in the description. Next time: Simpson''s paradox, and the admissions data that said two opposite things at once.'
+  min_duration: 6
+short:
+  title: '2.4 million ballots, wrong answer — the 1936 poll #shorts'
+  scenes:
+  - id: s_hook
+    kind: text
+    shows: Hook
+    params:
+      number: 2400000
+      headline: ballots, wrong answer
+      sub: Literary Digest · 1936
+      color: '#F2A93B'
+    narration: In 1936 the biggest poll in history, two point four million ballots, predicted the wrong president.
+    min_duration: 5
+  - id: s_compare
+    kind: bars
+    shows: Compare
+    params:
+      title: Big sample vs **right** sample
+      data: polls
+      series:
+      - landon
+      - roosevelt
+      labels:
+      - Landon
+      - Roosevelt
+      colors:
+      - '#FF6B6B'
+      - '#5CC8FF'
+      xkey: poll
+      ymax: 100
+      reveal_seconds: 3
+    narration: Gallup, with fifty thousand interviews chosen to mirror the country, got it right. The Digest asked the wrong people, and the wrong people answered. Size does not fix bias.
+    min_duration: 10
+  - id: s_cta
+    kind: outro
+    shows: CTA
+    params:
+      headline: Why it failed twice
+      sub: Full story on the channel
+    narration: The full story is on the channel.
+    min_duration: 4
