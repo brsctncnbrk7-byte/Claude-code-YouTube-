@@ -57,13 +57,22 @@ thumbnail:
   chosen: 0
 gate:
   original_narrative: true
-  sources_verified: false
+  sources_verified: true
   visuals_explain: true
   distinct_from_previous: true
   title_thumbnail_honest: true
   ad_suitability_noted: true
   licenses_recorded: true
-  notes: Not yet built. Map geometry deliberately not reproduced (digitization license unclear); the spatial argument is told in words and with the daily tally.
+  frames_reviewed: true
+  audio_reviewed: true
+  notes: >-
+    sources_verified: daily table verified against CSV (616 deaths, 127 on Sept 2, 30 on Sept 8); historical claims rest on
+    secondary summaries (CDC MMWR, Wikipedia, PMC) and are hedged ('by one widely repeated account' style wording where needed);
+    Snow's 'date unknown' row (45 attacks, 0 deaths) is excluded from the time charts and noted here. frames_reviewed (2026-10-03):
+    Claude inspected daily, dots616 (616 dots; Sept 8 onward highlighted), handle (Sept 8 marker; curve already falling) — correct
+    after removing the undated row that produced a spurious end spike. audio_reviewed: ASR mean WER 0.039 before ordinal
+    normalization; flags were ordinals (2nd/31st/7th/1st/8th), 'Snow's', and ASR slips (worst→worse, curve→curves, cholera→Collara
+    in the Short); phonemes for Soho, Whitehead, cholera, cesspit checked. No human listening test was performed. Map geometry deliberately not reproduced (digitization license unclear); the spatial argument is told in words and with the daily tally.
 scenes:
 - id: hook
   kind: text
@@ -90,6 +99,7 @@ scenes:
     title: Deaths per day, Golden Square outbreak
     subtitle: Snow's table, 1855 · August 19 – September 30, 1854
     data: snow
+    filter: r.date !== ''
     series:
     - deaths
     labels:
@@ -111,6 +121,7 @@ scenes:
     title: Six hundred and sixteen
     subtitle: one dot per death · in the order Snow recorded them
     data: snow
+    filter: r.date !== ''
     count_key: deaths
     label_key: date
     unit: deaths
@@ -137,6 +148,7 @@ scenes:
     title: The handle comes off
     subtitle: 'new cases and deaths per day · marker: pump handle removed, September 8'
     data: snow
+    filter: r.date !== ''
     series:
     - attacks
     - deaths
@@ -202,6 +214,7 @@ short:
     params:
       title: The handle came off on **Sept 8**
       data: snow
+      filter: r.date !== ''
       series:
       - deaths
       labels:

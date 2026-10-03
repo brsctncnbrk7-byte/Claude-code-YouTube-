@@ -16,6 +16,7 @@
   const fmt = (n, d = 0) => Number(n).toLocaleString('en-US', { maximumFractionDigits: d, minimumFractionDigits: d });
   const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   const rich = (s) => esc(s).replace(/\*\*(.+?)\*\*/g, '<span class="hl">$1</span>');
+  const rowsOf = (p) => { let rows = E.data[p.data] || []; if (p.filter) rows = rows.filter(r => eval(p.filter)); return rows; }; // filter is a trusted literal from episode.yaml
 
   function chartBox(p) {
     // chart drawing area in px
@@ -71,7 +72,7 @@
 
   // ---- bars (stacked, monthly) ----
   K.bars = (sc, t, d) => {
-    const p = sc.params, rows = E.data[p.data], b = chartBox(p), keys = p.series, colors = p.colors || SERIES;
+    const p = sc.params, rows = rowsOf(p), b = chartBox(p), keys = p.series, colors = p.colors || SERIES;
     const n = rows.length, reveal = p.reveal_seconds || Math.max(2, d - 2.5);
     const maxv = p.ymax || Math.max(...rows.map(r => keys.reduce((a, k) => a + (+r[k] || 0), 0)));
     const ys = linScale(0, maxv, b.y + b.h, b.y), bw = b.w / n;
@@ -114,7 +115,7 @@
 
   // ---- line chart ----
   K.line = (sc, t, d) => {
-    const p = sc.params, rows = E.data[p.data], b = chartBox(p), keys = p.series, colors = p.colors || SERIES;
+    const p = sc.params, rows = rowsOf(p), b = chartBox(p), keys = p.series, colors = p.colors || SERIES;
     const xs0 = rows.map((r, i) => p.xkey_numeric ? +r[p.xkey_numeric] : i);
     const xmin = Math.min(...xs0), xmax = Math.max(...xs0);
     const ymax = p.ymax || Math.max(...rows.flatMap(r => keys.map(k => +r[k] || 0))) * 1.05;
@@ -133,7 +134,7 @@
 
   // ---- scatter ----
   function scatterSVG(p, t, d, b, data) {
-    const rows = data || E.data[p.data];
+    const rows = data || rowsOf(p);
     const xk = p.x, yk = p.y;
     const show = rows.filter(r => !p.hide_if || !eval(p.hide_if));
     const xd = p.xdomain || [Math.min(...rows.map(r => +r[xk])), Math.max(...rows.map(r => +r[xk]))];
@@ -176,7 +177,7 @@
 
   // ---- dots: N units appear over time in a grid, optionally grouped/colored by a data column ----
   K.dots = (sc, t, d) => {
-    const p = sc.params; const rows = p.data ? E.data[p.data] : null;
+    const p = sc.params; const rows = p.data ? rowsOf(p) : null;
     let groups = [];
     if (rows) rows.forEach((r, i) => { const n = +r[p.count_key] || 0; for (let k = 0; k < n; k++) groups.push({ g: i, label: r[p.label_key] }); });
     else for (let k = 0; k < (p.total || 100); k++) groups.push({ g: 0 });

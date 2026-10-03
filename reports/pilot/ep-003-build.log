@@ -28,3 +28,30 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+[qc] QC_PASS_TECHNICAL_ONLY technical_ok=True gate_ok=False → reports/ep-003/long/qc-report.md
+[package] /home/user/Claude-code-YouTube-/dist/ep-003
+[tts] 26.5s narration, 5 sentences, 11.6s
+[subs] 6 cues
+[render] /home/user/Claude-code-YouTube-/build/ep-003/short/video.mp4 in 37.4s
+[mux] /home/user/Claude-code-YouTube-/build/ep-003/short/ep-003.mp4 (measured I=-25.64 LUFS → -14)
+[done] build ep-003/short in 55.5s
+
+
+
+
+
+[qc] QC_PASS_TECHNICAL_ONLY technical_ok=True gate_ok=False → reports/ep-003/short/qc-report.md
+[package] /home/user/Claude-code-YouTube-/dist/ep-003/short
+EXIT 0

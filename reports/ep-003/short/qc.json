@@ -1,0 +1,144 @@
+{
+  "episode": "ep-003",
+  "format": "short",
+  "checks": {
+    "container": {
+      "codec": "h264",
+      "pix_fmt": "yuv420p",
+      "w": 1080,
+      "h": 1920,
+      "fps": "30/1",
+      "audio": "aac 48000Hz",
+      "duration": 26.467,
+      "frames": 794,
+      "expected_frames": 794,
+      "ok": true
+    },
+    "blackdetect": {
+      "events": [],
+      "ok": true
+    },
+    "silencedetect": {
+      "events": [],
+      "ok": true
+    },
+    "loudness": {
+      "integrated_lufs": -14.01,
+      "true_peak_dbtp": -2.99,
+      "lra": 2.6,
+      "ok": true
+    },
+    "subtitles": {
+      "cues": 6,
+      "long_or_tall": 0,
+      "ok": true
+    },
+    "text_overflow": {
+      "scenes": [],
+      "ok": true
+    },
+    "frame_samples": {
+      "count": 6,
+      "dir": "/home/user/Claude-code-YouTube-/reports/ep-003/short/frames",
+      "reviewed_by_claude": false
+    },
+    "frame_content": {
+      "blank_frames": [],
+      "ok": true
+    }
+  },
+  "audio_eval": {
+    "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-003/short/spectrogram.png",
+    "phonemes": [
+      {
+        "scene": "s_hook",
+        "text": "In September 1854, cholera killed one hundred and twenty-seven people in a single day in one London neighbourhood.",
+        "ipa": "ɪn sɛptˈɛmbɚ wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti fˈɔːɹ kˈɑːlɚɹə kˈɪld wˈʌn hˈʌndɹɪd ænd twˈɛntisˈɛvən pˈiːpəl ɪn ɐ sˈɪŋɡəl dˈeɪ ɪn wˈʌn lˈʌndən nˈeɪbɚhˌʊd"
+      },
+      {
+        "scene": "s_handle",
+        "text": "John Snow traced it to one water pump and had the handle removed.",
+        "ipa": "dʒˈɑːn snˈoʊ tɹˈeɪst ɪt tə wˈʌn wˈɔːɾɚ pˈʌmp ænd hæd ðə hˈændəl ɹᵻmˈuːvd"
+      },
+      {
+        "scene": "s_handle",
+        "text": "But look at his own data: the outbreak was already falling.",
+        "ipa": "bˌʌt lˈʊk æt hɪz ˈoʊn dˈeɪɾə ðɪ ˈaʊtbɹeɪk wʌz ɔːlɹˌɛdi fˈɔːlɪŋ"
+      },
+      {
+        "scene": "s_handle",
+        "text": "The handle probably stopped a second wave; the map is what proved the water did it.",
+        "ipa": "ðə hˈændəl pɹˈɑːbəbli stˈɑːpt ɐ sˈɛkənd wˈeɪv ðə mˈæp ɪz wʌt pɹˈuːvd ðə wˈɔːɾɚ dˈɪd ɪt"
+      },
+      {
+        "scene": "s_cta",
+        "text": "The full story, with Snow's table, is on the channel.",
+        "ipa": "ðə fˈʊl stˈɔːɹi wɪð snˈoʊz tˈeɪbəl ɪz ɔnðə tʃˈænəl"
+      }
+    ],
+    "asr": {
+      "model": "whisper-base.en int8 (sherpa-onnx)",
+      "seconds": 3.7,
+      "rows": [
+        {
+          "scene": "s_hook",
+          "ref": "In September 1854, cholera killed one hundred and twenty-seven people in a single day in one London neighbourhood.",
+          "hyp": "In September 1854, Collara killed 127 people in a single day in one London neighborhood.",
+          "wer": 0.1,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-003/short/spectrograms/flag_00_s_hook.png"
+        },
+        {
+          "scene": "s_handle",
+          "ref": "John Snow traced it to one water pump and had the handle removed.",
+          "hyp": "John Snow traced it to one water pump and had the handle removed.",
+          "wer": 0.0
+        },
+        {
+          "scene": "s_handle",
+          "ref": "But look at his own data: the outbreak was already falling.",
+          "hyp": "But look at his own data. The outbreak was already falling. [BUZZER]",
+          "wer": 0.0
+        },
+        {
+          "scene": "s_handle",
+          "ref": "The handle probably stopped a second wave; the map is what proved the water did it.",
+          "hyp": "The handle probably stopped a second wave. The map is what proved the water did it. [buzzer]",
+          "wer": 0.0
+        },
+        {
+          "scene": "s_cta",
+          "ref": "The full story, with Snow's table, is on the channel.",
+          "hyp": "The full story with Snow's Table is on the channel.",
+          "wer": 0.0
+        }
+      ],
+      "mean_wer": 0.02,
+      "flagged": [
+        {
+          "scene": "s_hook",
+          "ref": "In September 1854, cholera killed one hundred and twenty-seven people in a single day in one London neighbourhood.",
+          "hyp": "In September 1854, Collara killed 127 people in a single day in one London neighborhood.",
+          "wer": 0.1,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-003/short/spectrograms/flag_00_s_hook.png"
+        }
+      ]
+    },
+    "disclaimer": "Audio was evaluated by phoneme review, ASR round-trip and spectrogram inspection; no human listening test was performed."
+  },
+  "warnings": [],
+  "status": "QC_PASS_TECHNICAL_ONLY",
+  "technical_ok": true,
+  "gate": {
+    "original_narrative": true,
+    "sources_verified": false,
+    "visuals_explain": true,
+    "distinct_from_previous": true,
+    "title_thumbnail_honest": true,
+    "ad_suitability_noted": true,
+    "licenses_recorded": true,
+    "frames_reviewed": false,
+    "audio_reviewed": false,
+    "notes": "Not yet built. Map geometry deliberately not reproduced (digitization license unclear); the spatial argument is told in words and with the daily tally."
+  },
+  "gate_ok": false
+}

@@ -60,6 +60,21 @@ def num_to_words(n: int) -> str:
     return num_to_words(n // 1_000_000) + " million" + ("" if n % 1_000_000 == 0 else " " + num_to_words(n % 1_000_000))
 
 
+_ORD = {"one": "first", "two": "second", "three": "third", "five": "fifth", "eight": "eighth", "nine": "ninth", "twelve": "twelfth"}
+
+
+def ordinal_words(n: int) -> str:
+    w = num_to_words_plain(n).split()
+    last = w[-1]
+    if last in _ORD:
+        w[-1] = _ORD[last]
+    elif last.endswith("y"):
+        w[-1] = last[:-1] + "ieth"
+    else:
+        w[-1] = last + "th"
+    return " ".join(w)
+
+
 def num_to_words_plain(n: int) -> str:
     """Same as num_to_words but never uses the year style (1758 -> one thousand seven hundred fifty eight)."""
     if 1100 <= n <= 1999 and n % 100 != 0:
@@ -78,8 +93,10 @@ def normalize_for_wer(s: str, year_style: bool = True) -> list[str]:
     s = s.replace("°f", " degrees fahrenheit ").replace("°", " degrees ")
     s = re.sub(r"(\d),(\d{3})", r"\1\2", s)       # 1,023 -> 1023
     s = re.sub(r"\b([2-9])0s\b", lambda m: _TENS[int(m.group(1))][:-1] + "ies", s)  # 50s -> fifties
+    s = re.sub(r"\b(\d+)(st|nd|rd|th)\b", lambda m: " " + ordinal_words(int(m.group(1))) + " ", s)  # 31st -> thirty first
+    s = s.replace("'", "")                          # Snow's == Snows (ASR often drops possessives)
     s = re.sub(r"\d+", lambda m: " " + (num_to_words(int(m.group(0))) if year_style else num_to_words_plain(int(m.group(0)))) + " ", s)
-    s = re.sub(r"[^a-z' ]+", " ", s)
+    s = re.sub(r"[^a-z ]+", " ", s)
     s = re.sub(r"\b(and)\b", " ", s)             # "four hundred and seventy six" == "four hundred seventy six"
     s = re.sub(r"-", " ", s)
     s = " ".join(s.split())

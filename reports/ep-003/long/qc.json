@@ -1,0 +1,552 @@
+{
+  "episode": "ep-003",
+  "format": "long",
+  "checks": {
+    "container": {
+      "codec": "h264",
+      "pix_fmt": "yuv420p",
+      "w": 1920,
+      "h": 1080,
+      "fps": "30/1",
+      "audio": "aac 48000Hz",
+      "duration": 157.167,
+      "frames": 4715,
+      "expected_frames": 4715,
+      "ok": true
+    },
+    "blackdetect": {
+      "events": [],
+      "ok": true
+    },
+    "silencedetect": {
+      "events": [],
+      "ok": true
+    },
+    "loudness": {
+      "integrated_lufs": -14.01,
+      "true_peak_dbtp": -2.63,
+      "lra": 2.3,
+      "ok": true
+    },
+    "subtitles": {
+      "cues": 49,
+      "long_or_tall": 0,
+      "ok": true
+    },
+    "text_overflow": {
+      "scenes": [],
+      "ok": true
+    },
+    "frame_samples": {
+      "count": 18,
+      "dir": "/home/user/Claude-code-YouTube-/reports/ep-003/long/frames",
+      "reviewed_by_claude": false
+    },
+    "frame_content": {
+      "blank_frames": [],
+      "ok": true
+    }
+  },
+  "audio_eval": {
+    "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-003/long/spectrogram.png",
+    "phonemes": [
+      {
+        "scene": "hook",
+        "text": "On the second of September, 1854, one hundred and twenty-seven people died of cholera within a few streets of each other in Soho, London.",
+        "ipa": "ɔnðə sˈɛkənd ʌv sɛptˈɛmbɚ wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti fˈɔːɹ wˈʌn hˈʌndɹɪd ænd twˈɛntisˈɛvən pˈiːpəl dˈaɪd ʌv kˈɑːlɚɹə wɪðˌɪn ɐ fjˈuː stɹˈiːts ʌv ˈiːtʃ ˈʌðɚɹ ɪn sˈoʊhoʊ lˈʌndən"
+      },
+      {
+        "scene": "hook",
+        "text": "Most of them had fallen ill the day before.",
+        "ipa": "mˈoʊst əv ðˌɛm hæd fˈɔːlən ˈɪl ðə dˈeɪ bᵻfˈɔːɹ"
+      },
+      {
+        "scene": "hook",
+        "text": "Nobody knew what cholera was.",
+        "ipa": "nˈoʊbɑːdi nˈuː wʌt kˈɑːlɚɹə wʌz"
+      },
+      {
+        "scene": "title",
+        "text": "This is the story of how a doctor found the source of an epidemic with a table, a map, and a question nobody else was asking.",
+        "ipa": "ðɪs ɪz ðə stˈɔːɹi ʌv hˌaʊ ɐ dˈɑːktɚ fˈaʊnd ðə sˈɔːɹs əvən ˌɛpɪdˈɛmɪk wɪð ɐ tˈeɪbəl ɐ mˈæp ænd ɐ kwˈɛstʃən nˈoʊbɑːdi ˈɛls wʌz ˈæskɪŋ"
+      },
+      {
+        "scene": "daily",
+        "text": "John Snow was a physician who had argued, five years earlier, that cholera spread through water, not through bad air.",
+        "ipa": "dʒˈɑːn snˈoʊ wʌzɐ fɪzˈɪʃən hˌuː hæd ˈɑːɹɡjuːd fˈaɪv jˈɪɹz ˈɜːlɪɚ ðæt kˈɑːlɚɹə spɹˈɛd θɹuː wˈɔːɾɚ nˌɑːt θɹuː bˈæd ˈɛɹ"
+      },
+      {
+        "scene": "daily",
+        "text": "When the outbreak began at the end of August he went to the General Register Office and copied out the deaths, day by day.",
+        "ipa": "wˌɛn ðɪ ˈaʊtbɹeɪk bɪɡˈæn æt ðɪ ˈɛnd ʌv ˈɔːɡəst hiː wɛnt tə ðə dʒˈɛnɚɹəl ɹˈɛdʒɪstɚɹ ˈɑːfɪs ænd kˈɑːpɪd ˈaʊt ðə dˈɛθs dˈeɪ baɪ dˈeɪ"
+      },
+      {
+        "scene": "daily",
+        "text": "Here is his table.",
+        "ipa": "hˈɪɹ ɪz hɪz tˈeɪbəl"
+      },
+      {
+        "scene": "daily",
+        "text": "Almost nothing until August thirty-first.",
+        "ipa": "ˈɔːlmoʊst nˈʌθɪŋ ʌntˈɪl ˈɔːɡəst θˈɜːɾifˈɜːst"
+      },
+      {
+        "scene": "daily",
+        "text": "Then, in three days, hundreds.",
+        "ipa": "ðˈɛn ɪn θɹˈiː dˈeɪz hˈʌndɹɪdz"
+      },
+      {
+        "scene": "daily",
+        "text": "By the end of September the tally reached six hundred and sixteen.",
+        "ipa": "baɪ ðɪ ˈɛnd ʌv sɛptˈɛmbɚ ðə tˈæli ɹˈiːtʃt sˈɪks hˈʌndɹɪd ænd sˈɪkstiːn"
+      },
+      {
+        "scene": "dots616",
+        "text": "Six hundred and sixteen people.",
+        "ipa": "sˈɪks hˈʌndɹɪd ænd sˈɪkstiːn pˈiːpəl"
+      },
+      {
+        "scene": "dots616",
+        "text": "Snow walked the streets with a map and marked each death at the address where it happened.",
+        "ipa": "snˈoʊ wˈɔːkt ðə stɹˈiːts wɪð ɐ mˈæp ænd mˈɑːɹkt ˈiːtʃ dˈɛθ æt ðɪ ɐdɹˈɛs wˌɛɹ ɪt hˈæpənd"
+      },
+      {
+        "scene": "dots616",
+        "text": "The marks piled up around one place: the public water pump on Broad Street.",
+        "ipa": "ðə mˈɑːɹks pˈaɪld ˌʌp ɚɹˈaʊnd wˈʌn plˈeɪs ðə pˈʌblɪk wˈɔːɾɚ pˈʌmp ˌɔn bɹˈɔːd stɹˈiːt"
+      },
+      {
+        "scene": "dots616",
+        "text": "Streets a few minutes away, served by other pumps, were almost untouched.",
+        "ipa": "stɹˈiːts ɐ fjˈuː mˈɪnɪts ɐwˈeɪ sˈɜːvd baɪ ˈʌðɚ pˈʌmps wɜːɹ ˈɔːlmoʊst ʌntˈʌtʃt"
+      },
+      {
+        "scene": "argument",
+        "text": "The map made an argument.",
+        "ipa": "ðə mˈæp mˌeɪd ɐn ˈɑːɹɡjuːmənt"
+      },
+      {
+        "scene": "argument",
+        "text": "A workhouse near the pump had its own well, and few of its five hundred residents died.",
+        "ipa": "ɐ wˈɜːkhaʊs nˌɪɹ ðə pˈʌmp hæd ɪts ˈoʊn wˈɛl ænd fjˈuː ʌv ɪts fˈaɪv hˈʌndɹɪd ɹˈɛzᵻdənts dˈaɪd"
+      },
+      {
+        "scene": "argument",
+        "text": "A brewery on Broad Street gave its workers beer and had its own water; the owner reported no cases among them.",
+        "ipa": "ɐ bɹˈuːɚɹi ˌɔn bɹˈɔːd stɹˈiːt ɡˈeɪv ɪts wˈɜːkɚz bˈɪɹ ænd hæd ɪts ˈoʊn wˈɔːɾɚ ðɪ ˈoʊnɚ ɹᵻpˈɔːɹɾᵻd nˈoʊ kˈeɪsᵻz ɐmˈʌŋ ðˌɛm"
+      },
+      {
+        "scene": "argument",
+        "text": "The houses that drew water from the pump suffered worst.",
+        "ipa": "ðə hˈaʊzᵻz ðæt dɹˈuː wˈɔːɾɚ fɹʌmðə pˈʌmp sˈʌfɚd wˈɜːst"
+      },
+      {
+        "scene": "argument",
+        "text": "The pattern followed the water, not the air.",
+        "ipa": "ðə pˈætɚn fˈɑːloʊd ðə wˈɔːɾɚ nˌɑːt ðɪ ˈɛɹ"
+      },
+      {
+        "scene": "handle",
+        "text": "On the evening of September seventh Snow presented his evidence to the parish Board of Guardians.",
+        "ipa": "ɔnðɪ ˈiːvnɪŋ ʌv sɛptˈɛmbɚ sˈɛvənθ snˈoʊ pɹɪzˈɛntᵻd hɪz ˈɛvɪdəns tə ðə pˈæɹɪʃ bˈɔːɹd ʌv ɡˈɑːɹdiənz"
+      },
+      {
+        "scene": "handle",
+        "text": "The next day the pump handle was removed.",
+        "ipa": "ðə nˈɛkst dˈeɪ ðə pˈʌmp hˈændəl wʌz ɹᵻmˈuːvd"
+      },
+      {
+        "scene": "handle",
+        "text": "Here is the part the legend leaves out.",
+        "ipa": "hˈɪɹ ɪz ðə pˈɑːɹt ðə lˈɛdʒənd lˈiːvz ˈaʊt"
+      },
+      {
+        "scene": "handle",
+        "text": "Look at the curve.",
+        "ipa": "lˈʊk æt ðə kˈɜːv"
+      },
+      {
+        "scene": "handle",
+        "text": "New cases had peaked on September first.",
+        "ipa": "nˈuː kˈeɪsᵻz hæd pˈiːkt ˌɔn sɛptˈɛmbɚ fˈɜːst"
+      },
+      {
+        "scene": "handle",
+        "text": "By the eighth, deaths had already fallen from one hundred and twenty-seven a day to thirty.",
+        "ipa": "baɪ ðɪ ˈeɪtθ dˈɛθs hæd ɔːlɹˌɛdi fˈɔːlən fɹʌm wˈʌn hˈʌndɹɪd ænd twˈɛntisˈɛvən ɐ dˈeɪ tə θˈɜːɾi"
+      },
+      {
+        "scene": "handle",
+        "text": "The outbreak was ending on its own, partly because so many people had fled.",
+        "ipa": "ðɪ ˈaʊtbɹeɪk wʌz ˈɛndɪŋ ˌɔn ɪts ˈoʊn pˈɑːɹtli bɪkˈʌz sˌoʊ mˈɛni pˈiːpəl hæd flˈɛd"
+      },
+      {
+        "scene": "whitehead",
+        "text": "So did the handle matter?",
+        "ipa": "sˌoʊ dˈɪd ðə hˈændəl mˈæɾɚ"
+      },
+      {
+        "scene": "whitehead",
+        "text": "It almost certainly prevented a second wave, and it mattered for another reason.",
+        "ipa": "ɪɾ ˈɔːlmoʊst sˈɜːʔn̩li pɹɪvˈɛntᵻd ɐ sˈɛkənd wˈeɪv ænd ɪt mˈæɾɚd fɔːɹ ɐnˈʌðɚ ɹˈiːzən"
+      },
+      {
+        "scene": "whitehead",
+        "text": "A local curate, Henry Whitehead, did not believe Snow.",
+        "ipa": "ɐ lˈoʊkəl kjˈʊɹɹeɪt hˈɛnɹi wˈaɪthɛd dɪdnˌɑːt bᵻlˈiːv snˈoʊ"
+      },
+      {
+        "scene": "whitehead",
+        "text": "He set out to disprove him by re-interviewing the parish, house by house.",
+        "ipa": "hiː sˈɛt ˈaʊt tə dɪspɹˈuːv hˌɪm baɪ ɹˌiːˈɪntɚvjˌuːɪŋ ðə pˈæɹɪʃ hˈaʊs baɪ hˈaʊs"
+      },
+      {
+        "scene": "whitehead",
+        "text": "Instead he found the first case: an infant whose washing water had been emptied into a cesspit a few feet from the pump's well.",
+        "ipa": "ɪnstˈɛd hiː fˈaʊnd ðə fˈɜːst kˈeɪs ɐn ˈɪnfənt hˌuːz wˈɑːʃɪŋ wˈɔːɾɚ hɐdbɪn ˈɛmptid ˌɪntʊ ɐ sˈɛspɪt ɐ fjˈuː fˈiːt fɹʌmðə pˈʌmps wˈɛl"
+      },
+      {
+        "scene": "lesson",
+        "text": "Snow never saw the bacterium.",
+        "ipa": "snˈoʊ nˈɛvɚ sˈɔː ðə bæktˈɪɹiəm"
+      },
+      {
+        "scene": "lesson",
+        "text": "It would be identified decades later.",
+        "ipa": "ɪt wʊd biː aɪdˈɛntᵻfˌaɪd dˈɛkeɪdz lˈeɪɾɚ"
+      },
+      {
+        "scene": "lesson",
+        "text": "What he had was a count over time, a map over space, and comparison groups: the workhouse, the brewery, the people who drank elsewhere.",
+        "ipa": "wˌʌt hiː hæd wʌzɐ kˈaʊnt ˌoʊvɚ tˈaɪm ɐ mˈæp ˌoʊvɚ spˈeɪs ænd kəmpˈæɹɪsən ɡɹˈuːps ðə wˈɜːkhaʊs ðə bɹˈuːɚɹi ðə pˈiːpəl hˌuː dɹˈæŋk ˈɛlswɛɹ"
+      },
+      {
+        "scene": "lesson",
+        "text": "That is still how outbreaks are traced.",
+        "ipa": "ðæt ɪz stˈɪl hˌaʊ ˈaʊtbɹeɪks ɑːɹ tɹˈeɪst"
+      },
+      {
+        "scene": "outro",
+        "text": "Snow's table and the sources for this episode are in the description.",
+        "ipa": "snˈoʊz tˈeɪbəl ænd ðə sˈɔːɹsᵻz fɔːɹ ðɪs ˈɛpɪsˌoʊd ɑːɹ ɪnðə dᵻskɹˈɪpʃən"
+      },
+      {
+        "scene": "outro",
+        "text": "Next time: the bombers that came back, and the holes that were not there.",
+        "ipa": "nˈɛkst tˈaɪm ðə bˈɑːmɚz ðæt kˈeɪm bˈæk ænd ðə hˈoʊlz ðæt wɜː nˌɑːt ðˈɛɹ"
+      }
+    ],
+    "asr": {
+      "model": "whisper-base.en int8 (sherpa-onnx)",
+      "seconds": 19.5,
+      "rows": [
+        {
+          "scene": "hook",
+          "ref": "On the second of September, 1854, one hundred and twenty-seven people died of cholera within a few streets of each other in Soho, London.",
+          "hyp": "On the 2nd of September, 1,854, 127 people died of cholera within a few streets of each other in Soho, London.",
+          "wer": 0.077,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-003/long/spectrograms/flag_00_hook.png"
+        },
+        {
+          "scene": "hook",
+          "ref": "Most of them had fallen ill the day before.",
+          "hyp": "Most of them had fallen ill the day before.",
+          "wer": 0.0
+        },
+        {
+          "scene": "hook",
+          "ref": "Nobody knew what cholera was.",
+          "hyp": "Nobody knew what cholera was.",
+          "wer": 0.0
+        },
+        {
+          "scene": "title",
+          "ref": "This is the story of how a doctor found the source of an epidemic with a table, a map, and a question nobody else was asking.",
+          "hyp": "This is the story of how a doctor found the source of an epidemic with a table, a map, and a question nobody else was asking. [BUZZER]",
+          "wer": 0.0
+        },
+        {
+          "scene": "daily",
+          "ref": "John Snow was a physician who had argued, five years earlier, that cholera spread through water, not through bad air.",
+          "hyp": "John Snow was a physician who had argued, five years earlier, that cholera spread through water, not through bad air.",
+          "wer": 0.0
+        },
+        {
+          "scene": "daily",
+          "ref": "When the outbreak began at the end of August he went to the General Register Office and copied out the deaths, day by day.",
+          "hyp": "When the outbreak began at the end of August, he went to the General Register Office and copied out the deaths, day by day.",
+          "wer": 0.0
+        },
+        {
+          "scene": "daily",
+          "ref": "Here is his table.",
+          "hyp": "Here is his table.",
+          "wer": 0.0
+        },
+        {
+          "scene": "daily",
+          "ref": "Almost nothing until August thirty-first.",
+          "hyp": "almost nothing until August 31st.",
+          "wer": 0.333,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-003/long/spectrograms/flag_01_daily.png"
+        },
+        {
+          "scene": "daily",
+          "ref": "Then, in three days, hundreds.",
+          "hyp": "Then in three days, hundreds.",
+          "wer": 0.0
+        },
+        {
+          "scene": "daily",
+          "ref": "By the end of September the tally reached six hundred and sixteen.",
+          "hyp": "By the end of September, the tally reached 616.",
+          "wer": 0.0
+        },
+        {
+          "scene": "dots616",
+          "ref": "Six hundred and sixteen people.",
+          "hyp": "616 people.",
+          "wer": 0.0
+        },
+        {
+          "scene": "dots616",
+          "ref": "Snow walked the streets with a map and marked each death at the address where it happened.",
+          "hyp": "Snow walked the streets with a map and marked each death at the address where it happened.",
+          "wer": 0.0
+        },
+        {
+          "scene": "dots616",
+          "ref": "The marks piled up around one place: the public water pump on Broad Street.",
+          "hyp": "The marks piled up around one place, the public water pump on Broad Street.",
+          "wer": 0.0
+        },
+        {
+          "scene": "dots616",
+          "ref": "Streets a few minutes away, served by other pumps, were almost untouched.",
+          "hyp": "Streets a few minutes away, served by other pumps, were almost untouched.",
+          "wer": 0.0
+        },
+        {
+          "scene": "argument",
+          "ref": "The map made an argument.",
+          "hyp": "The map made an argument.",
+          "wer": 0.0
+        },
+        {
+          "scene": "argument",
+          "ref": "A workhouse near the pump had its own well, and few of its five hundred residents died.",
+          "hyp": "A workhouse near the pump had its own well, and few of its 500 residents died.",
+          "wer": 0.0
+        },
+        {
+          "scene": "argument",
+          "ref": "A brewery on Broad Street gave its workers beer and had its own water; the owner reported no cases among them.",
+          "hyp": "A brewery on Broad Street gave its workers beer and had its own water. The owner reported no cases among them.",
+          "wer": 0.0
+        },
+        {
+          "scene": "argument",
+          "ref": "The houses that drew water from the pump suffered worst.",
+          "hyp": "The houses that drew water from the pump suffered worse.",
+          "wer": 0.1,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-003/long/spectrograms/flag_02_argument.png"
+        },
+        {
+          "scene": "argument",
+          "ref": "The pattern followed the water, not the air.",
+          "hyp": "The pattern followed the water, not the air.",
+          "wer": 0.0
+        },
+        {
+          "scene": "handle",
+          "ref": "On the evening of September seventh Snow presented his evidence to the parish Board of Guardians.",
+          "hyp": "On the evening of September 7th, Snow presented his evidence to the parish board of guardians.",
+          "wer": 0.125,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-003/long/spectrograms/flag_03_handle.png"
+        },
+        {
+          "scene": "handle",
+          "ref": "The next day the pump handle was removed.",
+          "hyp": "The next day the pump handle was removed.",
+          "wer": 0.0
+        },
+        {
+          "scene": "handle",
+          "ref": "Here is the part the legend leaves out.",
+          "hyp": "Here is the part the legend leaves out.",
+          "wer": 0.0
+        },
+        {
+          "scene": "handle",
+          "ref": "Look at the curve.",
+          "hyp": "Look at the curves.",
+          "wer": 0.25,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-003/long/spectrograms/flag_04_handle.png"
+        },
+        {
+          "scene": "handle",
+          "ref": "New cases had peaked on September first.",
+          "hyp": "New cases had peaked on September 1st.",
+          "wer": 0.286,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-003/long/spectrograms/flag_05_handle.png"
+        },
+        {
+          "scene": "handle",
+          "ref": "By the eighth, deaths had already fallen from one hundred and twenty-seven a day to thirty.",
+          "hyp": "By the 8th, deaths had already fallen from 127, a day to 30. [buzzer]",
+          "wer": 0.125,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-003/long/spectrograms/flag_06_handle.png"
+        },
+        {
+          "scene": "handle",
+          "ref": "The outbreak was ending on its own, partly because so many people had fled.",
+          "hyp": "The outbreak was ending on its own, partly because so many people had fled.",
+          "wer": 0.0
+        },
+        {
+          "scene": "whitehead",
+          "ref": "So did the handle matter?",
+          "hyp": "So did the handle matter.",
+          "wer": 0.0
+        },
+        {
+          "scene": "whitehead",
+          "ref": "It almost certainly prevented a second wave, and it mattered for another reason.",
+          "hyp": "It almost certainly prevented a second wave, and it mattered for another reason.",
+          "wer": 0.0
+        },
+        {
+          "scene": "whitehead",
+          "ref": "A local curate, Henry Whitehead, did not believe Snow.",
+          "hyp": "A local curate Henry Whitehead did not believe snow.",
+          "wer": 0.0
+        },
+        {
+          "scene": "whitehead",
+          "ref": "He set out to disprove him by re-interviewing the parish, house by house.",
+          "hyp": "He set out to disprove him by re-interviewing the parish, house by house.",
+          "wer": 0.0
+        },
+        {
+          "scene": "whitehead",
+          "ref": "Instead he found the first case: an infant whose washing water had been emptied into a cesspit a few feet from the pump's well.",
+          "hyp": "Instead, he found the first case. An infant whose washing water had been emptied into a cespit a few feet from the pump's well. [buzzer]",
+          "wer": 0.042
+        },
+        {
+          "scene": "lesson",
+          "ref": "Snow never saw the bacterium.",
+          "hyp": "Snow never saw the bacterium.",
+          "wer": 0.0
+        },
+        {
+          "scene": "lesson",
+          "ref": "It would be identified decades later.",
+          "hyp": "It would be identified decades later.",
+          "wer": 0.0
+        },
+        {
+          "scene": "lesson",
+          "ref": "What he had was a count over time, a map over space, and comparison groups: the workhouse, the brewery, the people who drank elsewhere.",
+          "hyp": "What he had was a count over time, a map over space and comparison groups, the workhouse, the brewery, the people who drank elsewhere.",
+          "wer": 0.0
+        },
+        {
+          "scene": "lesson",
+          "ref": "That is still how outbreaks are traced.",
+          "hyp": "That is still how outbreaks are traced.",
+          "wer": 0.0
+        },
+        {
+          "scene": "outro",
+          "ref": "Snow's table and the sources for this episode are in the description.",
+          "hyp": "Snows table and the sources for this episode are in the description.",
+          "wer": 0.091,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-003/long/spectrograms/flag_07_outro.png"
+        },
+        {
+          "scene": "outro",
+          "ref": "Next time: the bombers that came back, and the holes that were not there.",
+          "hyp": "Next time, the bombers that came back and the holes that were not there.",
+          "wer": 0.0
+        }
+      ],
+      "mean_wer": 0.0386,
+      "flagged": [
+        {
+          "scene": "hook",
+          "ref": "On the second of September, 1854, one hundred and twenty-seven people died of cholera within a few streets of each other in Soho, London.",
+          "hyp": "On the 2nd of September, 1,854, 127 people died of cholera within a few streets of each other in Soho, London.",
+          "wer": 0.077,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-003/long/spectrograms/flag_00_hook.png"
+        },
+        {
+          "scene": "daily",
+          "ref": "Almost nothing until August thirty-first.",
+          "hyp": "almost nothing until August 31st.",
+          "wer": 0.333,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-003/long/spectrograms/flag_01_daily.png"
+        },
+        {
+          "scene": "argument",
+          "ref": "The houses that drew water from the pump suffered worst.",
+          "hyp": "The houses that drew water from the pump suffered worse.",
+          "wer": 0.1,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-003/long/spectrograms/flag_02_argument.png"
+        },
+        {
+          "scene": "handle",
+          "ref": "On the evening of September seventh Snow presented his evidence to the parish Board of Guardians.",
+          "hyp": "On the evening of September 7th, Snow presented his evidence to the parish board of guardians.",
+          "wer": 0.125,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-003/long/spectrograms/flag_03_handle.png"
+        },
+        {
+          "scene": "handle",
+          "ref": "Look at the curve.",
+          "hyp": "Look at the curves.",
+          "wer": 0.25,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-003/long/spectrograms/flag_04_handle.png"
+        },
+        {
+          "scene": "handle",
+          "ref": "New cases had peaked on September first.",
+          "hyp": "New cases had peaked on September 1st.",
+          "wer": 0.286,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-003/long/spectrograms/flag_05_handle.png"
+        },
+        {
+          "scene": "handle",
+          "ref": "By the eighth, deaths had already fallen from one hundred and twenty-seven a day to thirty.",
+          "hyp": "By the 8th, deaths had already fallen from 127, a day to 30. [buzzer]",
+          "wer": 0.125,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-003/long/spectrograms/flag_06_handle.png"
+        },
+        {
+          "scene": "outro",
+          "ref": "Snow's table and the sources for this episode are in the description.",
+          "hyp": "Snows table and the sources for this episode are in the description.",
+          "wer": 0.091,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-003/long/spectrograms/flag_07_outro.png"
+        }
+      ]
+    },
+    "disclaimer": "Audio was evaluated by phoneme review, ASR round-trip and spectrogram inspection; no human listening test was performed."
+  },
+  "warnings": [],
+  "status": "QC_PASS_TECHNICAL_ONLY",
+  "technical_ok": true,
+  "gate": {
+    "original_narrative": true,
+    "sources_verified": false,
+    "visuals_explain": true,
+    "distinct_from_previous": true,
+    "title_thumbnail_honest": true,
+    "ad_suitability_noted": true,
+    "licenses_recorded": true,
+    "frames_reviewed": false,
+    "audio_reviewed": false,
+    "notes": "Not yet built. Map geometry deliberately not reproduced (digitization license unclear); the spatial argument is told in words and with the daily tally."
+  },
+  "gate_ok": false
+}
