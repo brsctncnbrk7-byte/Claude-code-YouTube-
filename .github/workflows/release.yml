@@ -47,7 +47,13 @@ jobs:
         run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg espeak-ng fonts-dejavu-core time
       - uses: actions/setup-python@v5
         with: { python-version: "3.11" }
-      - uses: astral-sh/setup-uv@v5
+      - name: Install uv (from PyPI — avoids GitHub API rate limits that broke astral-sh/setup-uv in run 37156263709)
+        run: python -m pip install --quiet "uv==0.8.17"
+      - name: Cache uv downloads
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/uv
+          key: uv-${{ hashFiles('uv.lock') }}
       - name: Python deps (pinned)
         run: uv sync --frozen --extra dev
       - name: Chromium for Playwright (runner has none preinstalled for Python)
