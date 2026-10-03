@@ -40,6 +40,8 @@ class Gate(BaseModel):
     title_thumbnail_honest: bool = False
     ad_suitability_noted: bool = False
     licenses_recorded: bool = False
+    frames_reviewed: bool = False      # Claude looked at the sampled frames of the current build
+    audio_reviewed: bool = False       # Claude reviewed phonemes/ASR flags/spectrograms of the current build
     notes: str = ""
 
     def all_ok(self) -> bool:

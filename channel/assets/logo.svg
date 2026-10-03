@@ -1,0 +1,5 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'>
+<circle cx='100' cy='100' r='96' fill='#0B1020' stroke='#F2A93B' stroke-width='6'/>
+<polyline points='40,140 70,118 95,126 125,84 160,60' fill='none' stroke='#5CC8FF' stroke-width='10' stroke-linecap='round' stroke-linejoin='round'/>
+<circle cx='160' cy='60' r='12' fill='#F2A93B'/><circle cx='40' cy='140' r='7' fill='#F4F1EA'/>
+<line x1='40' y1='156' x2='164' y2='156' stroke='#8A93A6' stroke-width='4' stroke-dasharray='6 8'/></svg>

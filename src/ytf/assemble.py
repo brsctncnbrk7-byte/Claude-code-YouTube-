@@ -23,6 +23,16 @@ def mux(video: Path, narration: Path, out: Path) -> dict:
            "-af", f"{ln},aresample=48000,apad", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2",
            "-shortest", "-movflags", "+faststart", str(out)]
     subprocess.run(cmd, check=True)
+    # verify; loudnorm linear mode can land >0.5 LU off target — correct with a plain gain and re-mux (max 2 passes)
+    for _ in range(2):
+        got = measure_loudness(out)
+        diff = -14.0 - float(got["input_i"])
+        if abs(diff) <= 0.4 or float(got["input_tp"]) + diff > -1.2:
+            break
+        tmp = out.with_name(out.stem + "_gain.mp4")
+        subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(out), "-af", f"volume={diff:.2f}dB",
+                        "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(tmp)], check=True)
+        tmp.replace(out)
     return m
 
 

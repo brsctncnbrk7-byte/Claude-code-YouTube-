@@ -1,2 +1,29 @@
 [tts] 228.9s narration, 44 sentences, 58.7s
 [subs] 62 cues
+[render] /home/user/Claude-code-YouTube-/build/ep-001/long/video.mp4 in 310.0s
+[mux] /home/user/Claude-code-YouTube-/build/ep-001/long/ep-001.mp4 (measured I=-25.67 LUFS → -14)
+[done] build ep-001/long in 383.7s
+	Command being timed: "uv run ytf build ep-001 --workers 2"
+	User time (seconds): 737.12
+	System time (seconds): 59.75
+	Percent of CPU this job got: 207%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 6:24.04
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 829772
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 653
+	Minor (reclaiming a frame) page faults: 2813328
+	Voluntary context switches: 815140
+	Involuntary context switches: 258915
+	Swaps: 0
+	File system inputs: 695728
+	File system outputs: 1159160
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+EXIT 0

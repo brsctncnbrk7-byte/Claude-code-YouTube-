@@ -40,9 +40,43 @@ def wrap_lines(text: str, max_chars: int = 42, max_lines: int = 2) -> list[list[
     return blocks or [[text]]
 
 
+_ONES = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen",
+         "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
+_TENS = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
+
+
+def num_to_words(n: int) -> str:
+    """Plain English, matching how narration is written (e.g. 1,023 -> one thousand twenty three; years 1855 -> eighteen fifty five)."""
+    if n < 20:
+        return _ONES[n]
+    if n < 100:
+        return _TENS[n // 10] + ("" if n % 10 == 0 else " " + _ONES[n % 10])
+    if n < 1000:
+        return _ONES[n // 100] + " hundred" + ("" if n % 100 == 0 else " " + num_to_words(n % 100))
+    if 1100 <= n <= 1999 and n % 100 != 0:  # year-style
+        return num_to_words(n // 100) + " " + num_to_words(n % 100)
+    if n < 1_000_000:
+        return num_to_words(n // 1000) + " thousand" + ("" if n % 1000 == 0 else " " + num_to_words(n % 1000))
+    return num_to_words(n // 1_000_000) + " million" + ("" if n % 1_000_000 == 0 else " " + num_to_words(n % 1_000_000))
+
+
+# ASR/TTS-neutral spellings: both sides are mapped before comparison (homophones and spacing variants only).
+_HOMOPHONES = {"cockscomb": "coxcomb", "far": "farr", "scatter plot": "scatterplot", "scatterplots": "scatterplot",
+               "o rings": "orings", "o ring": "oring", "orings": "oring", "percent": "per cent", "ok": "okay"}
+
+
 def normalize_for_wer(s: str) -> list[str]:
     s = s.lower()
-    s = re.sub(r"[^a-z0-9' ]+", " ", s)
+    s = re.sub(r"\[[^\]]*\]", " ", s)          # whisper tags like [AUDIO OUT]
+    s = s.replace("°f", " degrees fahrenheit ").replace("°", " degrees ")
+    s = re.sub(r"(\d),(\d{3})", r"\1\2", s)       # 1,023 -> 1023
+    s = re.sub(r"\d+", lambda m: " " + num_to_words(int(m.group(0))) + " ", s)
+    s = re.sub(r"[^a-z' ]+", " ", s)
+    s = re.sub(r"\b(and)\b", " ", s)             # "four hundred and seventy six" == "four hundred seventy six"
+    s = re.sub(r"-", " ", s)
+    s = " ".join(s.split())
+    for a, b in _HOMOPHONES.items():
+        s = re.sub(rf"\b{a}\b", b, s)
     return s.split()
 
 

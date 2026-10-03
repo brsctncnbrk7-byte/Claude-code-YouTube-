@@ -1,0 +1,27 @@
+# Yayın kuyruğu ve durum takibi. Kanal sahibi yükledikçe `video_url` ve `published_at_utc` doldurulur.
+# first_public_publish_utc dolunca 30 gün sayacı başlar (docs/MASTER_PLAN.md §1).
+first_public_publish_utc: null
+items:
+  - id: ep-001
+    format: long
+    package: dist/ep-001/           # GitHub Release ep-001
+    planned_day: 0
+    status: packaging            # packaging → ready → scheduled → published
+    video_url: null
+    published_at_utc: null
+  - id: ep-001
+    format: short
+    planned_day: 1
+    status: planned
+  - id: ep-002
+    format: long
+    planned_day: 2
+    status: scripted
+  - id: ep-002
+    format: short
+    planned_day: 3
+    status: planned
+  - id: ep-003
+    format: long
+    planned_day: 4
+    status: idea

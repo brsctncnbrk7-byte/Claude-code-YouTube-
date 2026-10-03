@@ -12,3 +12,5 @@
 | "Bat's wing" radius-scaled diagram misleading; 1858 legend "areas … measured from the centre as the common vertex" | Understanding Uncertainty; Small (1998) (WebSearch summaries quoting legend) | secondary | partially verified |
 | "Coxcomb" referred to booklet, not chart (Small) | Small lecture summary (WebSearch) | secondary | partially verified |
 | Royal Commission on the Health of the Army 1857; Army Medical School at Chatham opened 1859–60 (sources differ on year; narration gives no year); first woman Fellow, Statistical Society of London 1858 | Encyclopaedia/biographical summaries (WebSearch) | secondary | unverified — see HELP_REQUEST |
+| Peacetime barracks mortality 17/19/20 per 1,000 (infantry/artillery/guards) vs ~11 civilians; 2,000 self-published copies of "Mortality of the British Army" (1858) | Scientific American (2020) "How Florence Nightingale Changed Data Visualization Forever"; Small (1998) | secondary | partially verified (WebSearch summaries agree on figures) |
+| Army strength 8,571 (Apr 1854) → 46,140 (Mar 1856) | nightingale.csv `Army` column | data | verified |

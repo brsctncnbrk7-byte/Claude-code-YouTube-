@@ -173,6 +173,28 @@
     return header(sc, p) + s + `</svg>` + footer(sc, t, d);
   };
 
+
+  // ---- dots: N units appear over time in a grid, optionally grouped/colored by a data column ----
+  K.dots = (sc, t, d) => {
+    const p = sc.params; const rows = p.data ? E.data[p.data] : null;
+    let groups = [];
+    if (rows) rows.forEach((r, i) => { const n = +r[p.count_key] || 0; for (let k = 0; k < n; k++) groups.push({ g: i, label: r[p.label_key] }); });
+    else for (let k = 0; k < (p.total || 100); k++) groups.push({ g: 0 });
+    const N = groups.length, b = chartBox(p);
+    const cols = p.cols || Math.ceil(Math.sqrt(N * b.w / b.h)), rowsN = Math.ceil(N / cols);
+    const cell = Math.min(b.w / cols, b.h / rowsN), r = cell * 0.36;
+    const reveal = p.reveal_seconds || Math.max(2, d - 2.5), k = prog(t, 0.3, reveal);
+    const shown = Math.floor(N * easeOut(k));
+    let s = `<svg width="${W}" height="${H}">`;
+    for (let i = 0; i < shown; i++) {
+      const x = b.x + (i % cols) * cell + cell / 2, y = b.y + Math.floor(i / cols) * cell + cell / 2;
+      const hl = p.highlight_from !== undefined && groups[i].g >= p.highlight_from;
+      s += `<circle cx="${x}" cy="${y}" r="${r}" fill="${hl ? C.amber : (p.color || C.coral)}" fill-opacity=".95"/>`;
+    }
+    s += `</svg><div class="legend"><div class="num" style="font-size:64px;font-weight:800;color:${C.paper}">${fmt(shown)}</div><div>${esc(p.unit || '')}</div></div>`;
+    return header(sc, p) + s + footer(sc, t, d);
+  };
+
   window.renderFrame = function (idx, t, thumbSpec) {
     const sc = E.scenes[idx], d = sc.duration;
     const fn = K[sc.kind] || K.text;

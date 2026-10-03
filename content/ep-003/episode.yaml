@@ -1,0 +1,227 @@
+id: ep-003
+title: '616 Dots: How a Map Found the Source of Cholera'
+thesis: John Snow's 1854 Broad Street investigation combined a daily tally of deaths with a spatial argument about one water pump. The handle came off on September 8, when the outbreak was already fading — and that nuance is part of why the case is so instructive.
+format: long
+language: en-us
+voice: af_heart
+speed: 1.0
+playlist: Epidemics & Medicine
+tags:
+- John Snow
+- cholera
+- Broad Street pump
+- epidemiology
+- data visualization
+- '1854'
+- history of medicine
+ad_suitability_note: Historical epidemic; mortality figures presented as data; no graphic description of symptoms.
+audience_made_for_kids: false
+publish_at_utc: ''
+description: 'In late August 1854 cholera erupted around Broad Street in Soho, London. Within days hundreds were dead. John Snow counted the deaths day by day, mapped where they lived, and argued that one water pump was the source — years before germ theory. We rebuild his daily table and the famous pump-handle moment, including the part the legend usually leaves out: the epidemic was already in retreat when the handle came off.'
+disclosure:
+  altered_or_synthetic: false
+  rationale: Synthetic narrator voice over non-realistic animated charts; no real person depicted; no realistic fabricated events. Unverified pending official page re-read.
+data_files:
+  snow: data/snow_dates.csv
+sources:
+- name: 'Snow, J. (1855). On the Mode of Communication of Cholera (2nd ed.). London: John Churchill — Table of attacks and deaths by day (Golden Square outbreak)'
+  license: public domain (1855)
+  primary: true
+- name: HistData::Snow.dates — digitized daily table; via vincentarelbundock/Rdatasets CSV
+  url: https://raw.githubusercontent.com/vincentarelbundock/Rdatasets/master/csv/HistData/Snow.dates.csv
+  accessed: '2026-10-03'
+  license: 19th-century public-domain facts; R package code GPL (not used)
+- name: CDC MMWR (2004). 150th Anniversary of John Snow and the Pump Handle
+  url: https://www.cdc.gov/mmwr/preview/mmwrhtml/mm5334a1.htm
+  accessed: 2026-10-03 (WebSearch summary)
+  license: US Government work
+- name: 'Wikipedia: 1854 Broad Street cholera outbreak; Henry Whitehead (priest)'
+  url: https://en.wikipedia.org/wiki/1854_Broad_Street_cholera_outbreak
+  accessed: 2026-10-03 (WebSearch summary)
+- name: Tulchinsky, T. (2018). John Snow, Cholera, the Broad Street Pump; Waterborne Diseases Then and Now (PMC7150208)
+  accessed: 2026-10-03 (WebSearch summary)
+thumbnail:
+  variants:
+  - headline: '**616** dots'
+    sub: The map that found cholera's source
+    scene: dots616
+    t: 8.0
+  - headline: The pump handle came off **too late**
+    sub: John Snow, 1854
+    scene: daily
+    t: 7.0
+  - headline: One pump. **616** deaths.
+    sub: Soho, 1854
+    scene: dots616
+    t: 8.0
+  chosen: 0
+gate:
+  original_narrative: true
+  sources_verified: false
+  visuals_explain: true
+  distinct_from_previous: true
+  title_thumbnail_honest: true
+  ad_suitability_noted: true
+  licenses_recorded: true
+  notes: Not yet built. Map geometry deliberately not reproduced (digitization license unclear); the spatial argument is told in words and with the daily tally.
+scenes:
+- id: hook
+  kind: text
+  shows: The outbreak's scale in one number.
+  params:
+    number: 127
+    headline: deaths in a single day
+    sub: Golden Square, Soho · September 2, 1854
+    color: '#FF6B6B'
+  narration: On the second of September, 1854, one hundred and twenty-seven people died of cholera within a few streets of each other in Soho, London. Most of them had fallen ill the day before. Nobody knew what cholera was.
+  min_duration: 6
+- id: title
+  kind: title
+  shows: Title card.
+  params:
+    title: '**616** Dots'
+    subtitle: How a map, a table and a pump handle found the source of cholera
+  narration: This is the story of how a doctor found the source of an epidemic with a table, a map, and a question nobody else was asking.
+  min_duration: 5
+- id: daily
+  kind: bars
+  shows: 'Snow''s own daily tally: deaths per day from August 19 to early October; the spike on September 1–2 and the decline before September 8.'
+  params:
+    title: Deaths per day, Golden Square outbreak
+    subtitle: Snow's table, 1855 · August 19 – September 30, 1854
+    data: snow
+    series:
+    - deaths
+    labels:
+    - deaths
+    colors:
+    - '#FF6B6B'
+    xkey: date
+    xevery: 4
+    ylabel: deaths
+    reveal_seconds: 8
+    chapter: The daily tally
+  source: 'Data: Snow (1855) via HistData'
+  narration: John Snow was a physician who had argued, five years earlier, that cholera spread through water, not through bad air. When the outbreak began at the end of August he went to the General Register Office and copied out the deaths, day by day. Here is his table. Almost nothing until August thirty-first. Then, in three days, hundreds. By the end of September the tally reached six hundred and sixteen.
+  min_duration: 14
+- id: dots616
+  kind: dots
+  shows: Each death as one dot, filling in day by day; the final count 616 appears as the grid completes.
+  params:
+    title: Six hundred and sixteen
+    subtitle: one dot per death · in the order Snow recorded them
+    data: snow
+    count_key: deaths
+    label_key: date
+    unit: deaths
+    color: '#FF6B6B'
+    reveal_seconds: 9
+    highlight_from: 20
+    chapter: '616'
+  source: 'Data: Snow (1855)'
+  narration: 'Six hundred and sixteen people. Snow walked the streets with a map and marked each death at the address where it happened. The marks piled up around one place: the public water pump on Broad Street. Streets a few minutes away, served by other pumps, were almost untouched.'
+  min_duration: 12
+- id: argument
+  kind: text
+  shows: 'The spatial argument stated: deaths clustered around the Broad Street pump; nearby workhouse and brewery with their own water had few deaths.'
+  params:
+    headline: The argument was **where**, not just how many
+    sub: 'A workhouse with its own well: few deaths. A brewery whose workers drank beer: none reported. Houses nearest the pump: the most.'
+    chapter: The map
+  narration: The map made an argument. A workhouse near the pump had its own well, and few of its five hundred residents died. A brewery on Broad Street gave its workers beer and had its own water; the owner reported no cases among them. The houses that drew water from the pump suffered worst. The pattern followed the water, not the air.
+  min_duration: 10
+- id: handle
+  kind: line
+  shows: 'Attacks and deaths per day with the September 8 handle-removal marker: the curve was already falling.'
+  params:
+    title: The handle comes off
+    subtitle: 'new cases and deaths per day · marker: pump handle removed, September 8'
+    data: snow
+    series:
+    - attacks
+    - deaths
+    labels:
+    - new cases
+    - deaths
+    colors:
+    - '#5CC8FF'
+    - '#FF6B6B'
+    xkey: date
+    xevery: 4
+    ylabel: people per day
+    markers:
+    - x: 20
+      label: 'Sept 8: handle removed'
+      at: 3.0
+    reveal_seconds: 6
+    chapter: September 8
+  source: 'Data: Snow (1855) via HistData'
+  narration: On the evening of September seventh Snow presented his evidence to the parish Board of Guardians. The next day the pump handle was removed. Here is the part the legend leaves out. Look at the curve. New cases had peaked on September first. By the eighth, deaths had already fallen from one hundred and twenty-seven a day to thirty. The outbreak was ending on its own, partly because so many people had fled.
+  min_duration: 14
+- id: whitehead
+  kind: text
+  shows: 'Why the case still matters: Whitehead''s independent re-investigation and the index case next to the pump.'
+  params:
+    headline: The sceptic who confirmed it
+    sub: 'Reverend Henry Whitehead set out to disprove Snow, re-interviewed the parish, and found the first case: a cesspit beside the pump.'
+    chapter: Whitehead
+  narration: 'So did the handle matter? It almost certainly prevented a second wave, and it mattered for another reason. A local curate, Henry Whitehead, did not believe Snow. He set out to disprove him by re-interviewing the parish, house by house. Instead he found the first case: an infant whose washing water had been emptied into a cesspit a few feet from the pump''s well.'
+  min_duration: 11
+- id: lesson
+  kind: text
+  shows: 'Thesis: the combination of time series, place, and a comparison group — epidemiology before germ theory.'
+  params:
+    headline: Time, place, and a **comparison**
+    sub: Snow had no microscope. He had a daily count, a map, and people who did not drink the water.
+  narration: 'Snow never saw the bacterium. It would be identified decades later. What he had was a count over time, a map over space, and comparison groups: the workhouse, the brewery, the people who drank elsewhere. That is still how outbreaks are traced.'
+  min_duration: 8
+- id: outro
+  kind: outro
+  shows: Closing card.
+  params:
+    headline: Plotted Past
+    sub: Every episode, a real mystery solved by a chart. Sources and data in the description.
+  narration: 'Snow''s table and the sources for this episode are in the description. Next time: the bombers that came back, and the holes that were not there.'
+  min_duration: 6
+short:
+  title: 'The pump handle came off too late? John Snow, 1854 #shorts'
+  scenes:
+  - id: s_hook
+    kind: text
+    shows: Hook
+    params:
+      number: 127
+      headline: deaths in one day
+      sub: Soho, London · September 2, 1854
+      color: '#FF6B6B'
+    narration: In September 1854, cholera killed one hundred and twenty-seven people in a single day in one London neighbourhood.
+    min_duration: 5
+  - id: s_handle
+    kind: line
+    shows: Curve with marker
+    params:
+      title: The handle came off on **Sept 8**
+      data: snow
+      series:
+      - deaths
+      labels:
+      - deaths per day
+      colors:
+      - '#FF6B6B'
+      xkey: date
+      xevery: 6
+      markers:
+      - x: 20
+        label: handle removed
+        at: 2.0
+      reveal_seconds: 4
+    narration: 'John Snow traced it to one water pump and had the handle removed. But look at his own data: the outbreak was already falling. The handle probably stopped a second wave; the map is what proved the water did it.'
+    min_duration: 10
+  - id: s_cta
+    kind: outro
+    shows: CTA
+    params:
+      headline: The full story
+      sub: on the channel
+    narration: The full story, with Snow's table, is on the channel.
+    min_duration: 4

@@ -17,6 +17,7 @@ disclosure:
   rationale: "Synthetic narrator voice (Kokoro-82M) over clearly non-realistic animated charts; no real person depicted or imitated, no realistic events fabricated. Per secondary readings of YouTube's altered/synthetic content guidance this does not require the label; recorded as unverified until the official page is re-read (docs/policies/synthetic-content-disclosure.md)."
 data_files:
   nightingale: data/nightingale.csv
+  barracks: data/barracks.csv
 sources:
   - name: "Nightingale, F. (1858). Notes on Matters Affecting the Health, Efficiency, and Hospital Administration of the British Army. London: Harrison and Sons. (monthly mortality tables; polar-area diagram)"
     license: "public domain (1858)"
@@ -95,7 +96,7 @@ scenes:
     params: { headline: "Three columns in a ledger", sub: "**Zymotic** disease · Wounds and injuries · All other causes — William Farr's classification, adopted by Nightingale" }
     narration: >-
       The numbers came from army returns, compiled with William Farr, the statistician at the General Register Office.
-      Nightingale reached the barracks hospital at Scutari in November 1854 and found the record keeping in disarray.
+      Florence Nightingale reached the barracks hospital at Scutari in November 1854 and found the record keeping in disarray.
       She sorted every death into three columns: zymotic disease, meaning epidemic and preventable; wounds; and everything else.
       Counting came before cleaning.
     min_duration: 8
@@ -141,6 +142,26 @@ scenes:
       In March 1855 a Sanitary Commission reached Scutari. It flushed the sewers, cleared the latrines, and, by one widely repeated account, removed a dead horse from the water supply.
       The wedges shrink. By September 1855, for the first time, more soldiers died of wounds than of disease.
     min_duration: 11
+  - id: army_size
+    kind: line
+    shows: "The army in the East grew more than fivefold over the war; raw death counts therefore need to be read as rates."
+    params:
+      title: "The army kept growing"
+      subtitle: "Average strength of the British Army in the East, by month"
+      data: nightingale
+      series: [Army]
+      labels: ["Army strength"]
+      colors: ["#F2A93B"]
+      xkey: Month
+      xevery: 2
+      ylabel: "soldiers"
+      reveal_seconds: 5
+      chapter: "A growing army"
+    source: "Data: Nightingale (1858), via HistData"
+    narration: >-
+      One more thing the table shows. The army itself was changing. In April 1854 there were about eight and a half thousand British soldiers in the East.
+      By March 1856 there were more than forty-six thousand. A death count in a small army and a death count in a large one are not the same thing, which is why Nightingale, following Farr, reported deaths as annual rates per thousand.
+    min_duration: 10
   - id: rates
     kind: line
     shows: "Annualized death rates per 1,000 remove the effect of the growing army: disease falls from over 1,000 to under 4."
@@ -170,7 +191,7 @@ scenes:
     params: { headline: "The false start: the **bat's wing**", sub: "Radius ∝ deaths makes 2× look like 4×. The 1858 version writes the rule into its legend: areas 'are each measured from the centre as the common vertex.'" }
     narration: >-
       Her first attempt, later nicknamed the bat's wing, scaled the radius of each wedge to the death rate.
-      That exaggerates: double the deaths looks like four times the area. She redrew it so that area carried the number, and wrote the rule into the legend itself.
+      That exaggerates: double the deaths looks like four times the area. She redrew it so that the area of each wedge carried the number, and wrote the rule into the legend itself.
     min_duration: 8
   - id: coxcomb
     kind: text
@@ -179,6 +200,27 @@ scenes:
     narration: >-
       Most people call the chart a coxcomb. According to historian Hugh Small, she used that word for the printed booklet the diagrams appeared in, not for the chart itself.
     min_duration: 6
+  - id: barracks
+    kind: bars
+    shows: "Her follow-up 'Lines' chart: peacetime soldiers in English barracks died at nearly twice the rate of civilian men of the same ages."
+    params:
+      title: "Peacetime, at home: soldiers vs civilians"
+      subtitle: "Annual deaths per 1,000 men of military age · Nightingale, Mortality of the British Army (1858)"
+      data: barracks
+      series: [rate]
+      labels: ["deaths per 1,000 per year"]
+      colors: ["#F2A93B"]
+      xkey: group
+      ymax: 24
+      ylabel: "deaths per 1,000 per year"
+      reveal_seconds: 3
+      chapter: "The second chart"
+    source: "Figures as reported by Nightingale (1858); via Small (1998), Scientific American (2020)"
+    narration: >-
+      She did not stop at the war. Back in England she compared young soldiers living in barracks with civilian men of the same ages.
+      Civilians died at about eleven per thousand a year. Infantry, seventeen. Artillery, nineteen. Guards, twenty.
+      Healthy men, already screened by a medical exam, were dying at nearly twice the civilian rate in peacetime. She printed two thousand copies of the report at her own expense and sent them to people who could act.
+    min_duration: 12
   - id: impact
     kind: text
     shows: "What the chart changed: the Royal Commission (1857), reforms, and her election to the Statistical Society (1858)."

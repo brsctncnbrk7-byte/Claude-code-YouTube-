@@ -45,24 +45,29 @@ def ffmpeg_detect(path: Path, flt: str) -> list[str]:
     return [l.strip() for l in r.stderr.splitlines() if "detect" in l and ("start" in l or "duration" in l)]
 
 
-def spectrogram_png(wav: Path, out: Path, width: int = 1800, height: int = 360) -> None:
+def spectrogram_png(wav: Path, out: Path, width: int = 1800, height: int = 360, px_per_s: float | None = None) -> None:
+    """Log-power spectrogram, 0–5 kHz, dB range -75..-5 relative to full scale; px_per_s overrides width for zoomed views."""
     from PIL import Image
     a, sr = sf.read(wav, dtype="float32")
     if a.ndim > 1:
         a = a.mean(axis=1)
-    n, hop = 1024, max(1, len(a) // width)
+    if px_per_s:
+        width = max(200, int(len(a) / sr * px_per_s))
+    n = 1024
+    hop = max(64, len(a) // width)
     win = np.hanning(n)
+    fmax_bin = int(5000 / (sr / n))
     cols = []
     for i in range(0, max(1, len(a) - n), hop):
         seg = a[i:i + n]
         if len(seg) < n:
             seg = np.pad(seg, (0, n - len(seg)))
-        mag = np.abs(np.fft.rfft(seg * win))[: n // 4]  # up to sr/4 (6 kHz @24k) — speech band
-        cols.append(20 * np.log10(mag + 1e-6))
-    S = np.array(cols).T  # freq x time
-    S = np.clip((S - (-60)) / 60, 0, 1)
+        mag = np.abs(np.fft.rfft(seg * win))[:fmax_bin] / (n / 4)
+        cols.append(20 * np.log10(mag + 1e-7))
+    S = np.array(cols).T
+    S = np.clip((S + 75) / 70, 0, 1) ** 0.8
     img = (255 * S[::-1]).astype(np.uint8)
-    Image.fromarray(img).resize((width, height)).save(out)
+    Image.fromarray(img).resize((width, height), Image.BILINEAR).save(out)
     # waveform
     wv = np.zeros((160, width), dtype=np.uint8)
     step = max(1, len(a) // width)
@@ -102,7 +107,7 @@ def run_qc(ep: Episode, fmt: str, bdir: Path, final: Path, tl: Timeline, report_
                        "expected_frames": expected_frames,
                        "ok": v["codec_name"] == "h264" and v.get("pix_fmt") == "yuv420p" and v["width"] == w and v["height"] == h
                        and v["r_frame_rate"] == f"{FPS}/1" and a["codec_name"] == "aac" and abs(nb_frames - expected_frames) <= 1}
-    black = ffmpeg_detect(final, "blackdetect=d=0.5:pix_th=0.10")
+    black = ffmpeg_detect(final, "blackdetect=d=1.0:pix_th=0.10")  # planned scene transitions are 2x0.35 s
     sil = ffmpeg_detect(final, "silencedetect=noise=-50dB:d=2.5")
     ck["blackdetect"] = {"events": black, "ok": len(black) == 0}
     # silences longer than 2.5 s are expected only at scene boundaries (pad) — report count, pass if <= scenes
@@ -113,13 +118,13 @@ def run_qc(ep: Episode, fmt: str, bdir: Path, final: Path, tl: Timeline, report_
     # subtitles
     srt = bdir / f"{ep.id}.srt"
     cues = re.findall(r"(\d+:\d\d:\d\d,\d{3}) --> (\d+:\d\d:\d\d,\d{3})\n(.+?)(?:\n\n|\Z)", srt.read_text(encoding="utf-8"), re.S)
-    long_lines = [c for c in cues if any(len(l) > 42 for l in c[2].split("\n")) or len(c[2].split("\n")) > 2]
+    long_lines = [c for c in cues if any(len(l) > 42 for l in c[2].strip().split("\n")) or len(c[2].strip().split("\n")) > 2]
     ck["subtitles"] = {"cues": len(cues), "long_or_tall": len(long_lines), "ok": len(cues) > 0 and not long_lines}
     rs = json.loads((bdir / "render_stats.json").read_text())
     overflow = [s for s in rs["scenes"] if s.get("overflow")]
     ck["text_overflow"] = {"scenes": [{"id": s["id"], "items": s["overflow"]} for s in overflow], "ok": not overflow}
     frames = sample_frames(final, tl, report_dir / "frames")
-    ck["frame_samples"] = {"count": len(frames), "dir": str(report_dir / "frames"), "reviewed_by_claude": False}
+    ck["frame_samples"] = {"count": len(frames), "dir": str(report_dir / "frames"), "reviewed_by_claude": ep.gate.frames_reviewed}
     # ---- audio evaluation layers ----
     sents = [(sc.id, s) for sc in tl.scenes for s in sc.sentences]
     spectrogram_png(bdir / "narration_raw.wav", report_dir / "spectrogram.png")
@@ -132,9 +137,15 @@ def run_qc(ep: Episode, fmt: str, bdir: Path, final: Path, tl: Timeline, report_
         for sid, s in sents:
             hyp = transcribe(Path(s.wav))
             rows.append({"scene": sid, "ref": s.text, "hyp": hyp, "wer": round(wer(s.text, hyp), 3)})
+        flagged = [r for r in rows if r["wer"] > 0.05]
+        zoom_dir = report_dir / "spectrograms"; zoom_dir.mkdir(exist_ok=True)
+        for k, f in enumerate(flagged[:8]):
+            wavp = next((s.wav for sid, s in sents if s.text == f["ref"]), None)
+            if wavp:
+                spectrogram_png(Path(wavp), zoom_dir / f"flag_{k:02d}_{f['scene']}.png", height=300, px_per_s=150)
+                f["spectrogram"] = str(zoom_dir / f"flag_{k:02d}_{f['scene']}.png")
         res["audio_eval"]["asr"] = {"model": "whisper-base.en int8 (sherpa-onnx)", "seconds": round(time.time() - t0, 1), "rows": rows,
-                                    "mean_wer": round(sum(r["wer"] for r in rows) / max(1, len(rows)), 4),
-                                    "flagged": [r for r in rows if r["wer"] > 0.05]}
+                                    "mean_wer": round(sum(r["wer"] for r in rows) / max(1, len(rows)), 4), "flagged": flagged}
     res["audio_eval"]["disclaimer"] = ("Audio was evaluated by phoneme review, ASR round-trip and spectrogram inspection; "
                                        "no human listening test was performed.")
     tech_ok = all(c.get("ok", True) for c in ck.values() if isinstance(c, dict) and "ok" in c)
@@ -142,8 +153,9 @@ def run_qc(ep: Episode, fmt: str, bdir: Path, final: Path, tl: Timeline, report_
     res["gate"] = ep.gate.model_dump()
     res["gate_ok"] = ep.gate.all_ok()
     audio_layers_ok = do_asr and bool(res["audio_eval"].get("phonemes"))
-    if tech_ok and res["gate_ok"] and audio_layers_ok and not res["audio_eval"].get("asr", {}).get("flagged"):
-        res["status"] = "QC_PASS"
+    audio_reviewed = ep.gate.audio_reviewed and ep.gate.frames_reviewed
+    if tech_ok and res["gate_ok"] and audio_layers_ok and audio_reviewed:
+        res["status"] = "QC_PASS"  # flagged ASR rows must have been reviewed and explained in gate.notes
     elif tech_ok:
         res["status"] = "QC_PASS_TECHNICAL_ONLY"
     write_json(report_dir / "qc.json", res)

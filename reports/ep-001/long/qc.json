@@ -1,0 +1,636 @@
+{
+  "episode": "ep-001",
+  "format": "long",
+  "checks": {
+    "container": {
+      "codec": "h264",
+      "pix_fmt": "yuv420p",
+      "w": 1920,
+      "h": 1080,
+      "fps": "30/1",
+      "audio": "aac 48000Hz",
+      "duration": 228.867,
+      "frames": 6866,
+      "expected_frames": 6866,
+      "ok": true
+    },
+    "blackdetect": {
+      "events": [
+        "[blackdetect @ 0x55c0eba6c340] black_start:59.2667 black_end:89.3 black_duration:30.0333",
+        "[blackdetect @ 0x55c0eba6c340] black_start:110.267 black_end:111.933 black_duration:1.66667",
+        "[blackdetect @ 0x55c0eba6c340] black_start:136.567 black_end:137.7 black_duration:1.13333",
+        "[blackdetect @ 0x55c0eba6c340] black_start:156.433 black_end:228.833 black_duration:72.4"
+      ],
+      "ok": false
+    },
+    "silencedetect": {
+      "events": [],
+      "ok": true
+    },
+    "loudness": {
+      "integrated_lufs": -15.77,
+      "true_peak_dbtp": -4.14,
+      "lra": 2.3,
+      "ok": false
+    },
+    "subtitles": {
+      "cues": 62,
+      "long_or_tall": 1,
+      "ok": false
+    },
+    "text_overflow": {
+      "scenes": [],
+      "ok": true
+    },
+    "frame_samples": {
+      "count": 24,
+      "dir": "/home/user/Claude-code-YouTube-/reports/ep-001/long/frames",
+      "reviewed_by_claude": false
+    }
+  },
+  "audio_eval": {
+    "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-001/long/spectrogram.png",
+    "phonemes": [
+      {
+        "scene": "hook",
+        "text": "In January 1855, the British army besieging Sevastopol was dying at a rate of one thousand and twenty-three men per thousand, per year.",
+        "ipa": "ɪn dʒˈænjuːˌɛɹi wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti fˈaɪv ðə bɹˈɪɾɪʃ ˈɑːɹmi bᵻsˈiːdʒɪŋ sˈɛvɐstˌɑːpɑːl wʌz dˈaɪɪŋ æɾɚ ɹˈeɪt ʌv wˈʌn θˈaʊzənd ænd twˈɛntiθɹˈiː mˈɛn pɜː θˈaʊzənd pɜː jˈɪɹ"
+      },
+      {
+        "scene": "hook",
+        "text": "Read that again.",
+        "ipa": "ɹˈiːd ðæt ɐɡˈɛn"
+      },
+      {
+        "scene": "hook",
+        "text": "At that rate, disease alone would have wiped out the entire army in under a year, without the enemy firing a shot.",
+        "ipa": "æt ðæt ɹˈeɪt dɪzˈiːz ɐlˈoʊn wʊdhɐv wˈaɪpt ˈaʊt ðɪ ɛntˈaɪɚɹ ˈɑːɹmi ɪn ˌʌndɚɹ ɐ jˈɪɹ wɪðˌaʊt ðɪ ˈɛnəmi fˈaɪɚɹɪŋ ɐ ʃˈɑːt"
+      },
+      {
+        "scene": "title",
+        "text": "This is the story of how one woman turned that ledger into a picture, and why the picture worked where the numbers had failed.",
+        "ipa": "ðɪs ɪz ðə stˈoːɹi ʌv hˌaʊ wˈʌn wˈʊmən tˈɜːnd ðæt lˈɛdʒɚɹ ˌɪntʊ ɐ pˈɪktʃɚ ænd wˌaɪ ðə pˈɪktʃɚ wˈɜːkt wˌɛɹ ðə nˈʌmbɚz hæd fˈeɪld"
+      },
+      {
+        "scene": "bars_all",
+        "text": "Here is every month of the war, from April 1854 to March 1856.",
+        "ipa": "hˈɪɹ ɪz ˈɛvɹi mˈʌnθ ʌvðə wˈɔːɹ fɹʌm ˈeɪpɹəl wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti fˈoːɹ tə mˈɑːɹtʃ wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti sˈɪks"
+      },
+      {
+        "scene": "bars_all",
+        "text": "Blue is death from disease: cholera, typhus, dysentery.",
+        "ipa": "blˈuː ɪz dˈɛθ fɹʌm dɪzˈiːz kˈɑːlɚɹə tˈaɪfəs dˈɪsəntɚɹi"
+      },
+      {
+        "scene": "bars_all",
+        "text": "Red is death from wounds.",
+        "ipa": "ɹˈɛd ɪz dˈɛθ fɹʌm wˈuːndz"
+      },
+      {
+        "scene": "bars_all",
+        "text": "White is everything else.",
+        "ipa": "wˈaɪt ɪz ˈɛvɹɪθˌɪŋ ˈɛls"
+      },
+      {
+        "scene": "bars_all",
+        "text": "The bars are not close.",
+        "ipa": "ðə bˈɑːɹz ɑːɹ nˌɑːt klˈoʊs"
+      },
+      {
+        "scene": "bars_all",
+        "text": "Over the whole war, disease killed fourteen thousand four hundred and seventy-six British soldiers.",
+        "ipa": "ˌoʊvɚ ðə hˈoʊl wˈɔːɹ dɪzˈiːz kˈɪld fˈoːɹtiːn θˈaʊzənd fˈoːɹ hˈʌndɹɪd ænd sˈɛvəntisˈɪks bɹˈɪɾɪʃ sˈoʊldʒɚz"
+      },
+      {
+        "scene": "bars_all",
+        "text": "Wounds killed one thousand seven hundred and fifty-eight.",
+        "ipa": "wˈuːndz kˈɪld wˈʌn θˈaʊzənd sˈɛvən hˈʌndɹɪd ænd fˈɪftiˈeɪt"
+      },
+      {
+        "scene": "bars_all",
+        "text": "For every soldier killed by the enemy, eight died of something that could have been prevented.",
+        "ipa": "fɔːɹ ˈɛvɹi sˈoʊldʒɚ kˈɪld baɪ ðɪ ˈɛnəmi ˈeɪt dˈaɪd ʌv sˈʌmθɪŋ ðæt kˌʊdɐv bˌɪn pɹɪvˈɛntᵻd"
+      },
+      {
+        "scene": "ledger",
+        "text": "The numbers came from army returns, compiled with William Farr, the statistician at the General Register Office.",
+        "ipa": "ðə nˈʌmbɚz kˈeɪm fɹʌm ˈɑːɹmi ɹᵻtˈɜːnz kəmpˈaɪld wɪð wˈɪljəm fˈɑːɹ ðə stˌæɾɪstˈɪʃən æt ðə dʒˈɛnɚɹəl ɹˈɛdʒɪstɚɹ ˈɑːfɪs"
+      },
+      {
+        "scene": "ledger",
+        "text": "Nightingale reached the barracks hospital at Scutari in November 1854 and found the record keeping in disarray.",
+        "ipa": "nˈaɪɾɪŋɡˌeɪl ɹˈiːtʃt ðə bˈɛɹəks hˈɑːspɪɾəl æt skjuːtˈɑːɹɹi ɪn noʊvˈɛmbɚ wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti fˈoːɹ ænd fˈaʊnd ðə ɹˈɛkɚd kˈiːpɪŋ ɪn dˌɪsɚɹˈeɪ"
+      },
+      {
+        "scene": "ledger",
+        "text": "She sorted every death into three columns: zymotic disease, meaning epidemic and preventable; wounds; and everything else.",
+        "ipa": "ʃiː sˈɔːɹɾᵻd ˈɛvɹi dˈɛθ ˌɪntʊ θɹˈiː kˈɑːlʌmz zaɪmˈɑːɾɪk dɪzˈiːz mˈiːnɪŋ ˌɛpɪdˈɛmɪk ænd pɹɪvˈɛntəbəl wˈuːndz ænd ˈɛvɹɪθˌɪŋ ˈɛls"
+      },
+      {
+        "scene": "ledger",
+        "text": "Counting came before cleaning.",
+        "ipa": "kˈaʊntɪŋ kˈeɪm bᵻfˌoːɹ klˈiːnɪŋ"
+      },
+      {
+        "scene": "rose_y1",
+        "text": "In 1858 she drew this.",
+        "ipa": "ɪn wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti ˈeɪt ʃiː dɹˈuː ðˈɪs"
+      },
+      {
+        "scene": "rose_y1",
+        "text": "Twelve wedges, one per month, starting in April 1854 and running clockwise.",
+        "ipa": "twˈɛlv wˈɛdʒᵻz wˈʌn pɜː mˈʌnθ stˈɑːɹɾɪŋ ɪn ˈeɪpɹəl wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti fˈoːɹ ænd ɹˈʌnɪŋ klˈɑːkwaɪz"
+      },
+      {
+        "scene": "rose_y1",
+        "text": "The area of each wedge, not its length, is proportional to the number of deaths.",
+        "ipa": "ðɪ ˈɛɹiə ʌv ˈiːtʃ wˈɛdʒ nˌɑːt ɪts lˈɛŋθ ɪz pɹəpˈoːɹʃənəl tə ðə nˈʌmbɚɹ ʌv dˈɛθs"
+      },
+      {
+        "scene": "rose_y1",
+        "text": "Blue is preventable disease.",
+        "ipa": "blˈuː ɪz pɹɪvˈɛntəbəl dɪzˈiːz"
+      },
+      {
+        "scene": "rose_y1",
+        "text": "Red is wounds.",
+        "ipa": "ɹˈɛd ɪz wˈuːndz"
+      },
+      {
+        "scene": "rose_y1",
+        "text": "White is other causes.",
+        "ipa": "wˈaɪt ɪz ˈʌðɚ kˈɔːzᵻz"
+      },
+      {
+        "scene": "rose_y1",
+        "text": "Watch what happens as winter arrives.",
+        "ipa": "wˈɑːtʃ wʌt hˈæpənz æz wˈɪntɚɹ ɚɹˈaɪvz"
+      },
+      {
+        "scene": "rose_y1",
+        "text": "Watch January.",
+        "ipa": "wˈɑːtʃ dʒˈænjuːˌɛɹi"
+      },
+      {
+        "scene": "rose_y2",
+        "text": "Now the second year, drawn at exactly the same scale.",
+        "ipa": "nˈaʊ ðə sˈɛkənd jˈɪɹ dɹˈɔːn æɾ ɛɡzˈæktli ðə sˈeɪm skˈeɪl"
+      },
+      {
+        "scene": "rose_y2",
+        "text": "In March 1855 a Sanitary Commission reached Scutari.",
+        "ipa": "ɪn mˈɑːɹtʃ wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti fˈaɪv ɐ sˈænətˌɛɹi kəmˈɪʃən ɹˈiːtʃt skjuːtˈɑːɹɹi"
+      },
+      {
+        "scene": "rose_y2",
+        "text": "It flushed the sewers, cleared the latrines, and, by one widely repeated account, removed a dead horse from the water supply.",
+        "ipa": "ɪt flˈʌʃt ðə sˈuːɚz klˈɪɹd ðə lɐtɹˈiːnz ænd baɪ wˈʌn wˈaɪdli ɹᵻpˈiːɾᵻd ɐkˈaʊnt ɹᵻmˈuːvd ɐ dˈɛd hˈɔːɹs fɹʌmðə wˈɔːɾɚ səplˈaɪ"
+      },
+      {
+        "scene": "rose_y2",
+        "text": "The wedges shrink.",
+        "ipa": "ðə wˈɛdʒᵻz ʃɹˈɪŋk"
+      },
+      {
+        "scene": "rose_y2",
+        "text": "By September 1855, for the first time, more soldiers died of wounds than of disease.",
+        "ipa": "baɪ sɛptˈɛmbɚ wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti fˈaɪv fɚðə fˈɜːst tˈaɪm mˈoːɹ sˈoʊldʒɚz dˈaɪd ʌv wˈuːndz ðɐn ʌv dɪzˈiːz"
+      },
+      {
+        "scene": "rates",
+        "text": "Rates tell the same story with the army's size taken out.",
+        "ipa": "ɹˈeɪts tˈɛl ðə sˈeɪm stˈoːɹi wɪððɪ ˈɑːɹmiz sˈaɪz tˈeɪkən ˈaʊt"
+      },
+      {
+        "scene": "rates",
+        "text": "The army more than doubled during the war, so raw counts can mislead.",
+        "ipa": "ðɪ ˈɑːɹmi mˈoːɹ ðɐn dˈʌbəld dˈʊɹɹɪŋ ðə wˈɔːɹ sˌoʊ ɹˈɔː kˈaʊnts kæn mɪslˈiːd"
+      },
+      {
+        "scene": "rates",
+        "text": "Per thousand men, disease deaths fell from over one thousand a year in January 1855 to under four by March 1856.",
+        "ipa": "pɜː θˈaʊzənd mˈɛn dɪzˈiːz dˈɛθs fˈɛl fɹʌm ˌoʊvɚ wˈʌn θˈaʊzənd ɐ jˈɪɹ ɪn dʒˈænjuːˌɛɹi wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti fˈaɪv tʊ ˌʌndɚ fˈoːɹ baɪ mˈɑːɹtʃ wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti sˈɪks"
+      },
+      {
+        "scene": "batswing",
+        "text": "Her first attempt, later nicknamed the bat's wing, scaled the radius of each wedge to the death rate.",
+        "ipa": "hɜː fˈɜːst ɐtˈɛmpt lˈeɪɾɚ nˈɪkneɪmd ðə bˈæts wˈɪŋ skˈeɪld ðə ɹˈeɪdɪəs ʌv ˈiːtʃ wˈɛdʒ tə ðə dˈɛθ ɹˈeɪt"
+      },
+      {
+        "scene": "batswing",
+        "text": "That exaggerates: double the deaths looks like four times the area.",
+        "ipa": "ðæt ɛɡzˈædʒɚɹˌeɪts dˈʌbəl ðə dˈɛθs lˈʊks lˈaɪk fˈoːɹ tˈaɪmz ðɪ ˈɛɹiə"
+      },
+      {
+        "scene": "batswing",
+        "text": "She redrew it so that area carried the number, and wrote the rule into the legend itself.",
+        "ipa": "ʃiː ɹiːdɹˈuː ɪt sˌoʊ ðæt ˈɛɹiə kˈæɹid ðə nˈʌmbɚ ænd ɹˈoʊt ðə ɹˈuːl ˌɪntʊ ðə lˈɛdʒənd ɪtsˈɛlf"
+      },
+      {
+        "scene": "coxcomb",
+        "text": "Most people call the chart a coxcomb.",
+        "ipa": "mˈoʊst pˈiːpəl kˈɔːl ðə tʃˈɑːɹt ɐ kˈɑːkskoʊm"
+      },
+      {
+        "scene": "coxcomb",
+        "text": "According to historian Hugh Small, she used that word for the printed booklet the diagrams appeared in, not for the chart itself.",
+        "ipa": "ɐkˈoːɹdɪŋ tə hɪstˈoːɹiən hjˈuː smˈɔːl ʃiː jˈuːzd ðæt wˈɜːd fɚðə pɹˈɪntᵻd bˈʊklɪt ðə dˈaɪəɡɹˌæmz ɐpˈɪɹd ɪn nˌɑːt fɚðə tʃˈɑːɹt ɪtsˈɛlf"
+      },
+      {
+        "scene": "impact",
+        "text": "The diagram went into her evidence for the Royal Commission on the Health of the Army, formed in 1857, and to the people who could act: Queen Victoria, Sidney Herbert, members of Parliament.",
+        "ipa": "ðə dˈaɪəɡɹˌæm wɛnt ˌɪntʊ hɜːɹ ˈɛvɪdəns fɚðə ɹˈɔɪəl kəmˈɪʃən ɔnðə hˈɛlθ ʌvðɪ ˈɑːɹmi fˈɔːɹmd ɪn wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti sˈɛvən ænd tə ðə pˈiːpəl hˌuː kʊd ˈækt kwˈiːn vɪktˈoːɹiə sˈɪdni hˈɜːbɚt mˈɛmbɚz ʌv pˈɑːɹləmənt"
+      },
+      {
+        "scene": "impact",
+        "text": "Reforms followed: an army medical school, routine sanitary statistics for barracks and hospitals.",
+        "ipa": "ɹᵻfˈɔːɹmz fˈɑːloʊd ɐn ˈɑːɹmi mˈɛdɪkəl skˈuːl ɹuːtˈiːn sˈænətˌɛɹi stɐtˈɪstɪks fɔːɹ bˈɛɹəks ænd hˈɑːspɪɾəlz"
+      },
+      {
+        "scene": "impact",
+        "text": "In 1858 she became the first woman elected to the Statistical Society of London.",
+        "ipa": "ɪn wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti ˈeɪt ʃiː bɪkˌeɪm ðə fˈɜːst wˈʊmən ᵻlˈɛktᵻd tə ðə stɐtˈɪstɪkəl səsˈaɪəɾi ʌv lˈʌndən"
+      },
+      {
+        "scene": "why",
+        "text": "The report had hundreds of pages of tables.",
+        "ipa": "ðə ɹᵻpˈoːɹt hæd hˈʌndɹɪdz ʌv pˈeɪdʒᵻz ʌv tˈeɪbəlz"
+      },
+      {
+        "scene": "why",
+        "text": "The chart made one argument, and made it in a shape: the biggest killer was the one you could fix.",
+        "ipa": "ðə tʃˈɑːɹt mˌeɪd wˈʌn ˈɑːɹɡjuːmənt ænd mˌeɪd ɪɾ ɪn ɐ ʃˈeɪp ðə bˈɪɡɪst kˈɪlɚ wʌzðə wˈʌn juː kʊd fˈɪks"
+      },
+      {
+        "scene": "outro",
+        "text": "Next time: the scatterplot that could have saved the space shuttle Challenger.",
+        "ipa": "nˈɛkst tˈaɪm ðə skˈæɾɚplˌɑːt ðæt kˌʊdɐv sˈeɪvd ðə spˈeɪs ʃˈʌɾəl tʃˈælɪndʒɚ"
+      },
+      {
+        "scene": "outro",
+        "text": "Sources and the data for this episode are in the description.",
+        "ipa": "sˈoːɹsᵻz ænd ðə dˈeɪɾə fɔːɹ ðɪs ˈɛpɪsˌoʊd ɑːɹ ɪnðə dᵻskɹˈɪpʃən"
+      }
+    ],
+    "asr": {
+      "model": "whisper-base.en int8 (sherpa-onnx)",
+      "seconds": 22.4,
+      "rows": [
+        {
+          "scene": "hook",
+          "ref": "In January 1855, the British army besieging Sevastopol was dying at a rate of one thousand and twenty-three men per thousand, per year.",
+          "hyp": "In January 1855, the British Army besieging Sevastopol was dying at a rate of 1,023 men per thousand per year.",
+          "wer": 0.208
+        },
+        {
+          "scene": "hook",
+          "ref": "Read that again.",
+          "hyp": "Read that again.",
+          "wer": 0.0
+        },
+        {
+          "scene": "hook",
+          "ref": "At that rate, disease alone would have wiped out the entire army in under a year, without the enemy firing a shot.",
+          "hyp": "At that rate, disease alone would have wiped out the entire army in under a year, without the enemy firing a shot.",
+          "wer": 0.0
+        },
+        {
+          "scene": "title",
+          "ref": "This is the story of how one woman turned that ledger into a picture, and why the picture worked where the numbers had failed.",
+          "hyp": "This is the story of how one woman turned that ledger into a picture, and why the picture worked where the numbers had failed.",
+          "wer": 0.0
+        },
+        {
+          "scene": "bars_all",
+          "ref": "Here is every month of the war, from April 1854 to March 1856.",
+          "hyp": "Here is every month of the war, from April 1854 to March 1856.",
+          "wer": 0.0
+        },
+        {
+          "scene": "bars_all",
+          "ref": "Blue is death from disease: cholera, typhus, dysentery.",
+          "hyp": "Blue is death from disease, cholera typhus dysentery.",
+          "wer": 0.0
+        },
+        {
+          "scene": "bars_all",
+          "ref": "Red is death from wounds.",
+          "hyp": "Red is death from wounds.",
+          "wer": 0.0
+        },
+        {
+          "scene": "bars_all",
+          "ref": "White is everything else.",
+          "hyp": "White is everything else.",
+          "wer": 0.0
+        },
+        {
+          "scene": "bars_all",
+          "ref": "The bars are not close.",
+          "hyp": "The bars are not close.",
+          "wer": 0.0
+        },
+        {
+          "scene": "bars_all",
+          "ref": "Over the whole war, disease killed fourteen thousand four hundred and seventy-six British soldiers.",
+          "hyp": "Over the whole war, disease killed 14,400 and 76 British soldiers.",
+          "wer": 0.4
+        },
+        {
+          "scene": "bars_all",
+          "ref": "Wounds killed one thousand seven hundred and fifty-eight.",
+          "hyp": "Wounds killed 1,758.",
+          "wer": 0.778
+        },
+        {
+          "scene": "bars_all",
+          "ref": "For every soldier killed by the enemy, eight died of something that could have been prevented.",
+          "hyp": "For every soldier killed by the enemy, eight died of something that could have been prevented.",
+          "wer": 0.0
+        },
+        {
+          "scene": "ledger",
+          "ref": "The numbers came from army returns, compiled with William Farr, the statistician at the General Register Office.",
+          "hyp": "The numbers came from Army Returns, compiled with William Far, the statistician at the General Register Office.",
+          "wer": 0.059
+        },
+        {
+          "scene": "ledger",
+          "ref": "Nightingale reached the barracks hospital at Scutari in November 1854 and found the record keeping in disarray.",
+          "hyp": "Nyead and Gail reached the barracks hospital at Scutari in November 1854 and found the record keeping in disarray.",
+          "wer": 0.176
+        },
+        {
+          "scene": "ledger",
+          "ref": "She sorted every death into three columns: zymotic disease, meaning epidemic and preventable; wounds; and everything else.",
+          "hyp": "She sorted every death into three columns, \"zymotic disease\" meaning epidemic and preventable, wounds and everything else.",
+          "wer": 0.0
+        },
+        {
+          "scene": "ledger",
+          "ref": "Counting came before cleaning.",
+          "hyp": "Counting came before cleaning.",
+          "wer": 0.0
+        },
+        {
+          "scene": "rose_y1",
+          "ref": "In 1858 she drew this.",
+          "hyp": "In 1858, she drew this.",
+          "wer": 0.0
+        },
+        {
+          "scene": "rose_y1",
+          "ref": "Twelve wedges, one per month, starting in April 1854 and running clockwise.",
+          "hyp": "12 wedges, one per month, starting in April 1854 and running clockwise.",
+          "wer": 0.083
+        },
+        {
+          "scene": "rose_y1",
+          "ref": "The area of each wedge, not its length, is proportional to the number of deaths.",
+          "hyp": "The area of each wedge, not its length, is proportional to the number of deaths.",
+          "wer": 0.0
+        },
+        {
+          "scene": "rose_y1",
+          "ref": "Blue is preventable disease.",
+          "hyp": "Blue is preventable disease.",
+          "wer": 0.0
+        },
+        {
+          "scene": "rose_y1",
+          "ref": "Red is wounds.",
+          "hyp": "Red is wounds.",
+          "wer": 0.0
+        },
+        {
+          "scene": "rose_y1",
+          "ref": "White is other causes.",
+          "hyp": "White is other causes.",
+          "wer": 0.0
+        },
+        {
+          "scene": "rose_y1",
+          "ref": "Watch what happens as winter arrives.",
+          "hyp": "Watch what happens as winter arrives.",
+          "wer": 0.0
+        },
+        {
+          "scene": "rose_y1",
+          "ref": "Watch January.",
+          "hyp": "Watch January",
+          "wer": 0.0
+        },
+        {
+          "scene": "rose_y2",
+          "ref": "Now the second year, drawn at exactly the same scale.",
+          "hyp": "Now the second year, drawn at exactly the same scale.",
+          "wer": 0.0
+        },
+        {
+          "scene": "rose_y2",
+          "ref": "In March 1855 a Sanitary Commission reached Scutari.",
+          "hyp": "In March 1855, a sanitary commission reached Scutari.",
+          "wer": 0.0
+        },
+        {
+          "scene": "rose_y2",
+          "ref": "It flushed the sewers, cleared the latrines, and, by one widely repeated account, removed a dead horse from the water supply.",
+          "hyp": "It flushed the sewers, cleared the latrines, and by one widely repeated account, removed a dead horse from the water supply.",
+          "wer": 0.0
+        },
+        {
+          "scene": "rose_y2",
+          "ref": "The wedges shrink.",
+          "hyp": "The wedges shrink.",
+          "wer": 0.0
+        },
+        {
+          "scene": "rose_y2",
+          "ref": "By September 1855, for the first time, more soldiers died of wounds than of disease.",
+          "hyp": "By September 1855, for the first time, more soldiers died of wounds than of disease.",
+          "wer": 0.0
+        },
+        {
+          "scene": "rates",
+          "ref": "Rates tell the same story with the army's size taken out.",
+          "hyp": "Rates tell the same story, with the army's size taken out.",
+          "wer": 0.0
+        },
+        {
+          "scene": "rates",
+          "ref": "The army more than doubled during the war, so raw counts can mislead.",
+          "hyp": "The army more than doubled during the war, so raw counts can mislead.",
+          "wer": 0.0
+        },
+        {
+          "scene": "rates",
+          "ref": "Per thousand men, disease deaths fell from over one thousand a year in January 1855 to under four by March 1856.",
+          "hyp": "Per 1,000 men, disease deaths fell from over 1,000 a year in January 1,855, to under 4 by March 1,856. [buzzer]",
+          "wer": 0.476
+        },
+        {
+          "scene": "batswing",
+          "ref": "Her first attempt, later nicknamed the bat's wing, scaled the radius of each wedge to the death rate.",
+          "hyp": "Her first attempt, later nicknamed the bat's wing, scaled the radius of each wedge to the death rate.",
+          "wer": 0.0
+        },
+        {
+          "scene": "batswing",
+          "ref": "That exaggerates: double the deaths looks like four times the area.",
+          "hyp": "That exaggerates. Double the deaths looks like four times the area.",
+          "wer": 0.0
+        },
+        {
+          "scene": "batswing",
+          "ref": "She redrew it so that area carried the number, and wrote the rule into the legend itself.",
+          "hyp": "She redrew it so that Aria carried the number and wrote the rule into the legend itself.",
+          "wer": 0.059
+        },
+        {
+          "scene": "coxcomb",
+          "ref": "Most people call the chart a coxcomb.",
+          "hyp": "Most people call the chart a cockscomb.",
+          "wer": 0.143
+        },
+        {
+          "scene": "coxcomb",
+          "ref": "According to historian Hugh Small, she used that word for the printed booklet the diagrams appeared in, not for the chart itself.",
+          "hyp": "According to historian Hugh Small, she used that word for the printed booklet the Diagrams appeared in, not for the chart itself.",
+          "wer": 0.0
+        },
+        {
+          "scene": "impact",
+          "ref": "The diagram went into her evidence for the Royal Commission on the Health of the Army, formed in 1857, and to the people who could act: Queen Victoria, Sidney Herbert, members of Parliament.",
+          "hyp": "The diagram went into her evidence for the Royal Commission on the Health of the Army, formed in 1857 and to the people who could act. Queen Victoria, Sydney Herbert, members of Parliament.",
+          "wer": 0.03
+        },
+        {
+          "scene": "impact",
+          "ref": "Reforms followed: an army medical school, routine sanitary statistics for barracks and hospitals.",
+          "hyp": "Reforms followed. An Army medical school routines sanitary statistics for barracks and hospitals.",
+          "wer": 0.077
+        },
+        {
+          "scene": "impact",
+          "ref": "In 1858 she became the first woman elected to the Statistical Society of London.",
+          "hyp": "In 1858, she became the first woman elected to the Statistical Society of London.",
+          "wer": 0.0
+        },
+        {
+          "scene": "why",
+          "ref": "The report had hundreds of pages of tables.",
+          "hyp": "The report had hundreds of pages of tables.",
+          "wer": 0.0
+        },
+        {
+          "scene": "why",
+          "ref": "The chart made one argument, and made it in a shape: the biggest killer was the one you could fix.",
+          "hyp": "The chart made one argument and made it in a shape. The biggest killer was the one you could fix.",
+          "wer": 0.0
+        },
+        {
+          "scene": "outro",
+          "ref": "Next time: the scatterplot that could have saved the space shuttle Challenger.",
+          "hyp": "Next time, the scatter plot that could have saved the space shuttle Challenger. [buzzer]",
+          "wer": 0.25
+        },
+        {
+          "scene": "outro",
+          "ref": "Sources and the data for this episode are in the description.",
+          "hyp": "Sources and the data for this episode are in the description. [AUDIO OUT]",
+          "wer": 0.182
+        }
+      ],
+      "mean_wer": 0.0664,
+      "flagged": [
+        {
+          "scene": "hook",
+          "ref": "In January 1855, the British army besieging Sevastopol was dying at a rate of one thousand and twenty-three men per thousand, per year.",
+          "hyp": "In January 1855, the British Army besieging Sevastopol was dying at a rate of 1,023 men per thousand per year.",
+          "wer": 0.208
+        },
+        {
+          "scene": "bars_all",
+          "ref": "Over the whole war, disease killed fourteen thousand four hundred and seventy-six British soldiers.",
+          "hyp": "Over the whole war, disease killed 14,400 and 76 British soldiers.",
+          "wer": 0.4
+        },
+        {
+          "scene": "bars_all",
+          "ref": "Wounds killed one thousand seven hundred and fifty-eight.",
+          "hyp": "Wounds killed 1,758.",
+          "wer": 0.778
+        },
+        {
+          "scene": "ledger",
+          "ref": "The numbers came from army returns, compiled with William Farr, the statistician at the General Register Office.",
+          "hyp": "The numbers came from Army Returns, compiled with William Far, the statistician at the General Register Office.",
+          "wer": 0.059
+        },
+        {
+          "scene": "ledger",
+          "ref": "Nightingale reached the barracks hospital at Scutari in November 1854 and found the record keeping in disarray.",
+          "hyp": "Nyead and Gail reached the barracks hospital at Scutari in November 1854 and found the record keeping in disarray.",
+          "wer": 0.176
+        },
+        {
+          "scene": "rose_y1",
+          "ref": "Twelve wedges, one per month, starting in April 1854 and running clockwise.",
+          "hyp": "12 wedges, one per month, starting in April 1854 and running clockwise.",
+          "wer": 0.083
+        },
+        {
+          "scene": "rates",
+          "ref": "Per thousand men, disease deaths fell from over one thousand a year in January 1855 to under four by March 1856.",
+          "hyp": "Per 1,000 men, disease deaths fell from over 1,000 a year in January 1,855, to under 4 by March 1,856. [buzzer]",
+          "wer": 0.476
+        },
+        {
+          "scene": "batswing",
+          "ref": "She redrew it so that area carried the number, and wrote the rule into the legend itself.",
+          "hyp": "She redrew it so that Aria carried the number and wrote the rule into the legend itself.",
+          "wer": 0.059
+        },
+        {
+          "scene": "coxcomb",
+          "ref": "Most people call the chart a coxcomb.",
+          "hyp": "Most people call the chart a cockscomb.",
+          "wer": 0.143
+        },
+        {
+          "scene": "impact",
+          "ref": "Reforms followed: an army medical school, routine sanitary statistics for barracks and hospitals.",
+          "hyp": "Reforms followed. An Army medical school routines sanitary statistics for barracks and hospitals.",
+          "wer": 0.077
+        },
+        {
+          "scene": "outro",
+          "ref": "Next time: the scatterplot that could have saved the space shuttle Challenger.",
+          "hyp": "Next time, the scatter plot that could have saved the space shuttle Challenger. [buzzer]",
+          "wer": 0.25
+        },
+        {
+          "scene": "outro",
+          "ref": "Sources and the data for this episode are in the description.",
+          "hyp": "Sources and the data for this episode are in the description. [AUDIO OUT]",
+          "wer": 0.182
+        }
+      ]
+    },
+    "disclaimer": "Audio was evaluated by phoneme review, ASR round-trip and spectrogram inspection; no human listening test was performed."
+  },
+  "warnings": [],
+  "status": "QC_FAIL",
+  "technical_ok": false,
+  "gate": {
+    "original_narrative": true,
+    "sources_verified": false,
+    "visuals_explain": true,
+    "distinct_from_previous": true,
+    "title_thumbnail_honest": true,
+    "ad_suitability_noted": true,
+    "licenses_recorded": true,
+    "notes": "sources_verified stays false until each factual claim is cross-checked against at least one cited source in sources.md (see reports/pilot/ep-001.md)."
+  },
+  "gate_ok": false
+}

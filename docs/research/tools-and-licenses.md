@@ -17,7 +17,7 @@ Kural: kod, model ağırlığı, ses modeli/veri seti, fonemizer, font, veri set
 | phonemizer | 3.4.0 | G2P (kokoro-onnx bağımlılığı) | **GPL-3.0** | PyPI | verified-primary — kütüphane olarak süreç içinde; çıktıya etkisi yok; repo kodumuz MIT dağıtılır, kullanıcı birleştirir (not: `docs/operations/licensing-notes.md`) |
 | espeak-ng (apt) + libespeak-ng | 1.51 | fonemleştirici arka uç | GPL-3.0 | Ubuntu paketi | verified-primary — aynı not |
 | espeakng-loader | 0.2.4 | lib yükleyici | MIT | PyPI | verified-primary |
-| sherpa-onnx (pip) | 1.13.8 | ASR çalıştırıcı (QC) | Apache-2.0 | raw.githubusercontent.com/k2-fsa/sherpa-onnx/master/LICENSE | verified-primary |
+| sherpa-onnx + sherpa-onnx-core (pip) | 1.13.8 | ASR çalıştırıcı (QC); `-core` ikili kütüphaneleri taşır (libonnxruntime, c-api) | Apache-2.0 | raw.githubusercontent.com/k2-fsa/sherpa-onnx/master/LICENSE | verified-primary |
 | **Whisper base.en ağırlıkları** (sherpa-onnx dönüştürme) | — | ASR (QC, yayınlanmaz) | MIT (OpenAI) | raw.githubusercontent.com/openai/whisper/main/LICENSE | verified-primary (orijinal); dönüştürülmüş dosya sherpa release'inden (`asr-models`) |
 | soundfile / numpy / Pillow / pydantic / PyYAML / pytest | sabit (`uv.lock`) | yardımcı | BSD/MIT/HPND | PyPI | verified-primary |
 | Fontlar: DejaVu Sans | sistem | tipografi | Bitstream Vera/DejaVu lisansı (özgür, gömme serbest) | sistem paketi | verified-primary |
