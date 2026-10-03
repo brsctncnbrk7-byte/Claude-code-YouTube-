@@ -85,4 +85,7 @@ jobs:
         run: |
           EP=${{ steps.t.outputs.ep }}; TAG=${{ steps.t.outputs.tag }}
           NOTES=dist/$EP/RELEASE_NOTES.md; [ -f "$NOTES" ] || NOTES=/dev/null
-          if gh release view "$TAG" >/dev/null 2>&1; then gh release upload "$TAG" dist/$EP/* --clobber; else gh release create "$TAG" dist/$EP/* --title "$TAG" --notes-file "$NOTES" --target "$GITHUB_SHA"; fi
+          # files only (no directories); the short/ copies of sources.md and licenses.md are duplicates of the top-level ones
+          mapfile -t FILES < <(find "dist/$EP" -type f ! -path "*/short/sources.md" ! -path "*/short/licenses.md" | sort)
+          printf '%s\n' "${FILES[@]}"
+          if gh release view "$TAG" >/dev/null 2>&1; then gh release upload "$TAG" "${FILES[@]}" --clobber; else gh release create "$TAG" "${FILES[@]}" --title "$TAG" --notes-file "$NOTES" --target "$GITHUB_SHA"; fi
