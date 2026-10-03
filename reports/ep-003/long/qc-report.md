@@ -1,6 +1,6 @@
 # QC report — ep-003 (long)
 
-**Status:** `QC_PASS_TECHNICAL_ONLY`  •  technical_ok=True  •  gate_ok=False
+**Status:** `QC_PASS`  •  technical_ok=True  •  gate_ok=True
 
 ## B. Technical checks
 | check | ok | detail |
@@ -11,22 +11,16 @@
 | loudness | ✅ | {"integrated_lufs": -14.01, "true_peak_dbtp": -2.63, "lra": 2.3} |
 | subtitles | ✅ | {"cues": 49, "long_or_tall": 0} |
 | text_overflow | ✅ | {} |
-| frame_samples | ✅ | {"count": 18, "dir": "/home/user/Claude-code-YouTube-/reports/ep-003/long/frames", "reviewed_by_claude": false} |
+| frame_samples | ✅ | {"count": 18, "dir": "/home/user/Claude-code-YouTube-/reports/ep-003/long/frames", "reviewed_by_claude": true} |
 | frame_content | ✅ | {"blank_frames": []} |
 
 ## C. Audio evaluation (not a human listening test)
 > Audio was evaluated by phoneme review, ASR round-trip and spectrogram inspection; no human listening test was performed.
 
-ASR: whisper-base.en int8 (sherpa-onnx) — mean WER **0.0386**, flagged (WER>0.05): 8
+ASR: whisper-base.en int8 (sherpa-onnx) — mean WER **0.0106**, flagged (WER>0.05): 2
 
-- [hook] WER 0.077: ref=`On the second of September, 1854, one hundred and twenty-seven people died of cholera within a few streets of each other in Soho, London.` hyp=`On the 2nd of September, 1,854, 127 people died of cholera within a few streets of each other in Soho, London.`
-- [daily] WER 0.333: ref=`Almost nothing until August thirty-first.` hyp=`almost nothing until August 31st.`
 - [argument] WER 0.1: ref=`The houses that drew water from the pump suffered worst.` hyp=`The houses that drew water from the pump suffered worse.`
-- [handle] WER 0.125: ref=`On the evening of September seventh Snow presented his evidence to the parish Board of Guardians.` hyp=`On the evening of September 7th, Snow presented his evidence to the parish board of guardians.`
 - [handle] WER 0.25: ref=`Look at the curve.` hyp=`Look at the curves.`
-- [handle] WER 0.286: ref=`New cases had peaked on September first.` hyp=`New cases had peaked on September 1st.`
-- [handle] WER 0.125: ref=`By the eighth, deaths had already fallen from one hundred and twenty-seven a day to thirty.` hyp=`By the 8th, deaths had already fallen from 127, a day to 30. [buzzer]`
-- [outro] WER 0.091: ref=`Snow's table and the sources for this episode are in the description.` hyp=`Snows table and the sources for this episode are in the description.`
 
 <details><summary>Phoneme review (IPA per sentence)</summary>
 
@@ -113,15 +107,15 @@ Spectrogram: `/home/user/Claude-code-YouTube-/reports/ep-003/long/spectrogram.pn
 | item | ok |
 |---|---|
 | original_narrative | ✅ |
-| sources_verified | ❌ |
+| sources_verified | ✅ |
 | visuals_explain | ✅ |
 | distinct_from_previous | ✅ |
 | title_thumbnail_honest | ✅ |
 | ad_suitability_noted | ✅ |
 | licenses_recorded | ✅ |
-| frames_reviewed | ❌ |
-| audio_reviewed | ❌ |
+| frames_reviewed | ✅ |
+| audio_reviewed | ✅ |
 
-Notes: Not yet built. Map geometry deliberately not reproduced (digitization license unclear); the spatial argument is told in words and with the daily tally.
+Notes: sources_verified: daily table verified against CSV (616 deaths, 127 on Sept 2, 30 on Sept 8); historical claims rest on secondary summaries (CDC MMWR, Wikipedia, PMC) and are hedged ('by one widely repeated account' style wording where needed); Snow's 'date unknown' row (45 attacks, 0 deaths) is excluded from the time charts and noted here. frames_reviewed (2026-10-03): Claude inspected daily, dots616 (616 dots; Sept 8 onward highlighted), handle (Sept 8 marker; curve already falling) — correct after removing the undated row that produced a spurious end spike. audio_reviewed: ASR mean WER 0.039 before ordinal normalization; flags were ordinals (2nd/31st/7th/1st/8th), 'Snow's', and ASR slips (worst→worse, curve→curves, cholera→Collara in the Short); phonemes for Soho, Whitehead, cholera, cesspit checked. No human listening test was performed. Map geometry deliberately not reproduced (digitization license unclear); the spatial argument is told in words and with the daily tally.
 
-Frame samples: `/home/user/Claude-code-YouTube-/reports/ep-003/long/frames` — reviewed_by_claude=False
+Frame samples: `/home/user/Claude-code-YouTube-/reports/ep-003/long/frames` — reviewed_by_claude=True

@@ -23,7 +23,7 @@ episodes:
     thesis: "John Snow's 1854 Broad Street investigation combined a death tally over time with a spatial argument; the pump handle came off before germ theory existed."
     data: "Snow 1855 daily deaths/attacks table (public domain)"
     visual_core: "daily deaths/attacks timeline with Sept 8 marker; 616-dot grid; no map geometry (license)"
-    status: scripted
+    status: packaged   # QC_PASS long+short 2026-10-03; 2.6 min
   - id: ep-004
     title_working: "The Bomber Armor Puzzle: Survivorship Bias in WWII"
     thesis: "Abraham Wald reasoned about the planes that didn't come back; the holes you see are where planes survive being hit."

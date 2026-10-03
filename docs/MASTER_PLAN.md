@@ -23,9 +23,9 @@ Hazırlık süresi ayrı sayılır; 30 gün sayacı yayın tarihi bilinmeden ba�
 
 | Senaryo | Uzun video sayısı (30 gün) | Ort. izlenen dk/görüntüleme | Gerekli görüntüleme/gün (ort.) | 30 gün toplam görüntüleme | Abone dönüşümü varsayımı | Beklenen abone | Sonuç |
 |---|---|---|---|---|---|---|---|
-| Düşük | 10 | 2.5 | 3.200 | 96.000 | %1.0 | ~960 | saat **ve** abone büyük olasılıkla **ulaşılmaz** |
-| Temel | 13 | 3.5 | 2.300 | 69.000 | %1.5 | ~1.030 | saat için geç başlayan eğri nedeniyle ulaşılması **olasılık dışı değil ama düşük**; abone sınırda |
-| Yüksek | 13 + 13 Short | 4.5 | 1.800 (+Shorts aboneleri) | 54.000 uzun + Shorts | %2 uzun + Shorts | >1.000 | ancak bir-iki videonun öneri sistemine girmesiyle |
+| Düşük | 10 | 2.0 | 3.200 | 96.000 | %1.0 | ~960 | saat **ve** abone büyük olasılıkla **ulaşılmaz** |
+| Temel | 13 | 3.0 | 2.300 | 69.000 | %1.5 | ~1.030 | saat için geç başlayan eğri nedeniyle ulaşılması **olasılık dışı değil ama düşük**; abone sınırda |
+| Yüksek | 13 + 13 Short | 3.5 | 1.800 (+Shorts aboneleri) | 54.000 uzun + Shorts | %2 uzun + Shorts | >1.000 | ancak bir-iki videonun öneri sistemine girmesiyle |
 
 **Belirsizlik beyanı:** Yeni kanallarda 1.000 aboneye ortalama ~254 gün rapor ediliyor (`secondary`). 30 günlük hedef, en az bir videonun öneri akışında güçlü performans göstermesine ("viral varsayımı") dayanır; bu bir plan değil, umuttur. Plan, hedefe ulaşılmazsa da değer üreten bir kanal ve sistem bırakmayı garanti eder. Tahminler gerçek veri değildir.
 
@@ -36,7 +36,7 @@ Hazırlık süresi ayrı sayılır; 30 gün sayacı yayın tarihi bilinmeden ba�
 - **Fark:** Hikâye + orijinal veri + canlı yeniden çizim; stok görsel yok; her iddia kaynaklı; sentetik ses açıkça beyan edilir.
 
 ## 4. Format
-- Uzun: 6–9 dk, 1920×1080 30fps, anlatıcı (Kokoro), programatik görseller, bölüm işaretleri, altyazı.
+- Uzun: lansmanda 3–6 dk (ölçülen; ADR-013), hedef 6–9 dk ikinci aşamada; 1920×1080 30fps, anlatıcı (Kokoro), programatik görseller, bölüm işaretleri, altyazı.
 - Short: 45–60 sn dikey, bölümün "kanca" kesiti + kanala yönlendirme (saatlere sayılmaz; keşif için).
 - Yayın sıklığı: başlangıç varsayımı haftada 3 uzun + 3 Short; pilot render ölçümüyle kesinleşir (ADR-011).
 

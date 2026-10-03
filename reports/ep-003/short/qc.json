@@ -40,7 +40,7 @@
     "frame_samples": {
       "count": 6,
       "dir": "/home/user/Claude-code-YouTube-/reports/ep-003/short/frames",
-      "reviewed_by_claude": false
+      "reviewed_by_claude": true
     },
     "frame_content": {
       "blank_frames": [],
@@ -78,7 +78,7 @@
     ],
     "asr": {
       "model": "whisper-base.en int8 (sherpa-onnx)",
-      "seconds": 3.7,
+      "seconds": 3.5,
       "rows": [
         {
           "scene": "s_hook",
@@ -126,19 +126,19 @@
     "disclaimer": "Audio was evaluated by phoneme review, ASR round-trip and spectrogram inspection; no human listening test was performed."
   },
   "warnings": [],
-  "status": "QC_PASS_TECHNICAL_ONLY",
+  "status": "QC_PASS",
   "technical_ok": true,
   "gate": {
     "original_narrative": true,
-    "sources_verified": false,
+    "sources_verified": true,
     "visuals_explain": true,
     "distinct_from_previous": true,
     "title_thumbnail_honest": true,
     "ad_suitability_noted": true,
     "licenses_recorded": true,
-    "frames_reviewed": false,
-    "audio_reviewed": false,
-    "notes": "Not yet built. Map geometry deliberately not reproduced (digitization license unclear); the spatial argument is told in words and with the daily tally."
+    "frames_reviewed": true,
+    "audio_reviewed": true,
+    "notes": "sources_verified: daily table verified against CSV (616 deaths, 127 on Sept 2, 30 on Sept 8); historical claims rest on secondary summaries (CDC MMWR, Wikipedia, PMC) and are hedged ('by one widely repeated account' style wording where needed); Snow's 'date unknown' row (45 attacks, 0 deaths) is excluded from the time charts and noted here. frames_reviewed (2026-10-03): Claude inspected daily, dots616 (616 dots; Sept 8 onward highlighted), handle (Sept 8 marker; curve already falling) — correct after removing the undated row that produced a spurious end spike. audio_reviewed: ASR mean WER 0.039 before ordinal normalization; flags were ordinals (2nd/31st/7th/1st/8th), 'Snow's', and ASR slips (worst→worse, curve→curves, cholera→Collara in the Short); phonemes for Soho, Whitehead, cholera, cesspit checked. No human listening test was performed. Map geometry deliberately not reproduced (digitization license unclear); the spatial argument is told in words and with the daily tally."
   },
-  "gate_ok": false
+  "gate_ok": true
 }

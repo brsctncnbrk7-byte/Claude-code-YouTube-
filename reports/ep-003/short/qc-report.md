@@ -1,6 +1,6 @@
 # QC report — ep-003 (short)
 
-**Status:** `QC_PASS_TECHNICAL_ONLY`  •  technical_ok=True  •  gate_ok=False
+**Status:** `QC_PASS`  •  technical_ok=True  •  gate_ok=True
 
 ## B. Technical checks
 | check | ok | detail |
@@ -11,7 +11,7 @@
 | loudness | ✅ | {"integrated_lufs": -14.01, "true_peak_dbtp": -2.99, "lra": 2.6} |
 | subtitles | ✅ | {"cues": 6, "long_or_tall": 0} |
 | text_overflow | ✅ | {} |
-| frame_samples | ✅ | {"count": 6, "dir": "/home/user/Claude-code-YouTube-/reports/ep-003/short/frames", "reviewed_by_claude": false} |
+| frame_samples | ✅ | {"count": 6, "dir": "/home/user/Claude-code-YouTube-/reports/ep-003/short/frames", "reviewed_by_claude": true} |
 | frame_content | ✅ | {"blank_frames": []} |
 
 ## C. Audio evaluation (not a human listening test)
@@ -42,15 +42,15 @@ Spectrogram: `/home/user/Claude-code-YouTube-/reports/ep-003/short/spectrogram.p
 | item | ok |
 |---|---|
 | original_narrative | ✅ |
-| sources_verified | ❌ |
+| sources_verified | ✅ |
 | visuals_explain | ✅ |
 | distinct_from_previous | ✅ |
 | title_thumbnail_honest | ✅ |
 | ad_suitability_noted | ✅ |
 | licenses_recorded | ✅ |
-| frames_reviewed | ❌ |
-| audio_reviewed | ❌ |
+| frames_reviewed | ✅ |
+| audio_reviewed | ✅ |
 
-Notes: Not yet built. Map geometry deliberately not reproduced (digitization license unclear); the spatial argument is told in words and with the daily tally.
+Notes: sources_verified: daily table verified against CSV (616 deaths, 127 on Sept 2, 30 on Sept 8); historical claims rest on secondary summaries (CDC MMWR, Wikipedia, PMC) and are hedged ('by one widely repeated account' style wording where needed); Snow's 'date unknown' row (45 attacks, 0 deaths) is excluded from the time charts and noted here. frames_reviewed (2026-10-03): Claude inspected daily, dots616 (616 dots; Sept 8 onward highlighted), handle (Sept 8 marker; curve already falling) — correct after removing the undated row that produced a spurious end spike. audio_reviewed: ASR mean WER 0.039 before ordinal normalization; flags were ordinals (2nd/31st/7th/1st/8th), 'Snow's', and ASR slips (worst→worse, curve→curves, cholera→Collara in the Short); phonemes for Soho, Whitehead, cholera, cesspit checked. No human listening test was performed. Map geometry deliberately not reproduced (digitization license unclear); the spatial argument is told in words and with the daily tally.
 
-Frame samples: `/home/user/Claude-code-YouTube-/reports/ep-003/short/frames` — reviewed_by_claude=False
+Frame samples: `/home/user/Claude-code-YouTube-/reports/ep-003/short/frames` — reviewed_by_claude=True
