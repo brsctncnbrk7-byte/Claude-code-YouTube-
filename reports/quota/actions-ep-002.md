@@ -6,3 +6,6 @@ Not: Bu koşu, espeak sabitlemesinden önceki koda aittir (ses içeriği geçerl
 
 # ep-003 release koşusu
 | Run 37157099672 | `release-requests/ep-003.request` | ✅ | ~9 dk (2.6 dk video + Short) | `ep-003` yayınlandı 22:21 UTC, 21 varlık; sha256 eşleşti; runner MP4'leri yerel derlemelerle bit-aynı; QC_PASS |
+
+# ep-005 release koşusu
+| Run 37158356497 | `release-requests/ep-005.request` | ✅ | ~8 dk (2.3 dk video + Short) | `ep-005` yayınlandı; sha256 eşleşti; runner MP4'leri yerel derlemelerle bit-aynı; QC_PASS |

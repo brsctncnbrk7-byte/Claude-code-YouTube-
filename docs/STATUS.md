@@ -13,7 +13,7 @@
 - **ep-003 (Snow): QC_PASS uzun (2.6 dk) + Short** — `dist/ep-003/`; yeni `dots` sahnesi; tarihsiz satır filtresi
 - **Yeniden üretilebilirlik: PASS** — temiz klonda bit-düzeyinde aynı MP4 (ADR-012 tohumlu TTS + sabitlenmiş espeak; `reports/pilot/reproducibility.md`)
 - **GitHub Releases:** `ep-001`, `ep-002` yayımlandı ve sha256 doğrulandı; sabitlenmiş hatla yeniden yayım ve `ep-003` koşuları sürüyor
-- İkinci hafta tamponu: ep-005 (Minard, `flow` sahnesi) ve ep-006 (Literary Digest) senaryo+veri hazır (`scripted`)
+- İkinci hafta tamponu: **ep-005 (Minard) QC_PASS uzun+Short, Release `ep-005` yayımlandı ve doğrulandı**; ep-006 (Literary Digest) senaryo+veri hazır (`scripted`)
 - Kanal kiti: marka, logo/banner/profil/watermark PNG, kurulum listesi, playlist yapısı
 - Actions: smoke zinciri doğrulandı (workflow → release `smoke-37149042055` → indirme → sha256 OK); ep-001 gerçek release koşusu başlatıldı (run 37151370173)
 - Raporlar: `reports/pilot/ep-001.md`, `ep-002.md`, `render-benchmark.md`
