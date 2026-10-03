@@ -1,0 +1,640 @@
+{
+  "episode": "ep-003",
+  "format": "long",
+  "summary": {
+    "sentences": 37,
+    "mean_wer_best": 0.0068,
+    "mean_wer_base": 0.0106,
+    "mean_wer_small": 0.019,
+    "models": [
+      "whisper-base.en int8",
+      "whisper-small.en int8"
+    ],
+    "dnsmos_available": true,
+    "ovrl_median": 3.39,
+    "ovrl_min": 2.92,
+    "sig_median": 3.62,
+    "bak_median": 4.17
+  },
+  "thresholds": {
+    "mean_wer_max": 0.05,
+    "sentence_wer_max": 0.34,
+    "ovrl_median_min": 3.0,
+    "ovrl_sentence_min": 2.6
+  },
+  "audio_ok": true,
+  "flagged": [],
+  "minor": [
+    {
+      "scene": "handle",
+      "text": "Look at the curve.",
+      "duration": 0.94,
+      "ipa": "lˈʊk æt ðə kˈɜːv",
+      "hyp_base": "Look at the curves.",
+      "wer_base": 0.25,
+      "hyp_small": "Look at the curves.",
+      "wer_small": 0.25,
+      "wer_best": 0.25,
+      "dnsmos": {
+        "sig": 3.78,
+        "bak": 4.2,
+        "ovrl": 3.59
+      }
+    }
+  ],
+  "rows": [
+    {
+      "scene": "hook",
+      "text": "On the second of September, 1854, one hundred and twenty-seven people died of cholera within a few streets of each other in Soho, London.",
+      "duration": 9.75,
+      "ipa": "ɔnðə sˈɛkənd ʌv sɛptˈɛmbɚ wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti fˈɔːɹ wˈʌn hˈʌndɹɪd ænd twˈɛntisˈɛvən pˈiːpəl dˈaɪd ʌv kˈɑːlɚɹə wɪðˌɪn ɐ fjˈuː stɹˈiːts ʌv ˈiːtʃ ˈʌðɚɹ ɪn sˈoʊhoʊ lˈʌndən",
+      "hyp_base": "On the 2nd of September, 1,854, 127 people died of cholera within a few streets of each other in Soho, London.",
+      "wer_base": 0.0,
+      "hyp_small": "On the 2nd of September, 1,854, 127 people died of cholera within a few streets of each other in Soho, London.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.7,
+        "bak": 4.21,
+        "ovrl": 3.5
+      }
+    },
+    {
+      "scene": "hook",
+      "text": "Most of them had fallen ill the day before.",
+      "duration": 2.46,
+      "ipa": "mˈoʊst əv ðˌɛm hæd fˈɔːlən ˈɪl ðə dˈeɪ bᵻfˈɔːɹ",
+      "hyp_base": "Most of them had fallen ill the day before.",
+      "wer_base": 0.0,
+      "hyp_small": "Most of them had fallen ill the day before.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.51,
+        "bak": 4.03,
+        "ovrl": 3.21
+      }
+    },
+    {
+      "scene": "hook",
+      "text": "Nobody knew what cholera was.",
+      "duration": 1.67,
+      "ipa": "nˈoʊbɑːdi nˈuː wʌt kˈɑːlɚɹə wʌz",
+      "hyp_base": "Nobody knew what cholera was.",
+      "wer_base": 0.0,
+      "hyp_small": "Nobody knew what cholera was.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.69,
+        "bak": 4.22,
+        "ovrl": 3.5
+      }
+    },
+    {
+      "scene": "title",
+      "text": "This is the story of how a doctor found the source of an epidemic with a table, a map, and a question nobody else was asking.",
+      "duration": 7.21,
+      "ipa": "ðɪs ɪz ðə stˈɔːɹi ʌv hˌaʊ ɐ dˈɑːktɚ fˈaʊnd ðə sˈɔːɹs əvən ˌɛpɪdˈɛmɪk wɪð ɐ tˈeɪbəl ɐ mˈæp ænd ɐ kwˈɛstʃən nˈoʊbɑːdi ˈɛls wʌz ˈæskɪŋ",
+      "hyp_base": "This is the story of how a doctor found the source of an epidemic with a table, a map, and a question nobody else was asking. [BUZZER]",
+      "wer_base": 0.0,
+      "hyp_small": "This is the story of how a doctor found the source of an epidemic with a table, a map, and a question nobody else was asking.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.62,
+        "bak": 4.15,
+        "ovrl": 3.39
+      }
+    },
+    {
+      "scene": "daily",
+      "text": "John Snow was a physician who had argued, five years earlier, that cholera spread through water, not through bad air.",
+      "duration": 6.76,
+      "ipa": "dʒˈɑːn snˈoʊ wʌzɐ fɪzˈɪʃən hˌuː hæd ˈɑːɹɡjuːd fˈaɪv jˈɪɹz ˈɜːlɪɚ ðæt kˈɑːlɚɹə spɹˈɛd θɹuː wˈɔːɾɚ nˌɑːt θɹuː bˈæd ˈɛɹ",
+      "hyp_base": "John Snow was a physician who had argued, five years earlier, that cholera spread through water, not through bad air.",
+      "wer_base": 0.0,
+      "hyp_small": "John Snow was a physician who had argued, five years earlier, that cholera spread through water, not through bad air.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.67,
+        "bak": 4.23,
+        "ovrl": 3.47
+      }
+    },
+    {
+      "scene": "daily",
+      "text": "When the outbreak began at the end of August he went to the General Register Office and copied out the deaths, day by day.",
+      "duration": 6.76,
+      "ipa": "wˌɛn ðɪ ˈaʊtbɹeɪk bɪɡˈæn æt ðɪ ˈɛnd ʌv ˈɔːɡəst hiː wɛnt tə ðə dʒˈɛnɚɹəl ɹˈɛdʒɪstɚɹ ˈɑːfɪs ænd kˈɑːpɪd ˈaʊt ðə dˈɛθs dˈeɪ baɪ dˈeɪ",
+      "hyp_base": "When the outbreak began at the end of August, he went to the General Register Office and copied out the deaths, day by day.",
+      "wer_base": 0.0,
+      "hyp_small": "When the outbreak began at the end of August, he went to the general register office and copied out the deaths, day by day.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.66,
+        "bak": 4.22,
+        "ovrl": 3.47
+      }
+    },
+    {
+      "scene": "daily",
+      "text": "Here is his table.",
+      "duration": 1.1,
+      "ipa": "hˈɪɹ ɪz hɪz tˈeɪbəl",
+      "hyp_base": "Here is his table.",
+      "wer_base": 0.0,
+      "hyp_small": "Here is his table.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.49,
+        "bak": 4.06,
+        "ovrl": 3.22
+      }
+    },
+    {
+      "scene": "daily",
+      "text": "Almost nothing until August thirty-first.",
+      "duration": 2.44,
+      "ipa": "ˈɔːlmoʊst nˈʌθɪŋ ʌntˈɪl ˈɔːɡəst θˈɜːɾifˈɜːst",
+      "hyp_base": "almost nothing until August 31st.",
+      "wer_base": 0.0,
+      "hyp_small": "almost nothing until August 31.",
+      "wer_small": 0.167,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.35,
+        "bak": 4.08,
+        "ovrl": 3.1
+      }
+    },
+    {
+      "scene": "daily",
+      "text": "Then, in three days, hundreds.",
+      "duration": 1.89,
+      "ipa": "ðˈɛn ɪn θɹˈiː dˈeɪz hˈʌndɹɪdz",
+      "hyp_base": "Then in three days, hundreds.",
+      "wer_base": 0.0,
+      "hyp_small": "then in three days, hundreds.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.24,
+        "bak": 3.87,
+        "ovrl": 2.92
+      }
+    },
+    {
+      "scene": "daily",
+      "text": "By the end of September the tally reached six hundred and sixteen.",
+      "duration": 3.41,
+      "ipa": "baɪ ðɪ ˈɛnd ʌv sɛptˈɛmbɚ ðə tˈæli ɹˈiːtʃt sˈɪks hˈʌndɹɪd ænd sˈɪkstiːn",
+      "hyp_base": "By the end of September, the tally reached 616.",
+      "wer_base": 0.0,
+      "hyp_small": "By the end of September, the tally reached 616.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.62,
+        "bak": 4.21,
+        "ovrl": 3.42
+      }
+    },
+    {
+      "scene": "dots616",
+      "text": "Six hundred and sixteen people.",
+      "duration": 1.92,
+      "ipa": "sˈɪks hˈʌndɹɪd ænd sˈɪkstiːn pˈiːpəl",
+      "hyp_base": "616 people.",
+      "wer_base": 0.0,
+      "hyp_small": "616 people.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.54,
+        "bak": 4.1,
+        "ovrl": 3.29
+      }
+    },
+    {
+      "scene": "dots616",
+      "text": "Snow walked the streets with a map and marked each death at the address where it happened.",
+      "duration": 4.32,
+      "ipa": "snˈoʊ wˈɔːkt ðə stɹˈiːts wɪð ɐ mˈæp ænd mˈɑːɹkt ˈiːtʃ dˈɛθ æt ðɪ ɐdɹˈɛs wˌɛɹ ɪt hˈæpənd",
+      "hyp_base": "Snow walked the streets with a map and marked each death at the address where it happened.",
+      "wer_base": 0.0,
+      "hyp_small": "Snow walked the streets with a map and marked each death at the address where it happened.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.58,
+        "bak": 4.16,
+        "ovrl": 3.35
+      }
+    },
+    {
+      "scene": "dots616",
+      "text": "The marks piled up around one place: the public water pump on Broad Street.",
+      "duration": 4.25,
+      "ipa": "ðə mˈɑːɹks pˈaɪld ˌʌp ɚɹˈaʊnd wˈʌn plˈeɪs ðə pˈʌblɪk wˈɔːɾɚ pˈʌmp ˌɔn bɹˈɔːd stɹˈiːt",
+      "hyp_base": "The marks piled up around one place, the public water pump on Broad Street.",
+      "wer_base": 0.0,
+      "hyp_small": "The marks piled up around one place, the public water pump on Broad Street.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.7,
+        "bak": 4.21,
+        "ovrl": 3.49
+      }
+    },
+    {
+      "scene": "dots616",
+      "text": "Streets a few minutes away, served by other pumps, were almost untouched.",
+      "duration": 4.13,
+      "ipa": "stɹˈiːts ɐ fjˈuː mˈɪnɪts ɐwˈeɪ sˈɜːvd baɪ ˈʌðɚ pˈʌmps wɜːɹ ˈɔːlmoʊst ʌntˈʌtʃt",
+      "hyp_base": "Streets a few minutes away, served by other pumps, were almost untouched.",
+      "wer_base": 0.0,
+      "hyp_small": "Streets a few minutes away, served by other pumps, were almost untouched.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.68,
+        "bak": 4.19,
+        "ovrl": 3.47
+      }
+    },
+    {
+      "scene": "argument",
+      "text": "The map made an argument.",
+      "duration": 1.4,
+      "ipa": "ðə mˈæp mˌeɪd ɐn ˈɑːɹɡjuːmənt",
+      "hyp_base": "The map made an argument.",
+      "wer_base": 0.0,
+      "hyp_small": "The map made an argument.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.58,
+        "bak": 4.15,
+        "ovrl": 3.32
+      }
+    },
+    {
+      "scene": "argument",
+      "text": "A workhouse near the pump had its own well, and few of its five hundred residents died.",
+      "duration": 4.6,
+      "ipa": "ɐ wˈɜːkhaʊs nˌɪɹ ðə pˈʌmp hæd ɪts ˈoʊn wˈɛl ænd fjˈuː ʌv ɪts fˈaɪv hˈʌndɹɪd ɹˈɛzᵻdənts dˈaɪd",
+      "hyp_base": "A workhouse near the pump had its own well, and few of its 500 residents died.",
+      "wer_base": 0.0,
+      "hyp_small": "A workhouse near the pump had its own well, and few of its 500 residents died.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.68,
+        "bak": 4.2,
+        "ovrl": 3.46
+      }
+    },
+    {
+      "scene": "argument",
+      "text": "A brewery on Broad Street gave its workers beer and had its own water; the owner reported no cases among them.",
+      "duration": 6.77,
+      "ipa": "ɐ bɹˈuːɚɹi ˌɔn bɹˈɔːd stɹˈiːt ɡˈeɪv ɪts wˈɜːkɚz bˈɪɹ ænd hæd ɪts ˈoʊn wˈɔːɾɚ ðɪ ˈoʊnɚ ɹᵻpˈɔːɹɾᵻd nˈoʊ kˈeɪsᵻz ɐmˈʌŋ ðˌɛm",
+      "hyp_base": "A brewery on Broad Street gave its workers beer and had its own water. The owner reported no cases among them.",
+      "wer_base": 0.0,
+      "hyp_small": "A brewery on Broad Street gave its workers beer and had its own water. The owner reported no cases among them.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.69,
+        "bak": 4.22,
+        "ovrl": 3.47
+      }
+    },
+    {
+      "scene": "argument",
+      "text": "The houses that drew water from the pump suffered worst.",
+      "duration": 2.87,
+      "ipa": "ðə hˈaʊzᵻz ðæt dɹˈuː wˈɔːɾɚ fɹʌmðə pˈʌmp sˈʌfɚd wˈɜːst",
+      "hyp_base": "The houses that drew water from the pump suffered worse.",
+      "wer_base": 0.1,
+      "hyp_small": "The houses that drew water from the pump suffered worst.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.58,
+        "bak": 4.15,
+        "ovrl": 3.34
+      }
+    },
+    {
+      "scene": "argument",
+      "text": "The pattern followed the water, not the air.",
+      "duration": 2.22,
+      "ipa": "ðə pˈætɚn fˈɑːloʊd ðə wˈɔːɾɚ nˌɑːt ðɪ ˈɛɹ",
+      "hyp_base": "The pattern followed the water, not the air.",
+      "wer_base": 0.0,
+      "hyp_small": "The pattern followed the water, not the air.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.56,
+        "bak": 4.1,
+        "ovrl": 3.31
+      }
+    },
+    {
+      "scene": "handle",
+      "text": "On the evening of September seventh Snow presented his evidence to the parish Board of Guardians.",
+      "duration": 5.26,
+      "ipa": "ɔnðɪ ˈiːvnɪŋ ʌv sɛptˈɛmbɚ sˈɛvənθ snˈoʊ pɹɪzˈɛntᵻd hɪz ˈɛvɪdəns tə ðə pˈæɹɪʃ bˈɔːɹd ʌv ɡˈɑːɹdiənz",
+      "hyp_base": "On the evening of September 7th, Snow presented his evidence to the parish board of guardians.",
+      "wer_base": 0.0,
+      "hyp_small": "On the evening of September 7th, Snow presented his evidence to the Parish Board of Guardians.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.63,
+        "bak": 4.2,
+        "ovrl": 3.41
+      }
+    },
+    {
+      "scene": "handle",
+      "text": "The next day the pump handle was removed.",
+      "duration": 2.15,
+      "ipa": "ðə nˈɛkst dˈeɪ ðə pˈʌmp hˈændəl wʌz ɹᵻmˈuːvd",
+      "hyp_base": "The next day the pump handle was removed.",
+      "wer_base": 0.0,
+      "hyp_small": "The next day the pump handle was removed.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.59,
+        "bak": 4.12,
+        "ovrl": 3.33
+      }
+    },
+    {
+      "scene": "handle",
+      "text": "Here is the part the legend leaves out.",
+      "duration": 2.12,
+      "ipa": "hˈɪɹ ɪz ðə pˈɑːɹt ðə lˈɛdʒənd lˈiːvz ˈaʊt",
+      "hyp_base": "Here is the part the legend leaves out.",
+      "wer_base": 0.0,
+      "hyp_small": "Here is the part the legend leaves out.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.54,
+        "bak": 4.03,
+        "ovrl": 3.24
+      }
+    },
+    {
+      "scene": "handle",
+      "text": "Look at the curve.",
+      "duration": 0.94,
+      "ipa": "lˈʊk æt ðə kˈɜːv",
+      "hyp_base": "Look at the curves.",
+      "wer_base": 0.25,
+      "hyp_small": "Look at the curves.",
+      "wer_small": 0.25,
+      "wer_best": 0.25,
+      "dnsmos": {
+        "sig": 3.78,
+        "bak": 4.2,
+        "ovrl": 3.59
+      }
+    },
+    {
+      "scene": "handle",
+      "text": "New cases had peaked on September first.",
+      "duration": 2.39,
+      "ipa": "nˈuː kˈeɪsᵻz hæd pˈiːkt ˌɔn sɛptˈɛmbɚ fˈɜːst",
+      "hyp_base": "New cases had peaked on September 1st.",
+      "wer_base": 0.0,
+      "hyp_small": "New cases had peaked on September 1.",
+      "wer_small": 0.143,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.65,
+        "bak": 4.14,
+        "ovrl": 3.41
+      }
+    },
+    {
+      "scene": "handle",
+      "text": "By the eighth, deaths had already fallen from one hundred and twenty-seven a day to thirty.",
+      "duration": 5.06,
+      "ipa": "baɪ ðɪ ˈeɪtθ dˈɛθs hæd ɔːlɹˌɛdi fˈɔːlən fɹʌm wˈʌn hˈʌndɹɪd ænd twˈɛntisˈɛvən ɐ dˈeɪ tə θˈɜːɾi",
+      "hyp_base": "By the 8th, deaths had already fallen from 127, a day to 30. [buzzer]",
+      "wer_base": 0.0,
+      "hyp_small": "By the 8th, deaths had already fallen from 127, a day to 30.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.56,
+        "bak": 4.18,
+        "ovrl": 3.33
+      }
+    },
+    {
+      "scene": "handle",
+      "text": "The outbreak was ending on its own, partly because so many people had fled.",
+      "duration": 4.14,
+      "ipa": "ðɪ ˈaʊtbɹeɪk wʌz ˈɛndɪŋ ˌɔn ɪts ˈoʊn pˈɑːɹtli bɪkˈʌz sˌoʊ mˈɛni pˈiːpəl hæd flˈɛd",
+      "hyp_base": "The outbreak was ending on its own, partly because so many people had fled.",
+      "wer_base": 0.0,
+      "hyp_small": "The outbreak was ending on its own, partly because so many people had fled.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.65,
+        "bak": 4.21,
+        "ovrl": 3.44
+      }
+    },
+    {
+      "scene": "whitehead",
+      "text": "So did the handle matter?",
+      "duration": 1.34,
+      "ipa": "sˌoʊ dˈɪd ðə hˈændəl mˈæɾɚ",
+      "hyp_base": "So did the handle matter.",
+      "wer_base": 0.0,
+      "hyp_small": "So did the handle matter?",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.41,
+        "bak": 4.04,
+        "ovrl": 3.13
+      }
+    },
+    {
+      "scene": "whitehead",
+      "text": "It almost certainly prevented a second wave, and it mattered for another reason.",
+      "duration": 4.31,
+      "ipa": "ɪɾ ˈɔːlmoʊst sˈɜːʔn̩li pɹɪvˈɛntᵻd ɐ sˈɛkənd wˈeɪv ænd ɪt mˈæɾɚd fɔːɹ ɐnˈʌðɚ ɹˈiːzən",
+      "hyp_base": "It almost certainly prevented a second wave, and it mattered for another reason.",
+      "wer_base": 0.0,
+      "hyp_small": "It almost certainly prevented a second wave, and it mattered for another reason.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.65,
+        "bak": 4.19,
+        "ovrl": 3.43
+      }
+    },
+    {
+      "scene": "whitehead",
+      "text": "A local curate, Henry Whitehead, did not believe Snow.",
+      "duration": 3.1,
+      "ipa": "ɐ lˈoʊkəl kjˈʊɹɹeɪt hˈɛnɹi wˈaɪthɛd dɪdnˌɑːt bᵻlˈiːv snˈoʊ",
+      "hyp_base": "A local curate Henry Whitehead did not believe snow.",
+      "wer_base": 0.0,
+      "hyp_small": "A local curate, Henry Whitehead, did not believe Snow.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.75,
+        "bak": 4.24,
+        "ovrl": 3.58
+      }
+    },
+    {
+      "scene": "whitehead",
+      "text": "He set out to disprove him by re-interviewing the parish, house by house.",
+      "duration": 3.89,
+      "ipa": "hiː sˈɛt ˈaʊt tə dɪspɹˈuːv hˌɪm baɪ ɹˌiːˈɪntɚvjˌuːɪŋ ðə pˈæɹɪʃ hˈaʊs baɪ hˈaʊs",
+      "hyp_base": "He set out to disprove him by re-interviewing the parish, house by house.",
+      "wer_base": 0.0,
+      "hyp_small": "He set out to disprove him by reinterviewing the parish, house by house.",
+      "wer_small": 0.143,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.63,
+        "bak": 4.19,
+        "ovrl": 3.4
+      }
+    },
+    {
+      "scene": "whitehead",
+      "text": "Instead he found the first case: an infant whose washing water had been emptied into a cesspit a few feet from the pump's well.",
+      "duration": 7.26,
+      "ipa": "ɪnstˈɛd hiː fˈaʊnd ðə fˈɜːst kˈeɪs ɐn ˈɪnfənt hˌuːz wˈɑːʃɪŋ wˈɔːɾɚ hɐdbɪn ˈɛmptid ˌɪntʊ ɐ sˈɛspɪt ɐ fjˈuː fˈiːt fɹʌmðə pˈʌmps wˈɛl",
+      "hyp_base": "Instead, he found the first case. An infant whose washing water had been emptied into a cespit a few feet from the pump's well. [buzzer]",
+      "wer_base": 0.042,
+      "hyp_small": "Instead, he found the first case, an infant whose washing water had been emptied into a cesspit a few feet from the pump's well.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.67,
+        "bak": 4.22,
+        "ovrl": 3.46
+      }
+    },
+    {
+      "scene": "lesson",
+      "text": "Snow never saw the bacterium.",
+      "duration": 1.67,
+      "ipa": "snˈoʊ nˈɛvɚ sˈɔː ðə bæktˈɪɹiəm",
+      "hyp_base": "Snow never saw the bacterium.",
+      "wer_base": 0.0,
+      "hyp_small": "Snow never saw the bacterium.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.6,
+        "bak": 4.13,
+        "ovrl": 3.35
+      }
+    },
+    {
+      "scene": "lesson",
+      "text": "It would be identified decades later.",
+      "duration": 1.98,
+      "ipa": "ɪt wʊd biː aɪdˈɛntᵻfˌaɪd dˈɛkeɪdz lˈeɪɾɚ",
+      "hyp_base": "It would be identified decades later.",
+      "wer_base": 0.0,
+      "hyp_small": "it would be identified decades later.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.6,
+        "bak": 4.13,
+        "ovrl": 3.34
+      }
+    },
+    {
+      "scene": "lesson",
+      "text": "What he had was a count over time, a map over space, and comparison groups: the workhouse, the brewery, the people who drank elsewhere.",
+      "duration": 7.69,
+      "ipa": "wˌʌt hiː hæd wʌzɐ kˈaʊnt ˌoʊvɚ tˈaɪm ɐ mˈæp ˌoʊvɚ spˈeɪs ænd kəmpˈæɹɪsən ɡɹˈuːps ðə wˈɜːkhaʊs ðə bɹˈuːɚɹi ðə pˈiːpəl hˌuː dɹˈæŋk ˈɛlswɛɹ",
+      "hyp_base": "What he had was a count over time, a map over space and comparison groups, the workhouse, the brewery, the people who drank elsewhere.",
+      "wer_base": 0.0,
+      "hyp_small": "What he had was a count over time, a map over space, and comparison groups. The workhouse, the brewery, the people who drank elsewhere.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.7,
+        "bak": 4.23,
+        "ovrl": 3.5
+      }
+    },
+    {
+      "scene": "lesson",
+      "text": "That is still how outbreaks are traced.",
+      "duration": 2.03,
+      "ipa": "ðæt ɪz stˈɪl hˌaʊ ˈaʊtbɹeɪks ɑːɹ tɹˈeɪst",
+      "hyp_base": "That is still how outbreaks are traced.",
+      "wer_base": 0.0,
+      "hyp_small": "That is still how outbreaks are traced.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.62,
+        "bak": 4.13,
+        "ovrl": 3.38
+      }
+    },
+    {
+      "scene": "outro",
+      "text": "Snow's table and the sources for this episode are in the description.",
+      "duration": 3.76,
+      "ipa": "snˈoʊz tˈeɪbəl ænd ðə sˈɔːɹsᵻz fɔːɹ ðɪs ˈɛpɪsˌoʊd ɑːɹ ɪnðə dᵻskɹˈɪpʃən",
+      "hyp_base": "Snows table and the sources for this episode are in the description.",
+      "wer_base": 0.0,
+      "hyp_small": "Snow's Table and the sources for this episode are in the description.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.56,
+        "bak": 4.15,
+        "ovrl": 3.34
+      }
+    },
+    {
+      "scene": "outro",
+      "text": "Next time: the bombers that came back, and the holes that were not there.",
+      "duration": 3.81,
+      "ipa": "nˈɛkst tˈaɪm ðə bˈɑːmɚz ðæt kˈeɪm bˈæk ænd ðə hˈoʊlz ðæt wɜː nˌɑːt ðˈɛɹ",
+      "hyp_base": "Next time, the bombers that came back and the holes that were not there.",
+      "wer_base": 0.0,
+      "hyp_small": "Next time, the bombers that came back and the holes that were not there.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.55,
+        "bak": 4.17,
+        "ovrl": 3.32
+      }
+    }
+  ],
+  "disclaimer": "Machine evaluation on the actual synthesized audio: two-model ASR round-trip (intelligibility), DNSMOS P.835 (perceptual quality estimate), G2P phoneme listing (pronunciation review). No human listening test was performed."
+}

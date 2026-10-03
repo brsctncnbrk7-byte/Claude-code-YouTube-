@@ -11,3 +11,6 @@
 [qc] QC_PASS technical_ok=True gate_ok=True → reports/ep-002/short/qc-report.md
 [package] /home/user/Claude-code-YouTube-/dist/ep-002/short
 == qc ep-003 long 23:20:13
+[qc] QC_PASS technical_ok=True gate_ok=True → reports/ep-003/long/qc-report.md
+[package] /home/user/Claude-code-YouTube-/dist/ep-003
+== qc ep-003 short 23:22:21

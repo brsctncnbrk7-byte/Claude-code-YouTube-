@@ -238,7 +238,7 @@
     ],
     "asr": {
       "model": "whisper-base.en int8 (sherpa-onnx)",
-      "seconds": 18.4,
+      "seconds": 17.9,
       "rows": [
         {
           "scene": "hook",
@@ -483,7 +483,27 @@
         }
       ]
     },
-    "disclaimer": "Audio was evaluated by phoneme review, ASR round-trip and spectrogram inspection; no human listening test was performed."
+    "disclaimer": "Audio was evaluated by phoneme review, ASR round-trip and spectrogram inspection; no human listening test was performed.",
+    "deep": {
+      "audio_ok": true,
+      "summary": {
+        "sentences": 37,
+        "mean_wer_best": 0.0068,
+        "mean_wer_base": 0.0106,
+        "mean_wer_small": 0.019,
+        "models": [
+          "whisper-base.en int8",
+          "whisper-small.en int8"
+        ],
+        "dnsmos_available": true,
+        "ovrl_median": 3.39,
+        "ovrl_min": 2.92,
+        "sig_median": 3.62,
+        "bak_median": 4.17
+      },
+      "flagged": 0,
+      "report": "/home/user/Claude-code-YouTube-/reports/ep-003/long/audio-eval.md"
+    }
   },
   "warnings": [],
   "status": "QC_PASS",
