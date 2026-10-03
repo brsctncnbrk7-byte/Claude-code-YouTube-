@@ -1,7 +1,7 @@
 {
   "episode": "ep-005",
   "format": "short",
-  "created_utc": "2026-10-03T23:25:47+00:00",
+  "created_utc": "2026-10-03T23:27:29+00:00",
   "files": {
     "ep-005-short.mp4": {
       "sha256": "17697938847970af1c5913c805cb81f010d973fd36d78a7ffcdea6c5fa799fe8",
@@ -16,8 +16,8 @@
       "bytes": 556
     },
     "qc-report-short.md": {
-      "sha256": "86bc5c091a849001e38b27d4c2fda03a07c3db3fce73b2266bb6810adb6a9b94",
-      "bytes": 3516
+      "sha256": "366d2340bf71316f41ea9f14429b45a76434d31d1b54b89326e1b43eda15c109",
+      "bytes": 3770
     },
     "sources.md": {
       "sha256": "31feabbb706c8b7f7feaa493e931e6cd72b09116b31e3d459e0153efb4f25e30",

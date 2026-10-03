@@ -17,6 +17,8 @@
 ## C. Audio evaluation (not a human listening test)
 > Audio was evaluated by phoneme review, ASR round-trip and spectrogram inspection; no human listening test was performed.
 
+**Deep evaluation on the synthesized audio: audio_ok=True** — two-model ASR mean WER best-of-models 0.0 (base.en 0.0, small.en 0.0); DNSMOS P.835 OVRL median 3.46 (min 3.16), SIG/BAK median 3.67/4.21; flagged sentences 0. Details: audio-eval.md
+
 ASR: whisper-base.en int8 (sherpa-onnx) — mean WER **0.0**, flagged (WER>0.05): 0
 
 

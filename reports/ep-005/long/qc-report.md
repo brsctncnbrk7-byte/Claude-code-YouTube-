@@ -17,6 +17,8 @@
 ## C. Audio evaluation (not a human listening test)
 > Audio was evaluated by phoneme review, ASR round-trip and spectrogram inspection; no human listening test was performed.
 
+**Deep evaluation on the synthesized audio: audio_ok=True** — two-model ASR mean WER best-of-models 0.0192 (base.en 0.0286, small.en 0.0377); DNSMOS P.835 OVRL median 3.39 (min 2.82), SIG/BAK median 3.62/4.16; flagged sentences 0. Details: audio-eval.md
+
 ASR: whisper-base.en int8 (sherpa-onnx) — mean WER **0.0286**, flagged (WER>0.05): 7
 
 - [hook] WER 0.062: ref=`In June 1812, four hundred and twenty-two thousand soldiers crossed the river Niemen into Russia.` hyp=`In June 1812, 422,000 soldiers crossed the river Nieman into Russia.`

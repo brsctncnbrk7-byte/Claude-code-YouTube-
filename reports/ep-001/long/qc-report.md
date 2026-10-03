@@ -17,6 +17,8 @@
 ## C. Audio evaluation (not a human listening test)
 > Audio was evaluated by phoneme review, ASR round-trip and spectrogram inspection; no human listening test was performed.
 
+**Deep evaluation on the synthesized audio: audio_ok=True** — two-model ASR mean WER best-of-models 0.0012 (base.en 0.0076, small.en 0.0012); DNSMOS P.835 OVRL median 3.41 (min 3.14), SIG/BAK median 3.63/4.19; flagged sentences 0. Details: audio-eval.md
+
 ASR: whisper-base.en int8 (sherpa-onnx) — mean WER **0.0076**, flagged (WER>0.05): 2
 
 - [rates] WER 0.32: ref=`Per thousand men, disease deaths fell from over one thousand a year in January 1855 to under four by March 1856.` hyp=`per thousand men, disease deaths fell from over one thousand a year in January one thousand eight hundred fifty five to under four by march one thousand eight hundred fifty six`

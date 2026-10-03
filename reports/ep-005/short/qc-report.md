@@ -17,6 +17,8 @@
 ## C. Audio evaluation (not a human listening test)
 > Audio was evaluated by phoneme review, ASR round-trip and spectrogram inspection; no human listening test was performed.
 
+**Deep evaluation on the synthesized audio: audio_ok=True** — two-model ASR mean WER best-of-models 0.013 (base.en 0.013, small.en 0.013); DNSMOS P.835 OVRL median 3.33 (min 3.13), SIG/BAK median 3.56/4.13; flagged sentences 0. Details: audio-eval.md
+
 ASR: whisper-base.en int8 (sherpa-onnx) — mean WER **0.013**, flagged (WER>0.05): 1
 
 - [s_flow] WER 0.091: ref=`In 1869 Charles Minard drew it as one band.` hyp=`In 1869, Charles Minar drew it as one band.`

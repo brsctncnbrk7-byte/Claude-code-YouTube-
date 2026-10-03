@@ -17,6 +17,8 @@
 ## C. Audio evaluation (not a human listening test)
 > Audio was evaluated by phoneme review, ASR round-trip and spectrogram inspection; no human listening test was performed.
 
+**Deep evaluation on the synthesized audio: audio_ok=True** — two-model ASR mean WER best-of-models 0.0047 (base.en 0.0058, small.en 0.0047); DNSMOS P.835 OVRL median 3.41 (min 2.98), SIG/BAK median 3.63/4.19; flagged sentences 0. Details: audio-eval.md
+
 ASR: whisper-base.en int8 (sherpa-onnx) — mean WER **0.0058**, flagged (WER>0.05): 1
 
 - [caucus] WER 0.133: ref=`Thiokol's management took the call offline for about thirty minutes, returned, and overruled its own engineers.` hyp=`Thio-Call's management took the call offline for about 30 minutes, returned, and overruled its own engineers.`

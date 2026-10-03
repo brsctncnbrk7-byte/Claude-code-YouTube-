@@ -196,6 +196,12 @@ def render_report(r: dict) -> str:
         if c.get("scenes"): extra = f" overflow_scenes={[s['id'] for s in c['scenes']]}"
         L.append(f"| {k} | {'✅' if c.get('ok', True) else '❌'} | {json.dumps(detail, ensure_ascii=False)[:300]}{extra} |")
     L += ["", "## C. Audio evaluation (not a human listening test)", f"> {r['audio_eval'].get('disclaimer','')}", ""]
+    deep = r["audio_eval"].get("deep")
+    if deep:
+        sm = deep.get("summary", {})
+        L += [f"**Deep evaluation on the synthesized audio: audio_ok={deep.get('audio_ok')}** — two-model ASR mean WER best-of-models {sm.get('mean_wer_best')} "
+              f"(base.en {sm.get('mean_wer_base')}, small.en {sm.get('mean_wer_small')}); DNSMOS P.835 OVRL median {sm.get('ovrl_median')} (min {sm.get('ovrl_min')}), "
+              f"SIG/BAK median {sm.get('sig_median')}/{sm.get('bak_median')}; flagged sentences {deep.get('flagged')}. Details: audio-eval.md" + (f" • error: {deep['error']}" if deep.get('error') else ""), ""]
     asr = r["audio_eval"].get("asr")
     if asr:
         L += [f"ASR: {asr['model']} — mean WER **{asr['mean_wer']}**, flagged (WER>0.05): {len(asr['flagged'])}", ""]

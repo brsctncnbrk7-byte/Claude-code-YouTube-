@@ -1,7 +1,7 @@
 {
   "episode": "ep-006",
   "format": "long",
-  "created_utc": "2026-10-03T23:25:49+00:00",
+  "created_utc": "2026-10-03T23:27:31+00:00",
   "files": {
     "ep-006.mp4": {
       "sha256": "720f01ff474d683a679232adf588c924a24c95c3df9afb07f481d3ed23abef16",
@@ -24,8 +24,8 @@
       "bytes": 207753
     },
     "qc-report.md": {
-      "sha256": "8dc8f8755e7d66ee40f97d526922f18d30b97d7746e6b71c7b751ce6dd71d1b9",
-      "bytes": 10164
+      "sha256": "511957be7802ef913458e1a7cd34e681fcb91bea314f3bfe7c0f2147e2f2b118",
+      "bytes": 10421
     },
     "sources.md": {
       "sha256": "f2b9c5eb18aca772f18452ddf146321fc90db330e95a95f2e6e6b8db2bbd7670",
