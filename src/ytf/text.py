@@ -84,7 +84,8 @@ def num_to_words_plain(n: int) -> str:
 
 # ASR/TTS-neutral spellings: both sides are mapped before comparison (homophones and spacing variants only).
 _HOMOPHONES = {"cockscomb": "coxcomb", "far": "farr", "scatter plot": "scatterplot", "scatterplots": "scatterplot",
-               "o rings": "orings", "o ring": "oring", "orings": "oring", "percent": "per cent", "ok": "okay"}
+               "o rings": "orings", "o ring": "oring", "orings": "oring", "percent": "per cent", "ok": "okay",
+               "colour": "color", "colours": "colors", "grey": "gray", "metre": "meter", "metres": "meters", "centre": "center"}
 
 
 def normalize_for_wer(s: str, year_style: bool = True) -> list[str]:

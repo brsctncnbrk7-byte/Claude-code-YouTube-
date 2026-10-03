@@ -62,7 +62,7 @@
   };
   K.text = (sc, t, d) => {
     const p = sc.params; let big = '';
-    if (p.number !== undefined) { const v = p.number * easeOut(prog(t, .3, 1.6)); big = `<div class="big num" style="color:${p.color || C.amber}">${p.prefix || ''}${fmt(v, p.decimals || 0)}${p.suffix || ''}</div>`; }
+    if (p.number !== undefined) { const v = p.number * easeOut(prog(t, .3, 1.6)); const txt = `${p.prefix || ''}${fmt(p.number, p.decimals || 0)}${p.suffix || ''}`; const fs = Math.min(V ? 240 : 220, Math.floor(W * 0.84 / (txt.length * 0.6))); big = `<div class="big num" style="color:${p.color || C.amber};font-size:${fs}px">${p.prefix || ''}${fmt(v, p.decimals || 0)}${p.suffix || ''}</div>`; }
     return `<div class="card" style="opacity:${easeOut(prog(t, .1, .6))}">${big}<div class="head">${rich(p.headline || '')}</div><div class="sub">${rich(p.sub || '')}</div></div>${footer(sc, t, d)}`;
   };
   K.outro = (sc, t, d) => {
@@ -199,7 +199,7 @@
 
   // ---- flow: Minard-style band whose width ∝ a count, drawn along (x,y) points in data order; optional temperature strip ----
   K.flow = (sc, t, d) => {
-    const p = sc.params, rows = E.data[p.data], b = chartBox(p);
+    const p = sc.params, rows = rowsOf(p).filter(r => !p.only || r[p.direction] === p.only), b = chartBox(p);
     const temp = p.temp_data ? E.data[p.temp_data] : null;
     const bh = temp ? b.h * 0.68 : b.h, tb = { x: b.x, y: b.y + bh + 50, w: b.w, h: b.h - bh - 50 };
     const xs0 = rows.map(r => +r[p.x]), ys0 = rows.map(r => +r[p.y]);
@@ -228,10 +228,10 @@
       const kt = easeOut(prog(t, reveal * 0.55, reveal * 0.45));
       s += `<defs><clipPath id="clipT"><rect x="${tb.x + tb.w * (1 - kt)}" y="${tb.y - 20}" width="${tb.w * kt + 2}" height="${tb.h + 40}"/></clipPath></defs>`;
       s += `<g clip-path="url(#clipT)"><polyline points="${pts}" fill="none" stroke="${C.sky}" stroke-width="4"/>`;
-      temp.forEach((r, i) => { s += `<circle cx="${txs(+r[p.temp_x])}" cy="${tys(+r[p.temp_y])}" r="6" fill="${C.sky}"/><text x="${txs(+r[p.temp_x])}" y="${tys(+r[p.temp_y]) + (i % 2 ? 34 : -16)}" fill="${C.muted}" font-size="20" text-anchor="middle">${esc(r[p.temp_y])}°R ${esc(r[p.temp_label] || '')}</text>`; });
+      temp.forEach((r, i) => { s += `<circle cx="${txs(+r[p.temp_x])}" cy="${tys(+r[p.temp_y])}" r="6" fill="${C.sky}"/><text x="${txs(+r[p.temp_x])}" y="${tys(+r[p.temp_y]) + (i % 2 ? 58 : 34)}" fill="${C.muted}" font-size="20" text-anchor="middle">${esc(r[p.temp_y])}°R ${esc(r[p.temp_label] || '')}</text>`; });
       s += `</g><text x="${tb.x}" y="${tb.y - 8}" fill="${C.muted}" font-size="22">${esc(p.temp_title || 'temperature during the retreat')}</text>`;
     }
-    s += `</svg>` + legend(['advance', 'retreat'], [C.amber, C.paper], p.labels);
+    s += `</svg>` + (p.only === 'A' ? legend(['advance'], [C.amber]) : p.only === 'R' ? legend(['retreat'], [C.paper]) : legend(['advance', 'retreat'], [C.amber, C.paper], p.labels));
     return header(sc, p) + s + footer(sc, t, d);
   };
 

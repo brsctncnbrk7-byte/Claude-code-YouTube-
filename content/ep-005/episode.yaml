@@ -57,7 +57,7 @@ gate:
   title_thumbnail_honest: true
   ad_suitability_noted: true
   licenses_recorded: true
-  notes: Not yet built.
+  notes: Build 2 pending review.
 scenes:
 - id: hook
   kind: text
@@ -88,17 +88,14 @@ scenes:
     group: group
     direction: direction
     cities_data: cities
-    temp_data: temp
-    temp_x: long
-    temp_y: temp
-    temp_label: date
     vmax: 340000
     title: 'The advance: Kowno to Moscow'
     subtitle: band width ∝ number of men · amber = advance
     reveal_seconds: 9
     chapter: The advance
+    only: A
   source: 'Data: Minard (1869) via HistData'
-  narration: 'Charles Joseph Minard was a civil engineer who spent his retirement drawing flows: of coal, of wine, of people. Here the flow is an army. The band starts at the Polish border, thick with three hundred and forty thousand men in the main column, and it thins as the army marches east. Detachments split off. Men die of heat, hunger and disease long before the first great battle. By Moscow, the band is a fraction of its width.'
+  narration: 'Charles Joseph [[Minard|Mee-nar]] was a civil engineer who spent his retirement drawing flows: of coal, of wine, of people. Here the flow is an army. The band starts at the Polish border, thick with three hundred and forty thousand men in the main column, and it thins as the army marches east. Smaller columns split off to the north. Men die of heat, hunger and disease long before the first great battle. By Moscow, the band is a fraction of its width.'
   min_duration: 14
 - id: flow_full
   kind: flow
@@ -121,7 +118,7 @@ scenes:
     reveal_seconds: 12
     chapter: The retreat
   source: 'Data: Minard (1869) via HistData'
-  narration: Then the retreat. Minard drew it in a second band beneath the first, and under that a strip of temperatures as the army walked back into winter. Zero degrees Réaumur on October eighteenth. Minus twenty-one on November fourteenth. Minus thirty on December sixth, which is close to minus thirty-seven Celsius. Watch the band at the Berezina river, where the crossing cost thousands in two days. By the time the line reaches the border again, it is a thread.
+  narration: Then the retreat. Minard drew it in a second band beneath the first, and under that a strip of temperatures as the army walked back into winter. Zero degrees [[Réaumur|Ray-oh-mur]] on October eighteenth. Minus twenty-one on November fourteenth. Minus thirty on December sixth, which is close to minus thirty-seven Celsius. Watch the band at the [[Berezina|Berry-zee-na]] river, where the crossing cost thousands in two days. By the time the line reaches the border again, it is a thread.
   min_duration: 16
 - id: variables
   kind: text
@@ -130,7 +127,7 @@ scenes:
     headline: Six variables, no legend needed
     sub: men · longitude · latitude · direction · date · temperature
     chapter: Why it works
-  narration: Count what the picture encodes. The number of men, in the width. Where they were, in the position. Which way they were going, in the colour. When, in the dates. And how cold it was, in the strip below. Six variables, and you can read it without a legend.
+  narration: Count the things this one picture shows. The number of men, in the width of the band. Where they were, in its position. Which way they were going, in its colour. When, in the dates. And how cold it was, in the strip below. Six variables, and you can read it without a legend.
   min_duration: 8
 - id: caveat
   kind: text
@@ -138,7 +135,7 @@ scenes:
   params:
     headline: What it leaves **out**
     sub: Minard's numbers come from memoirs and dispatches, not a census. The map shows no Russian losses and no civilians.
-  narration: It also leaves things out. Minard's numbers came from memoirs and dispatches, assembled decades after the war; they are estimates, not a count. The map shows nothing of Russian losses, or of the civilians along the road. It is an argument about one army, made with one line.
+  narration: It also leaves things out. [[Minard's|Mee-nar's]] numbers came from memoirs and dispatches, assembled decades after the war; they are estimates, not a count. The map shows nothing of Russian losses, or of the civilians along the road. It is an argument about one army, made with one line.
   min_duration: 8
 - id: why
   kind: text
@@ -187,7 +184,7 @@ short:
       vmax: 340000
       title: Minard, 1869
       reveal_seconds: 8
-    narration: In 1869 Charles Minard drew it as one band. The width is the number of men. Amber is the advance, white the retreat, and the strip below is the temperature. Watch it thin to a thread.
+    narration: In 1869 Charles [[Minard|Mee-nar]] drew it as one band. The width is the number of men. Amber is the advance, white the retreat, and the strip below is the temperature. Watch it thin to a thread.
     min_duration: 11
   - id: s_cta
     kind: outro

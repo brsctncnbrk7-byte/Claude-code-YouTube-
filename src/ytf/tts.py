@@ -1,5 +1,6 @@
 from __future__ import annotations
 import json
+import re
 import os
 from dataclasses import dataclass, asdict
 from pathlib import Path
@@ -129,6 +130,19 @@ class Timeline:
         )
 
 
+_RESPELL = re.compile(r"\[\[(.+?)\|(.+?)\]\]")
+
+
+def display_text(t: str) -> str:
+    """`[[Réaumur|Ray-oh-mur]]` → shown/subtitled as 'Réaumur'."""
+    return _RESPELL.sub(r"\1", t)
+
+
+def spoken_text(t: str) -> str:
+    """`[[Réaumur|Ray-oh-mur]]` → synthesized as 'Ray-oh-mur' (pronunciation respelling for the TTS only)."""
+    return _RESPELL.sub(r"\2", t)
+
+
 def build_narration(scenes, voice: str, speed: float, lang: str, out_dir: Path, fps: int = 30) -> Timeline:
     """Synthesize every sentence, lay them on a timeline, write narration_raw.wav (24 kHz mono float)."""
     cache = paths.BUILD / "_tts_cache"
@@ -140,7 +154,8 @@ def build_narration(scenes, voice: str, speed: float, lang: str, out_dir: Path, 
         sents = []
         t += 0.25  # small lead-in per scene
         for s in split_sentences(sc.narration):
-            sa = synth_sentence(s, voice, speed, lang, cache)
+            sa = synth_sentence(spoken_text(s), voice, speed, lang, cache)
+            sa.text = display_text(s)
             data, sr = sf.read(sa.wav, dtype="float32")
             sa.start, sa.end = t, t + sa.duration
             chunks.append((t, data))

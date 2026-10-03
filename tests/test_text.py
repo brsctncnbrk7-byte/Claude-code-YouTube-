@@ -34,3 +34,10 @@ def test_tts_deterministic_when_models_present(tmp_path):
     b = synth_sentence("Determinism check, one two three.", "af_heart", 1.0, "en-us", tmp_path / "b")
     x, y = sf.read(a.wav)[0], sf.read(b.wav)[0]
     assert len(x) == len(y) and np.array_equal(x, y)
+
+
+def test_respelling_split():
+    from ytf.tts import display_text, spoken_text
+    t = "Zero degrees [[Réaumur|Ray-oh-mur]] on October eighteenth."
+    assert display_text(t) == "Zero degrees Réaumur on October eighteenth."
+    assert spoken_text(t) == "Zero degrees Ray-oh-mur on October eighteenth."
