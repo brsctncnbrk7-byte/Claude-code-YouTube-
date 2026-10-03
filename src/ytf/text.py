@@ -60,17 +60,24 @@ def num_to_words(n: int) -> str:
     return num_to_words(n // 1_000_000) + " million" + ("" if n % 1_000_000 == 0 else " " + num_to_words(n % 1_000_000))
 
 
+def num_to_words_plain(n: int) -> str:
+    """Same as num_to_words but never uses the year style (1758 -> one thousand seven hundred fifty eight)."""
+    if 1100 <= n <= 1999 and n % 100 != 0:
+        return num_to_words(n // 1000) + " thousand" + ("" if n % 1000 == 0 else " " + num_to_words(n % 1000))
+    return num_to_words(n)
+
+
 # ASR/TTS-neutral spellings: both sides are mapped before comparison (homophones and spacing variants only).
 _HOMOPHONES = {"cockscomb": "coxcomb", "far": "farr", "scatter plot": "scatterplot", "scatterplots": "scatterplot",
                "o rings": "orings", "o ring": "oring", "orings": "oring", "percent": "per cent", "ok": "okay"}
 
 
-def normalize_for_wer(s: str) -> list[str]:
+def normalize_for_wer(s: str, year_style: bool = True) -> list[str]:
     s = s.lower()
     s = re.sub(r"\[[^\]]*\]", " ", s)          # whisper tags like [AUDIO OUT]
     s = s.replace("°f", " degrees fahrenheit ").replace("°", " degrees ")
     s = re.sub(r"(\d),(\d{3})", r"\1\2", s)       # 1,023 -> 1023
-    s = re.sub(r"\d+", lambda m: " " + num_to_words(int(m.group(0))) + " ", s)
+    s = re.sub(r"\d+", lambda m: " " + (num_to_words(int(m.group(0))) if year_style else num_to_words_plain(int(m.group(0)))) + " ", s)
     s = re.sub(r"[^a-z' ]+", " ", s)
     s = re.sub(r"\b(and)\b", " ", s)             # "four hundred and seventy six" == "four hundred seventy six"
     s = re.sub(r"-", " ", s)
@@ -81,7 +88,11 @@ def normalize_for_wer(s: str) -> list[str]:
 
 
 def wer(ref: str, hyp: str) -> float:
-    r, h = normalize_for_wer(ref), normalize_for_wer(hyp)
+    """Word error rate after normalization; digits in the hypothesis may be read as years or plain numbers — take the better."""
+    return min(_wer(normalize_for_wer(ref), normalize_for_wer(hyp, True)), _wer(normalize_for_wer(ref), normalize_for_wer(hyp, False)))
+
+
+def _wer(r: list[str], h: list[str]) -> float:
     if not r:
         return 0.0 if not h else 1.0
     d = [[0] * (len(h) + 1) for _ in range(len(r) + 1)]

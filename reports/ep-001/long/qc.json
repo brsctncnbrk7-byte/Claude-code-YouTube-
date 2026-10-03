@@ -9,17 +9,18 @@
       "h": 1080,
       "fps": "30/1",
       "audio": "aac 48000Hz",
-      "duration": 228.867,
-      "frames": 6866,
-      "expected_frames": 6866,
+      "duration": 287.867,
+      "frames": 8636,
+      "expected_frames": 8636,
       "ok": true
     },
     "blackdetect": {
       "events": [
-        "[blackdetect @ 0x55c0eba6c340] black_start:59.2667 black_end:89.3 black_duration:30.0333",
-        "[blackdetect @ 0x55c0eba6c340] black_start:110.267 black_end:111.933 black_duration:1.66667",
-        "[blackdetect @ 0x55c0eba6c340] black_start:136.567 black_end:137.7 black_duration:1.13333",
-        "[blackdetect @ 0x55c0eba6c340] black_start:156.433 black_end:228.833 black_duration:72.4"
+        "[blackdetect @ 0x557965765dc0] black_start:59.2667 black_end:89.7667 black_duration:30.5",
+        "[blackdetect @ 0x557965765dc0] black_start:110.733 black_end:112.4 black_duration:1.66667",
+        "[blackdetect @ 0x557965765dc0] black_start:137.033 black_end:166 black_duration:28.9667",
+        "[blackdetect @ 0x557965765dc0] black_start:184.733 black_end:213.033 black_duration:28.3",
+        "[blackdetect @ 0x557965765dc0] black_start:242.533 black_end:287.833 black_duration:45.3"
       ],
       "ok": false
     },
@@ -28,22 +29,22 @@
       "ok": true
     },
     "loudness": {
-      "integrated_lufs": -15.77,
-      "true_peak_dbtp": -4.14,
-      "lra": 2.3,
-      "ok": false
+      "integrated_lufs": -14.02,
+      "true_peak_dbtp": -2.52,
+      "lra": 2.4,
+      "ok": true
     },
     "subtitles": {
-      "cues": 62,
-      "long_or_tall": 1,
-      "ok": false
+      "cues": 81,
+      "long_or_tall": 0,
+      "ok": true
     },
     "text_overflow": {
       "scenes": [],
       "ok": true
     },
     "frame_samples": {
-      "count": 24,
+      "count": 28,
       "dir": "/home/user/Claude-code-YouTube-/reports/ep-001/long/frames",
       "reviewed_by_claude": false
     }
@@ -118,8 +119,8 @@
       },
       {
         "scene": "ledger",
-        "text": "Nightingale reached the barracks hospital at Scutari in November 1854 and found the record keeping in disarray.",
-        "ipa": "nˈaɪɾɪŋɡˌeɪl ɹˈiːtʃt ðə bˈɛɹəks hˈɑːspɪɾəl æt skjuːtˈɑːɹɹi ɪn noʊvˈɛmbɚ wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti fˈoːɹ ænd fˈaʊnd ðə ɹˈɛkɚd kˈiːpɪŋ ɪn dˌɪsɚɹˈeɪ"
+        "text": "Florence Nightingale reached the barracks hospital at Scutari in November 1854 and found the record keeping in disarray.",
+        "ipa": "flˈɔːɹəns nˈaɪɾɪŋɡˌeɪl ɹˈiːtʃt ðə bˈɛɹəks hˈɑːspɪɾəl æt skjuːtˈɑːɹɹi ɪn noʊvˈɛmbɚ wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti fˈoːɹ ænd fˈaʊnd ðə ɹˈɛkɚd kˈiːpɪŋ ɪn dˌɪsɚɹˈeɪ"
       },
       {
         "scene": "ledger",
@@ -197,6 +198,31 @@
         "ipa": "baɪ sɛptˈɛmbɚ wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti fˈaɪv fɚðə fˈɜːst tˈaɪm mˈoːɹ sˈoʊldʒɚz dˈaɪd ʌv wˈuːndz ðɐn ʌv dɪzˈiːz"
       },
       {
+        "scene": "army_size",
+        "text": "One more thing the table shows.",
+        "ipa": "wˈʌn mˈoːɹ θˈɪŋ ðə tˈeɪbəl ʃˈoʊz"
+      },
+      {
+        "scene": "army_size",
+        "text": "The army itself was changing.",
+        "ipa": "ðɪ ˈɑːɹmi ɪtsˈɛlf wʌz tʃˈeɪndʒɪŋ"
+      },
+      {
+        "scene": "army_size",
+        "text": "In April 1854 there were about eight and a half thousand British soldiers in the East.",
+        "ipa": "ɪn ˈeɪpɹəl wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti fˈoːɹ ðɛɹwˌɜːɹ ɐbˌaʊt ˈeɪt ænd ɐ hˈæf θˈaʊzənd bɹˈɪɾɪʃ sˈoʊldʒɚz ɪnðɪ ˈiːst"
+      },
+      {
+        "scene": "army_size",
+        "text": "By March 1856 there were more than forty-six thousand.",
+        "ipa": "baɪ mˈɑːɹtʃ wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti sˈɪks ðɛɹwˌɜː mˈoːɹ ðɐn fˈɔːɹɾisˈɪks θˈaʊzənd"
+      },
+      {
+        "scene": "army_size",
+        "text": "A death count in a small army and a death count in a large one are not the same thing, which is why Nightingale, following Farr, reported deaths as annual rates per thousand.",
+        "ipa": "ɐ dˈɛθ kˈaʊnt ɪn ɐ smˈɔːl ˈɑːɹmi ænd ɐ dˈɛθ kˈaʊnt ɪn ɐ lˈɑːɹdʒ wˈʌn ɑːɹ nˌɑːt ðə sˈeɪm θˈɪŋ wˌɪtʃ ɪz wˌaɪ nˈaɪɾɪŋɡˌeɪl fˈɑːloʊɪŋ fˈɑːɹ ɹᵻpˈoːɹɾᵻd dˈɛθs æz ˈænjuːəl ɹˈeɪts pɜː θˈaʊzənd"
+      },
+      {
         "scene": "rates",
         "text": "Rates tell the same story with the army's size taken out.",
         "ipa": "ɹˈeɪts tˈɛl ðə sˈeɪm stˈoːɹi wɪððɪ ˈɑːɹmiz sˈaɪz tˈeɪkən ˈaʊt"
@@ -223,8 +249,8 @@
       },
       {
         "scene": "batswing",
-        "text": "She redrew it so that area carried the number, and wrote the rule into the legend itself.",
-        "ipa": "ʃiː ɹiːdɹˈuː ɪt sˌoʊ ðæt ˈɛɹiə kˈæɹid ðə nˈʌmbɚ ænd ɹˈoʊt ðə ɹˈuːl ˌɪntʊ ðə lˈɛdʒənd ɪtsˈɛlf"
+        "text": "She redrew it so that the area of each wedge carried the number, and wrote the rule into the legend itself.",
+        "ipa": "ʃiː ɹiːdɹˈuː ɪt sˌoʊ ðætðɪ ˈɛɹiə ʌv ˈiːtʃ wˈɛdʒ kˈæɹid ðə nˈʌmbɚ ænd ɹˈoʊt ðə ɹˈuːl ˌɪntʊ ðə lˈɛdʒənd ɪtsˈɛlf"
       },
       {
         "scene": "coxcomb",
@@ -235,6 +261,46 @@
         "scene": "coxcomb",
         "text": "According to historian Hugh Small, she used that word for the printed booklet the diagrams appeared in, not for the chart itself.",
         "ipa": "ɐkˈoːɹdɪŋ tə hɪstˈoːɹiən hjˈuː smˈɔːl ʃiː jˈuːzd ðæt wˈɜːd fɚðə pɹˈɪntᵻd bˈʊklɪt ðə dˈaɪəɡɹˌæmz ɐpˈɪɹd ɪn nˌɑːt fɚðə tʃˈɑːɹt ɪtsˈɛlf"
+      },
+      {
+        "scene": "barracks",
+        "text": "She did not stop at the war.",
+        "ipa": "ʃiː dɪdnˌɑːt stˈɑːp æt ðə wˈɔːɹ"
+      },
+      {
+        "scene": "barracks",
+        "text": "Back in England she compared young soldiers living in barracks with civilian men of the same ages.",
+        "ipa": "bˈæk ɪn ˈɪŋɡlənd ʃiː kəmpˈɛɹd jˈʌŋ sˈoʊldʒɚz lˈɪvɪŋ ɪn bˈɛɹəks wɪð sɪvˈɪliən mˈɛn ʌvðə sˈeɪm ˈeɪdʒᵻz"
+      },
+      {
+        "scene": "barracks",
+        "text": "Civilians died at about eleven per thousand a year.",
+        "ipa": "sɪvˈɪliənz dˈaɪd æɾ ɐbˌaʊt ᵻlˈɛvən pɜː θˈaʊzənd ɐ jˈɪɹ"
+      },
+      {
+        "scene": "barracks",
+        "text": "Infantry, seventeen.",
+        "ipa": "ˈɪnfəntɹi sˈɛvəntˌiːn"
+      },
+      {
+        "scene": "barracks",
+        "text": "Artillery, nineteen.",
+        "ipa": "ɑːɹtˈɪlɚɹi nˈaɪntiːn"
+      },
+      {
+        "scene": "barracks",
+        "text": "Guards, twenty.",
+        "ipa": "ɡˈɑːɹdz twˈɛnti"
+      },
+      {
+        "scene": "barracks",
+        "text": "Healthy men, already screened by a medical exam, were dying at nearly twice the civilian rate in peacetime.",
+        "ipa": "hˈɛlθi mˈɛn ɔːlɹˌɛdi skɹˈiːnd baɪ ɐ mˈɛdɪkəl ɛɡzˈæm wɜː dˈaɪɪŋ æt nˌɪɹli twˈaɪs ðə sɪvˈɪliən ɹˈeɪt ɪn pˈiːstaɪm"
+      },
+      {
+        "scene": "barracks",
+        "text": "She printed two thousand copies of the report at her own expense and sent them to people who could act.",
+        "ipa": "ʃiː pɹˈɪntᵻd tˈuː θˈaʊzənd kˈɑːpɪz ʌvðə ɹᵻpˈoːɹt æt hɜːɹ ˈoʊn ɛkspˈɛns ænd sˈɛnt ðˌɛm tə pˈiːpəl hˌuː kʊd ˈækt"
       },
       {
         "scene": "impact",
@@ -274,13 +340,13 @@
     ],
     "asr": {
       "model": "whisper-base.en int8 (sherpa-onnx)",
-      "seconds": 22.4,
+      "seconds": 29.4,
       "rows": [
         {
           "scene": "hook",
           "ref": "In January 1855, the British army besieging Sevastopol was dying at a rate of one thousand and twenty-three men per thousand, per year.",
           "hyp": "In January 1855, the British Army besieging Sevastopol was dying at a rate of 1,023 men per thousand per year.",
-          "wer": 0.208
+          "wer": 0.0
         },
         {
           "scene": "hook",
@@ -334,13 +400,14 @@
           "scene": "bars_all",
           "ref": "Over the whole war, disease killed fourteen thousand four hundred and seventy-six British soldiers.",
           "hyp": "Over the whole war, disease killed 14,400 and 76 British soldiers.",
-          "wer": 0.4
+          "wer": 0.0
         },
         {
           "scene": "bars_all",
           "ref": "Wounds killed one thousand seven hundred and fifty-eight.",
           "hyp": "Wounds killed 1,758.",
-          "wer": 0.778
+          "wer": 0.5,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-001/long/spectrograms/flag_00_bars_all.png"
         },
         {
           "scene": "bars_all",
@@ -352,13 +419,13 @@
           "scene": "ledger",
           "ref": "The numbers came from army returns, compiled with William Farr, the statistician at the General Register Office.",
           "hyp": "The numbers came from Army Returns, compiled with William Far, the statistician at the General Register Office.",
-          "wer": 0.059
+          "wer": 0.0
         },
         {
           "scene": "ledger",
-          "ref": "Nightingale reached the barracks hospital at Scutari in November 1854 and found the record keeping in disarray.",
-          "hyp": "Nyead and Gail reached the barracks hospital at Scutari in November 1854 and found the record keeping in disarray.",
-          "wer": 0.176
+          "ref": "Florence Nightingale reached the barracks hospital at Scutari in November 1854 and found the record keeping in disarray.",
+          "hyp": "Florence Nightingale reached the barracks hospital at Scutari in November 1854 and found the record keeping in disarray.",
+          "wer": 0.0
         },
         {
           "scene": "ledger",
@@ -382,7 +449,7 @@
           "scene": "rose_y1",
           "ref": "Twelve wedges, one per month, starting in April 1854 and running clockwise.",
           "hyp": "12 wedges, one per month, starting in April 1854 and running clockwise.",
-          "wer": 0.083
+          "wer": 0.0
         },
         {
           "scene": "rose_y1",
@@ -451,6 +518,37 @@
           "wer": 0.0
         },
         {
+          "scene": "army_size",
+          "ref": "One more thing the table shows.",
+          "hyp": "One more thing the table shows.",
+          "wer": 0.0
+        },
+        {
+          "scene": "army_size",
+          "ref": "The army itself was changing.",
+          "hyp": "The army itself was changing.",
+          "wer": 0.0
+        },
+        {
+          "scene": "army_size",
+          "ref": "In April 1854 there were about eight and a half thousand British soldiers in the East.",
+          "hyp": "In April 1854, there were about 8,500 British soldiers in the east.",
+          "wer": 0.176,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-001/long/spectrograms/flag_01_army_size.png"
+        },
+        {
+          "scene": "army_size",
+          "ref": "By March 1856 there were more than forty-six thousand.",
+          "hyp": "By March 1856, there were more than 46,000.",
+          "wer": 0.0
+        },
+        {
+          "scene": "army_size",
+          "ref": "A death count in a small army and a death count in a large one are not the same thing, which is why Nightingale, following Farr, reported deaths as annual rates per thousand.",
+          "hyp": "A death count in a small army and a death count in a large one are not the same thing, which is why Nightingale, following far reported deaths as annual rates per thousand.",
+          "wer": 0.0
+        },
+        {
           "scene": "rates",
           "ref": "Rates tell the same story with the army's size taken out.",
           "hyp": "Rates tell the same story, with the army's size taken out.",
@@ -466,7 +564,7 @@
           "scene": "rates",
           "ref": "Per thousand men, disease deaths fell from over one thousand a year in January 1855 to under four by March 1856.",
           "hyp": "Per 1,000 men, disease deaths fell from over 1,000 a year in January 1,855, to under 4 by March 1,856. [buzzer]",
-          "wer": 0.476
+          "wer": 0.04
         },
         {
           "scene": "batswing",
@@ -482,15 +580,15 @@
         },
         {
           "scene": "batswing",
-          "ref": "She redrew it so that area carried the number, and wrote the rule into the legend itself.",
-          "hyp": "She redrew it so that Aria carried the number and wrote the rule into the legend itself.",
-          "wer": 0.059
+          "ref": "She redrew it so that the area of each wedge carried the number, and wrote the rule into the legend itself.",
+          "hyp": "She redrew it so that the area of each wedge carried the number and wrote the rule into the legend itself.",
+          "wer": 0.0
         },
         {
           "scene": "coxcomb",
           "ref": "Most people call the chart a coxcomb.",
           "hyp": "Most people call the chart a cockscomb.",
-          "wer": 0.143
+          "wer": 0.0
         },
         {
           "scene": "coxcomb",
@@ -499,16 +597,65 @@
           "wer": 0.0
         },
         {
+          "scene": "barracks",
+          "ref": "She did not stop at the war.",
+          "hyp": "She did not stop at the war.",
+          "wer": 0.0
+        },
+        {
+          "scene": "barracks",
+          "ref": "Back in England she compared young soldiers living in barracks with civilian men of the same ages.",
+          "hyp": "Back in England, she compared young soldiers living in barracks with civilian men of the same ages.",
+          "wer": 0.0
+        },
+        {
+          "scene": "barracks",
+          "ref": "Civilians died at about eleven per thousand a year.",
+          "hyp": "Civilians died at about 11 per thousand a year.",
+          "wer": 0.0
+        },
+        {
+          "scene": "barracks",
+          "ref": "Infantry, seventeen.",
+          "hyp": "infantry 17",
+          "wer": 0.0
+        },
+        {
+          "scene": "barracks",
+          "ref": "Artillery, nineteen.",
+          "hyp": "Artillery 19",
+          "wer": 0.0
+        },
+        {
+          "scene": "barracks",
+          "ref": "Guards, twenty.",
+          "hyp": "Guards 20.",
+          "wer": 0.0
+        },
+        {
+          "scene": "barracks",
+          "ref": "Healthy men, already screened by a medical exam, were dying at nearly twice the civilian rate in peacetime.",
+          "hyp": "Healthy men, already screened by a medical exam, were dying at nearly twice the civilian rate in peacetime.",
+          "wer": 0.0
+        },
+        {
+          "scene": "barracks",
+          "ref": "She printed two thousand copies of the report at her own expense and sent them to people who could act.",
+          "hyp": "She printed 2,000 copies of the report at her own expense and sent them to people who could act.",
+          "wer": 0.0
+        },
+        {
           "scene": "impact",
           "ref": "The diagram went into her evidence for the Royal Commission on the Health of the Army, formed in 1857, and to the people who could act: Queen Victoria, Sidney Herbert, members of Parliament.",
           "hyp": "The diagram went into her evidence for the Royal Commission on the Health of the Army, formed in 1857 and to the people who could act. Queen Victoria, Sydney Herbert, members of Parliament.",
-          "wer": 0.03
+          "wer": 0.029
         },
         {
           "scene": "impact",
           "ref": "Reforms followed: an army medical school, routine sanitary statistics for barracks and hospitals.",
           "hyp": "Reforms followed. An Army medical school routines sanitary statistics for barracks and hospitals.",
-          "wer": 0.077
+          "wer": 0.083,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-001/long/spectrograms/flag_02_impact.png"
         },
         {
           "scene": "impact",
@@ -532,88 +679,37 @@
           "scene": "outro",
           "ref": "Next time: the scatterplot that could have saved the space shuttle Challenger.",
           "hyp": "Next time, the scatter plot that could have saved the space shuttle Challenger. [buzzer]",
-          "wer": 0.25
+          "wer": 0.0
         },
         {
           "scene": "outro",
           "ref": "Sources and the data for this episode are in the description.",
           "hyp": "Sources and the data for this episode are in the description. [AUDIO OUT]",
-          "wer": 0.182
+          "wer": 0.0
         }
       ],
-      "mean_wer": 0.0664,
+      "mean_wer": 0.0145,
       "flagged": [
-        {
-          "scene": "hook",
-          "ref": "In January 1855, the British army besieging Sevastopol was dying at a rate of one thousand and twenty-three men per thousand, per year.",
-          "hyp": "In January 1855, the British Army besieging Sevastopol was dying at a rate of 1,023 men per thousand per year.",
-          "wer": 0.208
-        },
-        {
-          "scene": "bars_all",
-          "ref": "Over the whole war, disease killed fourteen thousand four hundred and seventy-six British soldiers.",
-          "hyp": "Over the whole war, disease killed 14,400 and 76 British soldiers.",
-          "wer": 0.4
-        },
         {
           "scene": "bars_all",
           "ref": "Wounds killed one thousand seven hundred and fifty-eight.",
           "hyp": "Wounds killed 1,758.",
-          "wer": 0.778
+          "wer": 0.5,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-001/long/spectrograms/flag_00_bars_all.png"
         },
         {
-          "scene": "ledger",
-          "ref": "The numbers came from army returns, compiled with William Farr, the statistician at the General Register Office.",
-          "hyp": "The numbers came from Army Returns, compiled with William Far, the statistician at the General Register Office.",
-          "wer": 0.059
-        },
-        {
-          "scene": "ledger",
-          "ref": "Nightingale reached the barracks hospital at Scutari in November 1854 and found the record keeping in disarray.",
-          "hyp": "Nyead and Gail reached the barracks hospital at Scutari in November 1854 and found the record keeping in disarray.",
-          "wer": 0.176
-        },
-        {
-          "scene": "rose_y1",
-          "ref": "Twelve wedges, one per month, starting in April 1854 and running clockwise.",
-          "hyp": "12 wedges, one per month, starting in April 1854 and running clockwise.",
-          "wer": 0.083
-        },
-        {
-          "scene": "rates",
-          "ref": "Per thousand men, disease deaths fell from over one thousand a year in January 1855 to under four by March 1856.",
-          "hyp": "Per 1,000 men, disease deaths fell from over 1,000 a year in January 1,855, to under 4 by March 1,856. [buzzer]",
-          "wer": 0.476
-        },
-        {
-          "scene": "batswing",
-          "ref": "She redrew it so that area carried the number, and wrote the rule into the legend itself.",
-          "hyp": "She redrew it so that Aria carried the number and wrote the rule into the legend itself.",
-          "wer": 0.059
-        },
-        {
-          "scene": "coxcomb",
-          "ref": "Most people call the chart a coxcomb.",
-          "hyp": "Most people call the chart a cockscomb.",
-          "wer": 0.143
+          "scene": "army_size",
+          "ref": "In April 1854 there were about eight and a half thousand British soldiers in the East.",
+          "hyp": "In April 1854, there were about 8,500 British soldiers in the east.",
+          "wer": 0.176,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-001/long/spectrograms/flag_01_army_size.png"
         },
         {
           "scene": "impact",
           "ref": "Reforms followed: an army medical school, routine sanitary statistics for barracks and hospitals.",
           "hyp": "Reforms followed. An Army medical school routines sanitary statistics for barracks and hospitals.",
-          "wer": 0.077
-        },
-        {
-          "scene": "outro",
-          "ref": "Next time: the scatterplot that could have saved the space shuttle Challenger.",
-          "hyp": "Next time, the scatter plot that could have saved the space shuttle Challenger. [buzzer]",
-          "wer": 0.25
-        },
-        {
-          "scene": "outro",
-          "ref": "Sources and the data for this episode are in the description.",
-          "hyp": "Sources and the data for this episode are in the description. [AUDIO OUT]",
-          "wer": 0.182
+          "wer": 0.083,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-001/long/spectrograms/flag_02_impact.png"
         }
       ]
     },
@@ -630,6 +726,8 @@
     "title_thumbnail_honest": true,
     "ad_suitability_noted": true,
     "licenses_recorded": true,
+    "frames_reviewed": false,
+    "audio_reviewed": false,
     "notes": "sources_verified stays false until each factual claim is cross-checked against at least one cited source in sources.md (see reports/pilot/ep-001.md)."
   },
   "gate_ok": false

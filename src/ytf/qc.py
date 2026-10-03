@@ -79,6 +79,13 @@ def spectrogram_png(wav: Path, out: Path, width: int = 1800, height: int = 360, 
     Image.fromarray(wv).save(out.with_name(out.stem + "_wave.png"))
 
 
+def content_fraction(img: Path, bg=(11, 16, 32), thr: int = 24) -> float:
+    """Fraction of pixels that differ from the brand background — catches blank/frozen scenes that blackdetect cannot."""
+    from PIL import Image
+    a = np.asarray(Image.open(img).convert("RGB"), dtype=np.int16)
+    return float((np.abs(a - np.array(bg, dtype=np.int16)).max(axis=2) > thr).mean())
+
+
 def sample_frames(video: Path, tl: Timeline, out_dir: Path) -> list[Path]:
     out_dir.mkdir(parents=True, exist_ok=True)
     outs = []
@@ -107,7 +114,7 @@ def run_qc(ep: Episode, fmt: str, bdir: Path, final: Path, tl: Timeline, report_
                        "expected_frames": expected_frames,
                        "ok": v["codec_name"] == "h264" and v.get("pix_fmt") == "yuv420p" and v["width"] == w and v["height"] == h
                        and v["r_frame_rate"] == f"{FPS}/1" and a["codec_name"] == "aac" and abs(nb_frames - expected_frames) <= 1}
-    black = ffmpeg_detect(final, "blackdetect=d=1.0:pix_th=0.10")  # planned scene transitions are 2x0.35 s
+    black = ffmpeg_detect(final, "blackdetect=d=1.0:pix_th=0.05")  # brand background (#0B1020, luma≈0.064) is NOT black; true black only
     sil = ffmpeg_detect(final, "silencedetect=noise=-50dB:d=2.5")
     ck["blackdetect"] = {"events": black, "ok": len(black) == 0}
     # silences longer than 2.5 s are expected only at scene boundaries (pad) — report count, pass if <= scenes
@@ -125,6 +132,12 @@ def run_qc(ep: Episode, fmt: str, bdir: Path, final: Path, tl: Timeline, report_
     ck["text_overflow"] = {"scenes": [{"id": s["id"], "items": s["overflow"]} for s in overflow], "ok": not overflow}
     frames = sample_frames(final, tl, report_dir / "frames")
     ck["frame_samples"] = {"count": len(frames), "dir": str(report_dir / "frames"), "reviewed_by_claude": ep.gate.frames_reviewed}
+    blank = []
+    for fp in frames:
+        frac = content_fraction(fp)
+        if frac < 0.002:
+            blank.append({"frame": fp.name, "content_fraction": round(frac, 5)})
+    ck["frame_content"] = {"blank_frames": blank, "ok": not blank}
     # ---- audio evaluation layers ----
     sents = [(sc.id, s) for sc in tl.scenes for s in sc.sentences]
     spectrogram_png(bdir / "narration_raw.wav", report_dir / "spectrogram.png")

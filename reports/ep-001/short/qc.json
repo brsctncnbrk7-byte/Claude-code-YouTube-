@@ -1,0 +1,178 @@
+{
+  "episode": "ep-001",
+  "format": "short",
+  "checks": {
+    "container": {
+      "codec": "h264",
+      "pix_fmt": "yuv420p",
+      "w": 1080,
+      "h": 1920,
+      "fps": "30/1",
+      "audio": "aac 48000Hz",
+      "duration": 29.933,
+      "frames": 898,
+      "expected_frames": 898,
+      "ok": true
+    },
+    "blackdetect": {
+      "events": [
+        "[blackdetect @ 0x55f7fae05f40] black_start:11.8333 black_end:14.7667 black_duration:2.93333",
+        "[blackdetect @ 0x55f7fae05f40] black_start:25.6333 black_end:29.9 black_duration:4.26667"
+      ],
+      "ok": false
+    },
+    "silencedetect": {
+      "events": [],
+      "ok": true
+    },
+    "loudness": {
+      "integrated_lufs": -14.02,
+      "true_peak_dbtp": -2.19,
+      "lra": 2.9,
+      "ok": true
+    },
+    "subtitles": {
+      "cues": 10,
+      "long_or_tall": 0,
+      "ok": true
+    },
+    "text_overflow": {
+      "scenes": [],
+      "ok": true
+    },
+    "frame_samples": {
+      "count": 6,
+      "dir": "/home/user/Claude-code-YouTube-/reports/ep-001/short/frames",
+      "reviewed_by_claude": false
+    }
+  },
+  "audio_eval": {
+    "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-001/short/spectrogram.png",
+    "phonemes": [
+      {
+        "scene": "s_hook",
+        "text": "In January 1855 the British army was dying at a rate of one thousand and twenty-three men per thousand, per year.",
+        "ipa": "ɪn dʒˈænjuːˌɛɹi wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti fˈaɪv ðə bɹˈɪɾɪʃ ˈɑːɹmi wʌz dˈaɪɪŋ æɾɚ ɹˈeɪt ʌv wˈʌn θˈaʊzənd ænd twˈɛntiθɹˈiː mˈɛn pɜː θˈaʊzənd pɜː jˈɪɹ"
+      },
+      {
+        "scene": "s_hook",
+        "text": "Almost none of it was combat.",
+        "ipa": "ˈɔːlmoʊst nˈʌn ʌv ɪt wʌz kˈɑːmbæt"
+      },
+      {
+        "scene": "s_rose",
+        "text": "Florence Nightingale drew this.",
+        "ipa": "flˈɔːɹəns nˈaɪɾɪŋɡˌeɪl dɹˈuː ðˈɪs"
+      },
+      {
+        "scene": "s_rose",
+        "text": "Each wedge is a month.",
+        "ipa": "ˈiːtʃ wˈɛdʒ ɪz ɐ mˈʌnθ"
+      },
+      {
+        "scene": "s_rose",
+        "text": "Its area is the number of deaths.",
+        "ipa": "ɪts ˈɛɹiə ɪz ðə nˈʌmbɚɹ ʌv dˈɛθs"
+      },
+      {
+        "scene": "s_rose",
+        "text": "Blue is preventable disease.",
+        "ipa": "blˈuː ɪz pɹɪvˈɛntəbəl dɪzˈiːz"
+      },
+      {
+        "scene": "s_rose",
+        "text": "Red is wounds.",
+        "ipa": "ɹˈɛd ɪz wˈuːndz"
+      },
+      {
+        "scene": "s_rose",
+        "text": "For every soldier killed by the enemy, eight died of disease.",
+        "ipa": "fɔːɹ ˈɛvɹi sˈoʊldʒɚ kˈɪld baɪ ðɪ ˈɛnəmi ˈeɪt dˈaɪd ʌv dɪzˈiːz"
+      },
+      {
+        "scene": "s_cta",
+        "text": "The full story, and what the chart changed, is on the channel.",
+        "ipa": "ðə fˈʊl stˈoːɹi ænd wʌt ðə tʃˈɑːɹt tʃˈeɪndʒd ɪz ɔnðə tʃˈænəl"
+      }
+    ],
+    "asr": {
+      "model": "whisper-base.en int8 (sherpa-onnx)",
+      "seconds": 3.8,
+      "rows": [
+        {
+          "scene": "s_hook",
+          "ref": "In January 1855 the British army was dying at a rate of one thousand and twenty-three men per thousand, per year.",
+          "hyp": "In January 1855, the British Army was dying at a rate of 1,000 and 23 men per thousand per year.",
+          "wer": 0.0
+        },
+        {
+          "scene": "s_hook",
+          "ref": "Almost none of it was combat.",
+          "hyp": "Almost none of it was combat.",
+          "wer": 0.0
+        },
+        {
+          "scene": "s_rose",
+          "ref": "Florence Nightingale drew this.",
+          "hyp": "Florence Nightingale drew this.",
+          "wer": 0.0
+        },
+        {
+          "scene": "s_rose",
+          "ref": "Each wedge is a month.",
+          "hyp": "Each wedge is a month.",
+          "wer": 0.0
+        },
+        {
+          "scene": "s_rose",
+          "ref": "Its area is the number of deaths.",
+          "hyp": "Its area is the number of deaths.",
+          "wer": 0.0
+        },
+        {
+          "scene": "s_rose",
+          "ref": "Blue is preventable disease.",
+          "hyp": "Blue is preventable disease.",
+          "wer": 0.0
+        },
+        {
+          "scene": "s_rose",
+          "ref": "Red is wounds.",
+          "hyp": "Red is wounds.",
+          "wer": 0.0
+        },
+        {
+          "scene": "s_rose",
+          "ref": "For every soldier killed by the enemy, eight died of disease.",
+          "hyp": "For every soldier killed by the enemy, eight died of disease.",
+          "wer": 0.0
+        },
+        {
+          "scene": "s_cta",
+          "ref": "The full story, and what the chart changed, is on the channel.",
+          "hyp": "The full story and what the chart changed is on the channel.",
+          "wer": 0.0
+        }
+      ],
+      "mean_wer": 0.0,
+      "flagged": []
+    },
+    "disclaimer": "Audio was evaluated by phoneme review, ASR round-trip and spectrogram inspection; no human listening test was performed."
+  },
+  "warnings": [],
+  "status": "QC_FAIL",
+  "technical_ok": false,
+  "gate": {
+    "original_narrative": true,
+    "sources_verified": false,
+    "visuals_explain": true,
+    "distinct_from_previous": true,
+    "title_thumbnail_honest": true,
+    "ad_suitability_noted": true,
+    "licenses_recorded": true,
+    "frames_reviewed": false,
+    "audio_reviewed": false,
+    "notes": "sources_verified stays false until each factual claim is cross-checked against at least one cited source in sources.md (see reports/pilot/ep-001.md)."
+  },
+  "gate_ok": false
+}

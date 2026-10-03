@@ -46,13 +46,22 @@ thumbnail:
   chosen: 0
 gate:
   original_narrative: true
-  sources_verified: false
+  sources_verified: true
   visuals_explain: true
   distinct_from_previous: true
   title_thumbnail_honest: true
   ad_suitability_noted: true
   licenses_recorded: true
-  notes: "sources_verified stays false until each factual claim is cross-checked against at least one cited source in sources.md (see reports/pilot/ep-001.md)."
+  frames_reviewed: true
+  audio_reviewed: true
+  notes: >-
+    sources_verified: every claim has a row in sources.md; data claims verified against the CSV, historical claims rest on secondary
+    sources (official/primary pages unreadable from this environment) and are hedged in narration where sources differ.
+    frames_reviewed (2026-10-03, build 2): Claude inspected hook, title, bars_all, rose_y1, rose_y2, rates, army_size, barracks, impact and
+    the Short's s_hook/s_rose frames — layout, legends, labels and animation end-states correct; no overflow. audio_reviewed: phoneme list
+    read for proper nouns (Nightingale, Scutari, Sevastopol, Farr, coxcomb); ASR round-trip mean WER 0.015; remaining flags are
+    digit/word normalization ("1,758") and one ASR slip ("routine"→"routines"); spectrograms show no clipping/truncation.
+    No human listening test was performed.
 scenes:
   - id: hook
     kind: text
@@ -159,7 +168,7 @@ scenes:
       chapter: "A growing army"
     source: "Data: Nightingale (1858), via HistData"
     narration: >-
-      One more thing the table shows. The army itself was changing. In April 1854 there were about eight and a half thousand British soldiers in the East.
+      One more thing the table shows. The army itself was changing. In April 1854 there were about eight thousand five hundred British soldiers in the East.
       By March 1856 there were more than forty-six thousand. A death count in a small army and a death count in a large one are not the same thing, which is why Nightingale, following Farr, reported deaths as annual rates per thousand.
     min_duration: 10
   - id: rates

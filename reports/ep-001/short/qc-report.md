@@ -1,0 +1,62 @@
+# QC report — ep-001 (short)
+
+**Status:** `QC_FAIL`  •  technical_ok=False  •  gate_ok=False
+
+## B. Technical checks
+| check | ok | detail |
+|---|---|---|
+| container | ✅ | {"codec": "h264", "pix_fmt": "yuv420p", "w": 1080, "h": 1920, "fps": "30/1", "audio": "aac 48000Hz", "duration": 29.933, "frames": 898, "expected_frames": 898} |
+| blackdetect | ❌ | {} events=2 |
+| silencedetect | ✅ | {} |
+| loudness | ✅ | {"integrated_lufs": -14.02, "true_peak_dbtp": -2.19, "lra": 2.9} |
+| subtitles | ✅ | {"cues": 10, "long_or_tall": 0} |
+| text_overflow | ✅ | {} |
+| frame_samples | ✅ | {"count": 6, "dir": "/home/user/Claude-code-YouTube-/reports/ep-001/short/frames", "reviewed_by_claude": false} |
+
+## C. Audio evaluation (not a human listening test)
+> Audio was evaluated by phoneme review, ASR round-trip and spectrogram inspection; no human listening test was performed.
+
+ASR: whisper-base.en int8 (sherpa-onnx) — mean WER **0.0**, flagged (WER>0.05): 0
+
+
+<details><summary>Phoneme review (IPA per sentence)</summary>
+
+- [s_hook] In January 1855 the British army was dying at a rate of one thousand and twenty-three men per thousand, per year.
+  - `ɪn dʒˈænjuːˌɛɹi wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti fˈaɪv ðə bɹˈɪɾɪʃ ˈɑːɹmi wʌz dˈaɪɪŋ æɾɚ ɹˈeɪt ʌv wˈʌn θˈaʊzənd ænd twˈɛntiθɹˈiː mˈɛn pɜː θˈaʊzənd pɜː jˈɪɹ`
+- [s_hook] Almost none of it was combat.
+  - `ˈɔːlmoʊst nˈʌn ʌv ɪt wʌz kˈɑːmbæt`
+- [s_rose] Florence Nightingale drew this.
+  - `flˈɔːɹəns nˈaɪɾɪŋɡˌeɪl dɹˈuː ðˈɪs`
+- [s_rose] Each wedge is a month.
+  - `ˈiːtʃ wˈɛdʒ ɪz ɐ mˈʌnθ`
+- [s_rose] Its area is the number of deaths.
+  - `ɪts ˈɛɹiə ɪz ðə nˈʌmbɚɹ ʌv dˈɛθs`
+- [s_rose] Blue is preventable disease.
+  - `blˈuː ɪz pɹɪvˈɛntəbəl dɪzˈiːz`
+- [s_rose] Red is wounds.
+  - `ɹˈɛd ɪz wˈuːndz`
+- [s_rose] For every soldier killed by the enemy, eight died of disease.
+  - `fɔːɹ ˈɛvɹi sˈoʊldʒɚ kˈɪld baɪ ðɪ ˈɛnəmi ˈeɪt dˈaɪd ʌv dɪzˈiːz`
+- [s_cta] The full story, and what the chart changed, is on the channel.
+  - `ðə fˈʊl stˈoːɹi ænd wʌt ðə tʃˈɑːɹt tʃˈeɪndʒd ɪz ɔnðə tʃˈænəl`
+
+</details>
+
+Spectrogram: `/home/user/Claude-code-YouTube-/reports/ep-001/short/spectrogram.png` (+ `_wave.png`)
+
+## A. Content gate (manual)
+| item | ok |
+|---|---|
+| original_narrative | ✅ |
+| sources_verified | ❌ |
+| visuals_explain | ✅ |
+| distinct_from_previous | ✅ |
+| title_thumbnail_honest | ✅ |
+| ad_suitability_noted | ✅ |
+| licenses_recorded | ✅ |
+| frames_reviewed | ❌ |
+| audio_reviewed | ❌ |
+
+Notes: sources_verified stays false until each factual claim is cross-checked against at least one cited source in sources.md (see reports/pilot/ep-001.md).
+
+Frame samples: `/home/user/Claude-code-YouTube-/reports/ep-001/short/frames` — reviewed_by_claude=False

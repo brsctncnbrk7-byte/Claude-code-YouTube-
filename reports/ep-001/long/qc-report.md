@@ -5,31 +5,22 @@
 ## B. Technical checks
 | check | ok | detail |
 |---|---|---|
-| container | ✅ | {"codec": "h264", "pix_fmt": "yuv420p", "w": 1920, "h": 1080, "fps": "30/1", "audio": "aac 48000Hz", "duration": 228.867, "frames": 6866, "expected_frames": 6866} |
-| blackdetect | ❌ | {} events=4 |
+| container | ✅ | {"codec": "h264", "pix_fmt": "yuv420p", "w": 1920, "h": 1080, "fps": "30/1", "audio": "aac 48000Hz", "duration": 287.867, "frames": 8636, "expected_frames": 8636} |
+| blackdetect | ❌ | {} events=5 |
 | silencedetect | ✅ | {} |
-| loudness | ❌ | {"integrated_lufs": -15.77, "true_peak_dbtp": -4.14, "lra": 2.3} |
-| subtitles | ❌ | {"cues": 62, "long_or_tall": 1} |
+| loudness | ✅ | {"integrated_lufs": -14.02, "true_peak_dbtp": -2.52, "lra": 2.4} |
+| subtitles | ✅ | {"cues": 81, "long_or_tall": 0} |
 | text_overflow | ✅ | {} |
-| frame_samples | ✅ | {"count": 24, "dir": "/home/user/Claude-code-YouTube-/reports/ep-001/long/frames", "reviewed_by_claude": false} |
+| frame_samples | ✅ | {"count": 28, "dir": "/home/user/Claude-code-YouTube-/reports/ep-001/long/frames", "reviewed_by_claude": false} |
 
 ## C. Audio evaluation (not a human listening test)
 > Audio was evaluated by phoneme review, ASR round-trip and spectrogram inspection; no human listening test was performed.
 
-ASR: whisper-base.en int8 (sherpa-onnx) — mean WER **0.0664**, flagged (WER>0.05): 12
+ASR: whisper-base.en int8 (sherpa-onnx) — mean WER **0.0145**, flagged (WER>0.05): 3
 
-- [hook] WER 0.208: ref=`In January 1855, the British army besieging Sevastopol was dying at a rate of one thousand and twenty-three men per thousand, per year.` hyp=`In January 1855, the British Army besieging Sevastopol was dying at a rate of 1,023 men per thousand per year.`
-- [bars_all] WER 0.4: ref=`Over the whole war, disease killed fourteen thousand four hundred and seventy-six British soldiers.` hyp=`Over the whole war, disease killed 14,400 and 76 British soldiers.`
-- [bars_all] WER 0.778: ref=`Wounds killed one thousand seven hundred and fifty-eight.` hyp=`Wounds killed 1,758.`
-- [ledger] WER 0.059: ref=`The numbers came from army returns, compiled with William Farr, the statistician at the General Register Office.` hyp=`The numbers came from Army Returns, compiled with William Far, the statistician at the General Register Office.`
-- [ledger] WER 0.176: ref=`Nightingale reached the barracks hospital at Scutari in November 1854 and found the record keeping in disarray.` hyp=`Nyead and Gail reached the barracks hospital at Scutari in November 1854 and found the record keeping in disarray.`
-- [rose_y1] WER 0.083: ref=`Twelve wedges, one per month, starting in April 1854 and running clockwise.` hyp=`12 wedges, one per month, starting in April 1854 and running clockwise.`
-- [rates] WER 0.476: ref=`Per thousand men, disease deaths fell from over one thousand a year in January 1855 to under four by March 1856.` hyp=`Per 1,000 men, disease deaths fell from over 1,000 a year in January 1,855, to under 4 by March 1,856. [buzzer]`
-- [batswing] WER 0.059: ref=`She redrew it so that area carried the number, and wrote the rule into the legend itself.` hyp=`She redrew it so that Aria carried the number and wrote the rule into the legend itself.`
-- [coxcomb] WER 0.143: ref=`Most people call the chart a coxcomb.` hyp=`Most people call the chart a cockscomb.`
-- [impact] WER 0.077: ref=`Reforms followed: an army medical school, routine sanitary statistics for barracks and hospitals.` hyp=`Reforms followed. An Army medical school routines sanitary statistics for barracks and hospitals.`
-- [outro] WER 0.25: ref=`Next time: the scatterplot that could have saved the space shuttle Challenger.` hyp=`Next time, the scatter plot that could have saved the space shuttle Challenger. [buzzer]`
-- [outro] WER 0.182: ref=`Sources and the data for this episode are in the description.` hyp=`Sources and the data for this episode are in the description. [AUDIO OUT]`
+- [bars_all] WER 0.5: ref=`Wounds killed one thousand seven hundred and fifty-eight.` hyp=`Wounds killed 1,758.`
+- [army_size] WER 0.176: ref=`In April 1854 there were about eight and a half thousand British soldiers in the East.` hyp=`In April 1854, there were about 8,500 British soldiers in the east.`
+- [impact] WER 0.083: ref=`Reforms followed: an army medical school, routine sanitary statistics for barracks and hospitals.` hyp=`Reforms followed. An Army medical school routines sanitary statistics for barracks and hospitals.`
 
 <details><summary>Phoneme review (IPA per sentence)</summary>
 
@@ -59,8 +50,8 @@ ASR: whisper-base.en int8 (sherpa-onnx) — mean WER **0.0664**, flagged (WER>0.
   - `fɔːɹ ˈɛvɹi sˈoʊldʒɚ kˈɪld baɪ ðɪ ˈɛnəmi ˈeɪt dˈaɪd ʌv sˈʌmθɪŋ ðæt kˌʊdɐv bˌɪn pɹɪvˈɛntᵻd`
 - [ledger] The numbers came from army returns, compiled with William Farr, the statistician at the General Register Office.
   - `ðə nˈʌmbɚz kˈeɪm fɹʌm ˈɑːɹmi ɹᵻtˈɜːnz kəmpˈaɪld wɪð wˈɪljəm fˈɑːɹ ðə stˌæɾɪstˈɪʃən æt ðə dʒˈɛnɚɹəl ɹˈɛdʒɪstɚɹ ˈɑːfɪs`
-- [ledger] Nightingale reached the barracks hospital at Scutari in November 1854 and found the record keeping in disarray.
-  - `nˈaɪɾɪŋɡˌeɪl ɹˈiːtʃt ðə bˈɛɹəks hˈɑːspɪɾəl æt skjuːtˈɑːɹɹi ɪn noʊvˈɛmbɚ wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti fˈoːɹ ænd fˈaʊnd ðə ɹˈɛkɚd kˈiːpɪŋ ɪn dˌɪsɚɹˈeɪ`
+- [ledger] Florence Nightingale reached the barracks hospital at Scutari in November 1854 and found the record keeping in disarray.
+  - `flˈɔːɹəns nˈaɪɾɪŋɡˌeɪl ɹˈiːtʃt ðə bˈɛɹəks hˈɑːspɪɾəl æt skjuːtˈɑːɹɹi ɪn noʊvˈɛmbɚ wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti fˈoːɹ ænd fˈaʊnd ðə ɹˈɛkɚd kˈiːpɪŋ ɪn dˌɪsɚɹˈeɪ`
 - [ledger] She sorted every death into three columns: zymotic disease, meaning epidemic and preventable; wounds; and everything else.
   - `ʃiː sˈɔːɹɾᵻd ˈɛvɹi dˈɛθ ˌɪntʊ θɹˈiː kˈɑːlʌmz zaɪmˈɑːɾɪk dɪzˈiːz mˈiːnɪŋ ˌɛpɪdˈɛmɪk ænd pɹɪvˈɛntəbəl wˈuːndz ænd ˈɛvɹɪθˌɪŋ ˈɛls`
 - [ledger] Counting came before cleaning.
@@ -91,6 +82,16 @@ ASR: whisper-base.en int8 (sherpa-onnx) — mean WER **0.0664**, flagged (WER>0.
   - `ðə wˈɛdʒᵻz ʃɹˈɪŋk`
 - [rose_y2] By September 1855, for the first time, more soldiers died of wounds than of disease.
   - `baɪ sɛptˈɛmbɚ wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti fˈaɪv fɚðə fˈɜːst tˈaɪm mˈoːɹ sˈoʊldʒɚz dˈaɪd ʌv wˈuːndz ðɐn ʌv dɪzˈiːz`
+- [army_size] One more thing the table shows.
+  - `wˈʌn mˈoːɹ θˈɪŋ ðə tˈeɪbəl ʃˈoʊz`
+- [army_size] The army itself was changing.
+  - `ðɪ ˈɑːɹmi ɪtsˈɛlf wʌz tʃˈeɪndʒɪŋ`
+- [army_size] In April 1854 there were about eight and a half thousand British soldiers in the East.
+  - `ɪn ˈeɪpɹəl wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti fˈoːɹ ðɛɹwˌɜːɹ ɐbˌaʊt ˈeɪt ænd ɐ hˈæf θˈaʊzənd bɹˈɪɾɪʃ sˈoʊldʒɚz ɪnðɪ ˈiːst`
+- [army_size] By March 1856 there were more than forty-six thousand.
+  - `baɪ mˈɑːɹtʃ wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti sˈɪks ðɛɹwˌɜː mˈoːɹ ðɐn fˈɔːɹɾisˈɪks θˈaʊzənd`
+- [army_size] A death count in a small army and a death count in a large one are not the same thing, which is why Nightingale, following Farr, reported deaths as annual rates per thousand.
+  - `ɐ dˈɛθ kˈaʊnt ɪn ɐ smˈɔːl ˈɑːɹmi ænd ɐ dˈɛθ kˈaʊnt ɪn ɐ lˈɑːɹdʒ wˈʌn ɑːɹ nˌɑːt ðə sˈeɪm θˈɪŋ wˌɪtʃ ɪz wˌaɪ nˈaɪɾɪŋɡˌeɪl fˈɑːloʊɪŋ fˈɑːɹ ɹᵻpˈoːɹɾᵻd dˈɛθs æz ˈænjuːəl ɹˈeɪts pɜː θˈaʊzənd`
 - [rates] Rates tell the same story with the army's size taken out.
   - `ɹˈeɪts tˈɛl ðə sˈeɪm stˈoːɹi wɪððɪ ˈɑːɹmiz sˈaɪz tˈeɪkən ˈaʊt`
 - [rates] The army more than doubled during the war, so raw counts can mislead.
@@ -101,12 +102,28 @@ ASR: whisper-base.en int8 (sherpa-onnx) — mean WER **0.0664**, flagged (WER>0.
   - `hɜː fˈɜːst ɐtˈɛmpt lˈeɪɾɚ nˈɪkneɪmd ðə bˈæts wˈɪŋ skˈeɪld ðə ɹˈeɪdɪəs ʌv ˈiːtʃ wˈɛdʒ tə ðə dˈɛθ ɹˈeɪt`
 - [batswing] That exaggerates: double the deaths looks like four times the area.
   - `ðæt ɛɡzˈædʒɚɹˌeɪts dˈʌbəl ðə dˈɛθs lˈʊks lˈaɪk fˈoːɹ tˈaɪmz ðɪ ˈɛɹiə`
-- [batswing] She redrew it so that area carried the number, and wrote the rule into the legend itself.
-  - `ʃiː ɹiːdɹˈuː ɪt sˌoʊ ðæt ˈɛɹiə kˈæɹid ðə nˈʌmbɚ ænd ɹˈoʊt ðə ɹˈuːl ˌɪntʊ ðə lˈɛdʒənd ɪtsˈɛlf`
+- [batswing] She redrew it so that the area of each wedge carried the number, and wrote the rule into the legend itself.
+  - `ʃiː ɹiːdɹˈuː ɪt sˌoʊ ðætðɪ ˈɛɹiə ʌv ˈiːtʃ wˈɛdʒ kˈæɹid ðə nˈʌmbɚ ænd ɹˈoʊt ðə ɹˈuːl ˌɪntʊ ðə lˈɛdʒənd ɪtsˈɛlf`
 - [coxcomb] Most people call the chart a coxcomb.
   - `mˈoʊst pˈiːpəl kˈɔːl ðə tʃˈɑːɹt ɐ kˈɑːkskoʊm`
 - [coxcomb] According to historian Hugh Small, she used that word for the printed booklet the diagrams appeared in, not for the chart itself.
   - `ɐkˈoːɹdɪŋ tə hɪstˈoːɹiən hjˈuː smˈɔːl ʃiː jˈuːzd ðæt wˈɜːd fɚðə pɹˈɪntᵻd bˈʊklɪt ðə dˈaɪəɡɹˌæmz ɐpˈɪɹd ɪn nˌɑːt fɚðə tʃˈɑːɹt ɪtsˈɛlf`
+- [barracks] She did not stop at the war.
+  - `ʃiː dɪdnˌɑːt stˈɑːp æt ðə wˈɔːɹ`
+- [barracks] Back in England she compared young soldiers living in barracks with civilian men of the same ages.
+  - `bˈæk ɪn ˈɪŋɡlənd ʃiː kəmpˈɛɹd jˈʌŋ sˈoʊldʒɚz lˈɪvɪŋ ɪn bˈɛɹəks wɪð sɪvˈɪliən mˈɛn ʌvðə sˈeɪm ˈeɪdʒᵻz`
+- [barracks] Civilians died at about eleven per thousand a year.
+  - `sɪvˈɪliənz dˈaɪd æɾ ɐbˌaʊt ᵻlˈɛvən pɜː θˈaʊzənd ɐ jˈɪɹ`
+- [barracks] Infantry, seventeen.
+  - `ˈɪnfəntɹi sˈɛvəntˌiːn`
+- [barracks] Artillery, nineteen.
+  - `ɑːɹtˈɪlɚɹi nˈaɪntiːn`
+- [barracks] Guards, twenty.
+  - `ɡˈɑːɹdz twˈɛnti`
+- [barracks] Healthy men, already screened by a medical exam, were dying at nearly twice the civilian rate in peacetime.
+  - `hˈɛlθi mˈɛn ɔːlɹˌɛdi skɹˈiːnd baɪ ɐ mˈɛdɪkəl ɛɡzˈæm wɜː dˈaɪɪŋ æt nˌɪɹli twˈaɪs ðə sɪvˈɪliən ɹˈeɪt ɪn pˈiːstaɪm`
+- [barracks] She printed two thousand copies of the report at her own expense and sent them to people who could act.
+  - `ʃiː pɹˈɪntᵻd tˈuː θˈaʊzənd kˈɑːpɪz ʌvðə ɹᵻpˈoːɹt æt hɜːɹ ˈoʊn ɛkspˈɛns ænd sˈɛnt ðˌɛm tə pˈiːpəl hˌuː kʊd ˈækt`
 - [impact] The diagram went into her evidence for the Royal Commission on the Health of the Army, formed in 1857, and to the people who could act: Queen Victoria, Sidney Herbert, members of Parliament.
   - `ðə dˈaɪəɡɹˌæm wɛnt ˌɪntʊ hɜːɹ ˈɛvɪdəns fɚðə ɹˈɔɪəl kəmˈɪʃən ɔnðə hˈɛlθ ʌvðɪ ˈɑːɹmi fˈɔːɹmd ɪn wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti sˈɛvən ænd tə ðə pˈiːpəl hˌuː kʊd ˈækt kwˈiːn vɪktˈoːɹiə sˈɪdni hˈɜːbɚt mˈɛmbɚz ʌv pˈɑːɹləmənt`
 - [impact] Reforms followed: an army medical school, routine sanitary statistics for barracks and hospitals.
@@ -136,6 +153,8 @@ Spectrogram: `/home/user/Claude-code-YouTube-/reports/ep-001/long/spectrogram.pn
 | title_thumbnail_honest | ✅ |
 | ad_suitability_noted | ✅ |
 | licenses_recorded | ✅ |
+| frames_reviewed | ❌ |
+| audio_reviewed | ❌ |
 
 Notes: sources_verified stays false until each factual claim is cross-checked against at least one cited source in sources.md (see reports/pilot/ep-001.md).
 
