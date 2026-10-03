@@ -1,0 +1,238 @@
+id: ep-001
+title: "The Chart That Shamed an Army: Florence Nightingale's Rose"
+thesis: "Nightingale's 1858 polar-area diagram showed that most British soldiers in the Crimean War died of preventable disease, not wounds — and the shape of the chart, not the table, carried the argument to the people who could act."
+format: long
+language: en-us
+voice: af_heart
+speed: 1.0
+playlist: "Epidemics & Medicine"
+tags: [data visualization, Florence Nightingale, Crimean War, statistics, history of science, charts, epidemiology]
+ad_suitability_note: "Historical mortality statistics; no graphic imagery; measured language about disease and death."
+audience_made_for_kids: false
+publish_at_utc: ""
+description: |
+  In January 1855 the British army in the Crimea was dying at a rate of 1,023 men per 1,000 per year — almost all of it from disease, not combat. Florence Nightingale turned that ledger into a chart that Parliament could not ignore. In this episode we rebuild her 1858 polar-area diagram from her own monthly numbers, see why her first attempt misled the eye, and follow what the chart changed.
+disclosure:
+  altered_or_synthetic: false
+  rationale: "Synthetic narrator voice (Kokoro-82M) over clearly non-realistic animated charts; no real person depicted or imitated, no realistic events fabricated. Per secondary readings of YouTube's altered/synthetic content guidance this does not require the label; recorded as unverified until the official page is re-read (docs/policies/synthetic-content-disclosure.md)."
+data_files:
+  nightingale: data/nightingale.csv
+sources:
+  - name: "Nightingale, F. (1858). Notes on Matters Affecting the Health, Efficiency, and Hospital Administration of the British Army. London: Harrison and Sons. (monthly mortality tables; polar-area diagram)"
+    license: "public domain (1858)"
+    primary: true
+  - name: "Nightingale, F. (1859). A Contribution to the Sanitary History of the British Army during the Late War with Russia."
+    license: "public domain (1859)"
+    primary: true
+  - name: "HistData::Nightingale (R package) — digitized monthly table; accessed via vincentarelbundock/Rdatasets (CSV)"
+    url: "https://raw.githubusercontent.com/vincentarelbundock/Rdatasets/master/csv/HistData/Nightingale.csv"
+    accessed: "2026-10-03"
+    license: "data are 19th-century public-domain facts; R package code GPL-2/3 (not used)"
+  - name: "Small, H. (1998). Florence Nightingale's statistical diagrams. Stats & Lamps Research Conference, Florence Nightingale Museum."
+    url: "https://www.york.ac.uk/depts/maths/histstat/small.htm"
+    accessed: "2026-10-03 (via WebSearch summary; page not directly readable from this environment)"
+  - name: "Understanding Uncertainty — Nightingale's 'Coxcombs' (Cambridge Statistical Laboratory)"
+    url: "http://understandinguncertainty.org/coxcombs.html"
+    accessed: "2026-10-03 (WebSearch summary)"
+  - name: "National Army Museum — Florence Nightingale: The Lady with the Lamp (Sanitary Commission, March 1855)"
+    url: "https://www.nam.ac.uk/explore/florence-nightingale-lady-lamp"
+    accessed: "2026-10-03 (WebSearch summary)"
+thumbnail:
+  variants:
+    - { headline: "8 deaths to **1**", sub: "The chart that shamed an army", scene: rose_y1, t: 9.0 }
+    - { headline: "The chart that **shamed** an army", sub: "Florence Nightingale, 1858", scene: rose_y1, t: 9.0 }
+    - { headline: "1,023 per **1,000**", sub: "Nightingale's rose, rebuilt", scene: bars_all, t: 8.0 }
+  chosen: 0
+gate:
+  original_narrative: true
+  sources_verified: false
+  visuals_explain: true
+  distinct_from_previous: true
+  title_thumbnail_honest: true
+  ad_suitability_noted: true
+  licenses_recorded: true
+  notes: "sources_verified stays false until each factual claim is cross-checked against at least one cited source in sources.md (see reports/pilot/ep-001.md)."
+scenes:
+  - id: hook
+    kind: text
+    shows: "The single most alarming number in the dataset: the annualized death rate from disease in January 1855."
+    params: { number: 1023, headline: "deaths per 1,000 soldiers, per year", sub: "British Army in the East · January 1855 · disease only", color: "#FF6B6B" }
+    narration: >-
+      In January 1855, the British army besieging Sevastopol was dying at a rate of one thousand and twenty-three men per thousand, per year.
+      Read that again. At that rate, disease alone would have wiped out the entire army in under a year, without the enemy firing a shot.
+    min_duration: 6
+  - id: title
+    kind: title
+    shows: "Episode title and framing."
+    params: { title: "The Chart That **Shamed** an Army", subtitle: "Florence Nightingale's rose, rebuilt from her own numbers" }
+    narration: >-
+      This is the story of how one woman turned that ledger into a picture, and why the picture worked where the numbers had failed.
+    min_duration: 5
+  - id: bars_all
+    kind: bars
+    shows: "Monthly deaths by cause for the whole war, stacked; disease dwarfs wounds in every month of the first year."
+    params:
+      title: "Deaths in the British Army in the East, by month"
+      subtitle: "April 1854 – March 1856 · Nightingale's table, 1858"
+      data: nightingale
+      series: [Disease, Wounds, Other]
+      labels: ["Disease (preventable)", "Wounds", "Other causes"]
+      colors: ["#5CC8FF", "#FF6B6B", "#F4F1EA"]
+      xkey: Month
+      xevery: 2
+      ylabel: "deaths per month"
+      chapter: "Two years of deaths"
+    source: "Data: Nightingale (1858), via HistData"
+    narration: >-
+      Here is every month of the war, from April 1854 to March 1856. Blue is death from disease: cholera, typhus, dysentery.
+      Red is death from wounds. White is everything else. The bars are not close.
+      Over the whole war, disease killed fourteen thousand four hundred and seventy-six British soldiers. Wounds killed one thousand seven hundred and fifty-eight.
+      For every soldier killed by the enemy, eight died of something that could have been prevented.
+    min_duration: 10
+  - id: ledger
+    kind: text
+    shows: "Where the numbers came from and why counting itself was the first problem."
+    params: { headline: "Three columns in a ledger", sub: "**Zymotic** disease · Wounds and injuries · All other causes — William Farr's classification, adopted by Nightingale" }
+    narration: >-
+      The numbers came from army returns, compiled with William Farr, the statistician at the General Register Office.
+      Nightingale reached the barracks hospital at Scutari in November 1854 and found the record keeping in disarray.
+      She sorted every death into three columns: zymotic disease, meaning epidemic and preventable; wounds; and everything else.
+      Counting came before cleaning.
+    min_duration: 8
+  - id: rose_y1
+    kind: rose
+    shows: "The famous polar-area diagram, year one: wedge area proportional to deaths; the January 1855 disease wedge dominates."
+    params:
+      title: "Diagram of the Causes of Mortality in the Army in the East"
+      subtitle: "April 1854 – March 1855 · area of each wedge ∝ deaths"
+      data: nightingale
+      filter: "r.Year===1854 || (r.Year===1855 && ['Jan','Feb','Mar'].includes(r.Month))"
+      series: [Disease, Wounds, Other]
+      labels: ["Disease", "Wounds", "Other"]
+      colors: ["#5CC8FF", "#FF6B6B", "#F4F1EA"]
+      xkey: Month
+      vmax: 2761
+      reveal_seconds: 9
+      chapter: "The rose, year one"
+    source: "Redrawn from Nightingale (1858)"
+    narration: >-
+      In 1858 she drew this. Twelve wedges, one per month, starting in April 1854 and running clockwise.
+      The area of each wedge, not its length, is proportional to the number of deaths. Blue is preventable disease. Red is wounds. White is other causes.
+      Watch what happens as winter arrives. Watch January.
+    min_duration: 12
+  - id: rose_y2
+    kind: rose
+    shows: "Year two at the same scale: wedges shrink after the Sanitary Commission's work; by autumn 1855 wounds exceed disease."
+    params:
+      title: "The second year, at the same scale"
+      subtitle: "April 1855 – March 1856 · Sanitary Commission at Scutari from March 1855"
+      data: nightingale
+      filter: "r.Year===1856 || (r.Year===1855 && !['Jan','Feb','Mar'].includes(r.Month))"
+      series: [Disease, Wounds, Other]
+      labels: ["Disease", "Wounds", "Other"]
+      colors: ["#5CC8FF", "#FF6B6B", "#F4F1EA"]
+      xkey: Month
+      vmax: 2761
+      reveal_seconds: 8
+      chapter: "The rose, year two"
+    source: "Redrawn from Nightingale (1858)"
+    narration: >-
+      Now the second year, drawn at exactly the same scale.
+      In March 1855 a Sanitary Commission reached Scutari. It flushed the sewers, cleared the latrines, and, by one widely repeated account, removed a dead horse from the water supply.
+      The wedges shrink. By September 1855, for the first time, more soldiers died of wounds than of disease.
+    min_duration: 11
+  - id: rates
+    kind: line
+    shows: "Annualized death rates per 1,000 remove the effect of the growing army: disease falls from over 1,000 to under 4."
+    params:
+      title: "Annual death rate per 1,000 soldiers"
+      subtitle: "Army size removed · disease vs wounds"
+      data: nightingale
+      series: [Disease.rate, Wounds.rate]
+      labels: ["Disease", "Wounds"]
+      colors: ["#5CC8FF", "#FF6B6B"]
+      xkey: Month
+      xevery: 2
+      ylabel: "deaths per 1,000 per year"
+      markers:
+        - { x: 7, label: "Nightingale arrives", at: 2.5 }
+        - { x: 11, label: "Sanitary Commission", at: 4.5 }
+      reveal_seconds: 7
+      chapter: "Rates, not counts"
+    source: "Data: Nightingale (1858), via HistData"
+    narration: >-
+      Rates tell the same story with the army's size taken out. The army more than doubled during the war, so raw counts can mislead.
+      Per thousand men, disease deaths fell from over one thousand a year in January 1855 to under four by March 1856.
+    min_duration: 9
+  - id: batswing
+    kind: text
+    shows: "Her first diagram encoded mortality in the radius, which exaggerates differences; she redrew it with area carrying the number."
+    params: { headline: "The false start: the **bat's wing**", sub: "Radius ∝ deaths makes 2× look like 4×. The 1858 version writes the rule into its legend: areas 'are each measured from the centre as the common vertex.'" }
+    narration: >-
+      Her first attempt, later nicknamed the bat's wing, scaled the radius of each wedge to the death rate.
+      That exaggerates: double the deaths looks like four times the area. She redrew it so that area carried the number, and wrote the rule into the legend itself.
+    min_duration: 8
+  - id: coxcomb
+    kind: text
+    shows: "A naming correction supported by historian Hugh Small: 'coxcomb' referred to the booklet, not the chart."
+    params: { headline: "It is not a **coxcomb**", sub: "Historian Hugh Small argues Nightingale used that word for the printed booklet of diagrams, not for this chart." }
+    narration: >-
+      Most people call the chart a coxcomb. According to historian Hugh Small, she used that word for the printed booklet the diagrams appeared in, not for the chart itself.
+    min_duration: 6
+  - id: impact
+    kind: text
+    shows: "What the chart changed: the Royal Commission (1857), reforms, and her election to the Statistical Society (1858)."
+    params: { headline: "What a shape can do", sub: "Royal Commission on the Health of the Army, 1857 · first woman elected to the Statistical Society of London, 1858 · Army Medical School at Chatham (1859–60)", chapter: "What it changed" }
+    narration: >-
+      The diagram went into her evidence for the Royal Commission on the Health of the Army, formed in 1857, and to the people who could act: Queen Victoria, Sidney Herbert, members of Parliament.
+      Reforms followed: an army medical school, routine sanitary statistics for barracks and hospitals.
+      In 1858 she became the first woman elected to the Statistical Society of London.
+    min_duration: 9
+  - id: why
+    kind: text
+    shows: "The episode's thesis: the chart carried one argument that a table could not."
+    params: { headline: "The table had the facts. The chart had the **argument**.", sub: "The biggest killer was the one you could fix." }
+    narration: >-
+      The report had hundreds of pages of tables. The chart made one argument, and made it in a shape: the biggest killer was the one you could fix.
+    min_duration: 6
+  - id: outro
+    kind: outro
+    shows: "Closing card; sources pointer."
+    params: { headline: "Plotted Past", sub: "Every episode, a real mystery solved by a chart. Sources and data in the description." }
+    narration: >-
+      Next time: the scatterplot that could have saved the space shuttle Challenger. Sources and the data for this episode are in the description.
+    min_duration: 6
+short:
+  title: "1,023 deaths per 1,000 — Nightingale's rose #shorts"
+  scenes:
+    - id: s_hook
+      kind: text
+      shows: "Hook number"
+      params: { number: 1023, headline: "deaths per 1,000 per year", sub: "British Army · January 1855 · disease only", color: "#FF6B6B" }
+      narration: >-
+        In January 1855 the British army was dying at a rate of one thousand and twenty-three men per thousand, per year. Almost none of it was combat.
+      min_duration: 5
+    - id: s_rose
+      kind: rose
+      shows: "Year-one rose"
+      params:
+        title: "Nightingale's rose, 1858"
+        data: nightingale
+        filter: "r.Year===1854 || (r.Year===1855 && ['Jan','Feb','Mar'].includes(r.Month))"
+        series: [Disease, Wounds, Other]
+        labels: ["Disease", "Wounds", "Other"]
+        colors: ["#5CC8FF", "#FF6B6B", "#F4F1EA"]
+        xkey: Month
+        vmax: 2761
+        reveal_seconds: 6
+      narration: >-
+        Florence Nightingale drew this. Each wedge is a month. Its area is the number of deaths. Blue is preventable disease. Red is wounds.
+        For every soldier killed by the enemy, eight died of disease.
+      min_duration: 9
+    - id: s_cta
+      kind: outro
+      shows: "CTA"
+      params: { headline: "Why the chart worked", sub: "Full story on the channel" }
+      narration: >-
+        The full story, and what the chart changed, is on the channel.
+      min_duration: 4

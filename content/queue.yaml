@@ -1,0 +1,89 @@
+# İçerik kuyruğu — tek doğruluk kaynağı. Durumlar: idea → researched → scripted → rendered → qc_passed → packaged → scheduled → published
+# Her bölüm: content/<id>/episode.yaml (senaryo+sahneler), sources.md, licenses.md
+channel: Plotted Past
+language: en
+default_format: long   # 1920x1080, 6-9 min
+episodes:
+  - id: ep-001
+    title_working: "The Chart That Shamed an Army: Florence Nightingale's Rose"
+    thesis: "Nightingale's 1858 polar-area diagram showed that most British soldiers in Crimea died of preventable disease, not wounds — and the chart, not the numbers, changed policy."
+    data: "Nightingale 1858 monthly mortality table (public domain; via HistData/Rdatasets)"
+    visual_core: "animated polar-area (rose) chart; stacked monthly bars; before/after sanitation"
+    status: researched
+    pilot: 1
+  - id: ep-002
+    title_working: "The Scatterplot That Could Have Saved Challenger"
+    thesis: "Engineers had O-ring damage vs temperature data before the 1986 launch; the chart they drew hid the pattern by omitting the no-damage flights."
+    data: "O-ring incidents per flight and launch temperature (Presidential Commission report, 1986; Dalal et al. 1989; via Rdatasets)"
+    visual_core: "scatter with/without zero-incident flights; logistic fit; 31°F extrapolation"
+    status: researched
+    pilot: 2
+  - id: ep-003
+    title_working: "616 Dots: How a Map Found the Source of Cholera"
+    thesis: "John Snow's 1854 Broad Street investigation combined a death tally over time with a spatial argument; the pump handle came off before germ theory existed."
+    data: "Snow 1855 daily deaths/attacks table (public domain)"
+    visual_core: "daily deaths timeline; schematic (non-copied) street grid with cumulative dots; pump removal marker"
+    status: idea
+  - id: ep-004
+    title_working: "The Bomber Armor Puzzle: Survivorship Bias in WWII"
+    thesis: "Abraham Wald reasoned about the planes that didn't come back; the holes you see are where planes survive being hit."
+    data: "illustrative counts from Wald's 1943 SRG memoranda (public domain US gov work); clearly labeled as illustrative where exact numbers unavailable"
+    visual_core: "plane silhouette hit maps; conditional probability bars"
+    status: idea
+  - id: ep-005
+    title_working: "Napoleon's Army in One Line: Minard's Map"
+    thesis: "Minard's 1869 flow map encodes six variables; the retreat line tells the story that 422,000 became 10,000."
+    data: "Minard 1869 figures (public domain; HistData Minard.troops/temp)"
+    visual_core: "animated flow band width ∝ troop count; temperature strip"
+    status: idea
+  - id: ep-006
+    title_working: "The Poll That Got 1936 Spectacularly Wrong"
+    thesis: "Literary Digest's 2.4 million responses predicted Landon; Gallup's 50,000 predicted Roosevelt. Sample size is not sample quality."
+    data: "published 1936 poll and election results (public record)"
+    visual_core: "sample-size vs error animation; bias arrows"
+    status: idea
+  - id: ep-007
+    title_working: "Simpson's Paradox: The Berkeley Admissions Case"
+    thesis: "Aggregate data showed bias against women; department-level data reversed it. Both were 'true'."
+    data: "Bickel, Hammel & O'Connell 1975 table (facts; via UCBAdmissions dataset)"
+    visual_core: "stacked bars that flip when split"
+    status: idea
+  - id: ep-008
+    title_working: "Benford's Law: The Digits That Catch Fraud"
+    thesis: "Leading digits of natural data follow a predictable curve; fabricated numbers usually don't."
+    data: "generated distributions + public financial data (license per dataset)"
+    visual_core: "digit histogram vs Benford curve; live counting"
+    status: idea
+  - id: ep-009
+    title_working: "Anscombe's Quartet: Four Datasets, One Lie"
+    thesis: "Identical summary statistics, four completely different pictures — why you always plot the data."
+    data: "Anscombe 1973 (facts; built-in dataset)"
+    visual_core: "four scatterplots morphing; stats ticker"
+    status: idea
+  - id: ep-010
+    title_working: "The Prosecutor's Fallacy: Sally Clark"
+    thesis: "A '1 in 73 million' figure convicted a mother; the statistics were wrong twice over."
+    data: "published court/RSS statements (public record)"
+    visual_core: "probability trees; independence assumption breaking"
+    status: idea
+    ad_suitability_note: "infant death topic — measured language, no graphic detail"
+  - id: ep-011
+    title_working: "Semmelweis and the Handwashing Data Nobody Believed"
+    thesis: "Mortality in two Vienna wards diverged for a reason the data showed and the profession rejected."
+    data: "Semmelweis 1861 yearly tables (public domain)"
+    visual_core: "two-ward mortality lines; intervention marker"
+    status: idea
+  - id: ep-012
+    title_working: "Playfair Invents the Bar Chart (1786)"
+    thesis: "The first bar chart existed because Scotland's trade data had no time series — a workaround became a standard."
+    data: "Playfair 1786 Scotland imports/exports (public domain)"
+    visual_core: "reconstructed first bar chart; line-chart lineage"
+    status: idea
+  - id: ep-013
+    title_working: "Halley's Life Table: The Data Behind Life Insurance"
+    thesis: "Edmond Halley used Breslau parish records (1693) to price annuities; the table underprices and the crown loses money."
+    data: "Halley 1693 life table (public domain)"
+    visual_core: "survival curve build-up; annuity pricing bars"
+    status: idea
+shorts:
+  policy: "one Short per long episode: 45-60 s hook cut, vertical 1080x1920, same narration voice, ends with 'full story on the channel'"

@@ -1,0 +1,48 @@
+# --- secrets (never commit) ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*token*
+*secret*
+*credential*
+client_secret*.json
+oauth*.json
+*.p12
+.netrc
+
+# --- large media / models (delivered via GitHub Releases, tracked by manifest.json) ---
+models/
+build/
+dist/
+*.mp4
+*.mov
+*.mkv
+*.webm
+*.wav
+*.flac
+*.mp3
+*.onnx
+*.bin
+*.tar.bz2
+*.tar.gz
+*.zip
+!content/**/*.yaml
+!content/**/*.md
+
+# --- python ---
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# --- node ---
+node_modules/
+
+# --- os / editor ---
+.DS_Store
+Thumbs.db
+*.swp
