@@ -1,0 +1,199 @@
+id: ep-005
+title: 'Napoleon''s Army in One Line: Minard''s Map'
+thesis: Minard's 1869 flow map encodes army size, position, direction, dates and temperature in a single band; the band thins from 422,000 to 10,000 and makes the catastrophe legible without a single number spoken.
+format: long
+language: en-us
+voice: af_heart
+speed: 1.0
+playlist: The Birth of Charts
+tags:
+- Minard
+- Napoleon
+- '1812'
+- data visualization
+- flow map
+- history of charts
+- Russia
+ad_suitability_note: Military history and mass death presented as historical statistics; no graphic imagery.
+audience_made_for_kids: false
+publish_at_utc: ''
+description: 'In 1869 a retired French engineer, Charles Joseph Minard, drew the Russian campaign of 1812 as one tapering band: 422,000 men marching east, 10,000 coming back. We rebuild the figure from Minard''s own numbers, segment by segment, with the temperature strip that explains the retreat.'
+disclosure:
+  altered_or_synthetic: false
+  rationale: Synthetic narrator voice over non-realistic animated charts; nothing depicted as real footage. Unverified pending official page re-read.
+data_files:
+  troops: data/troops.csv
+  temp: data/temp.csv
+  cities: data/cities.csv
+sources:
+- name: Minard, C. J. (1869). Carte figurative des pertes successives en hommes de l'Armée Française dans la campagne de Russie 1812–1813.
+  license: public domain (1869)
+  primary: true
+- name: HistData::Minard.troops / Minard.temp / Minard.cities — digitized from the 1869 map; via vincentarelbundock/Rdatasets
+  url: https://raw.githubusercontent.com/vincentarelbundock/Rdatasets/master/csv/HistData/Minard.troops.csv
+  accessed: '2026-10-03'
+  license: 19th-century public-domain figures; R package code GPL (not used)
+- name: Kraak, M.-J. (2021). The best map ever? International Journal of Cartography
+  accessed: 2026-10-03 (WebSearch summary)
+- name: 'masswerk.at — Minard: Napoleon''s Retreat from Moscow (explanatory page)'
+  url: https://www.masswerk.at/minard/
+  accessed: 2026-10-03 (WebSearch summary)
+thumbnail:
+  variants:
+  - headline: 422,000 → **10,000**
+    sub: One line. One army.
+    scene: flow_full
+    t: 10.0
+  - headline: The best chart **ever** drawn?
+    sub: Minard, 1869
+    scene: flow_full
+    t: 10.0
+  chosen: 0
+gate:
+  original_narrative: true
+  sources_verified: false
+  visuals_explain: true
+  distinct_from_previous: true
+  title_thumbnail_honest: true
+  ad_suitability_noted: true
+  licenses_recorded: true
+  notes: Not yet built.
+scenes:
+- id: hook
+  kind: text
+  shows: The starting strength as the hook number.
+  params:
+    number: 422000
+    headline: soldiers crossed the Niemen, June 1812
+    sub: Napoleon's Grande Armée · Minard's figure
+    color: '#F2A93B'
+  narration: In June 1812, four hundred and twenty-two thousand soldiers crossed the river Niemen into Russia. Six months later, about ten thousand came back. In 1869 a retired engineer drew that fact as a single line.
+  min_duration: 7
+- id: title
+  kind: title
+  shows: Title.
+  params:
+    title: Napoleon's Army in **One Line**
+    subtitle: Minard's 1869 map, rebuilt from his own numbers
+  narration: This is the story of the chart many people call the best ever drawn, and what it leaves out.
+  min_duration: 5
+- id: flow_adv
+  kind: flow
+  shows: The advance band thinning from Kowno to Moscow; width proportional to men.
+  params:
+    data: troops
+    x: long
+    y: lat
+    size: survivors
+    group: group
+    direction: direction
+    cities_data: cities
+    temp_data: temp
+    temp_x: long
+    temp_y: temp
+    temp_label: date
+    vmax: 340000
+    title: 'The advance: Kowno to Moscow'
+    subtitle: band width ∝ number of men · amber = advance
+    reveal_seconds: 9
+    chapter: The advance
+  source: 'Data: Minard (1869) via HistData'
+  narration: 'Charles Joseph Minard was a civil engineer who spent his retirement drawing flows: of coal, of wine, of people. Here the flow is an army. The band starts at the Polish border, thick with three hundred and forty thousand men in the main column, and it thins as the army marches east. Detachments split off. Men die of heat, hunger and disease long before the first great battle. By Moscow, the band is a fraction of its width.'
+  min_duration: 14
+- id: flow_full
+  kind: flow
+  shows: Advance and retreat together with the temperature strip; the retreat band collapses as temperatures fall.
+  params:
+    data: troops
+    x: long
+    y: lat
+    size: survivors
+    group: group
+    direction: direction
+    cities_data: cities
+    temp_data: temp
+    temp_x: long
+    temp_y: temp
+    temp_label: date
+    vmax: 340000
+    title: The retreat, with the temperature
+    subtitle: white = retreat · temperature in degrees Réaumur (−30°R ≈ −37°C)
+    reveal_seconds: 12
+    chapter: The retreat
+  source: 'Data: Minard (1869) via HistData'
+  narration: Then the retreat. Minard drew it in a second band beneath the first, and under that a strip of temperatures as the army walked back into winter. Zero degrees Réaumur on October eighteenth. Minus twenty-one on November fourteenth. Minus thirty on December sixth, which is close to minus thirty-seven Celsius. Watch the band at the Berezina river, where the crossing cost thousands in two days. By the time the line reaches the border again, it is a thread.
+  min_duration: 16
+- id: variables
+  kind: text
+  shows: 'The encodings named: six variables in one figure.'
+  params:
+    headline: Six variables, no legend needed
+    sub: men · longitude · latitude · direction · date · temperature
+    chapter: Why it works
+  narration: Count what the picture encodes. The number of men, in the width. Where they were, in the position. Which way they were going, in the colour. When, in the dates. And how cold it was, in the strip below. Six variables, and you can read it without a legend.
+  min_duration: 8
+- id: caveat
+  kind: text
+  shows: 'What the map leaves out: sources of Minard''s figures; Russian losses; it is a graphic, not a census.'
+  params:
+    headline: What it leaves **out**
+    sub: Minard's numbers come from memoirs and dispatches, not a census. The map shows no Russian losses and no civilians.
+  narration: It also leaves things out. Minard's numbers came from memoirs and dispatches, assembled decades after the war; they are estimates, not a count. The map shows nothing of Russian losses, or of the civilians along the road. It is an argument about one army, made with one line.
+  min_duration: 8
+- id: why
+  kind: text
+  shows: Thesis.
+  params:
+    headline: A number you can **see**
+    sub: 422,000 to 10,000 is a statistic. A band that thins to a thread is an experience.
+  narration: Four hundred and twenty-two thousand to ten thousand is a statistic. A band that thins to a thread, in the cold, is something you can feel. That is what the chart does that the number cannot.
+  min_duration: 6
+- id: outro
+  kind: outro
+  shows: Closing.
+  params:
+    headline: Plotted Past
+    sub: Every episode, a real mystery solved by a chart. Sources and data in the description.
+  narration: 'Minard''s figures and the sources for this episode are in the description. Next time: the poll that got 1936 spectacularly wrong.'
+  min_duration: 6
+short:
+  title: '422,000 men in, 10,000 out — Minard''s map #shorts'
+  scenes:
+  - id: s_hook
+    kind: text
+    shows: Hook
+    params:
+      number: 422000
+      headline: soldiers marched into Russia
+      sub: June 1812
+      color: '#F2A93B'
+    narration: Four hundred and twenty-two thousand soldiers marched into Russia in 1812. About ten thousand came back.
+    min_duration: 5
+  - id: s_flow
+    kind: flow
+    shows: Full flow
+    params:
+      data: troops
+      x: long
+      y: lat
+      size: survivors
+      group: group
+      direction: direction
+      cities_data: cities
+      temp_data: temp
+      temp_x: long
+      temp_y: temp
+      temp_label: date
+      vmax: 340000
+      title: Minard, 1869
+      reveal_seconds: 8
+    narration: In 1869 Charles Minard drew it as one band. The width is the number of men. Amber is the advance, white the retreat, and the strip below is the temperature. Watch it thin to a thread.
+    min_duration: 11
+  - id: s_cta
+    kind: outro
+    shows: CTA
+    params:
+      headline: What the map leaves out
+      sub: Full story on the channel
+    narration: What the map leaves out is on the channel.
+    min_duration: 4

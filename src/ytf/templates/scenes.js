@@ -195,6 +195,45 @@
     return header(sc, p) + s + footer(sc, t, d);
   };
 
+
+  // ---- flow: Minard-style band whose width ∝ a count, drawn along (x,y) points in data order; optional temperature strip ----
+  K.flow = (sc, t, d) => {
+    const p = sc.params, rows = E.data[p.data], b = chartBox(p);
+    const temp = p.temp_data ? E.data[p.temp_data] : null;
+    const bh = temp ? b.h * 0.68 : b.h, tb = { x: b.x, y: b.y + bh + 50, w: b.w, h: b.h - bh - 50 };
+    const xs0 = rows.map(r => +r[p.x]), ys0 = rows.map(r => +r[p.y]);
+    const xmin = Math.min(...xs0) - .4, xmax = Math.max(...xs0) + .4, ymin = Math.min(...ys0) - .3, ymax = Math.max(...ys0) + .3;
+    const xs = linScale(xmin, xmax, b.x, b.x + b.w), ys = linScale(ymin, ymax, b.y + bh, b.y);
+    const maxv = p.vmax || Math.max(...rows.map(r => +r[p.size]));
+    const wmax = (bh / 5.5), reveal = p.reveal_seconds || Math.max(3, d - 3), k = easeOut(prog(t, 0.4, reveal));
+    // segments ordered: advance groups then retreat
+    const groups = {};
+    rows.forEach(r => { const g = `${r[p.group]}|${r[p.direction]}`; (groups[g] = groups[g] || []).push(r); });
+    const order = Object.keys(groups).sort((a, b2) => (a.endsWith('A') ? 0 : 1) - (b2.endsWith('A') ? 0 : 1) || a.localeCompare(b2));
+    let segs = [];
+    for (const g of order) { const rs = groups[g]; for (let i = 0; i + 1 < rs.length; i++) segs.push({ a: rs[i], b: rs[i + 1], adv: g.endsWith('A') }); }
+    const nShow = Math.floor(segs.length * k);
+    let s = `<svg width="${W}" height="${H}">`;
+    (p.cities_data ? E.data[p.cities_data] : []).forEach(c => { s += `<circle cx="${xs(+c[p.cx || 'long'])}" cy="${ys(+c[p.cy || 'lat'])}" r="5" fill="${C.muted}"/><text x="${xs(+c[p.cx || 'long']) + 10}" y="${ys(+c[p.cy || 'lat']) - 10}" fill="${C.muted}" font-size="20">${esc(c[p.city || 'city'])}</text>`; });
+    segs.slice(0, nShow).forEach(sg => {
+      const w = Math.max(2, wmax * (+sg.a[p.size]) / maxv);
+      s += `<line x1="${xs(+sg.a[p.x])}" y1="${ys(+sg.a[p.y])}" x2="${xs(+sg.b[p.x])}" y2="${ys(+sg.b[p.y])}" stroke="${sg.adv ? C.amber : C.paper}" stroke-width="${w}" stroke-linecap="butt" stroke-opacity=".9"/>`;
+    });
+    if (nShow > 0) { const sg = segs[Math.max(0, nShow - 1)]; s += `<text x="${b.x + b.w - 10}" y="${b.y + bh - 10}" fill="${C.paper}" font-size="40" font-weight="800" text-anchor="end" class="num">${fmt(+sg.b[p.size])} <tspan font-size="22" font-weight="400" fill="${C.muted}">men (${sg.adv ? 'advance' : 'retreat'})</tspan></text>`; }
+    if (temp) {
+      const txs = xs, tmin = Math.min(...temp.map(r => +r[p.temp_y])) - 2, tys = linScale(tmin, 0, tb.y + tb.h, tb.y);
+      s += `<path d="M${tb.x},${tys(0)}H${tb.x + tb.w}" stroke="${C.grid}" stroke-width="2"/>`;
+      const pts = temp.map(r => `${txs(+r[p.temp_x])},${tys(+r[p.temp_y])}`).join(' ');
+      const kt = easeOut(prog(t, reveal * 0.55, reveal * 0.45));
+      s += `<defs><clipPath id="clipT"><rect x="${tb.x + tb.w * (1 - kt)}" y="${tb.y - 20}" width="${tb.w * kt + 2}" height="${tb.h + 40}"/></clipPath></defs>`;
+      s += `<g clip-path="url(#clipT)"><polyline points="${pts}" fill="none" stroke="${C.sky}" stroke-width="4"/>`;
+      temp.forEach((r, i) => { s += `<circle cx="${txs(+r[p.temp_x])}" cy="${tys(+r[p.temp_y])}" r="6" fill="${C.sky}"/><text x="${txs(+r[p.temp_x])}" y="${tys(+r[p.temp_y]) + (i % 2 ? 34 : -16)}" fill="${C.muted}" font-size="20" text-anchor="middle">${esc(r[p.temp_y])}°R ${esc(r[p.temp_label] || '')}</text>`; });
+      s += `</g><text x="${tb.x}" y="${tb.y - 8}" fill="${C.muted}" font-size="22">${esc(p.temp_title || 'temperature during the retreat')}</text>`;
+    }
+    s += `</svg>` + legend(['advance', 'retreat'], [C.amber, C.paper], p.labels);
+    return header(sc, p) + s + footer(sc, t, d);
+  };
+
   window.renderFrame = function (idx, t, thumbSpec) {
     const sc = E.scenes[idx], d = sc.duration;
     const fn = K[sc.kind] || K.text;
