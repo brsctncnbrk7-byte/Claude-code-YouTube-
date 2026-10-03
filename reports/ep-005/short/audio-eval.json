@@ -1,0 +1,160 @@
+{
+  "episode": "ep-005",
+  "format": "short",
+  "summary": {
+    "sentences": 7,
+    "mean_wer_best": 0.013,
+    "mean_wer_base": 0.013,
+    "mean_wer_small": 0.013,
+    "models": [
+      "whisper-base.en int8",
+      "whisper-small.en int8"
+    ],
+    "dnsmos_available": true,
+    "ovrl_median": 3.33,
+    "ovrl_min": 3.13,
+    "sig_median": 3.56,
+    "bak_median": 4.13
+  },
+  "thresholds": {
+    "mean_wer_max": 0.05,
+    "sentence_wer_max": 0.34,
+    "ovrl_median_min": 3.0,
+    "ovrl_sentence_min": 2.6
+  },
+  "audio_ok": true,
+  "flagged": [],
+  "minor": [
+    {
+      "scene": "s_flow",
+      "text": "In 1869 Charles Minard drew it as one band.",
+      "duration": 4.48,
+      "ipa": "ɪn wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd sˈɪksti nˈaɪn tʃˈɑːɹlz mˈaɪnɑːɹd dɹˈuː ɪɾ æz wˈʌn bˈænd",
+      "hyp_base": "In 1869, Charles Minar drew it as one band.",
+      "wer_base": 0.091,
+      "hyp_small": "In 1869, Charles Menard drew it as one band.",
+      "wer_small": 0.091,
+      "wer_best": 0.091,
+      "dnsmos": {
+        "sig": 3.6,
+        "bak": 4.22,
+        "ovrl": 3.42
+      }
+    }
+  ],
+  "rows": [
+    {
+      "scene": "s_hook",
+      "text": "Four hundred and twenty-two thousand soldiers marched into Russia in 1812.",
+      "duration": 5.82,
+      "ipa": "fˈɔːɹ hˈʌndɹɪd ænd twˈɛntitˈuː θˈaʊzənd sˈoʊldʒɚz mˈɑːɹtʃt ˌɪntʊ ɹˈʌʃə ɪn wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd twˈɛlv",
+      "hyp_base": "422,000 soldiers marched into Russia in 1812.",
+      "wer_base": 0.0,
+      "hyp_small": "422,000 soldiers marched into Russia in 1812.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.66,
+        "bak": 4.17,
+        "ovrl": 3.41
+      }
+    },
+    {
+      "scene": "s_hook",
+      "text": "About ten thousand came back.",
+      "duration": 1.64,
+      "ipa": "ɐbˌaʊt tˈɛn θˈaʊzənd kˈeɪm bˈæk",
+      "hyp_base": "About 10,000 came back.",
+      "wer_base": 0.0,
+      "hyp_small": "About 10,000 came back.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.55,
+        "bak": 4.13,
+        "ovrl": 3.3
+      }
+    },
+    {
+      "scene": "s_flow",
+      "text": "In 1869 Charles Minard drew it as one band.",
+      "duration": 4.48,
+      "ipa": "ɪn wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd sˈɪksti nˈaɪn tʃˈɑːɹlz mˈaɪnɑːɹd dɹˈuː ɪɾ æz wˈʌn bˈænd",
+      "hyp_base": "In 1869, Charles Minar drew it as one band.",
+      "wer_base": 0.091,
+      "hyp_small": "In 1869, Charles Menard drew it as one band.",
+      "wer_small": 0.091,
+      "wer_best": 0.091,
+      "dnsmos": {
+        "sig": 3.6,
+        "bak": 4.22,
+        "ovrl": 3.42
+      }
+    },
+    {
+      "scene": "s_flow",
+      "text": "The width is the number of men.",
+      "duration": 1.69,
+      "ipa": "ðə wˈɪtθ ɪz ðə nˈʌmbɚɹ ʌv mˈɛn",
+      "hyp_base": "The width is the number of men.",
+      "wer_base": 0.0,
+      "hyp_small": "The width is the number of men.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.39,
+        "bak": 4.09,
+        "ovrl": 3.13
+      }
+    },
+    {
+      "scene": "s_flow",
+      "text": "Amber is the advance, white the retreat, and the strip below is the temperature.",
+      "duration": 4.54,
+      "ipa": "ˈæmbɚɹ ɪz ðɪ ɐdvˈæns wˈaɪt ðə ɹᵻtɹˈiːt ænd ðə stɹˈɪp bᵻlˌoʊ ɪz ðə tˈɛmpɹɪtʃɚ",
+      "hyp_base": "Amber is the advance, white the retreat, and the strip below is the temperature.",
+      "wer_base": 0.0,
+      "hyp_small": "Amber is the advance, white the retreat, and the strip below is the temperature.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.56,
+        "bak": 4.17,
+        "ovrl": 3.34
+      }
+    },
+    {
+      "scene": "s_flow",
+      "text": "Watch it thin to a thread.",
+      "duration": 1.42,
+      "ipa": "wˈɑːtʃ ɪt θˈɪn tʊ ɐ θɹˈɛd",
+      "hyp_base": "Watch it thin to a thread.",
+      "wer_base": 0.0,
+      "hyp_small": "Watch it thin to a thread.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.35,
+        "bak": 4.11,
+        "ovrl": 3.13
+      }
+    },
+    {
+      "scene": "s_cta",
+      "text": "What the map leaves out is on the channel.",
+      "duration": 1.95,
+      "ipa": "wˌʌt ðə mˈæp lˈiːvz ˈaʊt ɪz ɔnðə tʃˈænəl",
+      "hyp_base": "What the map leaves out is on the channel.",
+      "wer_base": 0.0,
+      "hyp_small": "What the map leaves out is on the channel.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.59,
+        "bak": 4.13,
+        "ovrl": 3.33
+      }
+    }
+  ],
+  "disclaimer": "Machine evaluation on the actual synthesized audio: two-model ASR round-trip (intelligibility), DNSMOS P.835 (perceptual quality estimate), G2P phoneme listing (pronunciation review). No human listening test was performed."
+}

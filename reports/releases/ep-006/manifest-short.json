@@ -1,0 +1,31 @@
+{
+  "episode": "ep-006",
+  "format": "short",
+  "created_utc": "2026-10-03T23:25:50+00:00",
+  "files": {
+    "ep-006-short.mp4": {
+      "sha256": "7263b6a49fd3f14a7bf9621d1b5d6da0c7788a3077bd35059819e6b1ca4100f7",
+      "bytes": 1103051
+    },
+    "ep-006-short.en.srt": {
+      "sha256": "72336b037230e34b3e30c9b2493abd525294eeb5c64db3a2b6e76bb2cd7f1664",
+      "bytes": 537
+    },
+    "ep-006-short.en.vtt": {
+      "sha256": "a035d36eca94d56db82f1e18cff9647c6cf786ca084805d269ca97cd03fc45d2",
+      "bytes": 531
+    },
+    "qc-report-short.md": {
+      "sha256": "d92648e2fbb2e6b1b8bc2a3c189393c2170eb8b6b386983202ae1ce6762113a3",
+      "bytes": 3408
+    },
+    "sources.md": {
+      "sha256": "f2b9c5eb18aca772f18452ddf146321fc90db330e95a95f2e6e6b8db2bbd7670",
+      "bytes": 981
+    },
+    "licenses.md": {
+      "sha256": "2d3127786a34b38c4b673f0278ff027cbbd8a5309762c62a2026537a06bc3042",
+      "bytes": 274
+    }
+  }
+}

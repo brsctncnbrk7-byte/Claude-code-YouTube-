@@ -1,0 +1,640 @@
+{
+  "episode": "ep-005",
+  "format": "long",
+  "summary": {
+    "sentences": 33,
+    "mean_wer_best": 0.0192,
+    "mean_wer_base": 0.0286,
+    "mean_wer_small": 0.0377,
+    "models": [
+      "whisper-base.en int8",
+      "whisper-small.en int8"
+    ],
+    "dnsmos_available": true,
+    "ovrl_median": 3.39,
+    "ovrl_min": 2.82,
+    "sig_median": 3.62,
+    "bak_median": 4.16
+  },
+  "thresholds": {
+    "mean_wer_max": 0.05,
+    "sentence_wer_max": 0.34,
+    "ovrl_median_min": 3.0,
+    "ovrl_sentence_min": 2.6
+  },
+  "audio_ok": true,
+  "flagged": [],
+  "minor": [
+    {
+      "scene": "flow_adv",
+      "text": "Charles Joseph Minard was a civil engineer who spent his retirement drawing flows: of coal, of wine, of people.",
+      "duration": 7.3,
+      "ipa": "tʃˈɑːɹlz dʒˈoʊsəf mˈaɪnɑːɹd wʌzɐ sˈɪvəl ˌɛndʒɪnˈɪɹ hˌuː spˈɛnt hɪz ɹᵻtˈaɪɚmənt dɹˈɔːɪŋ flˈoʊz ʌv kˈoʊl ʌv wˈaɪn ʌv pˈiːpəl",
+      "hyp_base": "Charles Joseph Minar was a civil engineer who spent his retirement drawing flows of coal, of wine, of people.",
+      "wer_base": 0.053,
+      "hyp_small": "Charles Joseph Minar was a civil engineer who spent his retirement drawing flows of coal, of wine, of people.",
+      "wer_small": 0.053,
+      "wer_best": 0.053,
+      "dnsmos": {
+        "sig": 3.71,
+        "bak": 4.25,
+        "ovrl": 3.54
+      }
+    },
+    {
+      "scene": "flow_full",
+      "text": "Zero degrees Réaumur on October eighteenth.",
+      "duration": 2.89,
+      "ipa": "zˈiəɹoʊ dᵻɡɹˈiːz ɹˈeɪɔːmɚɹ ˌɔn ɑːktˈoʊbɚɹ ˈeɪtiːnθ",
+      "hyp_base": "0 degrees rayomer on October 18th.",
+      "wer_base": 0.286,
+      "hyp_small": "0° Ray Omer on Oct. 18.",
+      "wer_small": 0.571,
+      "wer_best": 0.286,
+      "dnsmos": {
+        "sig": 3.58,
+        "bak": 4.17,
+        "ovrl": 3.34
+      }
+    },
+    {
+      "scene": "flow_full",
+      "text": "Minus twenty-one on November fourteenth.",
+      "duration": 2.37,
+      "ipa": "mˈaɪnəs twˈɛntiwˈʌn ˌɔn noʊvˈɛmbɚ fˈɔːɹtiːnθ",
+      "hyp_base": "-21 on November 14th.",
+      "wer_base": 0.167,
+      "hyp_small": "minus 21 on November 14.",
+      "wer_small": 0.167,
+      "wer_best": 0.167,
+      "dnsmos": {
+        "sig": 3.67,
+        "bak": 4.18,
+        "ovrl": 3.46
+      }
+    },
+    {
+      "scene": "flow_full",
+      "text": "Watch the band at the Berezina river, where the crossing cost thousands in two days.",
+      "duration": 4.75,
+      "ipa": "wˈɑːtʃ ðə bˈænd æt ðə bˈɛɹɪzˌɪnɚ ɹˈɪvɚ wˌɛɹ ðə kɹˈɔsɪŋ kˈɔst θˈaʊzəndz ɪn tˈuː dˈeɪz",
+      "hyp_base": "Watch the band at the Barry Zina River where the crossing cost thousands in two days.",
+      "wer_base": 0.133,
+      "hyp_small": "Watch the band at the Barysina River, where the crossing cost thousands in two days.",
+      "wer_small": 0.067,
+      "wer_best": 0.067,
+      "dnsmos": {
+        "sig": 3.71,
+        "bak": 4.23,
+        "ovrl": 3.49
+      }
+    },
+    {
+      "scene": "caveat",
+      "text": "Minard's numbers came from memoirs and dispatches, assembled decades after the war; they are estimates, not a count.",
+      "duration": 7.08,
+      "ipa": "mˈaɪnɑːɹdz nˈʌmbɚz kˈeɪm fɹʌm mˈɛmwɑːɹz ænd dɪspˈætʃᵻz ɐsˈɛmbəld dˈɛkeɪdz ˈæftɚ ðə wˈɔːɹ ðeɪ ɑːɹ ˈɛstᵻməts nˌɑːɾə kˈaʊnt",
+      "hyp_base": "Minars numbers came from memoirs and dispatches assembled decades after the war. They are estimates not account.",
+      "wer_base": 0.176,
+      "hyp_small": "Meenar's numbers came from memoirs and dispatches, assembled decades after the war. They are estimates, not a count.",
+      "wer_small": 0.059,
+      "wer_best": 0.059,
+      "dnsmos": {
+        "sig": 3.6,
+        "bak": 4.21,
+        "ovrl": 3.39
+      }
+    }
+  ],
+  "rows": [
+    {
+      "scene": "hook",
+      "text": "In June 1812, four hundred and twenty-two thousand soldiers crossed the river Niemen into Russia.",
+      "duration": 6.94,
+      "ipa": "ɪn dʒˈuːn wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd twˈɛlv fˈɔːɹ hˈʌndɹɪd ænd twˈɛntitˈuː θˈaʊzənd sˈoʊldʒɚz kɹˈɔst ðə ɹˈɪvɚ nˈiːmɛn ˌɪntʊ ɹˈʌʃə",
+      "hyp_base": "In June 1812, 422,000 soldiers crossed the river Nieman into Russia.",
+      "wer_base": 0.062,
+      "hyp_small": "In June 1812, 422,000 soldiers crossed the River Niemen into Russia.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.61,
+        "bak": 4.14,
+        "ovrl": 3.35
+      }
+    },
+    {
+      "scene": "hook",
+      "text": "Six months later, about ten thousand came back.",
+      "duration": 2.65,
+      "ipa": "sˈɪks mˈʌnθs lˈeɪɾɚɹ ɐbˌaʊt tˈɛn θˈaʊzənd kˈeɪm bˈæk",
+      "hyp_base": "Six months later, about 10,000 came back.",
+      "wer_base": 0.0,
+      "hyp_small": "Six months later, about 10,000 came back.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.42,
+        "bak": 4.05,
+        "ovrl": 3.14
+      }
+    },
+    {
+      "scene": "hook",
+      "text": "In 1869 a retired engineer drew that fact as a single line.",
+      "duration": 5.4,
+      "ipa": "ɪn wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd sˈɪksti nˈaɪn ɐ ɹᵻtˈaɪɚd ˌɛndʒɪnˈɪɹ dɹˈuː ðæt fˈækt æz ɐ sˈɪŋɡəl lˈaɪn",
+      "hyp_base": "In 1869, a retired engineer drew that fact as a single line.",
+      "wer_base": 0.0,
+      "hyp_small": "In 1869, a retired engineer drew that fact as a single line.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.63,
+        "bak": 4.21,
+        "ovrl": 3.43
+      }
+    },
+    {
+      "scene": "title",
+      "text": "This is the story of the chart many people call the best ever drawn, and what it leaves out.",
+      "duration": 5.23,
+      "ipa": "ðɪs ɪz ðə stˈɔːɹi ʌvðə tʃˈɑːɹt mˈɛni pˈiːpəl kˈɔːl ðə bˈɛst ˈɛvɚ dɹˈɔːn ænd wʌt ɪt lˈiːvz ˈaʊt",
+      "hyp_base": "This is the story of the chart. Many people call the best ever drawn and what it leaves out.",
+      "wer_base": 0.0,
+      "hyp_small": "This is the story of the chart many people call the best ever drawn and what it leaves out.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.67,
+        "bak": 4.21,
+        "ovrl": 3.47
+      }
+    },
+    {
+      "scene": "flow_adv",
+      "text": "Charles Joseph Minard was a civil engineer who spent his retirement drawing flows: of coal, of wine, of people.",
+      "duration": 7.3,
+      "ipa": "tʃˈɑːɹlz dʒˈoʊsəf mˈaɪnɑːɹd wʌzɐ sˈɪvəl ˌɛndʒɪnˈɪɹ hˌuː spˈɛnt hɪz ɹᵻtˈaɪɚmənt dɹˈɔːɪŋ flˈoʊz ʌv kˈoʊl ʌv wˈaɪn ʌv pˈiːpəl",
+      "hyp_base": "Charles Joseph Minar was a civil engineer who spent his retirement drawing flows of coal, of wine, of people.",
+      "wer_base": 0.053,
+      "hyp_small": "Charles Joseph Minar was a civil engineer who spent his retirement drawing flows of coal, of wine, of people.",
+      "wer_small": 0.053,
+      "wer_best": 0.053,
+      "dnsmos": {
+        "sig": 3.71,
+        "bak": 4.25,
+        "ovrl": 3.54
+      }
+    },
+    {
+      "scene": "flow_adv",
+      "text": "Here the flow is an army.",
+      "duration": 1.44,
+      "ipa": "hˈɪɹ ðə flˈoʊ ɪz ɐn ˈɑːɹmi",
+      "hyp_base": "Here the flow is an army.",
+      "wer_base": 0.0,
+      "hyp_small": "Here the flow is an army.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.48,
+        "bak": 4.1,
+        "ovrl": 3.22
+      }
+    },
+    {
+      "scene": "flow_adv",
+      "text": "The band starts at the Polish border, thick with three hundred and forty thousand men in the main column, and it thins as the army marches east.",
+      "duration": 8.32,
+      "ipa": "ðə bˈænd stˈɑːɹts æt ðə pˈoʊlɪʃ bˈɔːɹdɚ θˈɪk wɪð θɹˈiː hˈʌndɹɪd ænd fˈɔːɹɾi θˈaʊzənd mˈɛn ɪnðə mˈeɪn kˈɑːlʌm ænd ɪt θˈɪnz æz ðɪ ˈɑːɹmi mˈɑːɹtʃᵻz ˈiːst",
+      "hyp_base": "The band starts at the Polish border, thick with 340,000 men in the main column, and it thins as the army marches east.",
+      "wer_base": 0.0,
+      "hyp_small": "The band starts at the Polish border, thick with 340,000 men in the main column, and it thins as the army marches east.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.67,
+        "bak": 4.23,
+        "ovrl": 3.46
+      }
+    },
+    {
+      "scene": "flow_adv",
+      "text": "Smaller columns split off to the north.",
+      "duration": 2.07,
+      "ipa": "smˈɔːlɚ kˈɑːlʌmz splˈɪt ˈɔf tə ðə nˈɔːɹθ",
+      "hyp_base": "Smaller columns split off to the north.",
+      "wer_base": 0.0,
+      "hyp_small": "Smaller columns split off to the north.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.63,
+        "bak": 4.16,
+        "ovrl": 3.4
+      }
+    },
+    {
+      "scene": "flow_adv",
+      "text": "Men die of heat, hunger and disease long before the first great battle.",
+      "duration": 4.11,
+      "ipa": "mˈɛn dˈaɪ ʌv hˈiːt hˈʌŋɡɚ ænd dɪzˈiːz lˈɔŋ bᵻfˌɔːɹ ðə fˈɜːst ɡɹˈeɪt bˈæɾəl",
+      "hyp_base": "Men die of heat, hunger and disease long before the first great battle.",
+      "wer_base": 0.0,
+      "hyp_small": "Men die of heat, hunger, and disease long before the first great battle.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.52,
+        "bak": 4.11,
+        "ovrl": 3.27
+      }
+    },
+    {
+      "scene": "flow_adv",
+      "text": "By Moscow, the band is a fraction of its width.",
+      "duration": 2.79,
+      "ipa": "baɪ mˈɑːskoʊ ðə bˈænd ɪz ɐ fɹˈækʃən ʌv ɪts wˈɪtθ",
+      "hyp_base": "By Moscow, the band is a fraction of its width.",
+      "wer_base": 0.0,
+      "hyp_small": "By Moscow, the band is a fraction of its width.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.49,
+        "bak": 4.11,
+        "ovrl": 3.24
+      }
+    },
+    {
+      "scene": "flow_full",
+      "text": "Then the retreat.",
+      "duration": 1.08,
+      "ipa": "ðˈɛn ðə ɹᵻtɹˈiːt",
+      "hyp_base": "Then the retreat.",
+      "wer_base": 0.0,
+      "hyp_small": "then the retreat.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.6,
+        "bak": 4.14,
+        "ovrl": 3.36
+      }
+    },
+    {
+      "scene": "flow_full",
+      "text": "Minard drew it in a second band beneath the first, and under that a strip of temperatures as the army walked back into winter.",
+      "duration": 7.05,
+      "ipa": "mˈaɪnɑːɹd dɹˈuː ɪɾ ɪn ɐ sˈɛkənd bˈænd bᵻnˌiːθ ðə fˈɜːst ænd ˌʌndɚ ðˌæɾə stɹˈɪp ʌv tˈɛmpɹɪtʃɚz æz ðɪ ˈɑːɹmi wˈɔːkt bˈæk ˌɪntʊ wˈɪntɚ",
+      "hyp_base": "Minard drew it in a second band beneath the first, and under that a strip of temperatures, as the army walked back into winter.",
+      "wer_base": 0.0,
+      "hyp_small": "Minard drew it in a second band beneath the first, and under that a strip of temperatures as the army walked back into winter.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.7,
+        "bak": 4.19,
+        "ovrl": 3.48
+      }
+    },
+    {
+      "scene": "flow_full",
+      "text": "Zero degrees Réaumur on October eighteenth.",
+      "duration": 2.89,
+      "ipa": "zˈiəɹoʊ dᵻɡɹˈiːz ɹˈeɪɔːmɚɹ ˌɔn ɑːktˈoʊbɚɹ ˈeɪtiːnθ",
+      "hyp_base": "0 degrees rayomer on October 18th.",
+      "wer_base": 0.286,
+      "hyp_small": "0° Ray Omer on Oct. 18.",
+      "wer_small": 0.571,
+      "wer_best": 0.286,
+      "dnsmos": {
+        "sig": 3.58,
+        "bak": 4.17,
+        "ovrl": 3.34
+      }
+    },
+    {
+      "scene": "flow_full",
+      "text": "Minus twenty-one on November fourteenth.",
+      "duration": 2.37,
+      "ipa": "mˈaɪnəs twˈɛntiwˈʌn ˌɔn noʊvˈɛmbɚ fˈɔːɹtiːnθ",
+      "hyp_base": "-21 on November 14th.",
+      "wer_base": 0.167,
+      "hyp_small": "minus 21 on November 14.",
+      "wer_small": 0.167,
+      "wer_best": 0.167,
+      "dnsmos": {
+        "sig": 3.67,
+        "bak": 4.18,
+        "ovrl": 3.46
+      }
+    },
+    {
+      "scene": "flow_full",
+      "text": "Minus thirty on December sixth, which is close to minus thirty-seven Celsius.",
+      "duration": 4.63,
+      "ipa": "mˈaɪnəs θˈɜːɾi ˌɔn dᵻsˈɛmbɚ sˈɪksθ wˌɪtʃ ɪz klˈoʊs tə mˈaɪnəs θˈɜːɾisˈɛvən sˈɛlsɪəs",
+      "hyp_base": "minus 30 on December 6th, which is close to minus 37 Celsius.",
+      "wer_base": 0.0,
+      "hyp_small": "minus 30 on December 6, which is close to minus 37 Celsius.",
+      "wer_small": 0.077,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.6,
+        "bak": 4.14,
+        "ovrl": 3.35
+      }
+    },
+    {
+      "scene": "flow_full",
+      "text": "Watch the band at the Berezina river, where the crossing cost thousands in two days.",
+      "duration": 4.75,
+      "ipa": "wˈɑːtʃ ðə bˈænd æt ðə bˈɛɹɪzˌɪnɚ ɹˈɪvɚ wˌɛɹ ðə kɹˈɔsɪŋ kˈɔst θˈaʊzəndz ɪn tˈuː dˈeɪz",
+      "hyp_base": "Watch the band at the Barry Zina River where the crossing cost thousands in two days.",
+      "wer_base": 0.133,
+      "hyp_small": "Watch the band at the Barysina River, where the crossing cost thousands in two days.",
+      "wer_small": 0.067,
+      "wer_best": 0.067,
+      "dnsmos": {
+        "sig": 3.71,
+        "bak": 4.23,
+        "ovrl": 3.49
+      }
+    },
+    {
+      "scene": "flow_full",
+      "text": "By the time the line reaches the border again, it is a thread.",
+      "duration": 3.34,
+      "ipa": "baɪ ðə tˈaɪm ðə lˈaɪn ɹˈiːtʃᵻz ðə bˈɔːɹdɚɹ ɐɡˈɛn ɪɾ ɪz ɐ θɹˈɛd",
+      "hyp_base": "By the time the line reaches the border again, it is a thread.",
+      "wer_base": 0.0,
+      "hyp_small": "By the time the line reaches the border again, it is a thread.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.47,
+        "bak": 4.14,
+        "ovrl": 3.25
+      }
+    },
+    {
+      "scene": "variables",
+      "text": "Count the things this one picture shows.",
+      "duration": 1.99,
+      "ipa": "kˈaʊnt ðə θˈɪŋz ðˈɪswˌʌn pˈɪktʃɚ ʃˈoʊz",
+      "hyp_base": "Count the things this one picture shows.",
+      "wer_base": 0.0,
+      "hyp_small": "Count the things this one picture shows.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.66,
+        "bak": 4.15,
+        "ovrl": 3.44
+      }
+    },
+    {
+      "scene": "variables",
+      "text": "The number of men, in the width of the band.",
+      "duration": 2.2,
+      "ipa": "ðə nˈʌmbɚɹ ʌv mˈɛn ɪnðə wˈɪtθ ʌvðə bˈænd",
+      "hyp_base": "the number of men in the width of the band.",
+      "wer_base": 0.0,
+      "hyp_small": "the number of men in the width of the band.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.52,
+        "bak": 4.09,
+        "ovrl": 3.26
+      }
+    },
+    {
+      "scene": "variables",
+      "text": "Where they were, in its position.",
+      "duration": 1.68,
+      "ipa": "wˌɛɹ ðeɪ wɜːɹ ɪn ɪts pəzˈɪʃən",
+      "hyp_base": "where they were in its position.",
+      "wer_base": 0.0,
+      "hyp_small": "where they were in its position.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.24,
+        "bak": 4.02,
+        "ovrl": 2.96
+      }
+    },
+    {
+      "scene": "variables",
+      "text": "Which way they were going, in its colour.",
+      "duration": 1.91,
+      "ipa": "wˌɪtʃ wˈeɪ ðeɪ wɜː ɡˌoʊɪŋ ɪn ɪts kˈʌlɚ",
+      "hyp_base": "which way they were going in its color.",
+      "wer_base": 0.0,
+      "hyp_small": "which way they were going in its color.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.62,
+        "bak": 4.2,
+        "ovrl": 3.41
+      }
+    },
+    {
+      "scene": "variables",
+      "text": "When, in the dates.",
+      "duration": 1.07,
+      "ipa": "wˌɛn ɪnðə dˈeɪts",
+      "hyp_base": "When in the dates?",
+      "wer_base": 0.0,
+      "hyp_small": "When and the dates.",
+      "wer_small": 0.25,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.63,
+        "bak": 4.2,
+        "ovrl": 3.4
+      }
+    },
+    {
+      "scene": "variables",
+      "text": "And how cold it was, in the strip below.",
+      "duration": 2.23,
+      "ipa": "ænd hˌaʊ kˈoʊld ɪt wʌz ɪnðə stɹˈɪp bᵻlˈoʊ",
+      "hyp_base": "and how cold it was in the strip below.",
+      "wer_base": 0.0,
+      "hyp_small": "and how cold it was in the strip below.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.64,
+        "bak": 4.21,
+        "ovrl": 3.42
+      }
+    },
+    {
+      "scene": "variables",
+      "text": "Six variables, and you can read it without a legend.",
+      "duration": 2.85,
+      "ipa": "sˈɪks vˈɛɹɪəbəlz ænd juː kæn ɹˈiːd ɪt wɪðˌaʊt ɐ lˈɛdʒənd",
+      "hyp_base": "6 variables, and you can read it without a legend.",
+      "wer_base": 0.0,
+      "hyp_small": "six variables, and you can read it without a legend.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.6,
+        "bak": 4.18,
+        "ovrl": 3.36
+      }
+    },
+    {
+      "scene": "caveat",
+      "text": "It also leaves things out.",
+      "duration": 1.47,
+      "ipa": "ɪɾ ˈɔːlsoʊ lˈiːvz θˈɪŋz ˈaʊt",
+      "hyp_base": "It also leaves things out.",
+      "wer_base": 0.0,
+      "hyp_small": "It also leaves things out.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.52,
+        "bak": 4.0,
+        "ovrl": 3.23
+      }
+    },
+    {
+      "scene": "caveat",
+      "text": "Minard's numbers came from memoirs and dispatches, assembled decades after the war; they are estimates, not a count.",
+      "duration": 7.08,
+      "ipa": "mˈaɪnɑːɹdz nˈʌmbɚz kˈeɪm fɹʌm mˈɛmwɑːɹz ænd dɪspˈætʃᵻz ɐsˈɛmbəld dˈɛkeɪdz ˈæftɚ ðə wˈɔːɹ ðeɪ ɑːɹ ˈɛstᵻməts nˌɑːɾə kˈaʊnt",
+      "hyp_base": "Minars numbers came from memoirs and dispatches assembled decades after the war. They are estimates not account.",
+      "wer_base": 0.176,
+      "hyp_small": "Meenar's numbers came from memoirs and dispatches, assembled decades after the war. They are estimates, not a count.",
+      "wer_small": 0.059,
+      "wer_best": 0.059,
+      "dnsmos": {
+        "sig": 3.6,
+        "bak": 4.21,
+        "ovrl": 3.39
+      }
+    },
+    {
+      "scene": "caveat",
+      "text": "The map shows nothing of Russian losses, or of the civilians along the road.",
+      "duration": 4.34,
+      "ipa": "ðə mˈæp ʃˈoʊz nˈʌθɪŋ ʌv ɹˈʌʃən lˈɔsᵻz ɔːɹ ʌvðə sɪvˈɪliənz ɐlˈɔŋ ðə ɹˈoʊd",
+      "hyp_base": "The map shows nothing of Russian losses or of the civilians along the road.",
+      "wer_base": 0.0,
+      "hyp_small": "The map shows nothing of Russian losses or of the civilians along the road.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.6,
+        "bak": 4.16,
+        "ovrl": 3.36
+      }
+    },
+    {
+      "scene": "caveat",
+      "text": "It is an argument about one army, made with one line.",
+      "duration": 3.28,
+      "ipa": "ɪɾ ɪz ɐn ˈɑːɹɡjuːmənt ɐbˌaʊt wˈʌn ˈɑːɹmi mˌeɪd wɪð wˈʌn lˈaɪn",
+      "hyp_base": "It is an argument about one army, made with one line.",
+      "wer_base": 0.0,
+      "hyp_small": "It is an argument about one army made with one line.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.07,
+        "bak": 3.92,
+        "ovrl": 2.82
+      }
+    },
+    {
+      "scene": "why",
+      "text": "Four hundred and twenty-two thousand to ten thousand is a statistic.",
+      "duration": 3.98,
+      "ipa": "fˈɔːɹ hˈʌndɹɪd ænd twˈɛntitˈuː θˈaʊzənd tə tˈɛn θˈaʊzənd ɪz ɐ stɐtˈɪstɪk",
+      "hyp_base": "422,000 to 10,000 is a statistic.",
+      "wer_base": 0.0,
+      "hyp_small": "422,000 to 10,000 is a statistic.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.63,
+        "bak": 4.15,
+        "ovrl": 3.4
+      }
+    },
+    {
+      "scene": "why",
+      "text": "A band that thins to a thread, in the cold, is something you can feel.",
+      "duration": 3.8,
+      "ipa": "ɐ bˈænd ðæt θˈɪnz tʊ ɐ θɹˈɛd ɪnðə kˈoʊld ɪz sˈʌmθɪŋ juː kæn fˈiːl",
+      "hyp_base": "A ban that thins to a thread in the cold is something you can feel.",
+      "wer_base": 0.067,
+      "hyp_small": "A band that thins to a thread in the cold is something you can feel.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.76,
+        "bak": 4.23,
+        "ovrl": 3.55
+      }
+    },
+    {
+      "scene": "why",
+      "text": "That is what the chart does that the number cannot.",
+      "duration": 2.56,
+      "ipa": "ðæt ɪz wʌt ðə tʃˈɑːɹt dˈʌz ðætðə nˈʌmbɚ kænˈɑːt",
+      "hyp_base": "That is what the chart does that the number cannot.",
+      "wer_base": 0.0,
+      "hyp_small": "That is what the chart does that the number cannot.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.62,
+        "bak": 4.14,
+        "ovrl": 3.37
+      }
+    },
+    {
+      "scene": "outro",
+      "text": "Minard's figures and the sources for this episode are in the description.",
+      "duration": 4.05,
+      "ipa": "mˈaɪnɑːɹdz fˈɪɡjɚz ænd ðə sˈɔːɹsᵻz fɔːɹ ðɪs ˈɛpɪsˌoʊd ɑːɹ ɪnðə dᵻskɹˈɪpʃən",
+      "hyp_base": "Minards figures and the sources for this episode are in the description.",
+      "wer_base": 0.0,
+      "hyp_small": "Minard's figures and the sources for this episode are in the description.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.66,
+        "bak": 4.15,
+        "ovrl": 3.4
+      }
+    },
+    {
+      "scene": "outro",
+      "text": "Next time: the poll that got 1936 spectacularly wrong.",
+      "duration": 4.42,
+      "ipa": "nˈɛkst tˈaɪm ðə pˈoʊl ðæt ɡɑːt nˈaɪntiːnhˈʌndɹɪd θˈɜːɾi sˈɪks spɛktˈækjʊlɚli ɹˈɔŋ",
+      "hyp_base": "Next time, the poll that got 1936 spectacularly wrong.",
+      "wer_base": 0.0,
+      "hyp_small": "Next time, the poll that got 1,936 spectacularly wrong.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.7,
+        "bak": 4.22,
+        "ovrl": 3.5
+      }
+    }
+  ],
+  "disclaimer": "Machine evaluation on the actual synthesized audio: two-model ASR round-trip (intelligibility), DNSMOS P.835 (perceptual quality estimate), G2P phoneme listing (pronunciation review). No human listening test was performed."
+}

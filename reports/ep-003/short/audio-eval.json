@@ -1,0 +1,111 @@
+{
+  "episode": "ep-003",
+  "format": "short",
+  "summary": {
+    "sentences": 5,
+    "mean_wer_best": 0.01,
+    "mean_wer_base": 0.02,
+    "mean_wer_small": 0.01,
+    "models": [
+      "whisper-base.en int8",
+      "whisper-small.en int8"
+    ],
+    "dnsmos_available": true,
+    "ovrl_median": 3.45,
+    "ovrl_min": 3.36,
+    "sig_median": 3.67,
+    "bak_median": 4.19
+  },
+  "thresholds": {
+    "mean_wer_max": 0.05,
+    "sentence_wer_max": 0.34,
+    "ovrl_median_min": 3.0,
+    "ovrl_sentence_min": 2.6
+  },
+  "audio_ok": true,
+  "flagged": [],
+  "minor": [],
+  "rows": [
+    {
+      "scene": "s_hook",
+      "text": "In September 1854, cholera killed one hundred and twenty-seven people in a single day in one London neighbourhood.",
+      "duration": 8.25,
+      "ipa": "ɪn sɛptˈɛmbɚ wˈʌn θˈaʊzənd ˈeɪthˈʌndɹɪd fˈɪfti fˈɔːɹ kˈɑːlɚɹə kˈɪld wˈʌn hˈʌndɹɪd ænd twˈɛntisˈɛvən pˈiːpəl ɪn ɐ sˈɪŋɡəl dˈeɪ ɪn wˈʌn lˈʌndən nˈeɪbɚhˌʊd",
+      "hyp_base": "In September 1854, Collara killed 127 people in a single day in one London neighborhood.",
+      "wer_base": 0.1,
+      "hyp_small": "In September 1854, Cholera killed 127 people in a single day in one London neighborhood.",
+      "wer_small": 0.05,
+      "wer_best": 0.05,
+      "dnsmos": {
+        "sig": 3.72,
+        "bak": 4.25,
+        "ovrl": 3.53
+      }
+    },
+    {
+      "scene": "s_handle",
+      "text": "John Snow traced it to one water pump and had the handle removed.",
+      "duration": 3.9,
+      "ipa": "dʒˈɑːn snˈoʊ tɹˈeɪst ɪt tə wˈʌn wˈɔːɾɚ pˈʌmp ænd hæd ðə hˈændəl ɹᵻmˈuːvd",
+      "hyp_base": "John Snow traced it to one water pump and had the handle removed.",
+      "wer_base": 0.0,
+      "hyp_small": "John Snow traced it to one water pump and had the handle removed.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.68,
+        "bak": 4.19,
+        "ovrl": 3.45
+      }
+    },
+    {
+      "scene": "s_handle",
+      "text": "But look at his own data: the outbreak was already falling.",
+      "duration": 3.24,
+      "ipa": "bˌʌt lˈʊk æt hɪz ˈoʊn dˈeɪɾə ðɪ ˈaʊtbɹeɪk wʌz ɔːlɹˌɛdi fˈɔːlɪŋ",
+      "hyp_base": "But look at his own data. The outbreak was already falling. [BUZZER]",
+      "wer_base": 0.0,
+      "hyp_small": "But look at his own data. The outbreak was already falling.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.58,
+        "bak": 4.19,
+        "ovrl": 3.36
+      }
+    },
+    {
+      "scene": "s_handle",
+      "text": "The handle probably stopped a second wave; the map is what proved the water did it.",
+      "duration": 4.48,
+      "ipa": "ðə hˈændəl pɹˈɑːbəbli stˈɑːpt ɐ sˈɛkənd wˈeɪv ðə mˈæp ɪz wʌt pɹˈuːvd ðə wˈɔːɾɚ dˈɪd ɪt",
+      "hyp_base": "The handle probably stopped a second wave. The map is what proved the water did it. [buzzer]",
+      "wer_base": 0.0,
+      "hyp_small": "The handle probably stopped a second wave. The map is what proved the water did it.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.67,
+        "bak": 4.22,
+        "ovrl": 3.46
+      }
+    },
+    {
+      "scene": "s_cta",
+      "text": "The full story, with Snow's table, is on the channel.",
+      "duration": 2.78,
+      "ipa": "ðə fˈʊl stˈɔːɹi wɪð snˈoʊz tˈeɪbəl ɪz ɔnðə tʃˈænəl",
+      "hyp_base": "The full story with Snow's Table is on the channel.",
+      "wer_base": 0.0,
+      "hyp_small": "The full story with Snow's Table is on the channel.",
+      "wer_small": 0.0,
+      "wer_best": 0.0,
+      "dnsmos": {
+        "sig": 3.62,
+        "bak": 4.19,
+        "ovrl": 3.4
+      }
+    }
+  ],
+  "disclaimer": "Machine evaluation on the actual synthesized audio: two-model ASR round-trip (intelligibility), DNSMOS P.835 (perceptual quality estimate), G2P phoneme listing (pronunciation review). No human listening test was performed."
+}

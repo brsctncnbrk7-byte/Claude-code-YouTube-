@@ -17,7 +17,26 @@ Bağımsız kanıt incelemesi ayrı bir alt ajan tarafından yapıldı; bulgular
 | 8 | Kanal/yükleme paketleri, hesap sahibi zorunlulukları, analytics sınırları, ücretsiz sınırlar, VPS rehberi | channel/SETUP_CHECKLIST.md; dist/*/UPLOAD_CHECKLIST.md; docs/operations/{publishing,measurement,github-quota,session-continuity,recovery,vps-setup}.md | f20664f, 09a6208 | Dosyalar okundu; kullanıcıdan repo düzenlemesi isteyen ifadeler kaldırıldı (09a6208) | **PASS** |
 
 ## B. Ses QC yöntemi ve gerçek ses üzerindeki sonuçlar
-_(bu bölüm `reports/<ep>/<fmt>/audio-eval.md` çıktılarıyla doldurulur — aşağıda)_
+
+**Yöntem (docs/policies/production-gate.md §C; kod: src/ytf/audio_eval.py, src/ytf/qc.py):** dalga formu/loudness/sessizlik yalnızca teknik kontroldür ve telaffuz kanıtı sayılmaz. Gerçek sentezlenmiş cümle sesleri üzerinde üç makine katmanı çalıştırılır: (1) **iki bağımsız ASR modeliyle round-trip** — Whisper base.en ve small.en (sherpa-onnx, MIT/Apache) her cümleyi geri yazar; WER, sayı/yıl/sıra sayısı/ondalık/yüzde/eş sesli/İngiliz yazımı normalizasyonundan sonra hesaplanır; cümle skoru iki modelin iyisi; (2) **DNSMOS P.835** (Microsoft, CC BY 4.0) — her cümle için algısal kalite tahmini SIG/BAK/OVRL (1–5); (3) **telaffuz incelemesi** — her cümlenin G2P IPA çıktısı raporda; özel adlar `[[görünen|söylenen]]` respelling ile düzeltilir (Minard, Réaumur, Berezina). Eşikler: ortalama WER ≤ 0.05; cümle WER > 0.34 bayrak; OVRL medyan ≥ 3.0, cümle OVRL < 2.6 bayrak. `QC_PASS` yalnızca bu katmanlar çalışıp `audio_ok=true` verdiğinde; aksi hâlde `QC_PASS_TECHNICAL_ONLY`. Ücretsiz, çevrimdışı, kullanıcı müdahalesi gerektirmez; runner'da da aynı modeller kurulur.
+
+**Sonuçlar (yayımlanan sürümler, 2026-10-03 23:08–23:25 UTC; ayrıntı `reports/<ep>/<fmt>/audio-eval.md`):**
+| Bölüm | Format | Cümle | WER base | WER small | WER en iyi | DNSMOS OVRL medyan / min | SIG / BAK medyan | Bayrak | Küçük sapma | Durum |
+|---|---|---|---|---|---|---|---|---|---|---|
+| ep-001 | long | 57 | 0.0076 | 0.0012 | **0.0012** | 3.41 / 3.14 | 3.63 / 4.19 | 0 | 0 | QC_PASS |
+| ep-001 | short | 9 | 0.0 | 0.0556 | **0.0** | 3.29 / 3.12 | 3.56 / 4.13 | 0 | 0 | QC_PASS |
+| ep-002 | long | 39 | 0.0058 | 0.0047 | **0.0047** | 3.41 / 2.98 | 3.63 / 4.19 | 0 | 1 | QC_PASS |
+| ep-002 | short | 6 | 0.0 | 0.0 | **0.0** | 3.46 / 3.16 | 3.67 / 4.21 | 0 | 0 | QC_PASS |
+| ep-003 | long | 37 | 0.0106 | 0.019 | **0.0068** | 3.39 / 2.92 | 3.62 / 4.17 | 0 | 1 | QC_PASS |
+| ep-003 | short | 5 | 0.02 | 0.01 | **0.01** | 3.45 / 3.36 | 3.67 / 4.19 | 0 | 0 | QC_PASS |
+| ep-005 | long | 33 | 0.0286 | 0.0377 | **0.0192** | 3.39 / 2.82 | 3.62 / 4.16 | 0 | 5 | QC_PASS |
+| ep-005 | short | 7 | 0.013 | 0.013 | **0.013** | 3.33 / 3.13 | 3.56 / 4.13 | 0 | 1 | QC_PASS |
+| ep-006 | long | 34 | 0.0261 | 0.0119 | **0.0109** | 3.39 / 3.15 | 3.62 / 4.19 | 0 | 3 | QC_PASS |
+| ep-006 | short | 5 | 0.04 | 0.0 | **0.0** | 3.35 / 3.24 | 3.6 / 4.17 | 0 | 0 | QC_PASS |
+
+Küçük sapmalar (0.05 < WER ≤ 0.34) özel adlar ve eş seslilerdir (ör. "Minard"→"Minar", "Réaumur"→"rayomer", "Thiokol"→"Thio Call", "band"→"ban"); IPA çıktıları beklenen telaffuzla uyumlu ve `gate.notes`'ta gerekçelendirildi. En düşük cümle OVRL 2.82 (ep-005; eşik 2.6 üstünde).
+
+**Açık engel (çözülemeyen):** Tonlama, vurgu ve doğallık bu vekillerle ölçülemez; insan dinleme testi bu ortamda yapılamaz ve kullanıcıya devredilmez. Her rapor "No human listening test was performed" beyanını taşır. 7. gün izleyici tutma verisi (ilk 30 sn düşüşü) bu boşluğun tek gerçek geri bildirimi olacaktır.
 
 ## C. İçerik kalite kabulü
 

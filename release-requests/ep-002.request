@@ -1,3 +1,3 @@
 episode: ep-002
 format: both
-# retry 3: pinned espeak + seeded TTS (reproducible build)
+# re-release 2026-10-03T23:25:50Z: deep audio QC (two ASR + DNSMOS), corrected upload checklist, tracked manifests
