@@ -1,6 +1,6 @@
 # QC report — ep-005 (short)
 
-**Status:** `QC_FAIL`  •  technical_ok=False  •  gate_ok=False
+**Status:** `QC_PASS_TECHNICAL_ONLY`  •  technical_ok=True  •  gate_ok=False
 
 ## B. Technical checks
 | check | ok | detail |
@@ -8,9 +8,9 @@
 | container | ✅ | {"codec": "h264", "pix_fmt": "yuv420p", "w": 1080, "h": 1920, "fps": "30/1", "audio": "aac 48000Hz", "duration": 26.9, "frames": 807, "expected_frames": 807} |
 | blackdetect | ✅ | {} |
 | silencedetect | ✅ | {} |
-| loudness | ✅ | {"integrated_lufs": -13.98, "true_peak_dbtp": -2.91, "lra": 3.4} |
+| loudness | ✅ | {"integrated_lufs": -14.0, "true_peak_dbtp": -2.88, "lra": 3.4} |
 | subtitles | ✅ | {"cues": 7, "long_or_tall": 0} |
-| text_overflow | ❌ | {} overflow_scenes=['s_hook'] |
+| text_overflow | ✅ | {} |
 | frame_samples | ✅ | {"count": 6, "dir": "/home/user/Claude-code-YouTube-/reports/ep-005/short/frames", "reviewed_by_claude": false} |
 | frame_content | ✅ | {"blank_frames": []} |
 
@@ -19,7 +19,7 @@
 
 ASR: whisper-base.en int8 (sherpa-onnx) — mean WER **0.013**, flagged (WER>0.05): 1
 
-- [s_flow] WER 0.091: ref=`In 1869 Charles Minard drew it as one band.` hyp=`In 1869, Charles Meinard drew it as one band.`
+- [s_flow] WER 0.091: ref=`In 1869 Charles Minard drew it as one band.` hyp=`In 1869, Charles Minar drew it as one band.`
 
 <details><summary>Phoneme review (IPA per sentence)</summary>
 
@@ -55,6 +55,6 @@ Spectrogram: `/home/user/Claude-code-YouTube-/reports/ep-005/short/spectrogram.p
 | frames_reviewed | ❌ |
 | audio_reviewed | ❌ |
 
-Notes: Not yet built.
+Notes: Build 2 pending review.
 
 Frame samples: `/home/user/Claude-code-YouTube-/reports/ep-005/short/frames` — reviewed_by_claude=False

@@ -1,3 +1,57 @@
 == long
 [tts] 137.6s narration, 33 sentences, 22.6s
 [subs] 40 cues
+[render] /home/user/Claude-code-YouTube-/build/ep-005/long/video.mp4 in 204.9s
+[mux] /home/user/Claude-code-YouTube-/build/ep-005/long/ep-005.mp4 (measured I=-25.69 LUFS → -14)
+[done] build ep-005/long in 257.7s
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[qc] QC_PASS_TECHNICAL_ONLY technical_ok=True gate_ok=False → reports/ep-005/long/qc-report.md
+[package] /home/user/Claude-code-YouTube-/dist/ep-005
+== short
+[tts] 26.9s narration, 7 sentences, 2.6s
+[subs] 7 cues
+[render] /home/user/Claude-code-YouTube-/build/ep-005/short/video.mp4 in 40.6s
+[mux] /home/user/Claude-code-YouTube-/build/ep-005/short/ep-005.mp4 (measured I=-25.68 LUFS → -14)
+[done] build ep-005/short in 49.8s
+
+
+
+
+
+
+
+[qc] QC_PASS_TECHNICAL_ONLY technical_ok=True gate_ok=False → reports/ep-005/short/qc-report.md
+[package] /home/user/Claude-code-YouTube-/dist/ep-005/short
+EXIT 0

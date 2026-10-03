@@ -9,9 +9,9 @@
       "h": 1080,
       "fps": "30/1",
       "audio": "aac 48000Hz",
-      "duration": 135.767,
-      "frames": 4073,
-      "expected_frames": 4073,
+      "duration": 137.633,
+      "frames": 4129,
+      "expected_frames": 4129,
       "ok": true
     },
     "blackdetect": {
@@ -23,9 +23,9 @@
       "ok": true
     },
     "loudness": {
-      "integrated_lufs": -14.01,
-      "true_peak_dbtp": -3.09,
-      "lra": 2.6,
+      "integrated_lufs": -14.02,
+      "true_peak_dbtp": -3.06,
+      "lra": 2.4,
       "ok": true
     },
     "subtitles": {
@@ -87,8 +87,8 @@
       },
       {
         "scene": "flow_adv",
-        "text": "Detachments split off.",
-        "ipa": "dɪtˈætʃmənts splˈɪt ˈɔf"
+        "text": "Smaller columns split off to the north.",
+        "ipa": "smˈɔːlɚ kˈɑːlʌmz splˈɪt ˈɔf tə ðə nˈɔːɹθ"
       },
       {
         "scene": "flow_adv",
@@ -137,23 +137,23 @@
       },
       {
         "scene": "variables",
-        "text": "Count what the picture encodes.",
-        "ipa": "kˈaʊnt wʌt ðə pˈɪktʃɚɹ ɛŋkˈoʊdz"
+        "text": "Count the things this one picture shows.",
+        "ipa": "kˈaʊnt ðə θˈɪŋz ðˈɪswˌʌn pˈɪktʃɚ ʃˈoʊz"
       },
       {
         "scene": "variables",
-        "text": "The number of men, in the width.",
-        "ipa": "ðə nˈʌmbɚɹ ʌv mˈɛn ɪnðə wˈɪtθ"
+        "text": "The number of men, in the width of the band.",
+        "ipa": "ðə nˈʌmbɚɹ ʌv mˈɛn ɪnðə wˈɪtθ ʌvðə bˈænd"
       },
       {
         "scene": "variables",
-        "text": "Where they were, in the position.",
-        "ipa": "wˌɛɹ ðeɪ wɜːɹ ɪnðə pəzˈɪʃən"
+        "text": "Where they were, in its position.",
+        "ipa": "wˌɛɹ ðeɪ wɜːɹ ɪn ɪts pəzˈɪʃən"
       },
       {
         "scene": "variables",
-        "text": "Which way they were going, in the colour.",
-        "ipa": "wˌɪtʃ wˈeɪ ðeɪ wɜː ɡˌoʊɪŋ ɪnðə kˈʌlɚ"
+        "text": "Which way they were going, in its colour.",
+        "ipa": "wˌɪtʃ wˈeɪ ðeɪ wɜː ɡˌoʊɪŋ ɪn ɪts kˈʌlɚ"
       },
       {
         "scene": "variables",
@@ -218,7 +218,7 @@
     ],
     "asr": {
       "model": "whisper-base.en int8 (sherpa-onnx)",
-      "seconds": 14.9,
+      "seconds": 14.5,
       "rows": [
         {
           "scene": "hook",
@@ -248,7 +248,7 @@
         {
           "scene": "flow_adv",
           "ref": "Charles Joseph Minard was a civil engineer who spent his retirement drawing flows: of coal, of wine, of people.",
-          "hyp": "Charles Joseph Meinard was a civil engineer who spent his retirement drawing flows of coal, of wine, of people.",
+          "hyp": "Charles Joseph Minar was a civil engineer who spent his retirement drawing flows of coal, of wine, of people.",
           "wer": 0.053,
           "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-005/long/spectrograms/flag_01_flow_adv.png"
         },
@@ -266,10 +266,9 @@
         },
         {
           "scene": "flow_adv",
-          "ref": "Detachments split off.",
-          "hyp": "Detachment split off.",
-          "wer": 0.333,
-          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-005/long/spectrograms/flag_02_flow_adv.png"
+          "ref": "Smaller columns split off to the north.",
+          "hyp": "Smaller columns split off to the north.",
+          "wer": 0.0
         },
         {
           "scene": "flow_adv",
@@ -298,16 +297,16 @@
         {
           "scene": "flow_full",
           "ref": "Zero degrees Réaumur on October eighteenth.",
-          "hyp": "Zero degrees ray armor on October 18th.",
+          "hyp": "0 degrees rayomer on October 18th.",
           "wer": 0.286,
-          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-005/long/spectrograms/flag_03_flow_full.png"
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-005/long/spectrograms/flag_02_flow_full.png"
         },
         {
           "scene": "flow_full",
           "ref": "Minus twenty-one on November fourteenth.",
           "hyp": "-21 on November 14th.",
           "wer": 0.167,
-          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-005/long/spectrograms/flag_04_flow_full.png"
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-005/long/spectrograms/flag_03_flow_full.png"
         },
         {
           "scene": "flow_full",
@@ -318,9 +317,9 @@
         {
           "scene": "flow_full",
           "ref": "Watch the band at the Berezina river, where the crossing cost thousands in two days.",
-          "hyp": "Watch the band at the Beres in a River, where the crossing cost thousands in two days.",
-          "wer": 0.2,
-          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-005/long/spectrograms/flag_05_flow_full.png"
+          "hyp": "Watch the band at the Barry Zina River where the crossing cost thousands in two days.",
+          "wer": 0.133,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-005/long/spectrograms/flag_04_flow_full.png"
         },
         {
           "scene": "flow_full",
@@ -330,29 +329,27 @@
         },
         {
           "scene": "variables",
-          "ref": "Count what the picture encodes.",
-          "hyp": "Count with the picturing codes.",
-          "wer": 0.6,
-          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-005/long/spectrograms/flag_06_variables.png"
-        },
-        {
-          "scene": "variables",
-          "ref": "The number of men, in the width.",
-          "hyp": "the number of men in the wits.",
-          "wer": 0.143,
-          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-005/long/spectrograms/flag_07_variables.png"
-        },
-        {
-          "scene": "variables",
-          "ref": "Where they were, in the position.",
-          "hyp": "where they were in the position.",
+          "ref": "Count the things this one picture shows.",
+          "hyp": "Count the things this one picture shows.",
           "wer": 0.0
         },
         {
           "scene": "variables",
-          "ref": "Which way they were going, in the colour.",
-          "hyp": "which way they were going in the color.",
-          "wer": 0.125
+          "ref": "The number of men, in the width of the band.",
+          "hyp": "the number of men in the width of the band.",
+          "wer": 0.0
+        },
+        {
+          "scene": "variables",
+          "ref": "Where they were, in its position.",
+          "hyp": "where they were in its position.",
+          "wer": 0.0
+        },
+        {
+          "scene": "variables",
+          "ref": "Which way they were going, in its colour.",
+          "hyp": "which way they were going in its color.",
+          "wer": 0.0
         },
         {
           "scene": "variables",
@@ -381,8 +378,9 @@
         {
           "scene": "caveat",
           "ref": "Minard's numbers came from memoirs and dispatches, assembled decades after the war; they are estimates, not a count.",
-          "hyp": "Minards numbers came from memoirs and dispatches assembled decades after the war. They are estimates not account.",
-          "wer": 0.118
+          "hyp": "Minars numbers came from memoirs and dispatches assembled decades after the war. They are estimates not account.",
+          "wer": 0.176,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-005/long/spectrograms/flag_05_caveat.png"
         },
         {
           "scene": "caveat",
@@ -406,7 +404,8 @@
           "scene": "why",
           "ref": "A band that thins to a thread, in the cold, is something you can feel.",
           "hyp": "A ban that thins to a thread in the cold is something you can feel.",
-          "wer": 0.067
+          "wer": 0.067,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-005/long/spectrograms/flag_06_why.png"
         },
         {
           "scene": "why",
@@ -427,7 +426,7 @@
           "wer": 0.0
         }
       ],
-      "mean_wer": 0.0653,
+      "mean_wer": 0.0286,
       "flagged": [
         {
           "scene": "hook",
@@ -439,69 +438,44 @@
         {
           "scene": "flow_adv",
           "ref": "Charles Joseph Minard was a civil engineer who spent his retirement drawing flows: of coal, of wine, of people.",
-          "hyp": "Charles Joseph Meinard was a civil engineer who spent his retirement drawing flows of coal, of wine, of people.",
+          "hyp": "Charles Joseph Minar was a civil engineer who spent his retirement drawing flows of coal, of wine, of people.",
           "wer": 0.053,
           "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-005/long/spectrograms/flag_01_flow_adv.png"
         },
         {
-          "scene": "flow_adv",
-          "ref": "Detachments split off.",
-          "hyp": "Detachment split off.",
-          "wer": 0.333,
-          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-005/long/spectrograms/flag_02_flow_adv.png"
-        },
-        {
           "scene": "flow_full",
           "ref": "Zero degrees Réaumur on October eighteenth.",
-          "hyp": "Zero degrees ray armor on October 18th.",
+          "hyp": "0 degrees rayomer on October 18th.",
           "wer": 0.286,
-          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-005/long/spectrograms/flag_03_flow_full.png"
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-005/long/spectrograms/flag_02_flow_full.png"
         },
         {
           "scene": "flow_full",
           "ref": "Minus twenty-one on November fourteenth.",
           "hyp": "-21 on November 14th.",
           "wer": 0.167,
-          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-005/long/spectrograms/flag_04_flow_full.png"
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-005/long/spectrograms/flag_03_flow_full.png"
         },
         {
           "scene": "flow_full",
           "ref": "Watch the band at the Berezina river, where the crossing cost thousands in two days.",
-          "hyp": "Watch the band at the Beres in a River, where the crossing cost thousands in two days.",
-          "wer": 0.2,
-          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-005/long/spectrograms/flag_05_flow_full.png"
-        },
-        {
-          "scene": "variables",
-          "ref": "Count what the picture encodes.",
-          "hyp": "Count with the picturing codes.",
-          "wer": 0.6,
-          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-005/long/spectrograms/flag_06_variables.png"
-        },
-        {
-          "scene": "variables",
-          "ref": "The number of men, in the width.",
-          "hyp": "the number of men in the wits.",
-          "wer": 0.143,
-          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-005/long/spectrograms/flag_07_variables.png"
-        },
-        {
-          "scene": "variables",
-          "ref": "Which way they were going, in the colour.",
-          "hyp": "which way they were going in the color.",
-          "wer": 0.125
+          "hyp": "Watch the band at the Barry Zina River where the crossing cost thousands in two days.",
+          "wer": 0.133,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-005/long/spectrograms/flag_04_flow_full.png"
         },
         {
           "scene": "caveat",
           "ref": "Minard's numbers came from memoirs and dispatches, assembled decades after the war; they are estimates, not a count.",
-          "hyp": "Minards numbers came from memoirs and dispatches assembled decades after the war. They are estimates not account.",
-          "wer": 0.118
+          "hyp": "Minars numbers came from memoirs and dispatches assembled decades after the war. They are estimates not account.",
+          "wer": 0.176,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-005/long/spectrograms/flag_05_caveat.png"
         },
         {
           "scene": "why",
           "ref": "A band that thins to a thread, in the cold, is something you can feel.",
           "hyp": "A ban that thins to a thread in the cold is something you can feel.",
-          "wer": 0.067
+          "wer": 0.067,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-005/long/spectrograms/flag_06_why.png"
         }
       ]
     },
@@ -520,7 +494,7 @@
     "licenses_recorded": true,
     "frames_reviewed": false,
     "audio_reviewed": false,
-    "notes": "Not yet built."
+    "notes": "Build 2 pending review."
   },
   "gate_ok": false
 }

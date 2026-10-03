@@ -23,8 +23,8 @@
       "ok": true
     },
     "loudness": {
-      "integrated_lufs": -13.98,
-      "true_peak_dbtp": -2.91,
+      "integrated_lufs": -14.0,
+      "true_peak_dbtp": -2.88,
       "lra": 3.4,
       "ok": true
     },
@@ -34,24 +34,8 @@
       "ok": true
     },
     "text_overflow": {
-      "scenes": [
-        {
-          "id": "s_hook",
-          "items": [
-            {
-              "cls": "big num",
-              "text": "422,000",
-              "rect": [
-                108,
-                718.90625,
-                972,
-                958.90625
-              ]
-            }
-          ]
-        }
-      ],
-      "ok": false
+      "scenes": [],
+      "ok": true
     },
     "frame_samples": {
       "count": 6,
@@ -104,7 +88,7 @@
     ],
     "asr": {
       "model": "whisper-base.en int8 (sherpa-onnx)",
-      "seconds": 3.3,
+      "seconds": 3.0,
       "rows": [
         {
           "scene": "s_hook",
@@ -121,7 +105,7 @@
         {
           "scene": "s_flow",
           "ref": "In 1869 Charles Minard drew it as one band.",
-          "hyp": "In 1869, Charles Meinard drew it as one band.",
+          "hyp": "In 1869, Charles Minar drew it as one band.",
           "wer": 0.091,
           "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-005/short/spectrograms/flag_00_s_flow.png"
         },
@@ -155,7 +139,7 @@
         {
           "scene": "s_flow",
           "ref": "In 1869 Charles Minard drew it as one band.",
-          "hyp": "In 1869, Charles Meinard drew it as one band.",
+          "hyp": "In 1869, Charles Minar drew it as one band.",
           "wer": 0.091,
           "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-005/short/spectrograms/flag_00_s_flow.png"
         }
@@ -164,8 +148,8 @@
     "disclaimer": "Audio was evaluated by phoneme review, ASR round-trip and spectrogram inspection; no human listening test was performed."
   },
   "warnings": [],
-  "status": "QC_FAIL",
-  "technical_ok": false,
+  "status": "QC_PASS_TECHNICAL_ONLY",
+  "technical_ok": true,
   "gate": {
     "original_narrative": true,
     "sources_verified": false,
@@ -176,7 +160,7 @@
     "licenses_recorded": true,
     "frames_reviewed": false,
     "audio_reviewed": false,
-    "notes": "Not yet built."
+    "notes": "Build 2 pending review."
   },
   "gate_ok": false
 }

@@ -5,10 +5,10 @@
 ## B. Technical checks
 | check | ok | detail |
 |---|---|---|
-| container | ✅ | {"codec": "h264", "pix_fmt": "yuv420p", "w": 1920, "h": 1080, "fps": "30/1", "audio": "aac 48000Hz", "duration": 135.767, "frames": 4073, "expected_frames": 4073} |
+| container | ✅ | {"codec": "h264", "pix_fmt": "yuv420p", "w": 1920, "h": 1080, "fps": "30/1", "audio": "aac 48000Hz", "duration": 137.633, "frames": 4129, "expected_frames": 4129} |
 | blackdetect | ✅ | {} |
 | silencedetect | ✅ | {} |
-| loudness | ✅ | {"integrated_lufs": -14.01, "true_peak_dbtp": -3.09, "lra": 2.6} |
+| loudness | ✅ | {"integrated_lufs": -14.02, "true_peak_dbtp": -3.06, "lra": 2.4} |
 | subtitles | ✅ | {"cues": 40, "long_or_tall": 0} |
 | text_overflow | ✅ | {} |
 | frame_samples | ✅ | {"count": 16, "dir": "/home/user/Claude-code-YouTube-/reports/ep-005/long/frames", "reviewed_by_claude": false} |
@@ -17,18 +17,14 @@
 ## C. Audio evaluation (not a human listening test)
 > Audio was evaluated by phoneme review, ASR round-trip and spectrogram inspection; no human listening test was performed.
 
-ASR: whisper-base.en int8 (sherpa-onnx) — mean WER **0.0653**, flagged (WER>0.05): 11
+ASR: whisper-base.en int8 (sherpa-onnx) — mean WER **0.0286**, flagged (WER>0.05): 7
 
 - [hook] WER 0.062: ref=`In June 1812, four hundred and twenty-two thousand soldiers crossed the river Niemen into Russia.` hyp=`In June 1812, 422,000 soldiers crossed the river Nieman into Russia.`
-- [flow_adv] WER 0.053: ref=`Charles Joseph Minard was a civil engineer who spent his retirement drawing flows: of coal, of wine, of people.` hyp=`Charles Joseph Meinard was a civil engineer who spent his retirement drawing flows of coal, of wine, of people.`
-- [flow_adv] WER 0.333: ref=`Detachments split off.` hyp=`Detachment split off.`
-- [flow_full] WER 0.286: ref=`Zero degrees Réaumur on October eighteenth.` hyp=`Zero degrees ray armor on October 18th.`
+- [flow_adv] WER 0.053: ref=`Charles Joseph Minard was a civil engineer who spent his retirement drawing flows: of coal, of wine, of people.` hyp=`Charles Joseph Minar was a civil engineer who spent his retirement drawing flows of coal, of wine, of people.`
+- [flow_full] WER 0.286: ref=`Zero degrees Réaumur on October eighteenth.` hyp=`0 degrees rayomer on October 18th.`
 - [flow_full] WER 0.167: ref=`Minus twenty-one on November fourteenth.` hyp=`-21 on November 14th.`
-- [flow_full] WER 0.2: ref=`Watch the band at the Berezina river, where the crossing cost thousands in two days.` hyp=`Watch the band at the Beres in a River, where the crossing cost thousands in two days.`
-- [variables] WER 0.6: ref=`Count what the picture encodes.` hyp=`Count with the picturing codes.`
-- [variables] WER 0.143: ref=`The number of men, in the width.` hyp=`the number of men in the wits.`
-- [variables] WER 0.125: ref=`Which way they were going, in the colour.` hyp=`which way they were going in the color.`
-- [caveat] WER 0.118: ref=`Minard's numbers came from memoirs and dispatches, assembled decades after the war; they are estimates, not a count.` hyp=`Minards numbers came from memoirs and dispatches assembled decades after the war. They are estimates not account.`
+- [flow_full] WER 0.133: ref=`Watch the band at the Berezina river, where the crossing cost thousands in two days.` hyp=`Watch the band at the Barry Zina River where the crossing cost thousands in two days.`
+- [caveat] WER 0.176: ref=`Minard's numbers came from memoirs and dispatches, assembled decades after the war; they are estimates, not a count.` hyp=`Minars numbers came from memoirs and dispatches assembled decades after the war. They are estimates not account.`
 - [why] WER 0.067: ref=`A band that thins to a thread, in the cold, is something you can feel.` hyp=`A ban that thins to a thread in the cold is something you can feel.`
 
 <details><summary>Phoneme review (IPA per sentence)</summary>
@@ -47,8 +43,8 @@ ASR: whisper-base.en int8 (sherpa-onnx) — mean WER **0.0653**, flagged (WER>0.
   - `hˈɪɹ ðə flˈoʊ ɪz ɐn ˈɑːɹmi`
 - [flow_adv] The band starts at the Polish border, thick with three hundred and forty thousand men in the main column, and it thins as the army marches east.
   - `ðə bˈænd stˈɑːɹts æt ðə pˈoʊlɪʃ bˈɔːɹdɚ θˈɪk wɪð θɹˈiː hˈʌndɹɪd ænd fˈɔːɹɾi θˈaʊzənd mˈɛn ɪnðə mˈeɪn kˈɑːlʌm ænd ɪt θˈɪnz æz ðɪ ˈɑːɹmi mˈɑːɹtʃᵻz ˈiːst`
-- [flow_adv] Detachments split off.
-  - `dɪtˈætʃmənts splˈɪt ˈɔf`
+- [flow_adv] Smaller columns split off to the north.
+  - `smˈɔːlɚ kˈɑːlʌmz splˈɪt ˈɔf tə ðə nˈɔːɹθ`
 - [flow_adv] Men die of heat, hunger and disease long before the first great battle.
   - `mˈɛn dˈaɪ ʌv hˈiːt hˈʌŋɡɚ ænd dɪzˈiːz lˈɔŋ bᵻfˌɔːɹ ðə fˈɜːst ɡɹˈeɪt bˈæɾəl`
 - [flow_adv] By Moscow, the band is a fraction of its width.
@@ -67,14 +63,14 @@ ASR: whisper-base.en int8 (sherpa-onnx) — mean WER **0.0653**, flagged (WER>0.
   - `wˈɑːtʃ ðə bˈænd æt ðə bˈɛɹɪzˌɪnɚ ɹˈɪvɚ wˌɛɹ ðə kɹˈɔsɪŋ kˈɔst θˈaʊzəndz ɪn tˈuː dˈeɪz`
 - [flow_full] By the time the line reaches the border again, it is a thread.
   - `baɪ ðə tˈaɪm ðə lˈaɪn ɹˈiːtʃᵻz ðə bˈɔːɹdɚɹ ɐɡˈɛn ɪɾ ɪz ɐ θɹˈɛd`
-- [variables] Count what the picture encodes.
-  - `kˈaʊnt wʌt ðə pˈɪktʃɚɹ ɛŋkˈoʊdz`
-- [variables] The number of men, in the width.
-  - `ðə nˈʌmbɚɹ ʌv mˈɛn ɪnðə wˈɪtθ`
-- [variables] Where they were, in the position.
-  - `wˌɛɹ ðeɪ wɜːɹ ɪnðə pəzˈɪʃən`
-- [variables] Which way they were going, in the colour.
-  - `wˌɪtʃ wˈeɪ ðeɪ wɜː ɡˌoʊɪŋ ɪnðə kˈʌlɚ`
+- [variables] Count the things this one picture shows.
+  - `kˈaʊnt ðə θˈɪŋz ðˈɪswˌʌn pˈɪktʃɚ ʃˈoʊz`
+- [variables] The number of men, in the width of the band.
+  - `ðə nˈʌmbɚɹ ʌv mˈɛn ɪnðə wˈɪtθ ʌvðə bˈænd`
+- [variables] Where they were, in its position.
+  - `wˌɛɹ ðeɪ wɜːɹ ɪn ɪts pəzˈɪʃən`
+- [variables] Which way they were going, in its colour.
+  - `wˌɪtʃ wˈeɪ ðeɪ wɜː ɡˌoʊɪŋ ɪn ɪts kˈʌlɚ`
 - [variables] When, in the dates.
   - `wˌɛn ɪnðə dˈeɪts`
 - [variables] And how cold it was, in the strip below.
@@ -117,6 +113,6 @@ Spectrogram: `/home/user/Claude-code-YouTube-/reports/ep-005/long/spectrogram.pn
 | frames_reviewed | ❌ |
 | audio_reviewed | ❌ |
 
-Notes: Not yet built.
+Notes: Build 2 pending review.
 
 Frame samples: `/home/user/Claude-code-YouTube-/reports/ep-005/long/frames` — reviewed_by_claude=False

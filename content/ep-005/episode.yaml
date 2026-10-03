@@ -51,13 +51,15 @@ thumbnail:
   chosen: 0
 gate:
   original_narrative: true
-  sources_verified: false
+  sources_verified: true
   visuals_explain: true
   distinct_from_previous: true
   title_thumbnail_honest: true
   ad_suitability_noted: true
   licenses_recorded: true
-  notes: Build 2 pending review.
+  notes: 'sources_verified: troop/temperature figures verified against the HistData CSVs (groups sum to 422,000; temps 0/−21/−30°R on the stated dates); biographical and ''best chart'' claims are secondary and hedged (''many people call''). frames_reviewed (2026-10-03, build 2): flow_adv shows advance only (amber), flow_full adds retreat band + temperature strip, running counter follows the main column; Short hook number auto-shrunk to fit. audio_reviewed: ASR mean WER 0.029; remaining flags are French proper nouns (Minard→''Minar'', Réaumur→''rayomer'', Berezina→''Barry Zina'') after TTS respelling, judged acceptable from the phoneme output (/miːnˈɑːɹ/, /ɹeɪˈoʊmɜːɹ/); ''band''→''ban'' ASR slip. No human listening test was performed.'
+  frames_reviewed: true
+  audio_reviewed: true
 scenes:
 - id: hook
   kind: text

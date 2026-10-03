@@ -220,7 +220,7 @@
       const w = Math.max(2, wmax * (+sg.a[p.size]) / maxv);
       s += `<line x1="${xs(+sg.a[p.x])}" y1="${ys(+sg.a[p.y])}" x2="${xs(+sg.b[p.x])}" y2="${ys(+sg.b[p.y])}" stroke="${sg.adv ? C.amber : C.paper}" stroke-width="${w}" stroke-linecap="butt" stroke-opacity=".9"/>`;
     });
-    if (nShow > 0) { const sg = segs[Math.max(0, nShow - 1)]; s += `<text x="${b.x + b.w - 10}" y="${b.y + bh - 10}" fill="${C.paper}" font-size="40" font-weight="800" text-anchor="end" class="num">${fmt(+sg.b[p.size])} <tspan font-size="22" font-weight="400" fill="${C.muted}">men (${sg.adv ? 'advance' : 'retreat'})</tspan></text>`; }
+    if (nShow > 0) { const mainG = segs[0] && segs[0].a[p.group]; const drawn = segs.slice(0, nShow); const sg = [...drawn].reverse().find(x => x.a[p.group] === mainG) || drawn[drawn.length - 1]; s += `<text x="${b.x + b.w - 10}" y="${b.y + bh - 10}" fill="${C.paper}" font-size="40" font-weight="800" text-anchor="end" class="num">${fmt(+sg.b[p.size])} <tspan font-size="22" font-weight="400" fill="${C.muted}">men (${sg.adv ? 'advance' : 'retreat'})</tspan></text>`; }
     if (temp) {
       const txs = xs, tmin = Math.min(...temp.map(r => +r[p.temp_y])) - 2, tys = linScale(tmin, 0, tb.y + tb.h, tb.y);
       s += `<path d="M${tb.x},${tys(0)}H${tb.x + tb.w}" stroke="${C.grid}" stroke-width="2"/>`;
