@@ -11,6 +11,12 @@ Gözlemler:
 - Ücretsiz standart runner; dakika sayacı public repoda uygulanmıyor (`secondary`). Artifact depolama public repoda ücretsiz (`secondary`); yine de `retention-days: 90` ve bölüm başına ~15 MB.
 - Node 20 → 24 uyarısı (actions sürümleri); işlevi etkilemiyor.
 
+| 37156263709 (#6) | request bump ×2 (ep-001+ep-002, tek koşu) | ❌ kurulum: `astral-sh/setup-uv` GitHub API hatası ("Something went wrong", anonim oran sınırı) | — | — | — | — | 3:15 |
+| 37156473882 (#7) | aynı istek; uv PyPI'den kuruluyor | ✅ | 1:00 | **18:49** (iki bölüm, uzun+Short, tohumlu TTS) | dist zip | `ep-001` ve `ep-002` varlıkları `--clobber` ile güncellendi (22:11 UTC) | 20:02 |
+
+## Doğrulama 2 (2026-10-03 22:15 UTC) — çapraz makine yeniden üretilebilirlik
+Yeniden yayımlanan `ep-001.mp4`, `ep-001-short.mp4`, `ep-002.mp4`, `ep-002-short.mp4` indirildi: manifest sha256 **eşleşti** ve dört dosya da bu Claude ortamındaki yerel `dist/` derlemeleriyle **bit-düzeyinde aynı** (GitHub runner ≠ bu makine; aynı uv.lock, aynı modeller, sabitlenmiş espeak, tohumlu TTS). Runner QC raporları: `QC_PASS`.
+
 ## Doğrulama (2026-10-03 20:58 UTC, bu ortamdan)
 `ep-001.mp4`, `ep-001-short.mp4`, `ep-001.en.srt`, `thumbnail_A.png`, `qc-report.md` release'ten indirildi; `manifest.json` / `manifest-short.json` sha256 değerleri **birebir eşleşti**. ffprobe: h264 1920×1080, AAC, 288.1 s; Short 1080×1920, 30.0 s. Runner'daki QC raporu: `QC_PASS`.
 Sonuç: workflow → release → indirme → checksum zinciri gerçek bölümle doğrulandı (READY ölçütü 7).

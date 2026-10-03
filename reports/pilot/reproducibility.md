@@ -35,3 +35,6 @@ Tohumlama işe yaradı (aynı ortamda ardışık süreçler birebir aynı) ama a
 Temiz klon derleme: 9:49 duvar (cümle başına tohumlu oturum nedeniyle TTS ~2 dk), tepe RSS **1.34 GB** (oturum yeniden yükleme; VPS gereksinimine işlendi).
 
 Sonuç: `git clone` → `uv sync --frozen` → modeller (sha256) → `ytf build ep-001` zinciri, MASTER_PLAN §6 toleranslarını aşarak bit-düzeyinde aynı MP4 üretiyor. Bu sonuç bu makine/işletim sistemi için ölçülmüştür; farklı CPU/ORT yapısında bit eşitliği garanti edilmez, toleranslı eşitlik beklenir (CPU-only ORT, aynı wheel'ler).
+
+## Çapraz makine doğrulaması — GitHub Actions runner (2026-10-03 22:11 UTC)
+Run 37156473882 (`ubuntu-latest`, Python 3.11.16, aynı `uv.lock`, modeller sha256, sabitlenmiş espeak, tohumlu TTS) ile üretilen `ep-001.mp4`, `ep-001-short.mp4`, `ep-002.mp4`, `ep-002-short.mp4` bu ortamdaki yerel derlemelerle **bit-düzeyinde aynı** (sha256 eşit). Yani yeniden üretilebilirlik yalnızca aynı makinede değil, farklı bir CPU/işletim sistemi görüntüsünde de sağlandı. (Bit eşitliği yine de garanti olarak değil, ölçülmüş sonuç olarak kaydedilir; toleranslı tanım MASTER_PLAN §6'da kalır.)
