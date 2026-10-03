@@ -12,17 +12,32 @@ from .text import split_sentences
 SR = 24000
 SENTENCE_GAP = 0.35
 _synth = None
+_synth_seed = None
 
 
-def get_synth():
-    global _synth
-    if _synth is None:
+def get_synth(seed: int | None = None):
+    """Kokoro session. The ONNX graph draws random noise, so output is only reproducible when ONNX Runtime is seeded
+    *before* the session is created and calls happen in the same order. We therefore create a fresh seeded session per
+    sentence (seed = hash of text|voice|speed), which makes every sentence deterministic on its own (ADR-012)."""
+    global _synth, _synth_seed
+    if _synth is None or seed is not None:  # a seeded call always gets a fresh session (RNG state must start from the seed)
         paths.ensure_espeak_env()
+        import onnxruntime as ort
         from kokoro_onnx import Kokoro  # heavy import, lazy
         if not paths.KOKORO_MODEL.exists() or not paths.KOKORO_VOICES.exists():
             raise FileNotFoundError("Kokoro model files missing; run `uv run python scripts/fetch_models.py`")
-        _synth = Kokoro(str(paths.KOKORO_MODEL), str(paths.KOKORO_VOICES))
+        if seed is not None:
+            ort.set_seed(seed)
+        so = ort.SessionOptions()
+        so.intra_op_num_threads = 4
+        sess = ort.InferenceSession(str(paths.KOKORO_MODEL), so, providers=["CPUExecutionProvider"])
+        _synth = Kokoro.from_session(sess, str(paths.KOKORO_VOICES))
+        _synth_seed = seed
     return _synth
+
+
+def sentence_seed(text: str, voice: str, speed: float, lang: str) -> int:
+    return int(sha256_text(f"kokoro-v1.0|{voice}|{speed}|{lang}|{text}")[:8], 16) & 0x7FFFFFFF
 
 
 def list_voices() -> list[str]:
@@ -46,7 +61,7 @@ def synth_sentence(text: str, voice: str, speed: float, lang: str, cache_dir: Pa
     if wav.exists() and meta.exists():
         m = json.loads(meta.read_text())
         return SentenceAudio(text, str(wav), m["duration"])
-    samples, sr = get_synth().create(text, voice=voice, speed=speed, lang=lang)
+    samples, sr = get_synth(sentence_seed(text, voice, speed, lang)).create(text, voice=voice, speed=speed, lang=lang)
     samples = np.asarray(samples, dtype=np.float32)
     # trim leading/trailing silence below -50 dBFS, keep 60 ms margins
     thr = 10 ** (-50 / 20)

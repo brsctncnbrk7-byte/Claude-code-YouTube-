@@ -51,3 +51,7 @@ Bkz. `docs/research/niche-comparison.md`. **Karar:** "Data detective stories": g
 ## ADR-004a — Tetikleme düzeltmesi: release-request dosyası (2026-10-03)
 **Bağlam:** Bu ortamın git proxy'si tag push'unu reddediyor ("remote end hung up"; yalnızca çalışma dalı push edilebiliyor). `workflow_dispatch` default branch gerektiriyor; `main` yok ve izinsiz oluşturulmaz.
 **Karar:** Workflow, `release-requests/<ep>.request` dosyasını ekleyen/değiştiren push ile tetiklenir; yalnızca workflow dosyasına dokunan push smoke testi çalıştırır. Release tag'i `gh release create` ile koşunun içinde oluşturulur (GITHUB_TOKEN; başka workflow tetiklemez). Ek kullanıcı tokenı yok. Bkz. `release-requests/README.md`.
+
+## ADR-012 — TTS deterministikliği: cümle başına tohumlanmış ONNX oturumu (2026-10-03)
+**Bağlam:** Temiz klon testi (`reports/pilot/reproducibility.md`): Kokoro çıktısı aynı metin için çalıştırmalar arası farklı (örnek değerlerde ±0.13, cümle sürelerinde 200 ms'ye kadar). Neden: ONNX grafiği rastgele gürültü çekiyor; ORT tek iş parçacığında bile farklı. Deney: `onnxruntime.set_seed(s)` oturum oluşturulmadan önce çağrılırsa aynı çağrı sırası **bit-düzeyinde aynı** çıktı veriyor.
+**Karar:** Her cümle için `seed = hash(metin|ses|hız|dil)` ile yeni oturum; böylece her cümle tek başına deterministik, önbellek sırası önemsiz. Maliyet: cümle başına oturum yükleme (ölçüm `render-benchmark.md`). Yeniden üretilebilirlik tanımı (MASTER_PLAN §6) korunur; MP4 sha256 eşitliği yine zorunlu değil.

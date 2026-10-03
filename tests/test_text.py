@@ -20,3 +20,17 @@ def test_wrap_lines_limits():
 def test_wer():
     assert wer("the cat sat", "the cat sat") == 0.0
     assert abs(wer("the cat sat", "the cat") - 1 / 3) < 1e-9
+
+
+def test_tts_deterministic_when_models_present(tmp_path):
+    """Seeded per-sentence sessions must give bit-identical audio (ADR-012). Skipped when models are absent."""
+    import pytest
+    from ytf import paths
+    if not paths.KOKORO_MODEL.exists():
+        pytest.skip("kokoro model not downloaded")
+    import numpy as np, soundfile as sf
+    from ytf.tts import synth_sentence
+    a = synth_sentence("Determinism check, one two three.", "af_heart", 1.0, "en-us", tmp_path / "a")
+    b = synth_sentence("Determinism check, one two three.", "af_heart", 1.0, "en-us", tmp_path / "b")
+    x, y = sf.read(a.wav)[0], sf.read(b.wav)[0]
+    assert len(x) == len(y) and np.array_equal(x, y)

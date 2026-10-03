@@ -1,1 +1,53 @@
 == clean clone build start 20:23:34
+[tts] 288.3s narration, 57 sentences, 70.1s
+[subs] 81 cues
+[render] /tmp/claude-0/-home-user-Claude-code-YouTube-/8ccc70bb-5f25-5025-9976-28d226d9edb3/scratchpad/repro/clone/build/ep-001/long/video.mp4 in 385.4s
+[mux] /tmp/claude-0/-home-user-Claude-code-YouTube-/8ccc70bb-5f25-5025-9976-28d226d9edb3/scratchpad/repro/clone/build/ep-001/long/ep-001.mp4 (measured I=-25.68 LUFS → -14)
+[done] build ep-001/long in 517.9s
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 8:38.60
+	Maximum resident set size (kbytes): 836472
+== repro check
+{
+  "duration": {
+    "a": 288.066667,
+    "b": 288.333333,
+    "ok": false
+  },
+  "frames": {
+    "a": 8642,
+    "b": 8650,
+    "ok": false
+  },
+  "sentences": {
+    "n_a": 57,
+    "n_b": 57,
+    "max_abs_diff_ms": 200.3,
+    "ok": false
+  },
+  "srt_cues": {
+    "a": 81,
+    "b": 81,
+    "ok": true
+  },
+  "loudness": {
+    "a": -14.02,
+    "b": -14.01,
+    "ok": true
+  },
+  "frames_pixel_diff": {
+    "mean_per_sample": [
+      0.0,
+      0.0,
+      0.00014,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.00427
+    ],
+    "ok": false
+  },
+  "mp4_sha256_identical": false,
+  "REPRODUCIBLE": false
+}
+REPRO EXIT 0
