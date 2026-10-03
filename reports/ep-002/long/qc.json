@@ -1,0 +1,518 @@
+{
+  "episode": "ep-002",
+  "format": "long",
+  "checks": {
+    "container": {
+      "codec": "h264",
+      "pix_fmt": "yuv420p",
+      "w": 1920,
+      "h": 1080,
+      "fps": "30/1",
+      "audio": "aac 48000Hz",
+      "duration": 179.6,
+      "frames": 5388,
+      "expected_frames": 5388,
+      "ok": true
+    },
+    "blackdetect": {
+      "events": [],
+      "ok": true
+    },
+    "silencedetect": {
+      "events": [],
+      "ok": true
+    },
+    "loudness": {
+      "integrated_lufs": -14.01,
+      "true_peak_dbtp": -2.81,
+      "lra": 2.4,
+      "ok": true
+    },
+    "subtitles": {
+      "cues": 56,
+      "long_or_tall": 0,
+      "ok": true
+    },
+    "text_overflow": {
+      "scenes": [],
+      "ok": true
+    },
+    "frame_samples": {
+      "count": 20,
+      "dir": "/home/user/Claude-code-YouTube-/reports/ep-002/long/frames",
+      "reviewed_by_claude": true
+    },
+    "frame_content": {
+      "blank_frames": [],
+      "ok": true
+    }
+  },
+  "audio_eval": {
+    "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-002/long/spectrogram.png",
+    "phonemes": [
+      {
+        "scene": "hook",
+        "text": "Seventy-three seconds after launch, on January 28, 1986, the Space Shuttle Challenger broke apart.",
+        "ipa": "sˈɛvəntiθɹˈiː sˈɛkəndz ˈæftɚ lˈɑːntʃ ˌɔn dʒˈænjuːˌɛɹi twˈɛnti ˈeɪt nˈaɪntiːnhˈʌndɹɪd ˈeɪɾi sˈɪks ðə spˈeɪs ʃˈʌɾəl tʃˈælɪndʒɚ bɹˈoʊk ɐpˈɑːɹt"
+      },
+      {
+        "scene": "hook",
+        "text": "Seven people died.",
+        "ipa": "sˈɛvən pˈiːpəl dˈaɪd"
+      },
+      {
+        "scene": "hook",
+        "text": "The night before, a group of engineers had tried to stop the launch with a chart.",
+        "ipa": "ðə nˈaɪt bᵻfˌoːɹ ɐ ɡɹˈuːp ʌv ˌɛndʒɪnˈɪɹz hæd tɹˈaɪd tə stˈɑːp ðə lˈɑːntʃ wɪð ɐ tʃˈɑːɹt"
+      },
+      {
+        "scene": "title",
+        "text": "This is the story of the chart they drew, the chart they could have drawn, and the difference between them.",
+        "ipa": "ðɪs ɪz ðə stˈoːɹi ʌvðə tʃˈɑːɹt ðeɪ dɹˈuː ðə tʃˈɑːɹt ðeɪ kˌʊdɐv dɹˈɔːn ænd ðə dˈɪfɹəns bᵻtwˈiːn ðˌɛm"
+      },
+      {
+        "scene": "engineers",
+        "text": "On the evening of January 27, engineers at Morton Thiokol, the contractor that built the solid rocket boosters, joined a teleconference with NASA.",
+        "ipa": "ɔnðɪ ˈiːvnɪŋ ʌv dʒˈænjuːˌɛɹi twˈɛnti sˈɛvən ˌɛndʒɪnˈɪɹz æt mˈɔːɹtən θˌaɪoʊkˈɑːl ðə kəntɹˈæktɚ ðæt bˈɪlt ðə sˈɑːlɪd ɹˈɑːkɪt bˈuːstɚz dʒˈɔɪnd ɐ tˈɛlᵻkˌɑːnfɚɹəns wɪð nˈæsɐ"
+      },
+      {
+        "scene": "engineers",
+        "text": "Their concern was the rubber O-rings that sealed the booster joints.",
+        "ipa": "ðɛɹ kənsˈɜːn wʌzðə ɹˈʌbɚɹ ˈoʊɹˈɪŋz ðæt sˈiːld ðə bˈuːstɚ dʒˈɔɪnts"
+      },
+      {
+        "scene": "engineers",
+        "text": "Cold makes rubber stiff.",
+        "ipa": "kˈoʊld mˌeɪks ɹˈʌbɚ stˈɪf"
+      },
+      {
+        "scene": "engineers",
+        "text": "Here is the kind of evidence they had: every flight on which an O-ring had shown damage, plotted against the temperature at launch.",
+        "ipa": "hˈɪɹ ɪz ðə kˈaɪnd ʌv ˈɛvɪdəns ðeɪ hæd ˈɛvɹi flˈaɪt ˌɔn wˌɪtʃ ɐn ˈoʊɹˈɪŋ hæd ʃˈoʊn dˈæmɪdʒ plˈɑːɾᵻd ɐɡˈɛnst ðə tˈɛmpɹɪtʃɚɹ æt lˈɑːntʃ"
+      },
+      {
+        "scene": "engineers",
+        "text": "Seven flights.",
+        "ipa": "sˈɛvən flˈaɪts"
+      },
+      {
+        "scene": "engineers",
+        "text": "The coldest, at fifty-three degrees, had the most damage.",
+        "ipa": "ðə kˈoʊldɪst æt fˈɪftiθɹˈiː dᵻɡɹˈiːz hæd ðə mˈoʊst dˈæmɪdʒ"
+      },
+      {
+        "scene": "engineers",
+        "text": "The rest scatter from the high fifties to seventy-five.",
+        "ipa": "ðə ɹˈɛst skˈæɾɚ fɹʌmðə hˈaɪ fˈɪftiz tə sˈɛvəntifˈaɪv"
+      },
+      {
+        "scene": "engineers",
+        "text": "Managers looked at this and saw no clear trend.",
+        "ipa": "mˈænɪdʒɚz lˈʊkt æt ðɪs ænd sˈɔː nˈoʊ klˈɪɹ tɹˈɛnd"
+      },
+      {
+        "scene": "compare",
+        "text": "Now add what was left out.",
+        "ipa": "nˈaʊ ˈæd wʌt wʌz lˈɛft ˈaʊt"
+      },
+      {
+        "scene": "compare",
+        "text": "Sixteen flights had launched with no O-ring damage at all.",
+        "ipa": "sˈɪkstiːn flˈaɪts hæd lˈɑːntʃt wɪð nˈoʊ ˈoʊɹˈɪŋ dˈæmɪdʒ æɾ ˈɔːl"
+      },
+      {
+        "scene": "compare",
+        "text": "Every one of them was warm: sixty-six degrees or higher.",
+        "ipa": "ˈɛvɹi wˈʌn ʌv ðˌɛm wʌz wˈɔːɹm sˈɪkstisˈɪks dᵻɡɹˈiːz ɔːɹ hˈaɪɚ"
+      },
+      {
+        "scene": "compare",
+        "text": "Put the zeros back and the picture changes.",
+        "ipa": "pˌʊt ðə zˈiəɹoʊz bˈæk ænd ðə pˈɪktʃɚ tʃˈeɪndʒᵻz"
+      },
+      {
+        "scene": "compare",
+        "text": "Damage is not random.",
+        "ipa": "dˈæmɪdʒ ɪz nˌɑːt ɹˈændəm"
+      },
+      {
+        "scene": "compare",
+        "text": "It lives at the cold end.",
+        "ipa": "ɪt lˈɪvz æt ðə kˈoʊld ˈɛnd"
+      },
+      {
+        "scene": "all23",
+        "text": "Statisticians later fitted a simple model to these twenty-three flights: the chance that an O-ring is damaged as a function of temperature.",
+        "ipa": "stˌæɾɪstˈɪʃənz lˈeɪɾɚ fˈɪɾᵻd ɐ sˈɪmpəl mˈɑːdəl tə ðiːz twˈɛntiθɹˈiː flˈaɪts ðə tʃˈæns ðæt ɐn ˈoʊɹˈɪŋ ɪz dˈæmɪdʒd æz ɐ fˈʌŋkʃən ʌv tˈɛmpɹɪtʃɚ"
+      },
+      {
+        "scene": "all23",
+        "text": "Fit the same model to the public table, and the curve climbs steeply below sixty degrees.",
+        "ipa": "fˈɪt ðə sˈeɪm mˈɑːdəl tə ðə pˈʌblɪk tˈeɪbəl ænd ðə kˈɜːv klˈaɪmz stˈiːpli bᵻlˌoʊ sˈɪksti dᵻɡɹˈiːz"
+      },
+      {
+        "scene": "all23",
+        "text": "At fifty-three degrees, the coldest launch so far, it expects about three damaged rings out of six.",
+        "ipa": "æt fˈɪftiθɹˈiː dᵻɡɹˈiːz ðə kˈoʊldɪst lˈɑːntʃ sˈoʊ fˌɑːɹ ɪɾ ɛkspˈɛkts ɐbˌaʊt θɹˈiː dˈæmɪdʒd ɹˈɪŋz ˌaʊɾəv sˈɪks"
+      },
+      {
+        "scene": "all23",
+        "text": "At the thirty-six degrees recorded on the pad that morning, it expects nearly all six.",
+        "ipa": "æt ðə θˈɜːɾisˈɪks dᵻɡɹˈiːz ɹᵻkˈoːɹdᵻd ɔnðə pˈæd ðæt mˈɔːɹnɪŋ ɪɾ ɛkspˈɛkts nˌɪɹli ˈɔːl sˈɪks"
+      },
+      {
+        "scene": "all23",
+        "text": "The engineers' recommendation that night was to not launch below fifty-three degrees.",
+        "ipa": "ðɪ ˌɛndʒɪnˈɪɹz ɹˌɛkəmɛndˈeɪʃən ðæt nˈaɪt wʌz tə nˌɑːt lˈɑːntʃ bᵻlˌoʊ fˈɪftiθɹˈiː dᵻɡɹˈiːz"
+      },
+      {
+        "scene": "caucus",
+        "text": "NASA managers pushed back on the recommendation.",
+        "ipa": "nˈæsɐ mˈænɪdʒɚz pˈʊʃt bˈæk ɔnðə ɹˌɛkəmɛndˈeɪʃən"
+      },
+      {
+        "scene": "caucus",
+        "text": "Thiokol's management took the call offline for about thirty minutes, returned, and overruled its own engineers.",
+        "ipa": "θˌaɪoʊkˈɑːlz mˈænɪdʒmənt tˈʊk ðə kˈɔːl ˈɔflaɪn fɔːɹ ɐbˌaʊt θˈɜːɾi mˈɪnɪts ɹᵻtˈɜːnd ænd ˌoʊvɚɹˈuːld ɪts ˈoʊn ˌɛndʒɪnˈɪɹz"
+      },
+      {
+        "scene": "caucus",
+        "text": "The launch went ahead.",
+        "ipa": "ðə lˈɑːntʃ wɛnt ɐhˈɛd"
+      },
+      {
+        "scene": "caucus",
+        "text": "The Presidential Commission later traced the failure to the O-ring seal in the aft field joint of the right solid rocket booster, with cold temperature among the causes.",
+        "ipa": "ðə pɹˌɛzɪdˈɛnʃəl kəmˈɪʃən lˈeɪɾɚ tɹˈeɪst ðə fˈeɪlɪɹ tə ðɪ ˈoʊɹˈɪŋ sˈiːl ɪnðɪ ˈæft fˈiːld dʒˈɔɪnt ʌvðə ɹˈaɪt sˈɑːlɪd ɹˈɑːkɪt bˈuːstɚ wɪð kˈoʊld tˈɛmpɹɪtʃɚɹ ɐmˌʌŋ ðə kˈɔːzᵻz"
+      },
+      {
+        "scene": "selection",
+        "text": "The mistake has a name.",
+        "ipa": "ðə mɪstˈeɪk hɐz ɐ nˈeɪm"
+      },
+      {
+        "scene": "selection",
+        "text": "The engineers selected on the outcome: they plotted only the flights where damage had occurred.",
+        "ipa": "ðɪ ˌɛndʒɪnˈɪɹz sᵻlˈɛktᵻd ɔnðɪ ˈaʊtkʌm ðeɪ plˈɑːɾᵻd ˈoʊnli ðə flˈaɪts wˌɛɹ dˈæmɪdʒ hæd əkˈɜːd"
+      },
+      {
+        "scene": "selection",
+        "text": "That throws away the comparison group.",
+        "ipa": "ðæt θɹˈoʊz ɐwˈeɪ ðə kəmpˈæɹɪsən ɡɹˈuːp"
+      },
+      {
+        "scene": "selection",
+        "text": "Without the flights that went fine, there is nothing for the damaged flights to be different from.",
+        "ipa": "wɪðˌaʊt ðə flˈaɪts ðæt wɛnt fˈaɪn ðɛɹ ɪz nˈʌθɪŋ fɚðə dˈæmɪdʒd flˈaɪts təbi dˈɪfɹənt fɹʌm"
+      },
+      {
+        "scene": "tufte",
+        "text": "In 1989, three statisticians published a risk analysis using only the data available before the launch.",
+        "ipa": "ɪn nˈaɪntiːnhˈʌndɹɪd ˈeɪɾi nˈaɪn θɹˈiː stˌæɾɪstˈɪʃənz pˈʌblɪʃt ɐ ɹˈɪsk ɐnˈæləsˌɪs jˈuːzɪŋ ˈoʊnli ðə dˈeɪɾə ɐvˈeɪləbəl bᵻfˌoːɹ ðə lˈɑːntʃ"
+      },
+      {
+        "scene": "tufte",
+        "text": "Their conclusion was that the probability of failure near freezing was very high.",
+        "ipa": "ðɛɹ kəŋklˈuːʒən wʌz ðætðə pɹˌɑːbəbˈɪlᵻɾi ʌv fˈeɪlɪɹ nˌɪɹ fɹˈiːzɪŋ wʌz vˈɛɹi hˈaɪ"
+      },
+      {
+        "scene": "tufte",
+        "text": "Edward Tufte later made the same point about the charts themselves: the evidence existed; the display failed to show it.",
+        "ipa": "ˈɛdwɚd tˈʌft lˈeɪɾɚ mˌeɪd ðə sˈeɪm pˈɔɪnt ɐbˌaʊt ðə tʃˈɑːɹts ðɛmsˈɛlvz ðɪ ˈɛvɪdəns ɛɡzˈɪstᵻd ðə dɪsplˈeɪ fˈeɪld tə ʃˈoʊ ɪt"
+      },
+      {
+        "scene": "why",
+        "text": "Twenty-three rows and two columns.",
+        "ipa": "twˈɛntiθɹˈiː ɹˈoʊz ænd tˈuː kˈɑːlʌmz"
+      },
+      {
+        "scene": "why",
+        "text": "Shown in full, they told the truth.",
+        "ipa": "ʃˈoʊn ɪn fˈʊl ðeɪ tˈoʊld ðə tɹˈuːθ"
+      },
+      {
+        "scene": "why",
+        "text": "Shown in part, they said nothing at all.",
+        "ipa": "ʃˈoʊn ɪn pˈɑːɹt ðeɪ sˈɛd nˈʌθɪŋ æɾ ˈɔːl"
+      },
+      {
+        "scene": "outro",
+        "text": "Sources, the data table, and the model fit are in the description.",
+        "ipa": "sˈoːɹsᵻz ðə dˈeɪɾə tˈeɪbəl ænd ðə mˈɑːdəl fˈɪt ɑːɹ ɪnðə dᵻskɹˈɪpʃən"
+      },
+      {
+        "scene": "outro",
+        "text": "Next time: six hundred and sixteen dots, and the map that found the source of cholera.",
+        "ipa": "nˈɛkst tˈaɪm sˈɪks hˈʌndɹɪd ænd sˈɪkstiːn dˈɑːts ænd ðə mˈæp ðæt fˈaʊnd ðə sˈoːɹs ʌv kˈɑːlɚɹə"
+      }
+    ],
+    "asr": {
+      "model": "whisper-base.en int8 (sherpa-onnx)",
+      "seconds": 19.1,
+      "rows": [
+        {
+          "scene": "hook",
+          "ref": "Seventy-three seconds after launch, on January 28, 1986, the Space Shuttle Challenger broke apart.",
+          "hyp": "73 seconds after launch, on January 28, 1986, the Space Shuttle Challenger broke apart.",
+          "wer": 0.0
+        },
+        {
+          "scene": "hook",
+          "ref": "Seven people died.",
+          "hyp": "Seven people died.",
+          "wer": 0.0
+        },
+        {
+          "scene": "hook",
+          "ref": "The night before, a group of engineers had tried to stop the launch with a chart.",
+          "hyp": "The night before, a group of engineers had tried to stop the launch with a chart.",
+          "wer": 0.0
+        },
+        {
+          "scene": "title",
+          "ref": "This is the story of the chart they drew, the chart they could have drawn, and the difference between them.",
+          "hyp": "This is the story of the chart they drew, the chart they could have drawn, and the difference between them.",
+          "wer": 0.0
+        },
+        {
+          "scene": "engineers",
+          "ref": "On the evening of January 27, engineers at Morton Thiokol, the contractor that built the solid rocket boosters, joined a teleconference with NASA.",
+          "hyp": "On the evening of January 27, engineers at Morton Thiocall, the contractor that built the solid rocket boosters, joined a teleconference with NASA. [buzzer]",
+          "wer": 0.042
+        },
+        {
+          "scene": "engineers",
+          "ref": "Their concern was the rubber O-rings that sealed the booster joints.",
+          "hyp": "Their concern was the rubber o-rings that sealed the booster joints. [buzzer]",
+          "wer": 0.0
+        },
+        {
+          "scene": "engineers",
+          "ref": "Cold makes rubber stiff.",
+          "hyp": "Cold makes rubber stiff.",
+          "wer": 0.0
+        },
+        {
+          "scene": "engineers",
+          "ref": "Here is the kind of evidence they had: every flight on which an O-ring had shown damage, plotted against the temperature at launch.",
+          "hyp": "Here is the kind of evidence they had. Every flight on which an o-ring had shown damage plotted against the temperature at launch. [buzzer]",
+          "wer": 0.0
+        },
+        {
+          "scene": "engineers",
+          "ref": "Seven flights.",
+          "hyp": "7 flights",
+          "wer": 0.0
+        },
+        {
+          "scene": "engineers",
+          "ref": "The coldest, at fifty-three degrees, had the most damage.",
+          "hyp": "The coldest at 53 degrees had the most damage.",
+          "wer": 0.0
+        },
+        {
+          "scene": "engineers",
+          "ref": "The rest scatter from the high fifties to seventy-five.",
+          "hyp": "The rest scatter from the high 50s to 75.",
+          "wer": 0.0
+        },
+        {
+          "scene": "engineers",
+          "ref": "Managers looked at this and saw no clear trend.",
+          "hyp": "Managers looked at this and saw no clear trend.",
+          "wer": 0.0
+        },
+        {
+          "scene": "compare",
+          "ref": "Now add what was left out.",
+          "hyp": "Now add what was left out.",
+          "wer": 0.0
+        },
+        {
+          "scene": "compare",
+          "ref": "Sixteen flights had launched with no O-ring damage at all.",
+          "hyp": "16 flights had launched with no o-ring damage at all.",
+          "wer": 0.0
+        },
+        {
+          "scene": "compare",
+          "ref": "Every one of them was warm: sixty-six degrees or higher.",
+          "hyp": "Every one of them was warm, 66 degrees or higher.",
+          "wer": 0.0
+        },
+        {
+          "scene": "compare",
+          "ref": "Put the zeros back and the picture changes.",
+          "hyp": "Put the zeros back and the picture changes.",
+          "wer": 0.0
+        },
+        {
+          "scene": "compare",
+          "ref": "Damage is not random.",
+          "hyp": "Damage is not random.",
+          "wer": 0.0
+        },
+        {
+          "scene": "compare",
+          "ref": "It lives at the cold end.",
+          "hyp": "It lives at the cold end.",
+          "wer": 0.0
+        },
+        {
+          "scene": "all23",
+          "ref": "Statisticians later fitted a simple model to these twenty-three flights: the chance that an O-ring is damaged as a function of temperature.",
+          "hyp": "Statisticians later fitted a simple model to these 23 flights. The chance that an o-ring is damaged as a function of temperature.",
+          "wer": 0.0
+        },
+        {
+          "scene": "all23",
+          "ref": "Fit the same model to the public table, and the curve climbs steeply below sixty degrees.",
+          "hyp": "Fit the same model to the public table, and the curve climbs steeply below 60 degrees.",
+          "wer": 0.0
+        },
+        {
+          "scene": "all23",
+          "ref": "At fifty-three degrees, the coldest launch so far, it expects about three damaged rings out of six.",
+          "hyp": "At 53 degrees, the coldest launch so far. It expects about three damaged rings out of six. [BUZZER]",
+          "wer": 0.0
+        },
+        {
+          "scene": "all23",
+          "ref": "At the thirty-six degrees recorded on the pad that morning, it expects nearly all six.",
+          "hyp": "At the 36 degrees recorded on the pad that morning, it expects nearly all six.",
+          "wer": 0.0
+        },
+        {
+          "scene": "all23",
+          "ref": "The engineers' recommendation that night was to not launch below fifty-three degrees.",
+          "hyp": "The engineers' recommendation that night was to not launch below 53 degrees.",
+          "wer": 0.0
+        },
+        {
+          "scene": "caucus",
+          "ref": "NASA managers pushed back on the recommendation.",
+          "hyp": "NASA managers pushed back on the recommendation.",
+          "wer": 0.0
+        },
+        {
+          "scene": "caucus",
+          "ref": "Thiokol's management took the call offline for about thirty minutes, returned, and overruled its own engineers.",
+          "hyp": "Thio Call's management took the call offline for about 30 minutes, returned, and overruled its own engineers.",
+          "wer": 0.133,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-002/long/spectrograms/flag_00_caucus.png"
+        },
+        {
+          "scene": "caucus",
+          "ref": "The launch went ahead.",
+          "hyp": "The launch went ahead.",
+          "wer": 0.0
+        },
+        {
+          "scene": "caucus",
+          "ref": "The Presidential Commission later traced the failure to the O-ring seal in the aft field joint of the right solid rocket booster, with cold temperature among the causes.",
+          "hyp": "The presidential commission later traced the failure to the O-ring seal in the aft field joint of the right solid rocket booster, with cold temperature among the causes. [BUZZER]",
+          "wer": 0.0
+        },
+        {
+          "scene": "selection",
+          "ref": "The mistake has a name.",
+          "hyp": "The mistake has a name.",
+          "wer": 0.0
+        },
+        {
+          "scene": "selection",
+          "ref": "The engineers selected on the outcome: they plotted only the flights where damage had occurred.",
+          "hyp": "The engineers selected on the outcome. They plotted only the flights where damage had occurred. [buzzer]",
+          "wer": 0.0
+        },
+        {
+          "scene": "selection",
+          "ref": "That throws away the comparison group.",
+          "hyp": "That throws away the comparison group.",
+          "wer": 0.0
+        },
+        {
+          "scene": "selection",
+          "ref": "Without the flights that went fine, there is nothing for the damaged flights to be different from.",
+          "hyp": "Without the flights that went fine, there is nothing for the damaged flights to be different from.",
+          "wer": 0.0
+        },
+        {
+          "scene": "tufte",
+          "ref": "In 1989, three statisticians published a risk analysis using only the data available before the launch.",
+          "hyp": "In 1989, three statisticians published a risk analysis using only the data available before the launch.",
+          "wer": 0.0
+        },
+        {
+          "scene": "tufte",
+          "ref": "Their conclusion was that the probability of failure near freezing was very high.",
+          "hyp": "Their conclusion was that the probability of failure near freezing was very high.",
+          "wer": 0.0
+        },
+        {
+          "scene": "tufte",
+          "ref": "Edward Tufte later made the same point about the charts themselves: the evidence existed; the display failed to show it.",
+          "hyp": "Edward Tuft later made the same point about the charts themselves. The evidence existed, the display failed to show it.",
+          "wer": 0.05
+        },
+        {
+          "scene": "why",
+          "ref": "Twenty-three rows and two columns.",
+          "hyp": "23 rows and two columns.",
+          "wer": 0.0
+        },
+        {
+          "scene": "why",
+          "ref": "Shown in full, they told the truth.",
+          "hyp": "Shown in full, they told the truth.",
+          "wer": 0.0
+        },
+        {
+          "scene": "why",
+          "ref": "Shown in part, they said nothing at all.",
+          "hyp": "Shown in part, they said nothing at all.",
+          "wer": 0.0
+        },
+        {
+          "scene": "outro",
+          "ref": "Sources, the data table, and the model fit are in the description.",
+          "hyp": "Sources, the data table, and the model fit are in the description. [AUDIO OUT]",
+          "wer": 0.0
+        },
+        {
+          "scene": "outro",
+          "ref": "Next time: six hundred and sixteen dots, and the map that found the source of cholera.",
+          "hyp": "Next time, 616 dots and the map that found the source of cholera.",
+          "wer": 0.0
+        }
+      ],
+      "mean_wer": 0.0058,
+      "flagged": [
+        {
+          "scene": "caucus",
+          "ref": "Thiokol's management took the call offline for about thirty minutes, returned, and overruled its own engineers.",
+          "hyp": "Thio Call's management took the call offline for about 30 minutes, returned, and overruled its own engineers.",
+          "wer": 0.133,
+          "spectrogram": "/home/user/Claude-code-YouTube-/reports/ep-002/long/spectrograms/flag_00_caucus.png"
+        }
+      ]
+    },
+    "disclaimer": "Audio was evaluated by phoneme review, ASR round-trip and spectrogram inspection; no human listening test was performed."
+  },
+  "warnings": [],
+  "status": "QC_PASS",
+  "technical_ok": true,
+  "gate": {
+    "original_narrative": true,
+    "sources_verified": true,
+    "visuals_explain": true,
+    "distinct_from_previous": true,
+    "title_thumbnail_honest": true,
+    "ad_suitability_noted": true,
+    "licenses_recorded": true,
+    "frames_reviewed": true,
+    "audio_reviewed": true,
+    "notes": "sources_verified: all claims have rows in sources.md; the 23-flight table and our logistic fit are verified by computation; teleconference/temperature/caucus facts rest on secondary summaries (Rogers Commission report not readable here) and the narration avoids figures those sources disagree on. frames_reviewed (2026-10-03): Claude inspected hook, title, engineers, compare, all23, caucus frames — scatter layouts, markers (36°F, 53°F), curve and legends correct; thumbnail A readable at 320 px. audio_reviewed: ASR mean WER 0.011; the one remaining flag is the proper noun 'Thiokol' transcribed as 'Thio Call' (phonetically close; accepted). No human listening test was performed."
+  },
+  "gate_ok": true
+}

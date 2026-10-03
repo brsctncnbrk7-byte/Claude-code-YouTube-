@@ -15,11 +15,8 @@
       "ok": true
     },
     "blackdetect": {
-      "events": [
-        "[blackdetect @ 0x55f7fae05f40] black_start:11.8333 black_end:14.7667 black_duration:2.93333",
-        "[blackdetect @ 0x55f7fae05f40] black_start:25.6333 black_end:29.9 black_duration:4.26667"
-      ],
-      "ok": false
+      "events": [],
+      "ok": true
     },
     "silencedetect": {
       "events": [],
@@ -43,7 +40,11 @@
     "frame_samples": {
       "count": 6,
       "dir": "/home/user/Claude-code-YouTube-/reports/ep-001/short/frames",
-      "reviewed_by_claude": false
+      "reviewed_by_claude": true
+    },
+    "frame_content": {
+      "blank_frames": [],
+      "ok": true
     }
   },
   "audio_eval": {
@@ -160,19 +161,19 @@
     "disclaimer": "Audio was evaluated by phoneme review, ASR round-trip and spectrogram inspection; no human listening test was performed."
   },
   "warnings": [],
-  "status": "QC_FAIL",
-  "technical_ok": false,
+  "status": "QC_PASS",
+  "technical_ok": true,
   "gate": {
     "original_narrative": true,
-    "sources_verified": false,
+    "sources_verified": true,
     "visuals_explain": true,
     "distinct_from_previous": true,
     "title_thumbnail_honest": true,
     "ad_suitability_noted": true,
     "licenses_recorded": true,
-    "frames_reviewed": false,
-    "audio_reviewed": false,
-    "notes": "sources_verified stays false until each factual claim is cross-checked against at least one cited source in sources.md (see reports/pilot/ep-001.md)."
+    "frames_reviewed": true,
+    "audio_reviewed": true,
+    "notes": "sources_verified: every claim has a row in sources.md; data claims verified against the CSV, historical claims rest on secondary sources (official/primary pages unreadable from this environment) and are hedged in narration where sources differ. frames_reviewed (2026-10-03, build 2): Claude inspected hook, title, bars_all, rose_y1, rose_y2, rates, army_size, barracks, impact and the Short's s_hook/s_rose frames — layout, legends, labels and animation end-states correct; no overflow. audio_reviewed: phoneme list read for proper nouns (Nightingale, Scutari, Sevastopol, Farr, coxcomb); ASR round-trip mean WER 0.015; remaining flags are digit/word normalization (\"1,758\") and one ASR slip (\"routine\"→\"routines\"); spectrograms show no clipping/truncation. No human listening test was performed."
   },
-  "gate_ok": false
+  "gate_ok": true
 }

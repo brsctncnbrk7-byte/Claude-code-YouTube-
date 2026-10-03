@@ -20,17 +20,18 @@ def mux(video: Path, narration: Path, out: Path) -> dict:
     ln = ("loudnorm=I=-14:TP=-1.5:LRA=11:linear=true:measured_I={input_i}:measured_TP={input_tp}:measured_LRA={input_lra}:"
           "measured_thresh={input_thresh}:offset={target_offset}").format(**m)
     cmd = ["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(video), "-i", str(narration),
-           "-af", f"{ln},aresample=48000,apad", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2",
+           "-af", f"{ln},alimiter=limit=0.8:attack=3:release=60:level=false,aresample=48000,apad", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2",
            "-shortest", "-movflags", "+faststart", str(out)]
     subprocess.run(cmd, check=True)
     # verify; loudnorm linear mode can land >0.5 LU off target — correct with a plain gain and re-mux (max 2 passes)
     for _ in range(2):
         got = measure_loudness(out)
         diff = -14.0 - float(got["input_i"])
-        if abs(diff) <= 0.4 or float(got["input_tp"]) + diff > -1.2:
+        if abs(diff) <= 0.4 and float(got["input_tp"]) <= -1.0:
             break
         tmp = out.with_name(out.stem + "_gain.mp4")
-        subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(out), "-af", f"volume={diff:.2f}dB",
+        # gain, then a true-peak-safe limiter at -1.9 dBTP (speech has a high peak-to-loudness ratio)
+        subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(out), "-af", f"volume={diff:.2f}dB,alimiter=limit=0.8:attack=3:release=60:level=false",
                         "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(tmp)], check=True)
         tmp.replace(out)
     return m

@@ -1,17 +1,18 @@
 # QC report — ep-001 (short)
 
-**Status:** `QC_FAIL`  •  technical_ok=False  •  gate_ok=False
+**Status:** `QC_PASS`  •  technical_ok=True  •  gate_ok=True
 
 ## B. Technical checks
 | check | ok | detail |
 |---|---|---|
 | container | ✅ | {"codec": "h264", "pix_fmt": "yuv420p", "w": 1080, "h": 1920, "fps": "30/1", "audio": "aac 48000Hz", "duration": 29.933, "frames": 898, "expected_frames": 898} |
-| blackdetect | ❌ | {} events=2 |
+| blackdetect | ✅ | {} |
 | silencedetect | ✅ | {} |
 | loudness | ✅ | {"integrated_lufs": -14.02, "true_peak_dbtp": -2.19, "lra": 2.9} |
 | subtitles | ✅ | {"cues": 10, "long_or_tall": 0} |
 | text_overflow | ✅ | {} |
-| frame_samples | ✅ | {"count": 6, "dir": "/home/user/Claude-code-YouTube-/reports/ep-001/short/frames", "reviewed_by_claude": false} |
+| frame_samples | ✅ | {"count": 6, "dir": "/home/user/Claude-code-YouTube-/reports/ep-001/short/frames", "reviewed_by_claude": true} |
+| frame_content | ✅ | {"blank_frames": []} |
 
 ## C. Audio evaluation (not a human listening test)
 > Audio was evaluated by phoneme review, ASR round-trip and spectrogram inspection; no human listening test was performed.
@@ -48,15 +49,15 @@ Spectrogram: `/home/user/Claude-code-YouTube-/reports/ep-001/short/spectrogram.p
 | item | ok |
 |---|---|
 | original_narrative | ✅ |
-| sources_verified | ❌ |
+| sources_verified | ✅ |
 | visuals_explain | ✅ |
 | distinct_from_previous | ✅ |
 | title_thumbnail_honest | ✅ |
 | ad_suitability_noted | ✅ |
 | licenses_recorded | ✅ |
-| frames_reviewed | ❌ |
-| audio_reviewed | ❌ |
+| frames_reviewed | ✅ |
+| audio_reviewed | ✅ |
 
-Notes: sources_verified stays false until each factual claim is cross-checked against at least one cited source in sources.md (see reports/pilot/ep-001.md).
+Notes: sources_verified: every claim has a row in sources.md; data claims verified against the CSV, historical claims rest on secondary sources (official/primary pages unreadable from this environment) and are hedged in narration where sources differ. frames_reviewed (2026-10-03, build 2): Claude inspected hook, title, bars_all, rose_y1, rose_y2, rates, army_size, barracks, impact and the Short's s_hook/s_rose frames — layout, legends, labels and animation end-states correct; no overflow. audio_reviewed: phoneme list read for proper nouns (Nightingale, Scutari, Sevastopol, Farr, coxcomb); ASR round-trip mean WER 0.015; remaining flags are digit/word normalization ("1,758") and one ASR slip ("routine"→"routines"); spectrograms show no clipping/truncation. No human listening test was performed.
 
-Frame samples: `/home/user/Claude-code-YouTube-/reports/ep-001/short/frames` — reviewed_by_claude=False
+Frame samples: `/home/user/Claude-code-YouTube-/reports/ep-001/short/frames` — reviewed_by_claude=True

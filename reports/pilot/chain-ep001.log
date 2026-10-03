@@ -1,0 +1,167 @@
+== build ep-001 long
+[tts] 288.1s narration, 57 sentences, 3.3s
+[subs] 81 cues
+[render] /home/user/Claude-code-YouTube-/build/ep-001/long/video.mp4 in 398.3s
+[mux] /home/user/Claude-code-YouTube-/build/ep-001/long/ep-001.mp4 (measured I=-25.68 LUFS → -14)
+[done] build ep-001/long in 464.4s
+== qc long
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[qc] QC_PASS technical_ok=True gate_ok=True → reports/ep-001/long/qc-report.md
+== qc short
+
+
+
+
+
+
+
+
+
+[qc] QC_PASS technical_ok=True gate_ok=True → reports/ep-001/short/qc-report.md
+== package long
+[package] /home/user/Claude-code-YouTube-/dist/ep-001
+== package short
+[package] /home/user/Claude-code-YouTube-/dist/ep-001/short
+== build ep-002 long
+[tts] 179.6s narration, 39 sentences, 44.4s
+[subs] 56 cues
+[render] /home/user/Claude-code-YouTube-/build/ep-002/long/video.mp4 in 252.7s
+[mux] /home/user/Claude-code-YouTube-/build/ep-002/long/ep-002.mp4 (measured I=-25.63 LUFS → -14)
+[done] build ep-002/long in 335.2s
+	Command being timed: "uv run ytf build ep-002 --workers 2"
+	User time (seconds): 621.77
+	System time (seconds): 48.67
+	Percent of CPU this job got: 199%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:35.56
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 757732
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 200
+	Minor (reclaiming a frame) page faults: 2252701
+	Voluntary context switches: 798621
+	Involuntary context switches: 201171
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 818680
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+== build ep-002 short
+[tts] 24.1s narration, 6 sentences, 6.8s
+[subs] 6 cues
+[render] /home/user/Claude-code-YouTube-/build/ep-002/short/video.mp4 in 34.2s
+[mux] /home/user/Claude-code-YouTube-/build/ep-002/short/ep-002.mp4 (measured I=-25.58 LUFS → -14)
+[done] build ep-002/short in 46.6s
+== qc ep-002
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[qc] QC_FAIL technical_ok=False gate_ok=False → reports/ep-002/long/qc-report.md
+
+
+
+
+
+
+[qc] QC_PASS_TECHNICAL_ONLY technical_ok=True gate_ok=False → reports/ep-002/short/qc-report.md
+== package ep-002
+[package] /home/user/Claude-code-YouTube-/dist/ep-002
+[package] /home/user/Claude-code-YouTube-/dist/ep-002/short
+CHAIN EXIT 0

@@ -77,6 +77,7 @@ def normalize_for_wer(s: str, year_style: bool = True) -> list[str]:
     s = re.sub(r"\[[^\]]*\]", " ", s)          # whisper tags like [AUDIO OUT]
     s = s.replace("°f", " degrees fahrenheit ").replace("°", " degrees ")
     s = re.sub(r"(\d),(\d{3})", r"\1\2", s)       # 1,023 -> 1023
+    s = re.sub(r"\b([2-9])0s\b", lambda m: _TENS[int(m.group(1))][:-1] + "ies", s)  # 50s -> fifties
     s = re.sub(r"\d+", lambda m: " " + (num_to_words(int(m.group(0))) if year_style else num_to_words_plain(int(m.group(0)))) + " ", s)
     s = re.sub(r"[^a-z' ]+", " ", s)
     s = re.sub(r"\b(and)\b", " ", s)             # "four hundred and seventy six" == "four hundred seventy six"

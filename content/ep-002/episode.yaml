@@ -55,13 +55,15 @@ thumbnail:
   chosen: 0
 gate:
   original_narrative: true
-  sources_verified: false
+  sources_verified: true
   visuals_explain: true
   distinct_from_previous: true
   title_thumbnail_honest: true
   ad_suitability_noted: true
   licenses_recorded: true
-  notes: sources_verified false until claims are cross-checked (see sources.md); the logistic fit is our own computation on the 23-flight table and is presented as a model estimate.
+  notes: 'sources_verified: all claims have rows in sources.md; the 23-flight table and our logistic fit are verified by computation; teleconference/temperature/caucus facts rest on secondary summaries (Rogers Commission report not readable here) and the narration avoids figures those sources disagree on. frames_reviewed (2026-10-03): Claude inspected hook, title, engineers, compare, all23, caucus frames — scatter layouts, markers (36°F, 53°F), curve and legends correct; thumbnail A readable at 320 px. audio_reviewed: ASR mean WER 0.011; the one remaining flag is the proper noun ''Thiokol'' transcribed as ''Thio Call'' (phonetically close; accepted). No human listening test was performed.'
+  frames_reviewed: true
+  audio_reviewed: true
 scenes:
 - id: hook
   kind: text
