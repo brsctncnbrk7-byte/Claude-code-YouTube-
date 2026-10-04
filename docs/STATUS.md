@@ -1,8 +1,8 @@
 # STATUS — güncel durum
 
-**Son güncelleme:** 2026-10-03 (oturum 1, sonlara doğru)
+**Son güncelleme:** 2026-10-04 (oturum 1 sonu)
 **Faz:** 6 — GitHub hazırlığı tamamlandı
-**READY_FOR_VPS:** **YENİDEN AÇILDI — son kabul incelemesi sürüyor** (kullanıcı talebi 2026-10-03); karar `reports/READY_FOR_VPS.md` güncellenince
+**READY_FOR_VPS:** **EVET (kabul incelemesi sonrası yeniden verildi, 2026-10-04)** — `reports/ACCEPTANCE_REVIEW.md`, `reports/READY_FOR_VPS.md`; VPS geçişi kullanıcı talimatını bekliyor
 
 ## Tamamlanan somut çıktılar
 - Repo iskeleti, CLAUDE.md, MIT lisans, sır taraması, ortam raporu betiği
@@ -12,8 +12,8 @@
 - **Pilot #2 ep-002 (Challenger): QC_PASS uzun (3.0 dk) + Short** — `dist/ep-002/`; aynı hat, farklı veri/sahne türleri, kod değişikliği gerekmedi
 - **ep-003 (Snow): QC_PASS uzun (2.6 dk) + Short** — `dist/ep-003/`; yeni `dots` sahnesi; tarihsiz satır filtresi
 - **Yeniden üretilebilirlik: PASS** — temiz klonda bit-düzeyinde aynı MP4 (ADR-012 tohumlu TTS + sabitlenmiş espeak; `reports/pilot/reproducibility.md`)
-- **GitHub Releases:** `ep-001`, `ep-002` yayımlandı ve sha256 doğrulandı; sabitlenmiş hatla yeniden yayım ve `ep-003` koşuları sürüyor
-- İkinci hafta tamponu: **ep-005 (Minard) QC_PASS uzun+Short, Release `ep-005` yayımlandı ve doğrulandı**; ep-006 (Literary Digest) senaryo+veri hazır (`scripted`)
+- **GitHub Releases:** `ep-001`, `ep-002`, `ep-003`, `ep-005`, `ep-006` (uzun + Short) — derin ses QC raporlarıyla yeniden yayımlandı; sha256 = manifest = yerel derleme (bit-aynı)
+- İkinci hafta tamponu: ep-005 (Minard) ve ep-006 (Literary Digest) QC_PASS, yayımlandı; sıradaki senaryolar ep-004 (Wald — veri doğrulanırsa) / ep-007 (Simpson)
 - Kanal kiti: marka, logo/banner/profil/watermark PNG, kurulum listesi, playlist yapısı
 - Actions: smoke zinciri doğrulandı (workflow → release `smoke-37149042055` → indirme → sha256 OK); ep-001 gerçek release koşusu başlatıldı (run 37151370173)
 - Raporlar: `reports/pilot/ep-001.md`, `ep-002.md`, `render-benchmark.md`

@@ -40,4 +40,8 @@ items:
   - id: ep-006
     format: long
     planned_day: 9
-    status: scripted
+    status: ready
+  - id: ep-006
+    format: short
+    planned_day: 10
+    status: ready

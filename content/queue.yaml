@@ -41,7 +41,7 @@ episodes:
     thesis: "Literary Digest's 2.4 million responses predicted Landon; Gallup's 50,000 predicted Roosevelt. Sample size is not sample quality."
     data: "published 1936 poll and election results (public record)"
     visual_core: "mailing funnel; prediction vs result bars; bias explainer cards"
-    status: scripted
+    status: packaged   # QC_PASS long+short 2026-10-03; 2.7 min
   - id: ep-007
     title_working: "Simpson's Paradox: The Berkeley Admissions Case"
     thesis: "Aggregate data showed bias against women; department-level data reversed it. Both were 'true'."

@@ -76,8 +76,17 @@ Alt ajan sonucu: 6 PASS, 2 PARTIAL (ölçüt 7 "repo içinde manifest", ölçüt
 ## E. Hesap sahibi zorunlulukları (Claude yapamaz)
 Google hesabı/telefon doğrulaması; 2 Adımlı Doğrulama; gelişmiş özellikler için kimlik/telefon; YPP başvurusu; AdSense hesabı, vergi/banka bilgileri, sözleşme kabulü; video yükleme ve zamanlama (channel/SETUP_CHECKLIST.md, docs/operations/publishing.md). Yükleme sonrası kullanıcı yalnızca video URL'sini bildirir; repo kayıtlarını Claude günceller.
 
-## F. Yeniden yayım doğrulaması (derin ses QC + düzeltilmiş kontrol listesi)
-_(5 bölümlük yeniden yayım koşusu tamamlanınca: her release için MP4 sha256 = manifest = yerel derleme; UPLOAD_CHECKLIST adım 8 düzeltilmiş; qc-report derin ses satırı; durum)_
+## F. Yeniden yayım doğrulaması (Actions run 37161850218, 23:27:50–00:05:27 UTC, 5 bölüm tek koşuda; önceki koşu 37161749507 eski rapor koduyla başladığı için iptal edildi)
+Her release'ten `MP4`, `Short MP4`, `manifest*.json`, `qc-report*.md`, `UPLOAD_CHECKLIST.md` indirildi (2026-10-04 00:06 UTC):
+| Release | MP4 sha256 = manifest | = yerel derleme | Short sha256 = manifest | = yerel | Kontrol listesi düzeltilmiş | qc-report derin ses satırı | Durum (uzun/Short) |
+|---|---|---|---|---|---|---|---|
+| ep-001 | ✅ | ✅ bit-aynı | ✅ | ✅ | ✅ | ✅ | QC_PASS / QC_PASS |
+| ep-002 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | QC_PASS / QC_PASS |
+| ep-003 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | QC_PASS / QC_PASS |
+| ep-005 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | QC_PASS / QC_PASS |
+| ep-006 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | QC_PASS / QC_PASS |
+Not: yalnızca workflow dosyasına dokunan bir push, tasarım gereği `smoke-37161563615` adlı 3 dosyalık test release'i üretti; zararsız, kalıcı kanıt olarak bırakıldı.
 
 ## G. Karar
-_(§F doğrulamasından sonra)_
+Teknik hazırlık: 8/8 ölçüt PASS (§A, bağımsız incelemenin iki PARTIAL bulgusu §D/§F ile kapatıldı). İçerik kabulü: 5 bölüm + 5 Short, her biri içerik kapısı (A) ve derin ses katmanları (C) dahil `QC_PASS`; uzunluk içerik tarafından belirlendi (ADR-013). Hesap sahibi zorunlulukları §E'de ayrı. Açık ve çözülemeyen engeller: resmî politika sayfalarının bu ortamdan okunamaması (etiketli; HELP_REQUEST ile kapatılabilir) ve insan dinleme testinin yapılamaması (makine vekilleriyle değerlendirildi, beyan edildi).
+**Sonuç: `READY_FOR_VPS / GITHUB PREPARATION COMPLETE` yeniden verildi (2026-10-04). VPS geçişi kullanıcı talimatını bekler.**
