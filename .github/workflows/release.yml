@@ -4,10 +4,9 @@
 # default branch, so neither is used (ADR-004 amended 2026-10-03).
 # Free standard runner only (ADR-003). Runner setup is explicit — nothing from the Claude environment is assumed (ADR-005).
 name: build-and-release
+# PROJECT CLOSED / DISCONTINUED BY USER (2026-10-04): automatic trigger removed. Pushes no longer start this workflow.
+# Manual dispatch left in place only so the definition stays runnable for archival inspection; do not run it.
 on:
-  push:
-    branches: ["**"]
-    paths: ["release-requests/*.request", ".github/workflows/release.yml"]
   workflow_dispatch:
     inputs:
       episode: { description: "episode id (e.g. ep-001) or 'smoke'", required: true, default: "smoke" }

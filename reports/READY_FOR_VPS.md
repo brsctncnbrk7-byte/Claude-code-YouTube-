@@ -1,3 +1,5 @@
+> **GEÇERSİZ — ARŞİV KAYDI.** Proje 2026-10-04'te kullanıcı tarafından sonlandırıldı (CLOSED / DISCONTINUED BY USER; bkz. docs/STATUS.md). Bu belge güncel durumu göstermez; VPS'e geçiş yapılmadı ve yapılmayacak.
+
 # READY_FOR_VPS / GITHUB PREPARATION COMPLETE — 2026-10-04 (kabul incelemesinden sonra yeniden verildi; bkz. reports/ACCEPTANCE_REVIEW.md)
 
 Sekiz bitiş ölçütü (docs/MASTER_PROMPT.md §10) kanıtlarıyla aşağıdadır. VPS geçişi **başlatılmadı**; repo GitHub'da kalır ve geçiş yalnızca kullanıcı talebiyle başlar (CLAUDE.md §5, docs/operations/vps-setup.md "denenmedi" etiketlidir).

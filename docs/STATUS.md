@@ -1,10 +1,16 @@
 # STATUS — güncel durum
 
-**Son güncelleme:** 2026-10-04 (oturum 1 sonu)
-**Faz:** 6 — GitHub hazırlığı tamamlandı
-**READY_FOR_VPS:** **EVET (kabul incelemesi sonrası yeniden verildi, 2026-10-04)** — `reports/ACCEPTANCE_REVIEW.md`, `reports/READY_FOR_VPS.md`; VPS geçişi kullanıcı talimatını bekliyor
+**Son güncelleme:** 2026-10-04 (kapanış)
+**Durum:** **CLOSED / DISCONTINUED BY USER** — proje, mevcut çıktılar kullanıcı tarafından yeterli bulunmadığı için 2026-10-04 tarihinde sonlandırıldı.
+**READY_FOR_VPS:** geçerli değil (geçmiş kayıt; `reports/READY_FOR_VPS.md` ve `reports/ACCEPTANCE_REVIEW.md` arşiv olarak durur). VPS'e geçiş yapılmadı ve yapılmayacak.
+**Yayın:** hiçbir video yayımlanmadı; `first_public_publish_utc` boş; 30 günlük sayaç başlatılmadı.
+**Otomasyon:** `.github/workflows/release.yml` push tetikleyicisi kaldırıldı (yalnızca el ile dispatch tanımı kaldı, çalıştırılmayacak). Hesapta zamanlanmış Routine yok (list_triggers: boş). VPS cron kurulmadı.
+**Korunanlar:** repo, raporlar, `reports/releases/` manifestleri ve GitHub Releases `ep-001`, `ep-002`, `ep-003`, `ep-005`, `ep-006` silinmedi.
+**Yapılmayacaklar:** yeni render, revizyon, yayın, VPS kurulumu.
 
-> **2026-10-04 (sonra):** Kullanıcı ep-001/ep-002 örneklerini telefondan inceliyor (linkler: `reports/releases/sample-links-2026-10-04.md`). İçerik kabulü ve ilk yayın tarihi kullanıcı onayı gelmeden kaydedilmez. ChatGPT yanıt dosyası (`chatgpt-answers-2026-10-04.md`) beklenir; açık doğrulamalar o zamana kadar `unverified` kalır. VPS'e geçiş yok.
+---
+
+## Arşiv — kapanış öncesi durum (2026-10-04)
 
 ## Tamamlanan somut çıktılar
 - Repo iskeleti, CLAUDE.md, MIT lisans, sır taraması, ortam raporu betiği

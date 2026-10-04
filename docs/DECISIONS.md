@@ -60,3 +60,7 @@ Bkz. `docs/research/niche-comparison.md`. **Karar:** "Data detective stories": g
 **Bağlam:** Üç pilot/ilk hafta bölümü 450–600 kelimelik senaryolarla 2.6–4.8 dk çıktı. Aynı veri ve tezle 6–9 dk'ya çıkmak ya dolgu (inauthentic riski) ya da her bölüm için 2–3 ek veri sahnesi ve ek kaynak araştırması gerektiriyor.
 **Karar:** Bölüm uzunluğunu içerik belirler; 6–9 dk bir hedef değil, bir gözlemdir. Hiçbir bölüm süre için uzatılmaz; ek sahne yalnızca izleyiciye yeni bilgi ve anlatı değeri katıyorsa (kaynaklı veri, yeni olgu) eklenir. İlk hafta bölümleri 2.6–4.8 dk olarak yayımlanır; 7. gün izleyici tutma verisi, uzunluk değil içerik kararlarını besler. MASTER_PLAN §4 ve eşik matematiği buna göre güncellendi (ort. izlenen dk varsayımı 2.0–3.5).
 **Risk:** Daha kısa videolar izlenme saati eşiğini zorlaştırır (saat = izlenme × dk/60); planın belirsizlik beyanı zaten bunu kapsıyor. Shorts yalnızca keşif için kalır.
+
+## ADR-014 — Proje kapanışı (2026-10-04)
+**Karar (kullanıcı):** Proje, mevcut çıktılar yeterli bulunmadığı için sonlandırıldı. Durum: CLOSED / DISCONTINUED BY USER.
+**Sonuçlar:** READY_FOR_VPS geçerli durum olmaktan çıkarıldı (arşiv). Yeni render, revizyon, yayın ve VPS kurulumu yapılmaz. Repo, raporlar ve GitHub Releases silinmez. İlk yayın tarihi ve 30 günlük sayaç başlatılmaz. `release.yml` push tetikleyicisi kaldırıldı; hesapta zamanlanmış Routine yok. Açık doğrulamalar açık bırakıldı.

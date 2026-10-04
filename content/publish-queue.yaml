@@ -1,3 +1,4 @@
+# CLOSED / DISCONTINUED BY USER (2026-10-04): hiçbir öğe yayımlanmadı; first_public_publish_utc boş kalır, 30 gün sayacı başlatılmadı.
 # Yayın kuyruğu ve durum takibi. Kanal sahibi yükledikçe `video_url` ve `published_at_utc` doldurulur.
 # first_public_publish_utc dolunca 30 gün sayacı başlar (docs/MASTER_PLAN.md §1).
 first_public_publish_utc: null
