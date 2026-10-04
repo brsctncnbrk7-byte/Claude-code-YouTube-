@@ -4,6 +4,8 @@
 **Faz:** 6 — GitHub hazırlığı tamamlandı
 **READY_FOR_VPS:** **EVET (kabul incelemesi sonrası yeniden verildi, 2026-10-04)** — `reports/ACCEPTANCE_REVIEW.md`, `reports/READY_FOR_VPS.md`; VPS geçişi kullanıcı talimatını bekliyor
 
+> **2026-10-04 (sonra):** Kullanıcı ep-001/ep-002 örneklerini telefondan inceliyor (linkler: `reports/releases/sample-links-2026-10-04.md`). İçerik kabulü ve ilk yayın tarihi kullanıcı onayı gelmeden kaydedilmez. ChatGPT yanıt dosyası (`chatgpt-answers-2026-10-04.md`) beklenir; açık doğrulamalar o zamana kadar `unverified` kalır. VPS'e geçiş yok.
+
 ## Tamamlanan somut çıktılar
 - Repo iskeleti, CLAUDE.md, MIT lisans, sır taraması, ortam raporu betiği
 - docs: MASTER_PLAN, DECISIONS (ADR-001…013 + 004a), politika kayıtları (etiketli), araştırma (ortam, araç/lisans, niş), operasyon (yayın, ölçüm, kurtarma, süreklilik, GitHub kota, VPS taslağı)
